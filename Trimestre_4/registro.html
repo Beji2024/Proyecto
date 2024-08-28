@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+            <h1>DATOS DEL PROVEEDOR</h1>
+            <h3 id="icono">
+                <input type="text" placeholder="Buscar">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </h3>
+        </header>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <div id="datos">
+            <div id="nom">
+                Nombre Completo: <br>
+                <td>
+                    <input type="text" name="nombre">
+                </td>
+            </div>
+            <div id="est">
+                Estado: <br>
+                <select id="estado">
+                    <option>Activo</option>
+                    <option>Inactivo</option>
+                </select>
+            </div>
+
+            <div id="pro">
+                ID Proveedor: <br>
+                <td>
+                    <input type="number" name="id">
+                </td>
+            </div>
+
+            <div id="tel1">
+                Telefono 1: <br>
+                <td>
+                    <input type="number" name="telefono">
+                </td>
+            </div>
+            <div id="tel2">
+                Telefono 2: <br>
+                <td>
+                    <input type="number" name="tel">
+                </td>
+            </div>
+            <div id="correo">
+                Correo Electrnico: <br>
+                <td>
+                    <input type="email" name="correo" value="@">
+                </td>
+            </div>
+            <div id="dir">
+                Direccion: <br>
+                <td>
+                    <input type="text" name="dir">
+                </td>
+            </div>
+            <div id="dep">
+                Departamento: <br>
+                <td>
+                    <input type="text" name="dep">
+                </td>
+            </div>
+            <div id="ciu">
+                Ciudad: <br>
+                <td>
+                    <input type="text" name="ciu">
+                </td>
+            </div>
+
+            <div id="bar">
+                Barrio: <br>
+                <td>
+                    <input type="text" name="bar">
+                </td>
+            </div>
+        </div>
+        </fieldset>
+        <div id="boton">
+            <a href="#" style="--clr:#27df0f" id="registro"><span>Registrar</span></a>
+            <a href="#" style="--clr:#31b9ee" id="actualizar"> Actualizar</a>
+            <a href="#" style="--clr:#ff0000" id="eliminar"> eliminar</a>
+            <a href="pedido.html" style="--clr:#ffd900" id="pedido">Solicitar pedido</a>
+        </div>
+    </div>
+    
+</body>
+</html>

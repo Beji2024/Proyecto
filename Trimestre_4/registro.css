@@ -1,0 +1,235 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    background: url(imagenes/pexels-kristaps-ungurs-1831590-24405942.jpg) no-repeat;
+    background-size: cover;
+}
+
+#contenedor{
+    width: 100%;  
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+header{
+    width: 100%;
+    line-height: 70px;
+    display: flex;
+    color: white;
+    gap: 20px;
+}
+
+header h1{
+    width: 65%;
+
+}
+#icono{
+    position: relative;
+}
+#icono input{
+    width: 350px;
+    padding: 1px;
+    padding-right: 40px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+}
+button{
+    background: rgb(105, 17, 105);
+    padding: 15px 15px;
+    position: absolute;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    margin-top: 17px;
+    right: 0px;
+}
+
+fieldset{
+   border: rgb(76, 6, 94) 8px double;
+    border-radius: 10px ;
+    width: 95%;
+    margin:0px auto;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: white;
+}
+legend{
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+#datos{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 20px;
+ width: 90%;
+ margin: auto;
+}
+
+input{
+   line-height: 30px;
+   background: rgb(243, 201, 243);
+}
+
+ #nom input{
+    width: 325px;
+    padding: 1px;
+    padding-right: 40px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+ #est{
+    text-align: center;
+    
+ }
+ #estado{
+    width: 125px;
+    padding: 1px;
+    padding-right: 40px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+    background: rgb(243, 201, 243);
+ }
+ #pro input{
+    width: 300px;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #tel1 input{
+    width: 250px;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #tel2 input{
+    width: 250px;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #correo input{
+    width: 350px;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #dir{
+    grid-column: 1/4;
+ }
+
+ #dir input{
+    width: 100%;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #dep input{
+    width: 350px;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #ciu input{
+    width: 350px;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #bar input{
+    width: 350px;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    border: 0px;
+ }
+
+ #boton {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+ } 
+ #boton a{
+   background: #444;
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 1,5em;
+   letter-spacing: 0.1em;
+   font-weight: 400;
+   padding: 10px 30px;
+   transition: 0.5s;
+} 
+
+ #registro{
+    padding: 10px 10px;
+    border-radius: 5px;
+ }
+
+ #actualizar{
+    padding: 10px 10px;
+    border-radius: 5px;
+ }
+
+ #eliminar{
+    padding: 10px 10px;
+    border-radius: 5px;
+ }
+
+ #pedido{
+    padding: 10px 10px;
+    border-radius: 5px;
+ }
+
+#boton a:hover{
+   letter-spacing: 0.25em;
+   background: var(--clr);
+   box-shadow: 0 0 35px var(--clr);
+   color: rgb(90, 14, 90);
+   font-weight: bold;
+ }
+
+
+
+
+
+
+

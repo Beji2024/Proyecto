@@ -1,0 +1,60 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+#general{
+    background: gray;
+    height: 600px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#compras{
+    display: grid;
+    grid-template-rows: 55% 45%;
+    height: 30%;
+    margin-left: 3%;
+}
+#compras h1{
+    display: flex;
+    height: 100%;
+    font-size: 500%;
+    margin-left: 2%;
+    align-items: end;
+    color: darkmagenta;
+
+}
+#compras h2{
+    display: flex;
+    height: 100%;
+    font-size: 400%;
+    margin-left: 2%;
+    align-items:start;
+    color: darkmagenta;
+}
+#compras h4{
+    display: flex;
+    color: blue;
+    align-items: start;
+    font-size: 150%;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+#formulario{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    margin-top: 10%;
+    height: 40%;
+    margin-left: 3%;
+    }
+    #formulario li{
+        display: flex;
+        align-items: center;
+        height: 60%;
+        width: 45%;
+    }
+    #formulario input{
+        margin-left: 5%;
+    }
+    #formulario a{
+        color: black;
+    }
+    

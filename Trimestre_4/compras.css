@@ -1,0 +1,66 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+#general{
+    background: gray;
+    height: 600px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#compras{
+    display: grid;
+    grid-template-rows: 55% 45%;
+    height: 30%;
+    margin-left: 3%;
+}
+#compras h1{
+    display: flex;
+    height: 100%;
+    font-size: 500%;
+    margin-left: 2%;
+    align-items: end;
+    color: darkmagenta;
+
+}
+#compras h2{
+    display: flex;
+    height: 100%;
+    font-size: 400%;
+    margin-left: 2%;
+    align-items:start;
+    color: darkmagenta;
+}
+#menu{
+    display: grid;
+    grid-template-columns: 90%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    margin-top: 6%;
+}
+#menu ul {
+    height: 100%;
+    width: 30%;
+}
+#menu li{
+    display: grid;
+    height: 33%;
+    align-items: center;
+    transition: 10s ease, transform 10s ease;
+    
+}
+#menu a{
+    margin: 0 auto;
+    color: blueviolet;
+    font-size: 200%;
+    height: 100%;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+
+}
+#menu a:hover{
+    color: violet;
+    background-color: darkviolet;
+  transform: rotate(10deg);
+}

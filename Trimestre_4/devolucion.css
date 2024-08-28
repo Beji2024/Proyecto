@@ -1,0 +1,78 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+#general{
+    background: gray;
+    height: 700px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#compras{
+    display: grid;
+    grid-template-rows: 55% 45%;
+    height: 30%;
+    margin-left: 3%;
+}
+#compras h1{
+    display: flex;
+    height: 100%;
+    font-size: 500%;
+    margin-left: 2%;
+    align-items: end;
+    color: darkmagenta;
+
+}
+#compras h2{
+    display: flex;
+    height: 100%;
+    font-size: 400%;
+    margin-left: 2%;
+    align-items:start;
+    color: darkmagenta;
+}
+#compras h4{
+    display: flex;
+    color: blue;
+    align-items: start;
+    font-size: 150%;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+#consulta{
+    margin-top: 10%;
+}
+#consulta ul{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 0%;
+    width: 90%;
+}
+#consulta li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 100%;
+    font-size: 120%;
+    color: white;
+}
+#consultar1{
+    background: white;
+    width: 40%;
+    float: right;
+    margin-right: 10%;
+    margin-top: -5%;
+    font-size: 150%;
+    border-radius: 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7%;
+}
+#cambio{
+   margin-left: 25%;
+}
+#devolucion{
+    margin-left: 25%;
+}

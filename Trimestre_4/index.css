@@ -62,14 +62,14 @@ nav > ul >li{
     position: relative;
 }
 nav > ul > li:first-child > a{
-    background-image: url(/img/home\ \(1\).png);
+    background-image: url(home\ \(1\).png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
     padding: 15px 35px;
 }
 nav > ul > li:first-child:hover > a{
-    background-image: url(/img/home\ \(1\).png);
+    background-image: url(home\ \(1\).png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;

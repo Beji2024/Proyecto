@@ -4,13 +4,13 @@
 }
 #general{
     background: gray;
-    height: 600px;
+    height: 1200px;
     font-family: 'Courier New', Courier, monospace;
 }
 #compras{
     display: grid;
     grid-template-rows: 55% 45%;
-    height: 30%;
+    height: 15%;
     margin-left: 3%;
 }
 #compras h1{
@@ -39,34 +39,44 @@
     margin-left: 2%;
 }
 #consulta{
-    margin-top: 10%;
-}
-#consulta ul{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    column-gap: 0%;
-    width: 90%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 9%;
 }
-#consulta li{
+#consulta tr{
     display: flex;
-    justify-content: center;
-    border: 2px solid black;
     width: 100%;
-    font-size: 120%;
-    color: white;
+    height: 25%;
+    column-gap: 0.2%;
+    margin-top: 1.25%;
 }
-#consultar1{
-    background: white;
-    width: 40%;
-    float: right;
-    margin-right: 10%;
-    margin-top: -5%;
-    font-size: 150%;
-    border-radius: 15px;
+#consulta td{
+    display: grid;
     border: 1px solid black;
-    display: flex;
+    padding: 1%;
+    width: 90%;
+    font-size: 160%;
     justify-content: center;
     align-items: center;
-    height: 7%;
+    background: silver;
+}
+#titulo_t td{
+    background: rgb(105, 101, 101);
+}
+#barra_b{
+    width: 30%;
+    margin-left: 60%;
+    height: 3.5%;
+}
+#barra_b input{
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    border-radius: 10px;
+    border: 2px solid black;
     
 }

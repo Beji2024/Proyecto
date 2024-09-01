@@ -1,66 +1,97 @@
 *{
+    margin: 0px;
+    padding: 0px;
     text-decoration: none;
-    list-style: none;
-}
-#general{
-    background: gray;
-    height: 600px;
-    font-family: 'Courier New', Courier, monospace;
-}
-#compras{
-    display: grid;
-    grid-template-rows: 55% 45%;
-    height: 30%;
-    margin-left: 3%;
-}
-#compras h1{
-    display: flex;
-    height: 100%;
-    font-size: 500%;
-    margin-left: 2%;
-    align-items: end;
-    color: darkmagenta;
 
 }
-#compras h2{
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+#titulo{
+    grid-column: 1/4;
     display: flex;
-    height: 100%;
-    font-size: 400%;
-    margin-left: 2%;
-    align-items:start;
-    color: darkmagenta;
+    justify-content: space-between;
+    background: #a30dda;
+    padding: 5px;
+    gap: 20px;
 }
-#menu{
-    display: grid;
-    grid-template-columns: 90%;
-    height: 40%;
+#titulo h1{
+    font-family: "Trebuchet MS";
     display: flex;
-    align-items: center;
-    margin-top: 6%;
-}
-#menu ul {
-    height: 100%;
-    width: 30%;
-}
-#menu li{
-    display: grid;
-    height: 33%;
-    align-items: center;
-    transition: 10s ease, transform 10s ease;
-    
-}
-#menu a{
-    margin: 0 auto;
-    color: blueviolet;
-    font-size: 200%;
-    height: 100%;
-    width: 70%;
     align-items: center;
     justify-content: center;
-
+    font-weight: bold;
+    background: linear-gradient(rgb(107, 12, 107),rgb(248, 155, 236));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 80px;
 }
-#menu a:hover{
-    color: violet;
-    background-color: darkviolet;
-  transform: rotate(10deg);
+#titulo h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin-right: 90px;
+    color: aliceblue;
+}
+#titulo h4{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mask-image: none;
+}
+#cajas{
+    list-style: none;
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    gap: 50px;
+}
+
+#cajas ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    column-gap: 1%;
+}
+
+img{
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 50%;
+    background-clip: content-box;
+}
+
+#cajas li a{
+   margin: auto;
+   font-family:'Times New Roman', Times, serif ;
+   font-size: 25px;
+   font-weight: bold;
+   color: black;
+   padding:90px 30px;
+}
+
+#cajas li{
+    border: 2px solid rgb(1, 1, 8);
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+li{
+    display: block;
+    position: relative;
+    transition:all 0.5s;
+}
+li:hover{
+   background: #800080;
+   transform: translate(3px,-3px);
 }

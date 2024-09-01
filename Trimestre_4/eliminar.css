@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenedor{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+img{
+    width: 20%;
+    height: 20%;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+a:hover{
+    transform: translate(3px);
+}

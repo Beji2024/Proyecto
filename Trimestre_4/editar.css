@@ -84,7 +84,7 @@ input{
 
 #boton a{
    border: 2px solid rgb(12, 12, 12);
-   width: 160px;
+   width: 170px;
    border-radius: 10px;
     background: #00fc71;
     color: #020202;
@@ -95,26 +95,12 @@ input{
 }
 
 @media(max-width:360px){
-   table tr{
-      display: grid;
-      grid-template-columns: repeat(1,1fr);
-      gap: 10px;
-   }
-   #boton{
-      width: 100%;
-   }
-   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    table tr{
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+       gap: 10px;
+    }
+    #boton{
+       width: 100%;
+    }
+    }

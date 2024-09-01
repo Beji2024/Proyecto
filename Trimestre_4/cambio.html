@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Cambio  </title>
+    <title> Cambio </title>
     <link rel="stylesheet" href="cambio.css">
 </head>
 <body>
-    <div id="general">
-        <header id="compras">
-            <h1>Sport10</h1>
-            <h2>Ventas</h2>
-            <h4>Registro de cambio</h4>
-        </header>
+    <div id="contenedor">
+        <div id="titulo">
+            <h1>SISTEMA DE INVENTARIO</h1>
+            <h2>SPORT 10</h2>
+            <h4> <a href="pagina.html"> <img src="imagenes/atras.png" alt="" height="35px"></a> </h4>
+        </div>
         <nav id="formulario">
-            <ul>
+            <form>
+                <ul>
                 <li>Nombre del cliente<input type="text" id="nombre_c"></li>
-                <li>Numero de telefono de cliente<input type="number" id="numero_c"></li>
-                <li>Codigo del nuevo producto<input type="number" id="codigo_p"></li>
-                <li><button><a href="registroc.html">Registrar</a></button>
-            </ul>
+                <li>Numero de telefono <input type="number" id="numero_c"></li>
+                <li>Numero de documento<input type="number" id="numero_id"></li>
+                <li>Fecha de cambio <input type="date" id="fecha"></li>
+                <li>Correo electronico <input type="email" id="correo"></li>
+                <li>Codigo de nuevo producto<input type="number" id="codigo_p"></li>
+         
+                <div> <button ><a href="registrov.html">Registrar</a></button></div>
+                </ul>
+        </form>
         </nav>
     </div>
 </body>

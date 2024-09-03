@@ -43,14 +43,19 @@ body{
     align-items: center;
     margin-right: 2%;
 }
+#registros{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
 #usuario{
     margin: 0 auto;
     margin-top: 4%;
     width: 100%;
     display: grid;
-    grid-template-columns: 20% 2.5% 62.5% 12.5%;
-    grid-template-areas: "a . b c";
-    
+    grid-template-columns: 20% 10% 70% ;
+    grid-template-areas: "a . b b";
+
 }
 #image{
     grid-area: a;
@@ -73,36 +78,22 @@ body{
 }
 #c li{
     margin-left: 4%;
+    
 }
-#d{
-    grid-area: c;
+#c input{
+
+}
+#c button{
+    width: 160px;
+    height: 30px;
+    background: linear-gradient(40deg,#a30dda,pink);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 20px;
 }
-#d button{
-    width: 100px;
-    height: 30px;
-    background: linear-gradient(40deg,#a30dda,pink);
-}
-#registros{
-    height: 400px;
-    width: 90%;
+#boton{
     display: flex;
-    flex-direction: column;
-    overflow: auto;
-    margin: 0 auto;
-    margin-top: 1%;
-}
-#registrar{
-    display: flex;
-    margin-left: 7%;
-    margin-top: 2%;
     align-items: center;
-}
-#registrar button{
-    background: linear-gradient(40deg,#a30dda,pink);
-    height: 30px;
+    justify-content: right;
+    margin-right: 4%;
 }

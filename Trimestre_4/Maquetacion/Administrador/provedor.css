@@ -1,0 +1,170 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+#contenedor{
+   width: 90%;
+   margin:0px auto;
+   margin-top: 20px;
+   display: flex;
+   flex-flow:row wrap;
+   gap: 20px;
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    display:flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#contenedor a{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin: auto;
+}
+#contenedor a:hover{
+    color: #ff0015;
+    font-weight: bold;
+    transform: translate(3px);
+}
+
+#icono{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+i{
+    padding: 6px 10px;
+    border: 2px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: gray;
+    margin-left: -2px;
+}
+
+#icono img{
+    border: 1px solid black;
+}
+
+#icono input{
+    border: 2px solid black;
+    padding: 7.1px 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#boton{
+   display: flex;
+   width: 200px;
+   align-items: center;
+}
+
+
+h4{
+    box-sizing: content-box;
+width: 100%;
+}
+
+#boton a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #24c6ee;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1,5em;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+    z-index: 10;
+    width: 200px;
+ } 
+ #boton a:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    color: rgb(90, 14, 90);
+    font-weight: bold;
+  }
+
+#datos{
+    width: 100%;
+    margin: 0px auto;
+    height: 70vh;
+    overflow:auto;
+    
+}
+
+table{
+   border: 2px solid black ;
+    width: 100%;
+    margin: 0px auto;
+}
+
+table tr{
+    display: flex;
+}
+#ic{
+    margin-right: 5px;
+}
+#ic1{
+    margin-left: 5px;
+}
+img{
+    width: 40px;
+    height: 40px;
+}
+
+
+table td{
+    border: 1px solid rgb(3, 3, 3);
+    width: 11%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    overflow:hidden;
+}
+
+@media(max-width:720px){
+    #contenedor{
+        gap: 20px;
+     }
+
+     header{
+        line-height: 20px;
+     }
+
+     h1{
+        text-align: center;
+        font-size: 25px;
+     }
+}
+
+@media(max-width:360px){
+    #contenedor{
+        width: 160%;
+        gap: 10px;
+     }
+     #datos{
+        width: 100%;
+        height: 100vh;
+        overflow:auto; 
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+}

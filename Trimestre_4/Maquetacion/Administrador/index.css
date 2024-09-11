@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 5;
+
+}
+.header_superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.logo img{
+    width: 300px;
+}
+.search input{
+    width: 400px ;
+    padding: 10px;
+}
+.container_menu{
+    width: 100%;
+    height: 70px;
+    padding: 0px 20px;
+    background: rosybrown;
+}
+.menu{
+    max-width: 1200px ;
+    margin: auto;
+    height: 100%;
+}
+nav{
+   
+    height: 100%;
+
+}
+nav > ul{
+   
+    height: 100%;
+    display: flex;
+
+}
+nav > ul >li{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+nav > ul > li:first-child > a{
+    background-image: url(home\ \(1\).png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 15px 35px;
+}
+nav > ul > li:first-child:hover > a{
+    background-image: url(home\ \(1\).png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14PX;
+    
+    transition: all 300MS ease;
+    
+}
+nav > ul > li > a:hover{
+    transform: scale(1);
+    
+    background: rgb(218, 166, 166);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+#selected{
+    transform: scale(0.8);
+    background-color: rgb(218, 166, 166);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+/*submenu*/
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px  10px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+nav ul li ul::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right:  12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+nav ul li ul li a{
+    display: block;
+    color: rosybrown;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+nav ul li ul li a:hover{
+    background: rosybrown;
+    color: white;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px  10px 0px rgba(0,0,0,0.5);
+}
+nav ul li ul li{
+    list-style: none;
+}
+/*FILTRADO*/
+
+/*productos*/
+main{
+    background: #f0f0f0;
+    padding: 40px 20px;
+    margin-top: 150px ;
+    display: flex;
+    justify-content: center;
+    flex-flow:wrap;
+    gap: 30px;
+}
+main > div{
+    background: white;
+    border-radius: 15px;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    transition: all 200ms ease;
+}
+main > div:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 0;
+}
+main > div > button{
+    width: 50px;
+
+} 
+main > div > img{
+    height: 250px;
+    width: 245px;
+}
+
+
+
+/*responcivo*/
+.icon_menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width:26px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: none;
+
+}
+#label_chec{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#chec_menu{
+    display: none;
+}
+
+@media screen and (max-width:720px) {
+    .search input{
+        display: none;
+    }
+    .header_superior{
+        padding: 10px;
+    }
+    .logo img{
+        width: 200px;
+    }
+    nav > ul{
+        flex-direction: column;
+        background-color: rgb(161, 118, 118);
+        position: fixed;
+        left: 0;
+        top: 128px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav > ul > li > a:hover{
+        transform: scale(1)
+    }
+    nav ul li ul{
+        left: 90px;
+    }
+    nav> ul > li:hover ul{
+        top: 50px;
+    }
+    nav > ul > li:first-child a{
+        background-position: 20px;
+    }
+    #selected{
+        transform: scale(1);
+    }
+    
+    #label_chec{
+        display: block;
+    }
+    .icon_menu{
+        display: flex;
+    }
+    #chec_menu:checked ~ nav > ul {
+        height: 350px;
+        visibility: visible;
+        opacity: 1;
+    }
+    main{
+        margin-top: 100px;
+    }
+    
+}

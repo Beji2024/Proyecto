@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(imagenes/fondo.jpg);
+    background-size: cover;
+}
+
+#contenedor{
+    position: relative;
+    padding: 90px;
+    background: rgba(85, 23, 87);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 400px;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+#contenedor::after, #contenedor::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -2;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+  #contenedor::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+header{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#usuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#usuario input{
+    border: none;
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#usuario i{
+    position: absolute;
+    right: 18%;
+    font-size: 1.4em;
+    color: #1f1f1f;
+    line-height: 57px;
+    top: 157px;
+}
+
+#usuario i:hover{
+    color:#522664;
+}
+
+#contraseña input{
+    border: none;
+    position: relative;
+    width: 90%;
+    padding: 15px 20px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#contraseña i{
+    position: absolute;
+    right: 18%;
+    font-size: 1.4em;
+    color: #1f1f1f;
+    line-height: 57px;
+    top: 243px;
+}
+
+#contraseña i:hover{
+    color:#522664;
+}
+
+#enviar{
+   width: 30%;
+   margin: 0px auto;
+   padding: 10px;
+   font-weight: bold;
+   border-radius: 5px;
+   border: none;
+}
+
+#enviar:hover{
+    background: #522664;
+    color: black;
+}

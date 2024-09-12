@@ -7,9 +7,7 @@
 
 body{
     font-size: 70.5%;
-    background-color:white
-
-    
+    background-color:white  
 }
 
 header{
@@ -18,8 +16,12 @@ header{
     justify-content: space-between;
     background: #a30dda;
     padding: 5px;
+    width: 100%;
     gap: 20px;
     height: 110px;
+    border-radius: 20px;
+    border-style: groove;
+    box-shadow: 2px 2px 5px red, -2px -2px 5px blue;
 
 }
 header h1{
@@ -36,6 +38,7 @@ header h1{
     -3px 3px 0 black;
     font-size: 80px;
     margin:0 auto; 
+    
         
     }
 
@@ -91,10 +94,9 @@ nav :hover{
 }
 
 #menu3{
-    
+    display: flex;
+    flex-direction: column;
     background: #a30dda;
-    width: 900px;
-    height: 390px;
     margin:0 auto;
     margin-top: 5%;
     font-size: xx-large;
@@ -103,29 +105,47 @@ nav :hover{
     box-shadow: 2px 2px 5px red, -2px -2px 5px blue;
 }
 
+
 #menu3 select{
+    display: flex;
+    justify-content:center ;
     gap: 10px;
     width: 200px;
     height: 30px;
     color: black;
-    margin-left: 350px;
+    margin: 0 auto;
 }
 
 #menu3 option{
-
     color: black;
 }
+#datos{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+#datos h3{
+   width: 100%;
+}
+#datos input{
+    width: 100%;
+ }
+
+ #datos a{
+    width: 100%;
+    
+
+ }
+
 
 #menu3 input{
-    display: flex;
-    align-content: center;
-    justify-content: center;
     margin-top: 15px;
     width: 200px;
     height: 30px;
     color: black;
-    margin-left: 350px;
-    
 
 }
 
@@ -141,7 +161,7 @@ nav :hover{
     -3px -3px 0 black,
     3px -3px 0 black,
     -3px 3px 0 black;
-    font-size: 50px;
+    font-size: 60px;
     margin:0 auto 
     
 }
@@ -161,3 +181,59 @@ nav :hover{
     font-size: 50px;
     margin:0 auto 
 }
+
+@media  (max-width:720px){
+    
+    header{
+        width: 125%;
+    }
+    header h1{
+        font-size: 60px;     
+        }
+    #menu3{
+        width:125% ;
+    }
+}
+
+@media (max-width:360px){
+    
+    header{
+        width: 250%;
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+        
+    }
+    header h1{
+        font-size: 80px;     
+        }
+   nav h1 a{
+        font-size: 40px;
+    }
+    header h2{
+        font-size: 50px;
+    }
+    #menu3{
+        width: 250%;
+    }
+    #menu3 select{
+        gap: 10px;
+        width:300px;
+        height: 50px;
+        color: black;
+        font-size: xx-large;
+    }
+    #menu3 input{
+        font-size: xx-large;
+        font-weight: bold;
+        width: 300px;
+        height: 50px;
+        margin: 5px 20px;
+    }
+
+    #menu3 option{
+        font-size: 12px;
+    }
+    
+    
+} 

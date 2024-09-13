@@ -5,10 +5,12 @@
     font-family: "New Amsterdam", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-decoration: none;
 }
 
 header{
     width: 100%;
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -17,26 +19,70 @@ header{
 
 }
 .header_superior{
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    gap: 10PX;
+   display: flex;
+   flex-flow: row;
+    
+   display: block;
 
 }
-.logo img{
-    width: 300px;
+
+#titulo{
+    grid-column: 1/7;
+    display: flex;
+    justify-content: space-between;
+    background: purple;
+    padding: px;
+    gap: 20px;
+}
+#titulo h1{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+    3px 3px 0 black,
+    -3px -3px 0 black,
+    3px -3px 0 black,
+    -3px 3px 0 black;
+    font-size: 80px;
+   margin-left: 40px; 
+}
+#titulo h2{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+   
+    color: aliceblue;
+    color: white;
+    text-shadow: 
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+#titulo h4{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .search input{
-    width: 400px ;
+    margin-top: 20px;
+    width: 400PX ;
     padding: 10px;
+    margin-right: 40px;
 }
 .container_menu{
     width: 100%;
     height: 70px;
     padding: 0px 20px;
-    background: rosybrown;
+    background: rgb(65, 1, 65);
 }
 .menu{
     max-width: 1200px ;
@@ -74,6 +120,26 @@ nav > ul > li:first-child:hover > a{
     background-repeat: no-repeat;
     background-position: center center;
 }
+#agregar>a{
+    
+    background-image: url(dots.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+}
+#agregar:hover >a{
+    
+    background-image: url(dots.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#agregar{
+    margin-left:70% ;
+}
+
 nav > ul > li > a{
     width: 100%;
     height: 100%;
@@ -89,14 +155,34 @@ nav > ul > li > a{
 }
 nav > ul > li > a:hover{
     transform: scale(1);
-    
-    background: rgb(218, 166, 166);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    background: purple;
+    margin: 100px auto;
+    box-shadow: 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear; 
+}
+
+
+@keyframes rotate-shadow {
+    0% {
+        box-shadow: 0px  0px 15px rgba(255, 0, 0, 0.5);
+    }
+    33% {
+        box-shadow: 0px 0px  15px rgba(0, 255, 0, 0.5);
+    }
+    66% {
+        box-shadow: 0px 0px 15px rgba(0, 0, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+    }
 }
 #selected{
     transform: scale(0.8);
-    background-color: rgb(218, 166, 166);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    background-color: rgb(107, 2, 107);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear; 
 }
 /*submenu*/
 nav ul li ul{
@@ -110,7 +196,9 @@ nav ul li ul{
     padding: 14px 0px;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0px 0px  10px 0px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear; 
     z-index: 10;
     transition: all 300ms ease;
 }
@@ -132,7 +220,7 @@ nav ul li ul::before{
 }
 nav ul li ul li a{
     display: block;
-    color: rosybrown;
+    color: purple;
     padding: 6px;
     padding-left: 14px;
     margin-top: 10px;
@@ -141,16 +229,28 @@ nav ul li ul li a{
     transition: all 300ms ease;
 }
 nav ul li ul li a:hover{
-    background: rosybrown;
+    background: purple;
     color: white;
     transform: scale(1.1);
     padding-left: 30px;
     font-size: 14px;
-    box-shadow: 0px 0px  10px 0px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear; 
 }
 nav ul li ul li{
     list-style: none;
 }
+#agregar > ul{
+    width: 160px;
+    left: -110px;
+   
+    
+}
+#agregar >ul::before{
+    left: 115px;
+}
+
 /*FILTRADO*/
 
 /*productos*/
@@ -177,7 +277,9 @@ main > div{
 }
 main > div:hover{
     transform: scale(1.1);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     z-index: 0;
 }
 main > div > button{
@@ -188,8 +290,39 @@ main > div > img{
     height: 250px;
     width: 245px;
 }
-
-
+main > div > button{
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: white;
+    background: linear-gradient(45deg, purple, rgb(211, 138, 3), blueviolet);
+    background-size: 600% 600%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    outline: none;
+    animation: rgb-animation 5s linear infinite;
+}
+@keyframes rgb-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+main > div > button:hover {
+    transform: scale(1.05);
+}
+main > div > button:focus {
+    outline: none;
+}
 
 /*responcivo*/
 .icon_menu{
@@ -225,7 +358,7 @@ main > div > img{
     }
     nav > ul{
         flex-direction: column;
-        background-color: rgb(161, 118, 118);
+        background-color: purple;
         position: fixed;
         left: 0;
         top: 128px;
@@ -235,10 +368,9 @@ main > div > img{
         z-index: 100%;
         opacity: 0;
         visibility: hidden;
+        
     }
-    nav > ul > li > a:hover{
-        transform: scale(1)
-    }
+    
     nav ul li ul{
         left: 90px;
     }
@@ -265,6 +397,11 @@ main > div > img{
     }
     main{
         margin-top: 100px;
+    }
+    #chec_menu:checked ~ nav > ul {
+        height: 350px;
+        visibility: visible;
+        opacity: 1;
     }
     
 }

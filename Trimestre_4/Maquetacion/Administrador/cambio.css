@@ -55,25 +55,21 @@ body{
 }
 #formulario{
     margin: 0 auto;
-display: grid;
-margin-top: 2%;
-width: 50%;
-padding: 1%;
-background: rgb(164, 156, 156);
-justify-content: center;
-border-radius: 15px;
-border: 2px solid black;
+    display: grid;
+    margin-top: 2%;
+    width: 50%;
+    padding: 1%;
+    border: 2px solid #a30dda;;
+    box-shadow: 8px 8px 3px violet;
+    justify-content: center;
 }
 #formulario li{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
-    background: gray;
     height: 70%;
     width: 100%;
-    font-size: 210%;
-    border: 1px solid black;
-    border-radius: 15px;
+    font-size: 150%;
     padding: 1% 0;
     column-gap: 1%;
     margin-top: 1%;
@@ -85,16 +81,21 @@ border: 2px solid black;
 }
 #formulario input{
     width: 80%;
-    height: 30px;
-    border-radius: 15px;
+    height: 20px;   
 }
 #formulario button  {
     padding: 1%;
     width: 15%;;
-    background-color: silver;
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    background: linear-gradient(40deg,#a30dda,pink);
+}
+#formulario button:hover{
+    background: violet;
+    transition:all 0.5s;
+    transform: translate(5px,-5px);
+    
 }
 #formulario div{
     margin-top: 5%;

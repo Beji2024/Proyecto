@@ -19,10 +19,6 @@ header{
     width: 100%;
     gap: 20px;
     height: 110px;
-    border-radius: 20px;
-    border-style: groove;
-    box-shadow: 2px 2px 5px red, -2px -2px 5px blue;
-
 }
 header h1{
     font-family: "calibri";
@@ -56,12 +52,7 @@ header h1{
         -3px 3px 0 black;
         font-size: 40px;
         margin:0 auto; 
-
     }
-
-
-
-
 nav a{
     
     text-decoration: none;
@@ -96,13 +87,14 @@ nav :hover{
 #menu3{
     display: flex;
     flex-direction: column;
-    background: #a30dda;
+    background: white;
     margin:0 auto;
     margin-top: 5%;
     font-size: xx-large;
-    border-radius: 20px;
-    border-style: groove;
-    box-shadow: 2px 2px 5px red, -2px -2px 5px blue;
+    width: 50%;
+    padding: 2%;
+    border: 2px solid #a30dda;;
+    box-shadow: 8px 8px 3px violet;
 }
 
 
@@ -133,54 +125,48 @@ nav :hover{
 #datos input{
     width: 100%;
  }
-
  #datos a{
     width: 100%;
-    
-
  }
-
-
 #menu3 input{
     margin-top: 15px;
-    width: 200px;
+    width: 15%;
     height: 30px;
     color: black;
-
 }
-
 #menu3 h1{
     font-family: "calibri";
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: white;
-    text-shadow: 
-    3px 3px 0 black,
-    -3px -3px 0 black,
-    3px -3px 0 black,
-    -3px 3px 0 black;
+    color: black;
     font-size: 60px;
-    margin:0 auto 
-    
+    margin:0 auto   
 }
-
 #menu3 h3{
     font-family: "calibri";
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: white;
-    text-shadow: 
-    3px 3px 0 black,
-    -3px -3px 0 black,
-    3px -3px 0 black,
-    -3px 3px 0 black;
+    color: black;
     font-size: 50px;
     margin:0 auto 
 }
+#boton button{
+    margin-top: 4%;
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(40deg,#a30dda,pink);
+    color: black;   
+}
+#boton button:hover{
+    background: violet;
+    transition:all 0.5s;
+    transform: translate(5px,-5px);
+}
+
 
 @media  (max-width:720px){
     

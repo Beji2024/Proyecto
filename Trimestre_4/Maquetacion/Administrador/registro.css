@@ -62,7 +62,7 @@ body{
     justify-content: center;
     align-content: center;
 }
-form{
+.form{
     border-radius: 15px;
     background: purple;
     width: 70%;
@@ -118,20 +118,12 @@ th {
     border-radius: 10px;
     animation: rotate-shadow 2s infinite linear; 
 }
-#boton{
-   
-    margin: 0 auto;
-    
-    display: flex;
-    justify-content: center;
-}
 button{
     padding: 8px;
     border-radius: 10px;
     color: purple;
     border: 2px solid white;
     animation: 400ms all ease;
-    margin-left:-40%;
 }
 button:hover{
     

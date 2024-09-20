@@ -6,7 +6,7 @@
 
 body{
    width: 100%;
-    min-height: 100vh;
+   min-height: 100vh;
 }
 
 #titulo{
@@ -52,16 +52,17 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-right: 2%;
+   mask-image: none;
 }
 
 #contenedor{
-   width: 80%;
+   width: 100%;
    margin:0px auto;
    margin-top: 20px;
    display: flex;
    flex-flow:column wrap;
    gap: 20px;
+
 }
 
 #contenedor a{
@@ -105,7 +106,7 @@ legend{
    font-weight: bold;
    padding: 5px;
    border: rgb(0, 0, 0) 8px double;
-   background: #a30dda;
+   background:#a30dda;
 }
 
 h3{
@@ -126,7 +127,7 @@ input{
 
 #boton a{
    border: 2px solid rgb(12, 12, 12);
-   width: 170px;
+   width: 160px;
    border-radius: 10px;
     background: #00fc71;
     color: #020202;
@@ -140,12 +141,26 @@ input{
 }
 
 @media(max-width:360px){
-    table tr{
-       display: grid;
-       grid-template-columns: repeat(1,1fr);
-       gap: 10px;
-    }
-    #boton{
-       width: 100%;
-    }
-    }
+   table tr{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 10px;
+   }
+   #boton{
+      width: 100%;
+   }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: "New Amsterdam", sans-serif;
+
+}
+body{
+    background: #f0f0f0;
+    width: 100%;
+}
+#titulo{
+    grid-column: 1/7;
+    display: flex;
+    justify-content: space-between;
+    background: purple;
+    padding: 5px;
+    gap: 20px;
+}
+#titulo h1{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+    3px 3px 0 black,
+    -3px -3px 0 black,
+    3px -3px 0 black,
+    -3px 3px 0 black;
+    font-size: 80px;
+    margin:0 auto 
+}
+#titulo h2{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin-right: 90px;
+    color: aliceblue;
+    color: white;
+    text-shadow: 
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+#titulo h4{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+}
+.website{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.form{
+    border-radius: 15px;
+    background: purple;
+    width: 70%;
+    height: 400px auto;
+    gap: 20px;
+    padding: 20px 0;
+    box-shadow: 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear; 
+}
+@keyframes rotate-shadow {
+    0% {
+        box-shadow: 0px  0px 15px rgba(255, 0, 0, 0.5);
+    }
+    33% {
+        box-shadow: 0px 0px  15px rgba(0, 255, 0, 0.5);
+    }
+    66% {
+        box-shadow: 0px 0px 15px rgba(0, 0, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+    }
+}
+
+table{
+    
+    border-radius: 100px;
+    width: 60%;
+   
+    margin: 20px auto; /* Centra la tabla horizontalmente y añade un margen superior e inferior */
+    
+}
+
+th, td {
+    
+    padding: 10px; /* Añade espacio dentro de las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+td{
+
+    color: white;
+}
+
+th {
+    font-size: large;
+    
+    
+    border-radius: 10px;
+    background-color: white; /* Color de fondo de las cabeceras */
+    color: purple; /* Color del texto en las cabeceras */
+    box-shadow: 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear; 
+}
+button{
+    padding: 8px;
+    border-radius: 10px;
+    color: purple;
+    border: 2px solid white;
+    animation: 400ms all ease;
+}
+button:hover{
+    
+    color: purple;
+    background:#f0f0f0 ;
+    animation: 400ms all ease;
+    box-shadow: 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: rotate-shadow 2s infinite linear;
+}
+button:active{
+    margin-left: 10px;
+    transform: scale(1);
+    color: white;
+    background: purple;
+    box-shadow: #f0f0f0;
+    animation: 400ms all ease;
+}
+input[type="text"], input[type="number"], textarea{
+    width: 80%;
+    min-width: 80%;
+    max-width: 80% absolute ;
+}
+
+
+

@@ -4,10 +4,11 @@ import { HeaderComponent } from "./header/header.component";
 import { ContentComponent } from "./content/content.component";
 import { UsuarioComponent } from "./usuario/usuario.component";
 import { VentaRComponent } from "./venta-r/venta-r.component";
+import { ConsultaVComponent } from "./consulta-v/consulta-v.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent],
+  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent, ConsultaVComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

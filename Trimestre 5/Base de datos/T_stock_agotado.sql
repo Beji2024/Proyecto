@@ -1,5 +1,5 @@
 DELIMITER $$
-CREATE TRIGGER stock_agotado
+CREATE TRIGGER T_stock_agotado
 AFTER UPDATE ON mercancia
 FOR EACH ROW
 BEGIN

@@ -29,6 +29,11 @@ BEGIN
         FROM mercancia 
         WHERE id_pro = idpro
         LIMIT 1;  
+        
+        SELECT nombre INTO nombre_producto
+        FROM mercancia 
+        WHERE id_pro = idpro
+        LIMIT 1; 
 
         SELECT precio_venta INTO precio
         FROM mercancia 
@@ -47,9 +52,9 @@ BEGIN
             WHERE id_pro = idpro;
             
         ELSE
-            INSERT INTO alertas_inventario (idpro, nombre_producto, cantidad_restante, mensaje) 
-            VALUES (idpro, nombre_producto, cantidad_disponible,
-            CONCAT('¡Atención! No hay suficiente stock para el producto "', nombre_producto, '". Solo quedan ', cantidad_disponible, ' unidades.'));
+		SELECT CONCAT('¡Atención! No hay suficiente stock para el producto "', nombre_producto, '". solo quedan ', cantidad_disponible, ' unidades.') as mensaje_alerta
+		FROM mercancia
+        WHERE id_pro = idpro;
         END IF;
         SET iterador = iterador + 1;
     END WHILE;

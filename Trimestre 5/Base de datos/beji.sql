@@ -18,7 +18,7 @@ CREATE TABLE proveedores(
   nit INT PRIMARY KEY,
   nombre VARCHAR(50),
   direccion VARCHAR(40),
-  telefono VARCHAR(20),  -- Cambié a VARCHAR para poder almacenar más formatos
+  telefono VARCHAR(20),  
   correo VARCHAR(40)
 );
 
@@ -32,6 +32,15 @@ CREATE TABLE estado(
 CREATE TABLE categoria(
   idcat INT AUTO_INCREMENT PRIMARY KEY,
   nom_cat VARCHAR(25)
+);
+
+CREATE TABLE alertas_inventario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_pro INT,                       
+    nombre_producto VARCHAR(255),   
+    cantidad_restante INT,             
+    mensaje TEXT,                   
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
 );
 
 -- Tabla usuario
@@ -80,15 +89,16 @@ CREATE TABLE subcategoria(
 -- Tabla mercancia
 CREATE TABLE mercancia(
   id_pro INT AUTO_INCREMENT PRIMARY KEY,
+  cantidad TINYINT,
   nombre VARCHAR(50),
   talla TINYINT,
+  precio_venta double,
+  precio_compra double,
   material VARCHAR(30),
   color VARCHAR(20),
   sub_mer INT,
   CONSTRAINT fk_mer_sub FOREIGN KEY (sub_mer) REFERENCES subcategoria(id_sub)
 );
-ALTER TABLE mercancia
-ADD COLUMN cantidad TINYINT ;
 
 -- Tabla detalle_reg
 CREATE TABLE detalle_reg(
@@ -138,32 +148,5 @@ CREATE TABLE detalle_ped(
   CONSTRAINT fk_det_p_ped FOREIGN KEY (det_p_ped) REFERENCES pedido(idpedido)
 );
 
-DELIMITER $$
-
-CREATE PROCEDURE PA_agregar_producto_inventario(
-    IN id_mer INT,           -- ID del producto
-    IN cant TINYINT,         -- Cantidad a ingresar
-    IN id_user INT,          -- Usuario que realiza la acción
-    IN nit INT               -- Proveedor
-)
-BEGIN
-    DECLARE fecha_actual DATETIME;
-
-    SET fecha_actual = NOW();  -- Obtener la fecha y hora actuales
-
-    -- Insertar en el registro de inventario
-    INSERT INTO registro_inventario (fec_ing, id_user) 
-    VALUES (fecha_actual, id_user);
-
-    -- Insertar detalle del inventario (cantidad de productos)
-    INSERT INTO detalle_reg (cantidad, det_mer, det_reginv, det_prov) 
-    VALUES (cant, id_mer, LAST_INSERT_ID(), nit);
-
-    -- Actualizar la cantidad en la tabla mercancia
-	UPDATE mercancia
-    SET cantidad = cantidad + cant
-    WHERE id_pro = id_mer;
-END$$
-
-DELIMITER ;
 DROP DATABASE beji;
+SET SQL_SAFE_UPDATES = 0;

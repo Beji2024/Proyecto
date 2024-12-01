@@ -7,10 +7,11 @@ import { VentaRComponent } from "./venta-r/venta-r.component";
 import { ConsultaVComponent } from "./consulta-v/consulta-v.component";
 import { DevolucionesComponent } from "./devoluciones/devoluciones.component";
 import { PedidoComponent } from "./pedido/pedido.component";
+import { PrincipalComponent } from "./principal/principal.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent, ConsultaVComponent, DevolucionesComponent, PedidoComponent],
+  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent, ConsultaVComponent, DevolucionesComponent, PedidoComponent, PrincipalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

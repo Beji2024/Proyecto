@@ -22,6 +22,9 @@ CREATE TABLE proveedores(
   correo VARCHAR(40)
 );
 
+ALTER TABLE proveedores
+ADD COLUMN precio double;
+
 -- Tabla estado
 CREATE TABLE estado(
   idestado INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,6 +37,7 @@ CREATE TABLE categoria(
   nom_cat VARCHAR(25)
 );
 
+-- Tabla de alertas
 CREATE TABLE alertas_inventario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_pro INT,                       
@@ -50,7 +54,7 @@ CREATE TABLE usuario(
   apellidos VARCHAR(50),
   direccion VARCHAR(50),
   correo VARCHAR(45),
-  num_tel VARCHAR(20),  -- Cambié a VARCHAR para poder almacenar más formatos
+  num_tel VARCHAR(20), 
   fec_nac DATE,
   t_doc INT,
   rol INT,
@@ -72,7 +76,7 @@ CREATE TABLE ventas(
   fec_ven DATE,
   nom_com VARCHAR(50),
   correo VARCHAR(45),
-  telefono VARCHAR(20),  -- Cambié a VARCHAR para poder almacenar más formatos
+  telefono VARCHAR(20), 
   direccion VARCHAR(45),
   ven_usu INT,
   CONSTRAINT fk_ven_usu FOREIGN KEY (ven_usu) REFERENCES usuario(num_doc)
@@ -128,7 +132,7 @@ CREATE TABLE pedido(
 CREATE TABLE detalle_ven(
   id_detven INT AUTO_INCREMENT PRIMARY KEY, 
   cantidad TINYINT(2),
-  precio_uni DECIMAL(10,2),  -- Cambié a DECIMAL para mayor precisión
+  precio_uni DECIMAL(10,2),
   precio_tt DECIMAL(10,2),  
   det_v_ven INT,
   det_v_mer INT,

@@ -11,10 +11,17 @@ BEGIN
     DECLARE iterador INT DEFAULT 0;
     DECLARE num_productos INT;
     DECLARE proveedor_existe INT;
+    DECLARE precio_compra double;
     
     SELECT COUNT(*) INTO proveedor_existe
     FROM proveedores
-    WHERE nit = ped_prov;
+    WHERE nit = ped_prov
+    LIMIT 1;
+    
+    SELECT precio INTO precio_compra
+        FROM proveedores
+       WHERE nit = ped_prov
+        LIMIT 1; 
     
     IF proveedor_existe = 0 THEN
 		SELECT '¡Atención! El proveedor con el ID proporcionado no existe' AS mensaje_alerta;
@@ -31,7 +38,7 @@ BEGIN
         SET cant = JSON_UNQUOTE(JSON_EXTRACT(productos, CONCAT('$[', iterador, '].cantidad')));
 
         INSERT INTO detalle_ped (cantidad, det_p_mer, det_p_ped, precio_uni, precio_tt)
-        SELECT cant, id_pro, idpedido, m.precio_compra, m.precio_compra * cant
+        SELECT cant, id_pro, idpedido, precio_compra, precio_compra * cant
         FROM mercancia m WHERE m.id_pro = idpro;
         SET iterador = iterador + 1;
     END WHILE;

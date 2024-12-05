@@ -11,12 +11,14 @@ import { PrincipalComponent } from "./principal/principal.component";
 import { ProductosComponent } from './productos/productos.component';
 import { CategoriasComponent } from "./categorias/categorias.component";
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
+import { ProveedoresComponent } from "./proveedores/proveedores.component";
+import { RegproveedoresComponent } from "./regproveedores/regproveedores.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent, 
-    ConsultaVComponent, DevolucionesComponent, PedidoComponent, PrincipalComponent, 
-    ProductosComponent, CategoriasComponent,IniciarsesionComponent],
+  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent,
+    ConsultaVComponent, DevolucionesComponent, PedidoComponent, PrincipalComponent,
+    ProductosComponent, CategoriasComponent, IniciarsesionComponent, ProveedoresComponent, RegproveedoresComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

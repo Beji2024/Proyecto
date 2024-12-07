@@ -16,7 +16,7 @@ import { RegproveedoresComponent } from "./regproveedores/regproveedores.compone
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent,
+  imports: [RouterOutlet,HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent,
     ConsultaVComponent, DevolucionesComponent, PedidoComponent, PrincipalComponent,
     ProductosComponent, CategoriasComponent, IniciarsesionComponent, ProveedoresComponent, RegproveedoresComponent],
   templateUrl: './app.component.html',
@@ -25,3 +25,4 @@ import { RegproveedoresComponent } from "./regproveedores/regproveedores.compone
 export class AppComponent {
   title = 'Angular';
 }
+

@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 
 @Component({
-  selector: 'app-body',
-  standalone: true,
+  selector: 'app-proveditar',
   imports: [HeaderComponent],
-  templateUrl: './body.component.html',
-  styleUrl: './body.component.css'
+  templateUrl: './proveditar.component.html',
+  styleUrl: './proveditar.component.css'
 })
-export class BodyComponent {
+export class ProveditarComponent {
 
 }

@@ -7,6 +7,7 @@ import { VentaRComponent } from './venta-r/venta-r.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ProductosComponent } from './productos/productos.component';
 import { RegproveedoresComponent } from './regproveedores/regproveedores.component';
+import { ProveditarComponent } from './proveditar/proveditar.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'iniciarsesion', pathMatch: 'full'},
@@ -16,7 +17,8 @@ export const routes: Routes = [
     {path: 'proveedores', component:ProveedoresComponent},
     {path: 'venta-r', component:VentaRComponent},
     {path:'productos',component:ProductosComponent},
-    {path: 'regproveedores', component:RegproveedoresComponent}
+    {path: 'regproveedores', component:RegproveedoresComponent},
+    {path:'proveditar',component:ProveditarComponent}
 
         
 ]

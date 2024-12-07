@@ -3,17 +3,22 @@ import { Router, RouterOutlet } from '@angular/router';
 import { ProveedoresComponent } from '../proveedores/proveedores.component';
 import { VentaRComponent } from '../venta-r/venta-r.component';
 import { UsuarioComponent } from '../usuario/usuario.component';
+import { ProductosComponent } from '../productos/productos.component';
 
 export const Routes = {
   
   Usuario: '/usuario',
   Proveedores: '/proveedores',
-  Venta: '/venta-r'
+  Venta: '/venta-r',
+  Producto:'/productos'
 };
 
 @Component({
   selector: 'app-principal',
-  imports: [RouterOutlet,ProveedoresComponent,VentaRComponent,PrincipalComponent,UsuarioComponent],
+  imports: [RouterOutlet,ProveedoresComponent,VentaRComponent,PrincipalComponent,UsuarioComponent,
+    ProductosComponent
+  ],
+
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
@@ -30,5 +35,9 @@ export class PrincipalComponent {
 
   navigateToVenta(): void {
     this.router.navigate([Routes.Venta]);
+  }
+
+  navigateToProductos(): void {
+    this.router.navigate([Routes.Producto]);
   }
 }

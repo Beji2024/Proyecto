@@ -1,29 +1,32 @@
 
-    <div class="d-flex justify-content-between align-items-center mt-5 " >
+   <app-header></app-header>
+
+   <div class="d-flex justify-content-between align-items-center mt-5 " >
         <div class="col-md-4 d-flex justify-content-center align-items-center shadow ms-5 w-30">
              <img class="img-fluid w-75" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg048tD35--JnGN6JtGj5VIqGLV_GnhEmjuA&s" alt="image" h-70>
         </div>
+
         <div class=" w-50 aling-left ms-rigth mx-auto shadow"  >
               <div class="w-75 mx-auto mt-3 mb-3">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Nombres</span>
-                  <input type="text" aria-label="First name" class="form-control">
+                  <input type="text" aria-label="First name" class="form-control" required>
               </div>
               <div class="input-group mb-3">
                   <span class="input-group-text">Direccion</span>
-                  <input type="text" aria-label="Direccion" class="form-control">
+                  <input type="text" aria-label="Direccion" class="form-control" required>
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text">Correo</span>
-                  <input type="email" aria-label="Correo" class="form-control">
+                  <input type="email" aria-label="Correo" class="form-control" required>
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text">Numero de contacto</span>
-                  <input type="number" aria-label="Numero telefono" class="form-control">
+                  <input type="number" aria-label="Numero telefono" class="form-control" required>
                 </div>
                <div class="input-group mb-3"> 
                   <span class="input-group-text">Tipo de documento</span>
-                  <select class="form-select" aria-label="Tipo de documento">
+                  <select class="form-select" aria-label="Tipo de documento" required>
                     <option value="1">Cedula de ciudadania</option>
                     <option value="2">Tarjeta de identidad</option>
                     <option value="3">Pasaporte</option>
@@ -31,16 +34,46 @@
                </div>
                <div class="input-group mb-3">
                   <span class="input-group-text">Numero de documento</span>
-                  <input type="number" aria-label="Numero documento" class="form-control">
+                  <input type="number" aria-label="Numero documento" class="form-control" required>
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text">Fecha de nacimiento</span>
-                  <input type="date" aria-label="Fecha de nacimiento" class="form-control">
+                  <input type="date" aria-label="Fecha de nacimiento" class="form-control" required>
                 </div>
+
+                
                 <div class="col-auto d-flex justify-content-center">
-                  <button type="submit" class="btn btn-success ">Registrar</button>
+                  <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrar</button>
+                </div>
+                <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea registrar el nuevo usuario?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <h1 class="modal-title fs-5"> Registro exitoso</h1>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
         </div>
     </div>
 
+
+    
+    

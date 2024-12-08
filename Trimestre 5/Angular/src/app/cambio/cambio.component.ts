@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 
 @Component({
-  selector: 'app-content',
+  selector: 'app-cambio',
   imports: [HeaderComponent],
-  templateUrl: './content.component.html',
-  styleUrl: './content.component.css'
+  templateUrl: './cambio.component.html',
+  styleUrl: './cambio.component.css'
 })
-export class ContentComponent {
+export class CambioComponent {
 
 }

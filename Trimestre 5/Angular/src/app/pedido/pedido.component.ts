@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-pedido',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './pedido.component.html',
   styleUrl: './pedido.component.css'
 })

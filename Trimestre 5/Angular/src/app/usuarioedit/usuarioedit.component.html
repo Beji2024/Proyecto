@@ -2,40 +2,50 @@
 
 <div class=" w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5"  >
     <div class=" d-flex justify-content-center align-items-center h-25">
-        <h4 class="text-center mt-4 mb-0">Registro de venta</h4>
+        <h4 class="text-center mt-4 mb-0">Actualizar datos de usuarios</h4>
     </div>
     <div class="w-75 mx-auto mt-3 mb-0">
+        <fieldset disabled="disabled">
       <div class="input-group mb-3 ">
-        <span class="input-group-text mt-4">Nombre de cliente</span>
-        <input type="text" aria-label="First name" class="form-control mt-4">
+        <span class="input-group-text mt-4">Nombres</span>
+        <input type="text" aria-label="nombres" class="form-control mt-4" placeholder="PL">
     </div>
+</fieldset>
     <div class="input-group mb-3">
-        <span class="input-group-text">Direccion de residencia</span>
-        <input type="text" aria-label="Direccion" class="form-control">
+        <span class="input-group-text">Direccion</span>
+        <input type="text" aria-label="direccion" class="form-control" placeholder="CL 35-34">
       </div>
       <div class="input-group mb-3">
         <span class="input-group-text">Correo</span>
-        <input type="email" aria-label="Correo" class="form-control">
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text">Numero de contacto</span>
-        <input type="number" aria-label="Numero telefono" class="form-control">
+        <input type="email" aria-label="correo" class="form-control" placeholder="PLgmail.com">
       </div>
      <div class="input-group mb-3">
-        <span class="input-group-text">Numero de documento</span>
-        <input type="number" aria-label="Numero documento" class="form-control">
+        <span class="input-group-text">Numero de contacto</span>
+        <input type="number" aria-label="numerocontanto" class="form-control" placeholder="345678904">
       </div>
+      <fieldset disabled="disabled">
       <div class="input-group mb-3">
-        <span class="input-group-text">Codigo de zapato</span>
-        <input type="number" aria-label="Codigo numero" class="form-control">
+        <span class="input-group-text">Numero de documento</span>
+        <input type="number" aria-label="numerodocumento" class="form-control" placeholder="1038736289">
+      </div>
+      </fieldset>
+      <fieldset disabled="disabled">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Fecha de nacimiento</span>
+        <input type="text" aria-label="fechanaci" class="form-control" placeholder="7/10/1900">
+      </div>
+      </fieldset>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Cargo</span>
+        <input type="text" aria-label="cargo" class="form-control" placeholder="Administrador">
       </div>
       <div class="col-auto d-flex justify-content-center ">
-        <button class="btn btn-success mb-5 shadow" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrar</button>
+        <button class="btn btn-success mb-5 shadow" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Actualizar</button>
         <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea registrar la venta?</h1>
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea actualizar los datos del usuario?</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-footer">
@@ -51,10 +61,11 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h1 class="modal-title fs-5">Registro de venta exitoso</h1>
+                    <h1 class="modal-title fs-5">Actualizacion Exitosa</h1>
                 </div>
               </div>
             </div>
           </div>
       </div>
     </div>
+</div>

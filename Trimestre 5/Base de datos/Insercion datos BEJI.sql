@@ -13,10 +13,6 @@ INSERT INTO rol VALUES(3,'VENDEDOR');
 CALL PA_insertar_proveedores (104, 'super calzado', 'calle 80 #11-11', 321054867, 'super@gmail.com',189.99);
 CALL PA_insertar_proveedores(102, 'mundo calzado', 'calle 140 #88-13',424255341 ,'mundocalzado@hotmail.com',255.990);
 CALL PA_insertar_proveedores(103, 'calzado real', 'calle 1 #19-33', 555123456, 'realcalzado@hotmail.com',320.450);
--- actualizar un dato
-UPDATE proveedores
-SET precio = 150000
-WHERE nit = 103;
 
 -- insercion tabla estado
 INSERT INTO estado VALUES(1,'ENVIADO');
@@ -63,11 +59,9 @@ WHERE id_pro = 106;
 CALL PA_realizar_pedido(now(),104, 15482459, '[{"id_pro":3, "cantidad": 10}]');
 
 -- insercion tabla ventas now() fecha, nombre y apellido, correo, cel, direccion,cc del vendedor, productos
-call PA_ventas(now(),'kevin quintero','kel@hotmail.com','3114569874','diagonal 62',10325644,'[{"id_pro": 1, "cantidad": 7}]');
+call PA_ventas(now(),'andres rodrigez','ande-3@hotmail.com','3748234566','calle 22',10325644,'[{"id_pro": 1, "cantidad": 21}]');
 
 -- funcion para ver el stock disponible
 select F_stock_disponible(101);
 
 -- insercion tabla 
-
-CALL PA_historial('2024-11-30', '2024-12-31');

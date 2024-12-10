@@ -31,6 +31,9 @@ import { MujerdeComponent } from './subcates/mujerde/mujerde.component';
 import { MujerplaComponent } from './subcates/mujerpla/mujerpla.component';
 import { NonoesComponent } from './subcates/nonoes/nonoes.component';
 import { NinopanComponent } from './subcates/ninopan/ninopan.component';
+import { BodyComponent } from './body/body.component';
+import { TablabodyComponent } from './tablabody/tablabody.component';
+
 export const routes: Routes = [
     {path: '', redirectTo: 'iniciarsesion', pathMatch: 'full'},
     {path:'iniciarsesion',component:IniciarsesionComponent},
@@ -64,6 +67,10 @@ export const routes: Routes = [
     {path:'productos/mujer-plataformas',component:MujerplaComponent},
     {path:'productos/niño-escolar',component:NonoesComponent},
     {path:'productos/niño-pantaneras',component:NinopanComponent}
+    {path:'informes',component:BodyComponent},
+    {path:'tablainf',component:TablabodyComponent}
+
+
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],  // Asegúrate de usar RouterModule.forRoot

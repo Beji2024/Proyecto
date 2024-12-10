@@ -1,4 +1,4 @@
-.d-flex.justify-content-between.bg-primary {
+.bg-morado {
     background-color: #a30dda !important;
   }
 .text-center{
@@ -10,8 +10,6 @@
   }
 
 h2 {
-  margin-top: 40px;
-    margin-right: 95px;
     text-shadow: 
       2px 2px 0 black,
       -2px -2px 0 black,

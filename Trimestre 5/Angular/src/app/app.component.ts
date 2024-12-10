@@ -13,12 +13,16 @@ import { CategoriasComponent } from "./categorias/categorias.component";
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
 import { ProveedoresComponent } from "./proveedores/proveedores.component";
 import { RegproveedoresComponent } from "./regproveedores/regproveedores.component";
+import { SubcategoriasComponent } from "./subcategorias/subcategorias.component";
+import { HombreComponent } from "./hombre/hombre.component";
+import { MujerComponent } from "./mujer/mujer.component";
+import { NinoComponent } from "./nino/nino.component";
 
 @Component({
   selector: 'app-root',
   imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent,
     ConsultaVComponent, DevolucionesComponent, PedidoComponent, PrincipalComponent,
-    ProductosComponent, CategoriasComponent, IniciarsesionComponent, ProveedoresComponent, RegproveedoresComponent],
+    ProductosComponent, CategoriasComponent, IniciarsesionComponent, ProveedoresComponent, RegproveedoresComponent, SubcategoriasComponent, HombreComponent, MujerComponent, NinoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,29 +1,15 @@
 <div class="website">
     <div class="container mt-5">
-        <h2>Formulario de Categorías</h2>
+        <h2>Crear Nueva Categoría</h2>
         <form>
-            <!-- Categoría -->
             <div class="mb-3 row">
-                <label for="categoria" class="col-sm-2 col-form-label">Categorías</label>
+                <label for="subcategoria" class="col-sm-2 col-form-label">Nombre de la categoría</label>
                 <div class="col-sm-10">
-                    <select class="form-select" id="categoria" required>
-                        <option value="" disabled selected>Seleccione una categoría</option>
-                        <option value="Hombre">Hombre</option>
-                        <option value="Mujer">Mujer</option>
-                        <option value="Niño">Niño</option>
-                    </select>
+                    <input type="text" class="form-control" id="subcategoria" placeholder="Ingrese el nombre de la categoría" required>
                 </div>
             </div>
 
-            <!-- Nombre de la subcategoría -->
-            <div class="mb-3 row">
-                <label for="subcategoria" class="col-sm-2 col-form-label">Nombre de la Subcategoría</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="subcategoria" placeholder="Ingrese el nombre de la subcategoría" required>
-                </div>
-            </div>
-
-            <!-- Botón de Crear -->
+            
             <div class="row">
                 <div class="col-sm-10 offset-sm-2">
                     <button type="submit" class="btn btn-primary">Crear</button>

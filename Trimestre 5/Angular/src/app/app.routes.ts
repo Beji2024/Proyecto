@@ -66,7 +66,7 @@ export const routes: Routes = [
     {path:'productos/mujer-deportivo',component:MujerdeComponent},
     {path:'productos/mujer-plataformas',component:MujerplaComponent},
     {path:'productos/niño-escolar',component:NonoesComponent},
-    {path:'productos/niño-pantaneras',component:NinopanComponent}
+    {path:'productos/niño-pantaneras',component:NinopanComponent},
     {path:'informes',component:BodyComponent},
     {path:'tablainf',component:TablabodyComponent}
 

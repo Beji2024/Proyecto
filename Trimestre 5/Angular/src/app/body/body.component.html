@@ -1,7 +1,8 @@
-<div class="d-flex justify-content-center align-items-center " style="height: 100vh;">
-    <div class="bg-morado text-white p-4 text-center" style="width: 50%;">
-        <h1>Menu</h1>
-        <div class="mb-3">
+<app-header></app-header>
+<div class=" bg-morado w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5" >
+    <div class=" w-50 text-center p-4 mx-auto ">
+        <h2 class="mb-2 mt-4">Menu</h2>
+        <div class="d-flex justify-content-center align-items-center h-25">
             <label for="exampleSelect"></label>
             <select class="form-select" id="exampleSelect">
               <option selected>Selecciona...</option>
@@ -11,18 +12,18 @@
             </select>
           </div>
 
-        <h1>Fecha Inicio</h1>
+        <h2 class=" mt-4">Fecha Inicio</h2>
         <div class="mb-3">
             <label for="exampleDate" class="form-label"></label>
             <input type="date" class="form-control" id="exampleDate">
           </div>
-        <h1>Fecha Final</h1>
+        <h2 class="mt-4">Fecha Final</h2>
         <div class="mb-3">
             <label for="exampleDate" class="form-label"></label>
             <input type="date" class="form-control" id="exampleDate">
           </div>
           <div class="m-3">
-            <h1><input type="submit" class="btn btn-primary" value="Enviar"></h1>
+            <h1><input type="submit" class="btn btn-success" value="Enviar" (click)="navigateToTabla()"></h1>
           </div>        
 
     </div>

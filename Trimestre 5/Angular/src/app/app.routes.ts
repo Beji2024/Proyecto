@@ -15,6 +15,8 @@ import { VentaComponent } from './venta/venta.component';
 import { ConsultaVComponent } from './consulta-v/consulta-v.component';
 import { DevolucionesComponent } from './devoluciones/devoluciones.component';
 import { CambioComponent } from './cambio/cambio.component';
+import { BodyComponent } from './body/body.component';
+import { TablabodyComponent } from './tablabody/tablabody.component';
 export const routes: Routes = [
     {path: '', redirectTo: 'iniciarsesion', pathMatch: 'full'},
     {path:'iniciarsesion',component:IniciarsesionComponent},
@@ -31,7 +33,9 @@ export const routes: Routes = [
     {path: 'venta', component:VentaComponent},
     {path:'consultar-v',component:ConsultaVComponent},
     {path:'devoluciones',component:DevolucionesComponent},
-    {path:'cambio',component:CambioComponent}
+    {path:'cambio',component:CambioComponent},
+    {path:'informes',component:BodyComponent},
+    {path:'tablainf',component:TablabodyComponent}
 
 ]
 @NgModule({

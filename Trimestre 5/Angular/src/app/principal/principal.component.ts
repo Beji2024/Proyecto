@@ -6,21 +6,22 @@ import { UsuarioComponent } from '../usuario/usuario.component';
 import { ProductosComponent } from '../productos/productos.component';
 import { HeaderComponent } from "../header/header.component";
 import { PedidoComponent } from '../pedido/pedido.component';
+import { IniciarsesionComponent } from '../iniciarsesion/iniciarsesion.component';
 
 export const Routes = {
   
   Usuario: '/usuario',
   Proveedores: '/proveedores',
-  Ventar: '/venta-r',
+  Informes: '/informes',
   Producto:'/productos',
   Pedido: '/pedido',
   Venta: '/venta',
+  Iniciar: '/iniciarsesion',
 };
 
 @Component({
   selector: 'app-principal',
-  imports: [RouterOutlet, ProveedoresComponent, VentaRComponent, PrincipalComponent, UsuarioComponent,
-    ProductosComponent, HeaderComponent,PedidoComponent],
+  imports: [RouterOutlet],
 
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
@@ -36,8 +37,8 @@ export class PrincipalComponent {
     this.router.navigate([Routes.Proveedores]);
   }
 
-  navigateToVentar(): void {
-    this.router.navigate([Routes.Ventar]);
+  navigateToInformes(): void {
+    this.router.navigate([Routes.Informes]);
   }
 
   navigateToProductos(): void {
@@ -49,5 +50,8 @@ export class PrincipalComponent {
   }
   navigateToVenta(): void {
     this.router.navigate([Routes.Venta]);
+  }
+  navigateIniciar(): void {
+    this.router.navigate([Routes.Iniciar]);
   }
 }

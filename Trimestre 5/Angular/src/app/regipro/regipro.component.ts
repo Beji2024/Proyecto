@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 
 @Component({
-  selector: 'app-nino',
+  selector: 'app-regipro',
   imports: [HeaderComponent],
-  templateUrl: './nino.component.html',
-  styleUrl: './nino.component.css'
+  templateUrl: './regipro.component.html',
+  styleUrl: './regipro.component.css'
 })
-export class NinoComponent {
+export class RegiproComponent {
 
 }

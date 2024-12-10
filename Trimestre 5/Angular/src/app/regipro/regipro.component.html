@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <h2 class="mb-4">Registrar Producto</h2>
+    <form id="modificarProductoForm">
+      
+      <div class="mb-3">
+        <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+        <input type="text" class="form-control" id="nombreProducto" placeholder="Ingrese el nombre del producto" required />
+      </div>
+  
+      
+      <div class="mb-3">
+        <label for="categoriaProducto" class="form-label">Categoría</label>
+        <select class="form-select" id="categoriaProducto" required>
+          <option value="" disabled selected>Seleccione una categoría</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Niño">Niño</option>
+        </select>
+      </div>
+  
+      
+      <div class="mb-3">
+        <label for="subcategoriaProducto" class="form-label">Subcategoría</label>
+        <select class="form-select" id="subcategoriaProducto" required>
+          <option value="" disabled selected>Seleccione una subcategoría</option>
+          <option value="Calzado">Elegante</option>
+          <option value="Ropa">Guayos</option>
+          <option value="Accesorios">Plataformas</option>
+          <option value="Accesorios">Pantaneras</option>
+          <option value="Accesorios">Escolar</option>
+          <option value="Accesorios">Deportivo</option>
+        </select>
+      </div>
+  
+      
+      <div class="mb-3">
+        <label for="cantidadProducto" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" id="cantidadProducto" placeholder="Ingrese la cantidad disponible" required />
+      </div>
+  
+      
+      <div class="mb-3">
+        <label for="precioProducto" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="precioProducto" placeholder="Ingrese el precio del producto" required />
+      </div>
+  
+      
+      <button type="submit" class="btn btn-primary">Crear</button>
+    </form>
+  </div>

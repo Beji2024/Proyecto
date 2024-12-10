@@ -1,0 +1,401 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <h2 class="mb-4">Gestión de Productos</h2>
+    <button type="button" class="btn btn-primary" style="margin: 10px;" (click)="navigatecrear()" >Registrar producto</button>
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre del Producto</th>
+          <th>Categoría</th>
+          <th>Subcategoría</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <td>1</td>
+          <td>hombre, deportivo</td>
+          <td>Hombre</td>
+          <td>Deportivo</td>
+          <td>15</td>
+          <td>$00.0</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="navigatemodificar()">
+              Modificar
+            </button>
+            <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Hombre, guayos</td>
+          <td>Hombre</td>
+          <td>Guayos</td>
+          <td>25</td>
+          <td>$00.0</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="navigatemodificar()">
+              Modificar
+            </button>
+            <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>Hombre, elegante</td>
+            <td>Hombre</td>
+            <td>Elegante</td>
+            <td>10</td>
+            <td>$00.0</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2" (click)="navigatemodificar()" >
+                Modificar
+              </button>
+              <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>4</td>
+            <td>Mujer, deportivo</td>
+            <td>Mujer</td>
+            <td>Deportivo</td>
+            <td>17</td>
+            <td>$00.0</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2"  (click)="navigatemodificar()">
+                Modificar
+              </button>
+              <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Mujer, elegante</td>
+            <td>Mujer</td>
+            <td>Elegante</td>
+            <td>10</td>
+            <td>$00.0</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2"  (click)="navigatemodificar()">
+                Modificar
+              </button>
+              <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Mujer, plataformas</td>
+            <td>Mujer</td>
+            <td>Plataformas</td>
+            <td>12</td>
+            <td>$00.0</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2" (click)="navigatemodificar()">
+                Modificar
+              </button>
+              <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Niño, escolar</td>
+            <td>Niño</td>
+            <td>Escolar</td>
+            <td>18</td>
+            <td>$00.0</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2" (click)="navigatemodificar()" >
+                Modificar
+              </button>
+              <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>Niño, pantaneras</td>
+            <td>Niño</td>
+            <td>Pantaneras</td>
+            <td>21</td>
+            <td>$00.0</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2" (click)="navigatemodificar()" >
+                Modificar
+              </button>
+              <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>Niño</td>
+            <td>Niño</td>
+            <td>All</td>
+            <td>18</td>
+            <td>$00.0</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2" (click)="navigatemodificar()">
+                Modificar
+              </button>
+              <div class="btn  btn-sm">
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Eliminar</button>
+              </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar este producto?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="modal-title fs-5"> Producto eliminado con éxito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+  </div>
+  

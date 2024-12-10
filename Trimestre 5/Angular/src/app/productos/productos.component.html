@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="categorias">
     <nav class="navbar navbar-expand  bg-primary" data-bs-theme="dark" style="color: white; padding-left:60px ; padding-right: 80px;">
     
@@ -8,8 +9,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item" style="scale: 1.1; color: white; background-color: blue; border-radius: 10px;">
-                <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+              <li class="nav-item" style="scale: 1.1; color: white; background-color: blue; border-radius: 10px;" >
+                <a class="nav-link active" aria-current="page" href="/productos"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
               </li>
               
               <li class="nav-item dropdown">
@@ -17,10 +18,11 @@
                   Mujer
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Sport</a></li>
-                  <li><a class="dropdown-item" href="#">Guayos</a></li>
-                  <li><a class="dropdown-item" href="#">Plataformas</a></li>
-                  <li><a class="dropdown-item" href="#">Elegante</a></li>
+                  <li><a class="dropdown-item" href="/productos/mujer">All</a></li>
+                  <li><a class="dropdown-item" href="/productos/mujer-deportivo">Sport</a></li>
+                 
+                  <li><a class="dropdown-item" href="/productos/mujer-plataformas">Plataformas</a></li>
+                  <li><a class="dropdown-item" href="/productos/mujer-elegante">Elegante</a></li>
                   
                   
                 </ul>
@@ -30,10 +32,11 @@
                   Hombre
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Sport</a></li>
-                  <li><a class="dropdown-item" href="#">Guayos</a></li>
-                  <li><a class="dropdown-item" href="#">Plataformas</a></li>
-                  <li><a class="dropdown-item" href="#">Elegante</a></li>
+                  <li><a class="dropdown-item" href="/productos/hombre">All</a></li>
+                  <li><a class="dropdown-item" href="/productos/hombre-deportivo">Sport</a></li>
+                  <li><a class="dropdown-item" href="/productos/hombre-guayos">Guayos</a></li>
+                  
+                  <li><a class="dropdown-item" href="/productos/hombre-elegante">Elegante</a></li>
                   
                   
                 </ul>
@@ -43,10 +46,11 @@
                   Niño
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Pantaneras</a></li>
-                  <li><a class="dropdown-item" href="#">Guayos</a></li>
-                  <li><a class="dropdown-item" href="#">Escolar</a></li>
-                  <li><a class="dropdown-item" href="#">Elegante</a></li>
+                  <li><a class="dropdown-item" href="/productos/niño">All</a></li>
+                  <li><a class="dropdown-item" href="/productos/niño-pantaneras">Pantaneras</a></li>
+                  
+                  <li><a class="dropdown-item" href="/productos/niño-escolar">Escolar</a></li>
+                  
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -54,9 +58,9 @@
                     <i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-start">
-                  <li><a class="dropdown-item" href="#">Nueva categoría</a></li>
-                  <li><a class="dropdown-item" href="#">Nueva subcategoria</a></li>
-                  <li><a class="dropdown-item" href="#">Gestión de productos</a></li>
+                  <li><a class="dropdown-item" href="/productos/new-categoria">Nueva categoría</a></li>
+                  <li><a class="dropdown-item" href="/productos/new-subcategoria">Nueva subcategoria</a></li>
+                  <li><a class="dropdown-item" href="/productos/gestión">Gestión de productos</a></li>
                   
                 </ul>
               </li>
@@ -74,7 +78,7 @@
 </div>
 <div class="website">
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/deportivo_mujer.jpeg" class="card-img-top" alt="">
+        <img src="img/deportivo_mujer.jpeg" class="card-img-top" >
         <div class="card-body">
         <h5 class="card-title">Mujer, deportivo</h5>
         <p class="card-text">0.00$</p>
@@ -83,7 +87,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/elegante_mujer.jpg" class="card-img-top" alt="">
+        <img src="img/elegante_mujer.jpg" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Mujer, elegante</h5>
         <p class="card-text">0.00$</p>
@@ -92,7 +96,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/niño.avif" class="card-img-top" alt="">
+        <img src="img/niño.avif" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Niño</h5>
         <p class="card-text">0.00$</p>
@@ -101,7 +105,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/deportivo_hombre.jpg" class="card-img-top" alt="">
+        <img src="img/deportivo_hombre.jpg" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Hombre, deportivo</h5>
         <p class="card-text">0.00$</p>
@@ -110,7 +114,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/niño_escolar.avif" class="card-img-top" alt="">
+        <img src="img/niño_escolar.avif" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Niño, escolar</h5>
         <p class="card-text">0.00$</p>
@@ -119,7 +123,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/guayos_hombre.jpg" class="card-img-top" alt="">
+        <img src="img/guayos_hombre.jpg" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Hombre, guayos</h5>
         <p class="card-text">0.00$</p>
@@ -128,7 +132,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/plataforma_mujer.jpeg" class="card-img-top" alt="">
+        <img src="img/plataforma_mujer.jpeg" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Mujer, plataformas</h5>
         <p class="card-text">0.00$</p>
@@ -137,7 +141,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/pantaneras_niño.webp" class="card-img-top" alt="">
+        <img src="img/pantaneras_niño.webp" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Niño, pantaneras</h5>
         <p class="card-text">0.00$</p>
@@ -146,7 +150,7 @@
     </div>
 
     <div class="card" style="width: 18rem; height: 25rem;">
-        <img src="/public/img/elegante_hombre.jpeg" class="card-img-top" alt="">
+        <img src="img/elegante_hombre.jpeg" class="card-img-top" alt="">
         <div class="card-body">
         <h5 class="card-title">Hombre, elegante</h5>
         <p class="card-text">0.00$</p>

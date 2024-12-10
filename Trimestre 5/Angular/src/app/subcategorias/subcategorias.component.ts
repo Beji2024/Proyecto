@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-subcategorias',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './subcategorias.component.html',
   styleUrl: './subcategorias.component.css'
 })

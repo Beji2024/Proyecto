@@ -1,4 +1,5 @@
 
+<app-header/>
 <div class="navbar">
     <div class="container-fluid">
         <h1>DATOS PROVEEDORES</h1>
@@ -10,7 +11,7 @@
 </div>
 <div class="container-fluid">
     <div class="mb-4">
-    <a href="registrouser.html" class="btn btn-success">
+    <a class="btn btn-success" (click)="navigateToRegproveedores()">
         <img src="img/boton-mas.png" alt="Registrar" height="20px"> Registrar
     </a>
 </div>
@@ -40,7 +41,7 @@
                 <td>Nike</td>
                 <td>300000</td>
                 <td>
-                    <a href="editar.html" class="btn btn-info" >Editar</a> /
+                    <a class="btn btn-info" (click)="navigateToProveditar()">Editar</a> /
                     <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button>
                     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">
@@ -157,7 +158,7 @@
                 <td>Praga</td>
                 <td>600000</td>
                 <td>
-                    <a href="editar.html" class="btn btn-info" >Editar</a> /
+                    <a href="editar.html" class="btn btn-info" >Editar</a> 
                     <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button>
                     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">

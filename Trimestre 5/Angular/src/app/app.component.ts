@@ -20,7 +20,7 @@ import { NinoComponent } from "./nino/nino.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent,
+  imports: [RouterOutlet,HeaderComponent, ContentComponent, UsuarioComponent, VentaRComponent,
     ConsultaVComponent, DevolucionesComponent, PedidoComponent, PrincipalComponent,
     ProductosComponent, CategoriasComponent, IniciarsesionComponent, ProveedoresComponent, RegproveedoresComponent, SubcategoriasComponent, HombreComponent, MujerComponent, NinoComponent],
   templateUrl: './app.component.html',
@@ -29,3 +29,4 @@ import { NinoComponent } from "./nino/nino.component";
 export class AppComponent {
   title = 'Angular';
 }
+

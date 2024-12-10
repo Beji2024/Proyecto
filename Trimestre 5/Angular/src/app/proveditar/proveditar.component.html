@@ -1,0 +1,78 @@
+<app-header></app-header>
+<div class="container mt-5 shadow">
+    <fieldset class=" p-4">
+        <h1>DATOS PROVEEDORES</h1>
+        <form>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label for="nombreProveedor" class="form-label">Nombre del proveedor</label>
+                    <input type="text" id="nombreProveedor" class="form-control" placeholder="Super Calzado" disabled>
+                </div>
+                <div class="col-md-3">
+                    <label for="nitProveedor" class="form-label">Nit proveedor</label>
+                    <input type="number" id="nitProveedor" class="form-control" placeholder="6425148" disabled>
+                </div>
+                <div class="col-md-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="number" id="telefono" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="correo" class="form-label">Correo</label>
+                    <input type="email" id="correo" class="form-control" value="@">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" id="direccion" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="producto" class="form-label">Producto</label>
+                    <input type="text" id="producto" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="marca" class="form-label">Marca</label>
+                    <input type="text" id="marca" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="valorUnitario" class="form-label">Valor unitario</label>
+                    <input type="number" id="valorUnitario" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 text-end">
+                    <a>
+                        <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Actualizar</button>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea actualizar el proveedor?</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confrimar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title fs-5">!Actualizacion Exitosa¡</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</div>

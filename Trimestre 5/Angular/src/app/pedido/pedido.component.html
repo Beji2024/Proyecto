@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <div class=" w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5"  >
     <div class=" d-flex justify-content-center align-items-center h-25">
         <h4 class="text-center mt-4 mb-0">Solicitud de pedido</h4>
@@ -53,7 +55,32 @@
         <input type="number" aria-label="Proveedor" class="form-control">
       </div>
       <div class="col-auto d-flex justify-content-center ">
-        <button type="submit" class="btn btn-success mb-5 shadow ">Solicitar</button>
+        <button class="btn btn-success mb-5 shadow " data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Solicitar</button>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea realizar la solicitud?</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title fs-5">Solicitud realizada</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
       </div>
     </div>
 </div>

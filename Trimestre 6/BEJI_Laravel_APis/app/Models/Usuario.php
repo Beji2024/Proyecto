@@ -23,6 +23,9 @@ class Usuario extends Authenticatable
         'tipodoc',
         'rol',
     ];
+    protected $hidden =[
+        'password',
+    ];
 
     // Relación con el modelo TipoDoc si aplica
     public function tipoDoc()
@@ -33,6 +36,6 @@ class Usuario extends Authenticatable
     // Relación con el modelo Rol (tabla 'rols')
     public function rol()
     {
-        return $this->belongsTo(Rol::class, 'rol'); // FK = rol en usuarios
+        return $this->belongsTo(Rol::class, 'rol'); 
     }
 }

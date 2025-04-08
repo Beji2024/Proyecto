@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\CategoriaController;
 use App\Http\Controllers\Api\ProveedorController;
 use App\Http\Controllers\Api\EstadoController;
 use App\Http\Controllers\Api\UsuarioController;
+use Illuminate\Support\Facades\Route;
 
 //Tipo de documento
 Route::get('tipo-docs', [TipoDocController::class, 'index']);               // Listar todos

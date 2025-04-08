@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\TipoDoc;
 
+
 class TipoDocController extends Controller
 {
     public function index()

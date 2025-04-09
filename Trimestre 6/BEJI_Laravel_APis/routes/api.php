@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\ProveedorController;
 use App\Http\Controllers\Api\EstadoController;
 use App\Http\Controllers\Api\UsuarioController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthContoroller;
 
 //Tipo de documento
 Route::get('tipo-docs', [TipoDocController::class, 'index']);               // Listar todos
@@ -49,3 +50,12 @@ Route::post('usuarios', [UsuarioController::class, 'store']);
 Route::get('usuarios/{id}', [UsuarioController::class, 'show']);
 Route::put('usuarios/{id}', [UsuarioController::class, 'update']);
 Route::delete('usuarios/{id}', [UsuarioController::class, 'destroy']);
+
+
+//Ingreso
+Route::post('/login', [AuthContoroller::class, 'login']);
+
+Route::middleware(['auth:api'])->group(function () {
+Route::get('/me', [AuthContoroller::class, 'me']);
+Route::post('/logout', [AuthContoroller::class, 'logout']);
+});

@@ -6,6 +6,10 @@ use App\Http\Controllers\Api\CategoriaController;
 use App\Http\Controllers\Api\ProveedorController;
 use App\Http\Controllers\Api\EstadoController;
 use App\Http\Controllers\Api\UsuarioController;
+use App\Http\Controllers\Api\SubcategoriaController;
+use App\Http\Controllers\API\MercanciaController;
+use App\Http\Controllers\Api\PedidoController;
+use App\Http\Controllers\API\DetallePedController;
 
 //Tipo de documento
 Route::get('tipo-docs', [TipoDocController::class, 'index']);               // Listar todos
@@ -48,3 +52,31 @@ Route::post('usuarios', [UsuarioController::class, 'store']);
 Route::get('usuarios/{id}', [UsuarioController::class, 'show']);
 Route::put('usuarios/{id}', [UsuarioController::class, 'update']);
 Route::delete('usuarios/{id}', [UsuarioController::class, 'destroy']);
+
+//subcategoria
+Route::get('subcategorias', [SubcategoriaController::class, 'index']);
+Route::post('subcategorias', [SubcategoriaController::class, 'store']);
+Route::get('subcategorias/{id}', [SubcategoriaController::class, 'show']);
+Route::put('subcategorias/{id}', [SubcategoriaController::class, 'update']);
+Route::delete('subcategorias/{id}', [SubcategoriaController::class, 'destroy']);
+
+//Mercancia
+Route::get('mercancia', [MercanciaController::class, 'index']);
+Route::post('mercancia', [MercanciaController::class, 'store']);
+Route::get('mercancia/{id}', [MercanciaController::class, 'show']);
+Route::put('mercancia/{id}', [MercanciaController::class, 'update']);
+Route::delete('mercancia/{id}', [MercanciaController::class, 'destroy']);
+
+//Pedido
+Route::get('pedido', [PedidoController::class, 'index']);
+Route::post('pedido', [PedidoController::class, 'store']);
+Route::get('pedido/{id}', [PedidoController::class, 'show']);
+Route::put('pedido/{id}', [PedidoController::class, 'update']);
+Route::delete('pedido/{id}', [PedidoController::class, 'destroy']);
+
+//Detallepedido
+Route::get('detalleped', [DetallePedController::class, 'index']);
+Route::post('detalleped', [DetallePedController::class, 'store']);
+Route::get('detalleped/{id}', [DetallePedController::class, 'show']);
+Route::put('detalleped/{id}', [DetallePedController::class, 'update']);
+Route::delete('detalleped/{id}', [DetallePedController::class, 'destroy']);

@@ -10,6 +10,9 @@ use App\Http\Controllers\Api\SubcategoriaController;
 use App\Http\Controllers\API\MercanciaController;
 use App\Http\Controllers\Api\PedidoController;
 use App\Http\Controllers\API\DetallePedController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthContoroller;
+
 
 //Tipo de documento
 Route::get('tipo-docs', [TipoDocController::class, 'index']);               // Listar todos
@@ -53,6 +56,7 @@ Route::get('usuarios/{id}', [UsuarioController::class, 'show']);
 Route::put('usuarios/{id}', [UsuarioController::class, 'update']);
 Route::delete('usuarios/{id}', [UsuarioController::class, 'destroy']);
 
+
 //subcategoria
 Route::get('subcategorias', [SubcategoriaController::class, 'index']);
 Route::post('subcategorias', [SubcategoriaController::class, 'store']);
@@ -80,3 +84,12 @@ Route::post('detalleped', [DetallePedController::class, 'store']);
 Route::get('detalleped/{id}', [DetallePedController::class, 'show']);
 Route::put('detalleped/{id}', [DetallePedController::class, 'update']);
 Route::delete('detalleped/{id}', [DetallePedController::class, 'destroy']);
+
+//Ingreso
+Route::post('/login', [AuthContoroller::class, 'login']);
+
+Route::middleware(['auth:api'])->group(function () {
+Route::get('/me', [AuthContoroller::class, 'me']);
+Route::post('/logout', [AuthContoroller::class, 'logout']);
+});
+

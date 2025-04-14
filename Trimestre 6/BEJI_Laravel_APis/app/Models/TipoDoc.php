@@ -12,7 +12,7 @@ class TipoDoc extends Model
  
     protected $table = 'tipo_docs';
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['name'];
 
     
     public function usuarios()

@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class Usuario extends Authenticatable
+class Usuario extends Authenticatable implements JWTSubject
 {
-    use HasFactory;
+    use Notifiable;
 
-    protected $table = 'usuarios'; // Asegura que esté correcto
+    protected $table = 'usuarios';
 
     protected $fillable = [
         'num_doc',
@@ -21,18 +22,20 @@ class Usuario extends Authenticatable
         'fec_nac',
         'password',
         'tipodoc',
-        'rol',
+        'rol'
     ];
 
-    // Relación con el modelo TipoDoc si aplica
-    public function tipoDoc()
+    protected $hidden = [
+        'password',
+    ];
+
+    public function getJWTIdentifier()
     {
-        return $this->belongsTo(TipoDoc::class, 'tipodoc');
+        return $this->getKey();
     }
 
-    // Relación con el modelo Rol (tabla 'rols')
-    public function rol()
+    public function getJWTCustomClaims()
     {
-        return $this->belongsTo(Rol::class, 'rol'); // FK = rol en usuarios
+        return [];
     }
 }

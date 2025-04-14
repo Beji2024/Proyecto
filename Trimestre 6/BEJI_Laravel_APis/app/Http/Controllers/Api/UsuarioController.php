@@ -16,31 +16,22 @@ class UsuarioController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'num_doc' => 'required|string|max:15',
-            'nombres' => 'required|string|max:100',
-            'apellidos' => 'required|string|max:100',
-            'direccion' => 'required|string|max:100',
-            'email' => 'required|string|email|max:100|unique:usuarios,email',
-            'num_tel' => 'required|string|max:15',
+        $validated = $request->validate([
+            'num_doc' => 'required|unique:usuarios',
+            'nombres' => 'required',
+            'apellidos' => 'required',
+            'direccion' => 'required',
+            'email' => 'required|email|unique:usuarios',
+            'num_tel' => 'required',
             'fec_nac' => 'required|date',
-            'password' => 'required|string|min:5',
-            'tipodoc' => 'required|integer|exists:tipo_docs,id',
-            'rol' => 'required|integer|exists:rols,id',
+            'password' => 'required|min:6',
+            'tipodoc' => 'required|exists:tipo_docs,id',
+            'rol' => 'required|exists:rols,id',
         ]);
-        $usuario = Usuario::create([
-            'num_doc' => $request->num_doc,
-            'nombres' => $request->nombres,
-            'apellidos' => $request->apellidos,
-            'direccion' => $request->direccion,
-            'email' => $request->email,
-            'num_tel' => $request->num_tel,
-            'fec_nac' => $request->fec_nac,
-            'password' => bcrypt($request->password),
-            'tipodoc' => $request->tipodoc,
-            'rol' => $request->rol,
-        ]);
-        return response()->json($usuario,201);
+        
+        $validated['password']=bcrypt($validated['password']);
+        $usuario = Usuario::create($validated);
+        return response()->json(['mensaje'=>'Usuario creado correctamente', 'usuario'=> $usuario],201);
     }
 
     public function show($id)
@@ -54,7 +45,7 @@ class UsuarioController extends Controller
 
         $usuario->update($request->only(
             'num_doc', 'nombres', 'apellidos', 'direccion',
-            'email', 'num_tel', 'fec_nac', 'tipodoc_id', 'rol_id'
+            'email', 'num_tel', 'fec_nac', 'tipodoc', 'rol'
         ));
 
         if ($request->password) {

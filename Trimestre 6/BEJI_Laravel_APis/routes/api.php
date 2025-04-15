@@ -6,9 +6,14 @@ use App\Http\Controllers\Api\CategoriaController;
 use App\Http\Controllers\Api\ProveedorController;
 use App\Http\Controllers\Api\EstadoController;
 use App\Http\Controllers\Api\UsuarioController;
+use App\Http\Controllers\Api\SubcategoriaController;
+use App\Http\Controllers\API\MercanciaController;
+use App\Http\Controllers\Api\PedidoController;
+use App\Http\Controllers\API\DetallePedController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthContoroller;
 use App\Http\Middleware\VerificarRol;
+
 
 //Tipo de documento
 Route::get('tipo-docs', [TipoDocController::class, 'index']);               // Listar todos
@@ -68,8 +73,44 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthContoroller::class, 'logout']);
 
 
+//subcategoria
+Route::get('subcategorias', [SubcategoriaController::class, 'index']);
+Route::post('subcategorias', [SubcategoriaController::class, 'store']);
+Route::get('subcategorias/{id}', [SubcategoriaController::class, 'show']);
+Route::put('subcategorias/{id}', [SubcategoriaController::class, 'update']);
+Route::delete('subcategorias/{id}', [SubcategoriaController::class, 'destroy']);
+
+//Mercancia
+Route::get('mercancia', [MercanciaController::class, 'index']);
+Route::post('mercancia', [MercanciaController::class, 'store']);
+Route::get('mercancia/{id}', [MercanciaController::class, 'show']);
+Route::put('mercancia/{id}', [MercanciaController::class, 'update']);
+Route::delete('mercancia/{id}', [MercanciaController::class, 'destroy']);
+
+//Pedido
+Route::get('pedido', [PedidoController::class, 'index']);
+Route::post('pedido', [PedidoController::class, 'store']);
+Route::get('pedido/{id}', [PedidoController::class, 'show']);
+Route::put('pedido/{id}', [PedidoController::class, 'update']);
+Route::delete('pedido/{id}', [PedidoController::class, 'destroy']);
+
+//Detallepedido
+Route::get('detalleped', [DetallePedController::class, 'index']);
+Route::post('detalleped', [DetallePedController::class, 'store']);
+Route::get('detalleped/{id}', [DetallePedController::class, 'show']);
+Route::put('detalleped/{id}', [DetallePedController::class, 'update']);
+Route::delete('detalleped/{id}', [DetallePedController::class, 'destroy']);
+
 //Ingreso
 Route::post('/login', [AuthContoroller::class, 'login'])->name('login');
 
+<<<<<<< HEAD
 // va
 Route::middleware('auth:api')->get('/usuarios', [UsuarioController::class, 'index']);
+=======
+Route::middleware(['auth:api'])->group(function () {
+Route::get('/me', [AuthContoroller::class, 'me']);
+Route::post('/logout', [AuthContoroller::class, 'logout']);
+});
+
+>>>>>>> 3b21e20b0212f28c584a16a0a748dbdb3131e8f4

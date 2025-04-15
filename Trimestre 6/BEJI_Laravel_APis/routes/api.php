@@ -62,12 +62,6 @@ Route::middleware('auth:api')->group(function () {
 });
 
     //Usuarios    
-    Route::get('/usuarios', [UsuarioController::class, 'index']);
-    Route::post('/usuarios', [UsuarioController::class, 'store']);
-    Route::get('/usuarios/{id}', [UsuarioController::class, 'show']);
-    Route::put('/usuarios/{id}', [UsuarioController::class, 'update']);
-    Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy']);
-
     //token
     Route::get('/me', [AuthContoroller::class, 'me']);
     Route::post('/logout', [AuthContoroller::class, 'logout']);
@@ -103,14 +97,3 @@ Route::delete('detalleped/{id}', [DetallePedController::class, 'destroy']);
 
 //Ingreso
 Route::post('/login', [AuthContoroller::class, 'login'])->name('login');
-
-<<<<<<< HEAD
-// va
-Route::middleware('auth:api')->get('/usuarios', [UsuarioController::class, 'index']);
-=======
-Route::middleware(['auth:api'])->group(function () {
-Route::get('/me', [AuthContoroller::class, 'me']);
-Route::post('/logout', [AuthContoroller::class, 'logout']);
-});
-
->>>>>>> 3b21e20b0212f28c584a16a0a748dbdb3131e8f4

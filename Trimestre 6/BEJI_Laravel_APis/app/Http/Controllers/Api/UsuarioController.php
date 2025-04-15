@@ -6,12 +6,19 @@ use App\Models\Usuario;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsuarioController extends Controller
 {
     public function index()
     {
-        return Usuario::with(['tipodoc', 'rol'])->get();
+        $user = auth()->user();
+
+        if (!$user || $user->rol->name !== 'Administrador') {
+           return response()->json(['error' => 'No autorizado'], 403);
+        }
+        $usuarios = Usuario::with(['rol', 'tipodoc'])->get();
+        return response()->json($usuarios);
     }
 
     public function store(Request $request)
@@ -25,8 +32,8 @@ class UsuarioController extends Controller
             'num_tel' => 'required',
             'fec_nac' => 'required|date',
             'password' => 'required|min:6',
-            'tipodoc' => 'required|exists:tipo_docs,id',
-            'rol' => 'required|exists:rols,id',
+            'tipodoc_id' => 'required|exists:tipo_docs,id',
+            'rol_id' => 'required|exists:rols,id',
         ]);
         
         $validated['password']=bcrypt($validated['password']);

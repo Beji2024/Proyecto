@@ -21,8 +21,8 @@ class Usuario extends Authenticatable implements JWTSubject
         'num_tel',
         'fec_nac',
         'password',
-        'tipodoc',
-        'rol'
+        'tipodoc_id',
+        'rol_id'
     ];
 
     protected $hidden = [
@@ -38,4 +38,12 @@ class Usuario extends Authenticatable implements JWTSubject
     {
         return [];
     }
+    public function tipodoc()
+{
+    return $this->belongsTo(TipoDoc::class, 'tipodoc_id'); // Usa el nombre correcto del modelo y campo FK
+}
+public function rol()
+{
+    return $this->belongsTo(Rol::class, 'rol_id'); // Usa el nombre correcto del modelo y campo FK
+}
 }

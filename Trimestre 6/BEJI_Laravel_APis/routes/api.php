@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\EstadoController;
 use App\Http\Controllers\Api\UsuarioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthContoroller;
+use App\Http\Middleware\VerificarRol;
 
 //Tipo de documento
 Route::get('tipo-docs', [TipoDocController::class, 'index']);               // Listar todos
@@ -44,18 +45,31 @@ Route::get('estados/{id}', [EstadoController::class, 'show']);
 Route::put('estados/{id}', [EstadoController::class, 'update']);
 Route::delete('estados/{id}', [EstadoController::class, 'destroy']);
 
-//Usuario
-Route::get('usuarios', [UsuarioController::class, 'index']);
-Route::post('usuarios', [UsuarioController::class, 'store']);
-Route::get('usuarios/{id}', [UsuarioController::class, 'show']);
-Route::put('usuarios/{id}', [UsuarioController::class, 'update']);
-Route::delete('usuarios/{id}', [UsuarioController::class, 'destroy']);
+
+Route::middleware('auth:api')->group(function () {
+    
+    Route::get('/usuarios', [UsuarioController::class, 'index']);
+    Route::post('/usuarios', [UsuarioController::class, 'store']);
+    Route::get('/usuarios/{id}', [UsuarioController::class, 'show']);
+    Route::put('/usuarios/{id}', [UsuarioController::class, 'update']);
+    Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy']);
+    // Añade aquí todas las rutas que deben ser protegidas
+});
+
+    //Usuarios    
+    Route::get('/usuarios', [UsuarioController::class, 'index']);
+    Route::post('/usuarios', [UsuarioController::class, 'store']);
+    Route::get('/usuarios/{id}', [UsuarioController::class, 'show']);
+    Route::put('/usuarios/{id}', [UsuarioController::class, 'update']);
+    Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy']);
+
+    //token
+    Route::get('/me', [AuthContoroller::class, 'me']);
+    Route::post('/logout', [AuthContoroller::class, 'logout']);
 
 
 //Ingreso
-Route::post('/login', [AuthContoroller::class, 'login']);
+Route::post('/login', [AuthContoroller::class, 'login'])->name('login');
 
-Route::middleware(['auth:api'])->group(function () {
-Route::get('/me', [AuthContoroller::class, 'me']);
-Route::post('/logout', [AuthContoroller::class, 'logout']);
-});
+// va
+Route::middleware('auth:api')->get('/usuarios', [UsuarioController::class, 'index']);

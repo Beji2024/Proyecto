@@ -9,23 +9,27 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 use Tymon\JWTAuth\Facades\JWTauth;
 
+
 class AuthContoroller extends Controller
 {
     public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
+{
+    $credentials = $request->only('email', 'password');
 
-        if (!$token = Auth::guard('api')->attempt($credentials)) {
-            return response()->json(['error' => 'Credenciales incorrectas'], 401);
-        }
-
-        return response()->json([
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => JWTAuth::factory()->getTTL() * 60,
-            'user' => Auth::guard('api')->user(),
-        ]);
+    if (!$token = auth('api')->attempt($credentials)) {
+        return response()->json(['error' => 'Credenciales incorrectas'], 401);
     }
+
+    $user = auth('api')->user();
+    $user->load('rol'); 
+
+    return response()->json([
+        'access_token' => $token,
+        'token_type' => 'bearer',
+        'expires_in' => JWTAuth::factory()->getTTL() * 30,
+        'user' => $user,
+    ]);
+}
 
     public function logout()
     {

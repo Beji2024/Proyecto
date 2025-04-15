@@ -17,6 +17,6 @@ class TipoDoc extends Model
     
     public function usuarios()
     {
-        return $this->hasMany(Usuario::class, 'tipodoc');
+        return $this->hasMany(Usuario::class, 'tipodoc_id');
     }
 }

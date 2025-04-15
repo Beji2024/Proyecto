@@ -18,12 +18,12 @@ return new class extends Migration
             $table->string('num_tel');
             $table->date('fec_nac');
             $table->string('password');
-            $table->unsignedBigInteger('tipodoc');
-            $table->unsignedBigInteger('rol');
+            $table->unsignedBigInteger('tipodoc_id');
+            $table->unsignedBigInteger('rol_id');
             $table->timestamps();
 
-            $table->foreign('tipodoc')->references('id')->on('tipo_docs')->onDelete('cascade');
-            $table->foreign('rol')->references('id')->on('rols')->onDelete('cascade');     
+            $table->foreign('tipodoc_id')->references('id')->on('tipo_docs')->onDelete('cascade');
+            $table->foreign('rol_id')->references('id')->on('rols')->onDelete('cascade');     
         });
     }
 

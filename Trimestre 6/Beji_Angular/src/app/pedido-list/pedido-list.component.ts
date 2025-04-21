@@ -1,11 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PedidoService } from '../services/pedido.service';
 
 @Component({
   selector: 'app-pedido-list',
-  imports: [],
   templateUrl: './pedido-list.component.html',
-  styleUrl: './pedido-list.component.css'
+  styleUrls: ['./pedido-list.component.css']
 })
-export class PedidoListComponent {
+export class PedidoListComponent implements OnInit {
+  pedidos: any[] = [];
 
+  constructor(private pedidoService: PedidoService) {}
+
+  ngOnInit(): void {
+    this.cargarPedidos();
+  }
+
+  cargarPedidos(): void {
+    this.pedidoService.getPedidos().subscribe(
+      (data) => {
+        this.pedidos = data;
+      },
+      (error) => {
+        console.error('Error al cargar los pedidos:', error);
+      }
+    );
+  }
 }

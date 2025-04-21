@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PedidoService } from '../services/pedido.service';
+import { PedidoService } from './services/pedido.service';
 
 @Component({
   selector: 'app-pedido-list',
@@ -9,7 +9,7 @@ import { PedidoService } from '../services/pedido.service';
 export class PedidoListComponent implements OnInit {
   pedidos: any[] = [];
 
-  constructor(private pedidoService: PedidoService) {}
+  constructor(private pedidoService: PedidoService) { }
 
   ngOnInit(): void {
     this.cargarPedidos();

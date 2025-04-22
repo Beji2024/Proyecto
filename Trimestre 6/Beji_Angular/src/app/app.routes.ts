@@ -46,5 +46,8 @@ export const routes: Routes = [
   { path: 'cambio-venta/:id', 
     loadComponent: () => import('./components/principal/venta/devoluciones-venta/cambio/cambio.component').then(m => m.CambioComponent),
     canActivate:[AuthGuard]
+  },
+  { path: 'proveedores', 
+    loadComponent: () => import('./proveedores/proveedores.component').then(m=>m.ProveedoresComponent)
   }
 ];

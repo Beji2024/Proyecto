@@ -53,5 +53,6 @@ Route::middleware(['auth:api'])->group(function () {
     Route::delete('/venta/{id}', [VentaController::class, 'destroy']);
 });
 
+
     
     

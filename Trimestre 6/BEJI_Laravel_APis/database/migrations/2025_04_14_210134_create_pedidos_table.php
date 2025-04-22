@@ -16,12 +16,11 @@ return new class extends Migration
             $table->date('fec_ped');
             $table->unsignedBigInteger('ped_prov');
             $table->unsignedBigInteger('ped_est');
-            $table->unsignedBigInteger('ped_user');
+        
         
             // Definir las claves foráneas
             $table->foreign('ped_prov')->references('id')->on('proveedors')->onDelete('cascade');
             $table->foreign('ped_est')->references('id')->on('estados')->onDelete('cascade');
-            $table->foreign('ped_user')->references('id')->on('usuarios')->onDelete('cascade');
         
             $table->timestamps();
         });

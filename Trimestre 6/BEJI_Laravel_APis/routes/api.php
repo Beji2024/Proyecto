@@ -74,12 +74,21 @@ Route::get('subcategorias/{id}', [SubcategoriaController::class, 'show']);
 Route::put('subcategorias/{id}', [SubcategoriaController::class, 'update']);
 Route::delete('subcategorias/{id}', [SubcategoriaController::class, 'destroy']);
 
+
 //Mercancia
+// web.php o api.php
 Route::get('mercancia', [MercanciaController::class, 'index']);
 Route::post('mercancia', [MercanciaController::class, 'store']);
 Route::get('mercancia/{id}', [MercanciaController::class, 'show']);
 Route::put('mercancia/{id}', [MercanciaController::class, 'update']);
 Route::delete('mercancia/{id}', [MercanciaController::class, 'destroy']);
+
+// Corrección: usar los nombres reales del controlador
+Route::get('/mercancia/categoria/{id}', [MercanciaController::class, 'porCategoria']);
+Route::get('/mercancia/subcategoria/{id}', [MercanciaController::class, 'porSubcategoria']);
+
+
+
 
 //Pedido
 Route::get('pedido', [PedidoController::class, 'index']);

@@ -6,13 +6,13 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthInterceptor } from './app/pedido-list/services/auth.interceptor';
+import { AuthInterceptor} from './app/interceptores/auth-interceptor.service';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
     provideRouter(routes),
     importProvidersFrom(HttpClientModule),
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    {provide: HTTP_INTERCEPTORS,useClass: AuthInterceptor,multi:true}
   ]
 });

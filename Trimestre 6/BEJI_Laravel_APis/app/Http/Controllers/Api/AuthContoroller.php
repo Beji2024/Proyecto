@@ -41,5 +41,18 @@ class AuthContoroller extends Controller
     {
         return response()->json(Auth::guard('api')->user());
     }
+    public function refresh()
+    {
+        try {
+            $newToken = Auth::guard('api')->refresh();
+            return response()->json([
+                'access_token' => $newToken,
+                'token_type' => 'bearer',
+                'expires_in' => JWTAuth::factory()->getTTL() * 60,
+            ]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Token inválido'], 401);
+        }
+    }
 }
 

@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="container mt-5 shadow">
+  <fieldset>
+    <h1 class="text-center">DATOS PROVEEDORES</h1>
+<form [formGroup]="proveedorForm" (ngSubmit)="registrarProveedor()">
+  
+  <div class="row">
+  <div class="col-md-3 mb-3">
+    <label>Nombre</label>
+    <input formControlName="nombre" class="form-control" />
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>NIT</label>
+    <input formControlName="nit" class="form-control" />
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Celular</label>
+    <input formControlName="celular" class="form-control" />
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Email</label>
+    <input formControlName="email" class="form-control" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 mb-3">
+    <label>Dirección</label>
+    <input formControlName="direccion" class="form-control" />
+  </div>
+  
+  <div class="col-md-3 mb-3">
+    <label>Producto</label>
+    <input formControlName="producto" class="form-control" />
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Marca</label>
+    <input formControlName="marca" class="form-control" />
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Valor Unitario</label>
+    <input type="number" formControlName="valor_unitario" class="form-control" />
+  </div>
+</div>
+
+<div class="text-center">
+  <button class="btn btn-success mt-3" type="submit">Registrar</button>
+</div>
+
+  <div *ngIf="mensaje" class="alert alert-success mt-2">{{ mensaje }}</div>
+  <div *ngIf="error" class="alert alert-danger mt-2">{{ error }}</div>
+</form>
+</fieldset>
+</div>

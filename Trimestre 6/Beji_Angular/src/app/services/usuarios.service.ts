@@ -18,4 +18,14 @@ export class UsuariosService {
   const url = `${this.apiUrl}/${id}`;
   return this.http.delete(url);
 }
+  registrarUsuario(usuario: any) {
+  return this.http.post<any>('http://localhost:8000/api/usuarios', usuario);
+}
+  actualizarUsuario(id: number, datos: any) {
+  return this.http.put(`${this.apiUrl}/${id}`, datos);
+}
+  obtenerUsuarioPorId(id: number): Observable<Usuario> {
+  return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
+}
+
 }

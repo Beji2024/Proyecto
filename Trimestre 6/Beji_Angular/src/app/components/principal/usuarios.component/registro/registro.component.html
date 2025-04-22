@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<div class="d-flex justify-content-between align-items-center mt-5 mb-5">
+    <div class="col-md-4 d-flex justify-content-center align-items-center shadow ms-5 w-30">
+        <img class="img-fluid w-75" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg048tD35--JnGN6JtGj5VIqGLV_GnhEmjuA&s" alt="image" h-70>
+   </div>
+    <form class=" w-50 aling-left ms-rigth mx-auto shadow" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+      
+        <div class="w-75 mx-auto mt-3 mb-1">
+        <label class="input-group mb-3" for="num_doc">Número de documento:</label>
+        <input class="form-control" id="num_doc" formControlName="num_doc" type="text" />
+      </div>
+
+      <div class="w-75 mx-auto mt-1 mb-1">
+        <label class="input-group mb-3" for="nombres">Nombres:</label>
+        <input class="form-control" id="nombres" formControlName="nombres" type="text" />
+      </div> 
+      <div class="w-75 mx-auto mt-1 mb-1" >
+        <label class="input-group mb-3" for="apellidos">Apellidos:</label>
+        <input class="form-control" id="apellidos" formControlName="apellidos" type="text" />
+      </div>
+      <div class="w-75 mx-auto mt-1 mb-1">
+        <label class="input-group mb-3" for="direccion">Dirección:</label>
+        <input class="form-control" id="direccion" formControlName="direccion" type="text" />
+      </div>
+      <div class="w-75 mx-auto mt-1 mb-1">
+        <label class="input-group mb-3" for="email">Correo electrónico:</label>
+        <input class="form-control" id="email" formControlName="email" type="email" />
+      </div>
+      <div class="w-75 mx-auto mt-1 mb-1">
+        <label class="input-group mb-3" for="num_tel">Número de teléfono:</label>
+        <input class="form-control" id="num_tel" formControlName="num_tel" type="text" />
+      </div>
+      <div class="w-75 mx-auto mt-1 mb-1">
+        <label class="input-group mb-3" for="fec_nac">Fecha de nacimiento:</label>
+        <input class="form-control" id="fec_nac" formControlName="fec_nac" type="date" />
+      </div>
+      <div class="w-75 mx-auto mt-1 mb-1">
+        <label class="input-group mb-3" for="password">Contraseña:</label>
+        <input class="form-control" id="password" formControlName="password" type="password" />
+      </div>
+      <div class="w-75 mx-auto mt-1 mb-1">
+        <label class="input-group mb-3" for="tipodoc_id">Tipo de documento:</label>
+        <select class="form-control" id="tipodoc_id" formControlName="tipodoc_id">
+          <option value="1">Cédula de ciudadanía</option>
+          <option value="2">Pasaporte</option>
+          <option value="3">Tarjeta de identidad</option>
+        </select>
+      </div>
+      <div class="w-75 mx-auto mt-1 mb-5">
+        <label class="input-group mb-3" for="rol_id">Rol:</label>
+        <select class="form-control" id="rol_id" formControlName="rol_id">
+          <option value="1">Administrador</option>
+          <option value="2">Vendedor</option>
+          <option value="3">Bodeguero</option>
+        </select>
+      </div>
+      <div class="col-auto d-flex justify-content-center mb-5">
+        <button class="btn btn-success" type="submit" [disabled]="registroForm.invalid">Registrar</button>
+      </div>
+      
+    </form>
+  </div>
+  

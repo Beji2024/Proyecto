@@ -20,7 +20,7 @@ class PedidoController extends Controller
             'fec_ped' => 'required|date',
             'ped_prov' => 'required|integer',
             'ped_est' => 'required|integer',
-            'ped_user' => 'required|integer',
+            
         ]);
 
         $pedido = Pedido::create($request->all());

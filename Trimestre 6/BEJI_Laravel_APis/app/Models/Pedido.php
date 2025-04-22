@@ -16,6 +16,6 @@ class Pedido extends Model
         'fec_ped',
         'ped_prov',
         'ped_est',
-        'ped_user',
+        
     ];
 }

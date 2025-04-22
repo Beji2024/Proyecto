@@ -35,4 +35,10 @@ export class PrincipalComponent {
   goToUsuarios() {
     this.router.navigate(['/usuarios']);
   }
+  goToVenta(){
+    this.router.navigate(['/venta']);
+  }
+  goToProveedores(){
+    this.router.navigate(['/proveedores'])
+  }
 }

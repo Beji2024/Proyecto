@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthContoroller;
 use App\Http\Controllers\Api\TipoDocController;
 use App\Http\Controllers\Api\RolController;
 use App\Http\Controllers\Api\CategoriaController;
@@ -7,73 +9,26 @@ use App\Http\Controllers\Api\ProveedorController;
 use App\Http\Controllers\Api\EstadoController;
 use App\Http\Controllers\Api\UsuarioController;
 use App\Http\Controllers\Api\SubcategoriaController;
-use App\Http\Controllers\API\MercanciaController;
-use App\Http\Controllers\Api\PedidoController;
-use App\Http\Controllers\API\DetallePedController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\AuthContoroller;
-use App\Http\Middleware\VerificarRol;
+use App\Http\Controllers\Api\VentaController;
+use App\Http\Controllers\Api\ProductoController;
 
+// RUTAS PÚBLICAS
+Route::post('/login', [AuthContoroller::class, 'login']);
 
-//Tipo de documento
-Route::get('tipo-docs', [TipoDocController::class, 'index']);               // Listar todos
-Route::post('tipo-docs', [TipoDocController::class, 'store']);              // Crear nuevo
-Route::get('tipo-docs/{id}', [TipoDocController::class, 'show']);           // Ver uno
-Route::put('tipo-docs/{id}', [TipoDocController::class, 'update']);         // Actualizar
-Route::delete('tipo-docs/{id}', [TipoDocController::class, 'destroy']);     // Eliminar
+// RUTAS PROTEGIDAS POR JWT
+Route::middleware(['auth:api'])->group(function () {
 
-//Rol
-Route::get('roles', [RolController::class, 'index']);
-Route::post('roles', [RolController::class, 'store']);
-Route::get('roles/{id}', [RolController::class, 'show']);
-Route::put('roles/{id}', [RolController::class, 'update']);
-Route::delete('roles/{id}', [RolController::class, 'destroy']);
-
-//Categoria
-Route::get('categorias', [CategoriaController::class, 'index']);
-Route::post('categorias', [CategoriaController::class, 'store']);
-Route::get('categorias/{id}', [CategoriaController::class, 'show']);
-Route::put('categorias/{id}', [CategoriaController::class, 'update']);
-Route::delete('categorias/{id}', [CategoriaController::class, 'destroy']);
-
-//Proovedores
-Route::get('proveedores', [ProveedorController::class, 'index']);
-Route::post('proveedores', [ProveedorController::class, 'store']);
-Route::get('proveedores/{id}',[ProveedorController::class, 'show']);
-Route::put('proveedores/{id}', [ProveedorController::class, 'update']);
-Route::delete('proveedores/{id}', [ProveedorController::class, 'destroy']);
-
-//Estado
-Route::get('estados', [EstadoController::class, 'index']);
-Route::post('estados', [EstadoController::class, 'store']);
-Route::get('estados/{id}', [EstadoController::class, 'show']);
-Route::put('estados/{id}', [EstadoController::class, 'update']);
-Route::delete('estados/{id}', [EstadoController::class, 'destroy']);
-
-
-Route::middleware('auth:api')->group(function () {
-    
-    Route::get('/usuarios', [UsuarioController::class, 'index']);
-    Route::post('/usuarios', [UsuarioController::class, 'store']);
-    Route::get('/usuarios/{id}', [UsuarioController::class, 'show']);
-    Route::put('/usuarios/{id}', [UsuarioController::class, 'update']);
-    Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy']);
-    // Añade aquí todas las rutas que deben ser protegidas
-});
-
-    //Usuarios    
-    //token
+    // Auth
     Route::get('/me', [AuthContoroller::class, 'me']);
     Route::post('/logout', [AuthContoroller::class, 'logout']);
 
+    // Categorías
+    Route::apiResource('categorias', CategoriaController::class);
 
-//subcategoria
-Route::get('subcategorias', [SubcategoriaController::class, 'index']);
-Route::post('subcategorias', [SubcategoriaController::class, 'store']);
-Route::get('subcategorias/{id}', [SubcategoriaController::class, 'show']);
-Route::put('subcategorias/{id}', [SubcategoriaController::class, 'update']);
-Route::delete('subcategorias/{id}', [SubcategoriaController::class, 'destroy']);
+    // Proveedores
+    Route::apiResource('proveedores', ProveedorController::class);
 
+<<<<<<< HEAD
 
 //Mercancia
 // web.php o api.php
@@ -96,13 +51,33 @@ Route::post('pedido', [PedidoController::class, 'store']);
 Route::get('pedido/{id}', [PedidoController::class, 'show']);
 Route::put('pedido/{id}', [PedidoController::class, 'update']);
 Route::delete('pedido/{id}', [PedidoController::class, 'destroy']);
+=======
+    // Usuarios
+    Route::apiResource('usuarios', UsuarioController::class);
+    Route::get('/vendedores', [UsuarioController::class, 'getVendedores']); // extra
 
-//Detallepedido
-Route::get('detalleped', [DetallePedController::class, 'index']);
-Route::post('detalleped', [DetallePedController::class, 'store']);
-Route::get('detalleped/{id}', [DetallePedController::class, 'show']);
-Route::put('detalleped/{id}', [DetallePedController::class, 'update']);
-Route::delete('detalleped/{id}', [DetallePedController::class, 'destroy']);
+    // Estados
+    Route::apiResource('estados', EstadoController::class);
+>>>>>>> 930e891ef29530aad4274fcaf5e8daaf494d8fce
 
-//Ingreso
-Route::post('/login', [AuthContoroller::class, 'login'])->name('login');
+    // Productos
+    Route::apiResource('producto', ProductoController::class);
+
+    // Tipo de documento
+    Route::apiResource('tipo-docs', TipoDocController::class);
+
+    // Roles
+    Route::apiResource('roles', RolController::class);
+
+    // Ventas (algunas rutas personalizadas además del CRUD)
+    Route::get('/venta', [VentaController::class, 'index']);
+    Route::post('/venta', [VentaController::class, 'store']);
+    Route::get('/venta/{id}', [VentaController::class, 'show']);
+    Route::patch('/venta/{id}', [VentaController::class, 'update']);
+    Route::put('/venta/{id}', [VentaController::class, 'update1']); // extra personalizada
+    Route::delete('/venta/{id}', [VentaController::class, 'destroy']);
+});
+
+
+    
+    

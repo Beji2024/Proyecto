@@ -2,7 +2,7 @@
 <div class="m-5 mt-1 mb-0">
   <img class="m-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLrG5rQbIDkNP22MimEOOiCzRZNXZF3yrRxQ&s" 
   alt="image" height="100px">
-  <button class="btn btn-success shadow">Nuevo usuario</button>
+  <button (click)="IRRegistro()" class="btn btn-success shadow">Nuevo usuario</button>
 </div>
 
 
@@ -25,7 +25,9 @@
 
         <div>
           <tr class="d-flex mx-5">
-            <td class="list-group-item m-2">  <button class="btn btn-success shadow">Editar</button></td> 
+            <td class="list-group-item m-2">  
+              <button (click)="editarUsuario(usuario.id)" class="btn btn-success shadow">Editar</button>
+            </td> 
             <td><button (click)="eliminarUsuario(usuario.id)" class="btn btn-danger m-2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button></td>
           </tr>
         </div>
@@ -33,6 +35,3 @@
     </tbody>
   </table>
 </div>
-
-
-

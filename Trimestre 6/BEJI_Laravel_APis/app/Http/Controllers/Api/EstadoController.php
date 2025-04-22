@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Estado;
 use Illuminate\Http\Request;
+use App\Models\Estado;
 
 class EstadoController extends Controller
 {
@@ -12,27 +12,30 @@ class EstadoController extends Controller
     {
         return Estado::all();
     }
-    
+
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
+        $validated = $request->validate([
+            'nombre' => 'required|string|max:255',
         ]);
-        return Estado::create($request->only('name'));
+        return Estado::create($request->only('nombre'));
     }
+
     public function show($id)
     {
         return Estado::findOrFail($id);
     }
+
     public function update(Request $request, $id)
     {
-        $estado = Estado::findOrFail($id);
-        $estado ->update($request->only('name'));
-        return $estado;
+        $rol = Estado::findOrFail($id);
+        $rol->update($request->only('nombre'));
+        return $rol;
     }
+
     public function destroy($id)
     {
         Estado::destroy($id);
-        return response()->json(['message'=>'Estado eliminado correctamente']);
+        return response()->json(['message' => 'Estado eliminado correctamente']);
     }
 }

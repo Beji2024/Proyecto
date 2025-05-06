@@ -1,5 +1,5 @@
 # :package: Gestión de inventarios  BEJI 
-![Imagen del Proyecto](Trimestre\ 2/BEJI_LOGO.png)
+![Imagen del Proyecto](Trimestre 2/BEJI_LOGO.png)
 ## :memo: RESUMEN
 
 :bell: El sistema de inventarios BEJI busca facilitar la gestión de los  almacenes que existen en la actualidad, implementando un sistema en donde, los administradores o empleados pueden realizar , consultas, modificaciones, en inventarios, registro de ventas por empleados.

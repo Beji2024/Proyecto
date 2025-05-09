@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
+import { HeaderComponentComponent } from '../components/principal/header.component/header.component.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule,
     ReactiveFormsModule,
-    HttpClientModule, HeaderComponent],
+    HttpClientModule, HeaderComponentComponent],
   templateUrl: './regproveedores.component.html',
   styleUrl: './regproveedores.component.css'
 })

@@ -58,8 +58,6 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/productos/productos.component').then(m => m.ProductosComponent),
   },
-<<<<<<< HEAD
-=======
   { path: 'header', 
     loadComponent: () => import('./components/principal/header.component/header.component.component').then(m => m.HeaderComponentComponent),
     canActivate:[AuthGuard]
@@ -95,6 +93,8 @@ export const routes: Routes = [
   },
   { path: 'proveedores', 
     loadComponent: () => import('./proveedores/proveedores.component').then(m=>m.ProveedoresComponent)
+  },
+  { path: 'regproveedores', 
+    loadComponent: () => import('./regproveedores/regproveedores.component').then(m=>m.RegproveedoresComponent)
   }
->>>>>>> 930e891ef29530aad4274fcaf5e8daaf494d8fce
 ];

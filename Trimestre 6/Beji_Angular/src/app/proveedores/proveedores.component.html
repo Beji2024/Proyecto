@@ -33,9 +33,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let proveedor of proveedores">
-        <td>{{ proveedor.nombre }}</td>
+        <td>{{ proveedor.name }}</td>
         <td>{{ proveedor.nit }}</td>
-        <td>{{ proveedor.celular }}</td>
+        <td>{{ proveedor.telefono }}</td>
         <td>{{ proveedor.email }}</td>
         <td>{{ proveedor.direccion }}</td>
         <td>{{ proveedor.producto }}</td>
@@ -43,7 +43,7 @@
         <td>{{ proveedor.valor_unitario | currency:'COP':'symbol' }}</td>
         <td>
           <div class="d-flex gap-2">
-            <button class="btn btn-info btn-sm" (click)="editarProveedor(proveedor)">Editar</button>
+            <button class="btn btn-info btn-sm" (click)="goToRegProveedores()">Editar</button>
             <button class="btn btn-danger btn-sm" (click)="eliminarProveedor(proveedor.id)">Eliminar</button>
           </div>
         </td>

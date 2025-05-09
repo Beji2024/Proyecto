@@ -29,25 +29,5 @@ export class NuevaSubcategoriaComponent implements OnInit {
       next: (data) => this.categorias = data,
       error: (err) => console.error('Error al obtener categorías', err)
     });
-  }
-
-  crearSubcategoria() {
-    if (this.categoriaSeleccionada && this.nombreSubcategoria.trim() !== '') {
-      // Aquí aseguramos que se envíe solo el ID de la categoría seleccionada
-      this.categoriasService.crearSubcategoria({
-        nom_sub: this.nombreSubcategoria,
-        cat_sub: this.categoriaSeleccionada // Enviamos solo el ID de la categoría
-      }).subscribe({
-        next: () => {
-          this.mensajeExito = 'Subcategoría creada con éxito.';
-          this.nombreSubcategoria = '';
-          this.categoriaSeleccionada = null;
-        },
-        error: (err) => {
-          this.mensajeError = 'Error al crear subcategoría.';
-          console.error('Error al crear subcategoría:', err);
-        }
-      });
-    }
-  }
+  }  
 }

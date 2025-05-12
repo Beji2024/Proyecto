@@ -1,0 +1,122 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+
+}
+body{
+    width: 100%;
+}
+
+#titulo{
+    grid-column: 1/7;
+    display: flex;
+    justify-content: space-between;
+    background: #a30dda;
+    padding: 5px;
+    gap: 20px;
+}
+#titulo h1{
+    font-family: "calibri";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+    3px 3px 0 black,
+    -3px -3px 0 black,
+    3px -3px 0 black,
+    -3px 3px 0 black;
+    font-size: 80px;
+    margin:0 auto 
+}
+#titulo h2{
+    font-family: "calibri";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin-right: 90px;
+    color: aliceblue;
+    color: white;
+    text-shadow: 
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+#titulo h4{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+}
+#registros{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+#usuario{
+    margin: 0 auto;
+    margin-top: 4%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 10% 70% ;
+    grid-template-areas: "a . b b";
+
+}
+#image{
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #a30dda;;
+    box-shadow: 8px 8px 3px violet;
+    
+}
+#c{
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: 2px solid #a30dda;;
+    font-size: 150%;
+    box-shadow: 8px 8px 3px violet;
+}
+#z{
+    display: grid;
+    margin-left: 6%;
+    margin-top: 4%;
+}
+
+#c input{
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 4%;
+    height: 50%;
+}
+
+#c button{
+    
+    width: 160px;
+    height: 30px;
+    background: linear-gradient(40deg,#a30dda,pink);
+    align-items: center;
+    justify-content: center;
+
+}
+#boton{
+    grid-column: span 2;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#boton:hover{
+    transition:all 0.5s;
+    transform: translate(5px,-5px);
+}
+

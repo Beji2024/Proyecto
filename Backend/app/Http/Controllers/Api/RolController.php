@@ -10,7 +10,7 @@ class RolController extends Controller
 {
     public function index()
     {
-        return Rol::all();
+        return response()->json(\App\Models\Rol::all());
     }
 
     public function store(Request $request)

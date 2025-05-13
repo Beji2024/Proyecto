@@ -5,6 +5,7 @@ import { UsuariosService } from '../../../../services/usuarios.service';
 import { CommonModule } from '@angular/common';
 import { HeaderComponentComponent } from '../../header.component/header.component.component';
 import { Usuario } from '../../../../modelos/usuario';
+import { error } from 'node:console';
 
 @Component({
   selector: 'app-editar-usuario',
@@ -16,6 +17,7 @@ import { Usuario } from '../../../../modelos/usuario';
 export class EditarComponent implements OnInit {
   editarForm: FormGroup;
   userId: number = 0;
+  roles:any[] =[];
 
   constructor(
     private fb: FormBuilder,
@@ -37,7 +39,19 @@ export class EditarComponent implements OnInit {
   ngOnInit() {
     this.userId = Number(this.route.snapshot.paramMap.get('id'));
     console.log('User ID recibido:', this.userId); 
-    
+    this.cargarRoles();
+    }
+    cargarRoles() {
+    this.usuariosService.obtenerRoles().subscribe({
+      next: (roles) => {
+        this.roles = roles;
+        this.cargarUsuario(); 
+      },
+      error: (err) => console.error('Error al cargar roles', err)
+    });
+  }
+
+    cargarUsuario(){
     this.usuariosService.obtenerUsuarioPorId(this.userId).subscribe({
       next: (usuario: Usuario) => {
         this.editarForm.patchValue({
@@ -56,6 +70,7 @@ export class EditarComponent implements OnInit {
 
   onSubmit() {
     if (this.editarForm.valid) {
+      console.log('Datos enviados:', this.editarForm.value);
       this.usuariosService.actualizarUsuario(this.userId, this.editarForm.value).subscribe({
         next: (res) => {
           alert('Usuario actualizado con éxito');

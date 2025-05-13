@@ -8,7 +8,8 @@ import { Usuario } from '../modelos/usuario';
 })
 
 export class UsuariosService {
-  private apiUrl = 'http://localhost:8000/api/usuarios'
+  private apiUrl = 'http://localhost:8000/api/usuarios';
+  private apiRolesUrl = 'http://localhost:8000/api/roles';
 
   constructor(private http: HttpClient) { }
   getUsuarios(): Observable<Usuario[]> {
@@ -22,10 +23,14 @@ export class UsuariosService {
   return this.http.post<any>('http://localhost:8000/api/usuarios', usuario);
 }
   actualizarUsuario(id: number, datos: any) {
+    console.log('Datos enviados al backend:', datos);
   return this.http.put(`${this.apiUrl}/${id}`, datos);
 }
   obtenerUsuarioPorId(id: number): Observable<Usuario> {
   return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
+}
+  obtenerRoles(): Observable<any[]> {
+  return this.http.get<any[]>('http://localhost:8000/api/roles');
 }
 
 }

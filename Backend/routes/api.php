@@ -42,7 +42,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::apiResource('tipo-docs', TipoDocController::class);
 
     // Roles
-    Route::apiResource('roles', RolController::class);
+    Route::get('/roles', [RolController::class, 'index']);
 
     // Ventas (algunas rutas personalizadas además del CRUD)
     Route::get('/venta', [VentaController::class, 'index']);

@@ -22,7 +22,7 @@ return new class extends Migration
 
             $table->unsignedBigInteger('vendedor_id');
 
-            $table->unsignedBinInteger('estado_id')->default(1);
+            $table->unsignedBigInteger('estado_id')->default(1);
 
             $table->timestamp('fecha')->useCurrent();
             $table->timestamps();

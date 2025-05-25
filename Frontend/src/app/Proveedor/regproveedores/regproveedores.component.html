@@ -1,0 +1,98 @@
+<app-header></app-header>
+<div class="container mt-5 shadow">
+  <fieldset>
+    <h1 class="text-center">DATOS PROVEEDORES</h1>
+<form [formGroup]="proveedorForm" (ngSubmit)="registrarProveedor()">
+  
+  <div class="row">
+  <div class="col-md-3 mb-3">
+    <label>Nombre</label>
+    <input formControlName="nombre" class="form-control" />
+    <div *ngIf="erroresFormulario['nombre']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['nombre']">
+        {{ error }}
+      </small>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label for="nit">NIT</label>
+  <input id="nit" formControlName="nit" type="text" class="form-control">
+  <div *ngIf="erroresFormulario['nit']">
+    <small class="text-danger" *ngFor="let error of erroresFormulario['nit']">{{ error }}</small>
+  </div>
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Celular</label>
+    <input formControlName="celular" class="form-control" />
+    <div *ngIf="erroresFormulario['celular']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['celular']">
+        {{ error }}
+      </small>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Email</label>
+    <input formControlName="email" class="form-control" />
+    <div *ngIf="erroresFormulario['email']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['email']">
+        {{ error }}
+      </small>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 mb-3">
+    <label>Dirección</label>
+    <input formControlName="direccion" class="form-control" />
+    <div *ngIf="erroresFormulario['direccion']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['direccion']">
+        {{ error }}
+      </small>
+    </div>
+  </div>
+  
+  <div class="col-md-3 mb-3">
+    <label>Producto</label>
+    <input formControlName="producto" class="form-control" />
+    <div *ngIf="erroresFormulario['producto']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['producto']">
+        {{ error }}
+      </small>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Marca</label>
+    <input formControlName="marca" class="form-control" />
+    <div *ngIf="erroresFormulario['marca']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['marca']">
+        {{ error }}
+      </small>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label>Valor Unitario</label>
+    <input type="number" formControlName="valor_unitario" class="form-control" />
+    <div *ngIf="erroresFormulario['valor_unitario']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['valor_unitario']">
+        {{ error }}
+      </small>
+  </div>
+</div>
+</div>
+
+<div class="text-center">
+  <button class="btn btn-success mt-3" type="submit">Registrar</button>
+</div>
+
+  <div *ngIf="mensaje" class="alert alert-success mt-2">{{ mensaje }}</div>
+  <div *ngIf="error" class="alert alert-danger mt-2">{{ error }}</div>
+
+</form>
+</fieldset>
+</div>

@@ -38,4 +38,7 @@ export class PrincipalComponent {
   goToVenta(){
     this.router.navigate(['/venta']);
   }
+  goToProveedor(){
+    this.router.navigate(['/proveedor']);
+  }
 }

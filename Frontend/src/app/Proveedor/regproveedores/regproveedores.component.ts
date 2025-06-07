@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
+
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
 
 
 @Component({
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule,
     ReactiveFormsModule,
-    HttpClientModule, HeaderComponent],
+    HttpClientModule, HeaderComponentComponent],
   templateUrl: './regproveedores.component.html',
   styleUrl: './regproveedores.component.css'
 })

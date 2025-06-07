@@ -4,13 +4,13 @@ import { ProveedorService } from './proveedor.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from "../header/header.component";
 import { RouterModule } from '@angular/router';
+import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
 
 @Component({
   selector: 'app-proveedores',
   templateUrl: './proveedores.component.html',
-  imports: [CommonModule, FormsModule, HeaderComponent, HttpClientModule, RouterModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, HeaderComponentComponent],
 })
 export class ProveedoresComponent implements OnInit {
   proveedores: any[] = [];
@@ -45,6 +45,7 @@ export class ProveedoresComponent implements OnInit {
   }
 
   editarProveedor(proveedor: any): void {
+    console.log('Proveedor seleccionado:', proveedor);
     this.router.navigate(['/proveditar', proveedor.id]);
   }
   

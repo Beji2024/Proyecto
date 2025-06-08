@@ -52,7 +52,7 @@ export class RegproveedoresComponent {
         this.erroresFormulario = {};
         this.proveedorForm.reset();
         alert('Proveedor registrado correctamente');
-        this.router.navigate(['/proveedores']);
+        this.router.navigate(['/proveedor']);
       },
       error: (err) => {
         this.mensaje = '';

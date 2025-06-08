@@ -11,7 +11,7 @@ class proveedorController extends Controller
 {
     public function index()
     {
-        $proveedores = Proveedor::all();
+        $proveedores = Proveedor::paginate(10);
         if ($proveedores->isEmpty()) {
             $data = [
                 'message' => 'No se encontraron proveedores',

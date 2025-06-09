@@ -4,13 +4,13 @@ import { ProveedorService } from './proveedor.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from "../header/header.component";
 import { RouterModule } from '@angular/router';
+import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
 
 @Component({
   selector: 'app-proveedores',
   templateUrl: './proveedores.component.html',
-  imports: [CommonModule, FormsModule, HeaderComponent, HttpClientModule, RouterModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, HeaderComponentComponent],
 })
 export class ProveedoresComponent implements OnInit {
   proveedores: any[] = [];
@@ -19,7 +19,8 @@ export class ProveedoresComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private proveedorService: ProveedorService,
-    private router: Router
+    private router: Router,
+
   ) {}
 
   ngOnInit(): void {
@@ -30,11 +31,16 @@ export class ProveedoresComponent implements OnInit {
     });
   }
 
-  cargarProveedores(): void {
-    this.http.get<any[]>('http://localhost:8000/api/proveedores').subscribe(data => {
-      this.proveedores = data;
-    });
-  }
+  currentPage: number = 1;
+  lastPage: number = 1;
+
+cargarProveedores(page: number = 1): void {
+  this.http.get<any>(`http://localhost:8000/api/proveedores?page=${page}`).subscribe(data => {
+    this.proveedores = data.data;
+    this.currentPage = data.current_page;
+    this.lastPage = data.last_page;
+  });
+}
 
   eliminarProveedor(id: number): void {
     if (confirm('¿Estás seguro de que deseas eliminar este proveedor?')) {
@@ -45,6 +51,7 @@ export class ProveedoresComponent implements OnInit {
   }
 
   editarProveedor(proveedor: any): void {
+    console.log('Proveedor seleccionado:', proveedor);
     this.router.navigate(['/proveditar', proveedor.id]);
   }
   

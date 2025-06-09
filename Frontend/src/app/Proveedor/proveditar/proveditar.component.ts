@@ -1,13 +1,14 @@
-import { HeaderComponent } from "../header/header.component";
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
 
 @Component({
   selector: 'app-proveditar',
-  imports: [HeaderComponent, CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, HeaderComponentComponent],
   templateUrl: './proveditar.component.html',
   styleUrl: './proveditar.component.css'
 })
@@ -40,12 +41,12 @@ actualizarProveedor(): void {
       .subscribe(
         () => {
           alert('Proveedor actualizado correctamente');
-          this.router.navigate(['/proveedores']);
+          this.router.navigate(['/proveedor']);
         },
         error => console.error(error)
       );
   } else {
-    this.router.navigate(['/proveedores']);
+    this.router.navigate(['/proveedor']);
   }
 }
 

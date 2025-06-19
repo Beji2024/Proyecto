@@ -61,6 +61,26 @@ export const routes: Routes = [
   path: 'proveditar/:id',
   loadComponent: () => import('./components/principal/Proveedor/proveditar/proveditar.component').then(m => m.ProveditarComponent),
   canActivate: [AuthGuard]
-}
+},
+{
+  path: 'headerbod',
+  loadComponent: () => import('./components/principalbod/headerbod/headerbod.component').then(m => m.HeaderbodComponent),
+  canActivate: [AuthGuard]
+},
+{
+  path: 'principalbod',
+  loadComponent: () => import('./components/principalbod/principalbod.component').then(m => m.PrincipalbodComponent),
+  canActivate: [AuthGuard]
+},
+{
+  path: 'headerven',
+  loadComponent: () => import('./components/principalven/headerven/headerven.component').then(m => m.HeadervenComponent),
+  canActivate: [AuthGuard]
+},
+{
+  path: 'principalven',
+  loadComponent: () => import('./components/principalven/principalven.component').then(m => m.PrincipalvenComponent)
+},
+  
 
 ];

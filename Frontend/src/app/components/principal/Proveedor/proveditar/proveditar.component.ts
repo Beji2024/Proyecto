@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
+import { HeaderComponentComponent } from "../../header.component/header.component.component";
 
 @Component({
   selector: 'app-proveditar',

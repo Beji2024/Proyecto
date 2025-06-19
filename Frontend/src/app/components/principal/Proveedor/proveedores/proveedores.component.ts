@@ -5,12 +5,13 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
+import { HeaderComponentComponent } from '../../header.component/header.component.component';
+
 
 @Component({
   selector: 'app-proveedores',
   templateUrl: './proveedores.component.html',
-  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, HeaderComponentComponent],
+  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, HeaderComponentComponent,],
 })
 export class ProveedoresComponent implements OnInit {
   proveedores: any[] = [];

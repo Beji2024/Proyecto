@@ -79,8 +79,14 @@ export const routes: Routes = [
 },
 {
   path: 'principalven',
-  loadComponent: () => import('./components/principalven/principalven.component').then(m => m.PrincipalvenComponent)
+  loadComponent: () => import('./components/principalven/principalven.component').then(m => m.PrincipalvenComponent),
+  canActivate: [AuthGuard]
 },
+{
+  path: 'perfil',
+  loadComponent: () => import ('./components/principalbod/usuariobod/usuariobod.component').then(m => m.UsuariobodComponent),
+  canActivate: [AuthGuard]
+}
   
 
 ];

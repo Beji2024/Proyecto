@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UsuariosService } from '../../../../services/usuarios.service';
 import { CommonModule } from '@angular/common';
 import { HeaderComponentComponent } from '../../header.component/header.component.component';
+import { markAsUntransferable } from 'worker_threads';
 
 @Component({
   selector: 'app-registro',
@@ -21,12 +22,12 @@ export class RegistroComponent {
     private router: Router
   ) {
     this.registroForm = this.fb.group({
-      num_doc: ['', Validators.required],
+       num_doc: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
       nombres: ['', Validators.required],
       apellidos: ['', Validators.required],
       direccion: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      num_tel: ['', Validators.required],
+      num_tel: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       fec_nac: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
       tipodoc_id: ['', Validators.required],
@@ -36,6 +37,9 @@ export class RegistroComponent {
 
   onSubmit() {
     if (this.registroForm.valid) {
+      this.registroForm.markAllAsTouched();
+      return;}
+
       const nuevoUsuario = this.registroForm.value;
 
       this.usuariosService.registrarUsuario(nuevoUsuario).subscribe({
@@ -51,4 +55,4 @@ export class RegistroComponent {
       });
     }
   }
-}
+

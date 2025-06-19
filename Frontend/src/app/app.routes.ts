@@ -86,6 +86,11 @@ export const routes: Routes = [
   path: 'perfil',
   loadComponent: () => import ('./components/principalbod/usuariobod/usuariobod.component').then(m => m.UsuariobodComponent),
   canActivate: [AuthGuard]
+},
+{
+  path: 'perfilven',
+  loadComponent: () => import ('./components/principalven/usuarioven/usuarioven.component').then(m => m.UsuariovenComponent),
+  canActivate: [AuthGuard]
 }
   
 

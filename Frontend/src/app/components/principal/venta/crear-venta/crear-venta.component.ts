@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HeaderComponentComponent } from '../../header.component/header.component.component';
 import { VentaService } from '../../../../services/venta.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {Router} from '@angular/router';
+import { Router} from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule} from '@angular/common';
 
@@ -29,12 +29,12 @@ export class CrearVentaComponent implements OnInit {
     this.ventaForm = this.fb.group({
       nombre_cli: ['', Validators.required],
       direccion_cli: ['', Validators.required],
-      correo_cli: ['', Validators.required],
-      num_tel_cli: ['', Validators.required],
-      num_doc_cli: ['', Validators.required],
-      producto_id: ['', Validators.required],
-      cantidad: ['', [Validators.required, Validators.min(1)]],
-      vendedor_id: ['', Validators.required]
+      correo_cli: ['', [Validators.required, Validators.email]], 
+      num_tel_cli: ['', [Validators.required,Validators.pattern(/^\d{10}$/)]],
+      num_doc_cli: ['', [Validators.required,Validators.pattern(/^\d+$/)     ]],
+      producto_id: ['', [Validators.required,Validators.pattern(/^\d+$/)]],
+      cantidad: ['', [Validators.required,Validators.min(1),Validators.pattern(/^\d+$/)     ]],
+      vendedor_id: ['', [Validators.required,Validators.pattern(/^\d+$/)]]
     });
   }
 

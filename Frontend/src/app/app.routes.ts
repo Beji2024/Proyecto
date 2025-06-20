@@ -91,7 +91,26 @@ export const routes: Routes = [
   path: 'perfilven',
   loadComponent: () => import ('./components/principalven/usuarioven/usuarioven.component').then(m => m.UsuariovenComponent),
   canActivate: [AuthGuard]
+},
+{
+  path:'consultarven',
+  loadComponent: () => import('./components/principalven/ventasven/consultarven/consultarven.component').then(m => m.ConsultarvenComponent),
+  canActivate: [AuthGuard]
+},
+{
+  path:'crearven',
+  loadComponent: () => import('./components/principalven/ventasven/crearven/crearven.component').then(m => m.CrearvenComponent),
+  canActivate: [AuthGuard]
+},
+{
+  path:'devolucionven',
+  loadComponent: () => import('./components/principalven/ventasven/devolucionven/devolucionven.component').then(m => m.DevolucionvenComponent),
+  canActivate: [AuthGuard]
+},
+{
+  path:'ventasven',
+  loadComponent: () => import ('./components/principalven/ventasven/ventasven.component').then(m => m.VentasvenComponent),
+  canActivate: [AuthGuard]
 }
-  
 
 ];

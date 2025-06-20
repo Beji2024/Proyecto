@@ -36,7 +36,7 @@ export class RegistroComponent {
   }
 
   onSubmit() {
-    if (this.registroForm.valid) {
+    if (this.registroForm.invalid) {
       this.registroForm.markAllAsTouched();
       return;}
 

@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { HeadervenComponent } from '../../headerven/headerven.component';
 import { VentaService } from '../../../../services/venta.service';
 import { CommonModule } from '@angular/common';
-import { HeaderComponentComponent } from '../../header.component/header.component.component';
+
 @Component({
-  selector: 'app-consultar-venta',
-  standalone: true,
-  imports: [HeaderComponentComponent,CommonModule],
-  templateUrl: './consultar-venta.component.html',
-  styleUrl: './consultar-venta.component.css'
+  selector: 'app-consultarven',
+  standalone:true,
+  imports: [HeadervenComponent,CommonModule],
+  templateUrl: './consultarven.component.html',
+  styleUrl: './consultarven.component.css'
 })
-export class ConsultarVentaComponent implements OnInit {
-  ventas: any[]=[];
+export class ConsultarvenComponent implements OnInit {
+ ventas: any[]=[];
   ventasPaginadas: any[] = [];
   paginaActual: number = 1;
   ventasPorPagina: number = 10;
@@ -50,7 +51,4 @@ export class ConsultarVentaComponent implements OnInit {
     return Array.from({ length: this.totalPaginas }, (_, i) => i + 1);
   }
 }
-
-
-
 

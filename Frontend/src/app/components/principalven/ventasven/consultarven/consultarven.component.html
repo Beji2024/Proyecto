@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-headerven></app-headerven>
 
 <div class="container mt-4">
     <div class="d-flex justify-content-center align-items-center mb-5 mt-4">
@@ -41,7 +41,7 @@
     <li class="page-item"
         *ngFor="let pagina of paginas"
         [class.active]="pagina === paginaActual">
-      <button class="page-link " (click)="cambiarPagina(pagina)">
+      <button class="page-link" (click)="cambiarPagina(pagina)">
         {{ pagina }}
       </button>
     </li>

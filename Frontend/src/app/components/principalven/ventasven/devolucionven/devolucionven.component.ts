@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { HeaderComponentComponent } from '../../header.component/header.component.component';
+import { HeadervenComponent } from '../../headerven/headerven.component';
 import { VentaService } from '../../../../services/venta.service';
 import { CommonModule } from '@angular/common';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'app-devoluciones-venta',
-  standalone: true,
-  imports: [HeaderComponentComponent,CommonModule,RouterModule],
-  templateUrl: './devoluciones-venta.component.html',
-  styleUrl: './devoluciones-venta.component.css'
+  selector: 'app-devolucionven',
+  standalone:true,
+  imports: [HeadervenComponent,CommonModule,RouterModule],
+  templateUrl: './devolucionven.component.html',
+  styleUrl: './devolucionven.component.css'
 })
-export class DevolucionesVentaComponent {
+export class DevolucionvenComponent {
   ventas: any[] = [];
   ventasPaginadas: any[] = [];
   paginaActual: number = 1;

@@ -13,6 +13,7 @@ import { HeaderComponentComponent } from "../../components/principal/header.comp
   styleUrl: './proveditar.component.css'
 })
 export class ProveditarComponent  implements OnInit{
+  erroresFormulario: { [key: string]: string[] } = {};
   proveedor: any = {
     nombre: '',
     nit: '',

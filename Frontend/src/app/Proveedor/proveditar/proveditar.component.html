@@ -17,13 +17,18 @@
               <input id="celular" class="form-control" [(ngModel)]="proveedor.celular" name="celular" placeholder="Celular">
             </div>
             <div class="col-md-3 mb-3">
-              <label for="email">Email</label>
-              <input id="email" class="form-control" [(ngModel)]="proveedor.email" name="email" placeholder="Email">
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="direccion">Dirección</label>
-              <input id="direccion" class="form-control" [(ngModel)]="proveedor.direccion" name="direccion" placeholder="Dirección">
-            </div>
+    <label>Email</label>
+    <input formControlName="email" class="form-control" />
+    <div *ngIf="erroresFormulario['email']">
+      <small class="text-danger" *ngFor="let error of erroresFormulario['email']">
+        {{ error }}
+      </small>
+    </div>
+</div>
+        <div class="col-md-3 mb-3">
+          <label for="direccion">Dirección</label>
+          <input id="direccion" class="form-control" [(ngModel)]="proveedor.direccion" name="direccion" placeholder="Dirección">
+        </div>
             <div class="col-md-3 mb-3">
               <label for="producto">Producto</label>
               <input id="producto" class="form-control" [(ngModel)]="proveedor.producto" name="producto" placeholder="Producto">

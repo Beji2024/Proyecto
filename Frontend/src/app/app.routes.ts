@@ -111,6 +111,30 @@ export const routes: Routes = [
   path:'ventasven',
   loadComponent: () => import ('./components/principalven/ventasven/ventasven.component').then(m => m.VentasvenComponent),
   canActivate: [AuthGuard]
-}
+},
+
+{
+    path: 'productos',
+    loadComponent: () => import('./components/productos/productos/productos.component').then(m => m.ProductosComponent),
+  },
+  {
+    path: 'productos/gestion',
+    loadComponent: () => import('./components/productos/gestion-productos/gestion-productos.component').then(m => m.GestionProductosComponent),
+    
+  },
+  {
+    path: 'productos/nueva-categoria',
+    loadComponent: () => import('./components/categorias y sub/nueva-categoria/nueva-categoria.component').then(m => m.NuevaCategoriaComponent),
+  },
+  {
+    path: 'productos/nueva-subcategoria',
+    loadComponent: () => import('./components/categorias y sub/nueva-subcategoria/nueva-subcategoria.component').then(m => m.NuevaSubcategoriaComponent),
+  },
+  // Ruta dinámica DEBE IR AL FINAL
+  {
+    path: 'productos/:categoriaSub',
+    loadComponent: () => import('./components/productos/productos/productos.component').then(m => m.ProductosComponent),
+  }
+
 
 ];

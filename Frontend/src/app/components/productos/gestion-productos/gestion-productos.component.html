@@ -1,0 +1,168 @@
+<app-header> </app-header>
+<div class="container mt-5">
+    <h2 class="mb-4">Gestión de Productos</h2>
+    <button class="btn btn-primary mb-4" (click)="openForm()">Registrar Producto</button>
+  
+    <table class="table table-striped table-bordered" *ngIf="productos.length > 0; else noProd">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Subcategoría</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prod of productos; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ prod.nombre }}</td>
+          <td>{{ prod.subcategoria?.categoria?.name }}</td>
+          <td>{{ prod.subcategoria?.nom_sub }}</td>
+          <td>{{ prod.cantidad }}</td>
+          <td>{{ prod.precio_venta | currency }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editProducto(prod)">Modificar</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteProducto(prod)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noProd><p>No hay productos disponibles.</p></ng-template>
+  
+    <div *ngIf="isFormVisible" class="mt-4">
+      <h4>{{ isEditing ? 'Modificar Producto' : 'Registrar Nuevo Producto' }}</h4>
+      <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row g-3">
+          <!-- Nombre -->
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input id="nombre" name="nombre" class="form-control" required [(ngModel)]="currentProducto.nombre" />
+          </div>
+  
+          <!-- Categoría -->
+          <div class="col-md-3">
+            <label for="categoria" class="form-label">Categoría</label>
+            <select
+              id="categoria"
+              name="categoria"
+              class="form-select"
+              required
+              [(ngModel)]="categoriaSeleccionada"
+              (ngModelChange)="onCategoriaChange()"
+            >
+              <option [ngValue]="null" disabled>Seleccione</option>
+              <option *ngFor="let c of categorias" [ngValue]="c.id">{{ c.name }}</option>
+            </select>
+          </div>
+  
+          
+          <div class="col-md-3">
+            <label for="subcategoria" class="form-label">Subcategoría</label>
+            <select
+              id="subcategoria"
+              name="subcategoria"
+              class="form-select"
+              required
+              [(ngModel)]="subcategoriaSeleccionada"
+            >
+              <option [ngValue]="null" disabled>Seleccione</option>
+              <option *ngFor="let s of filteredSubcategorias" [ngValue]="s.id_sub">
+                {{ s.nom_sub }}
+              </option>
+            </select>
+          </div>
+  
+          
+          <div class="col-md-2">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input
+              id="cantidad"
+              name="cantidad"
+              type="number"
+              class="form-control"
+              required
+              [(ngModel)]="currentProducto.cantidad"
+            />
+          </div>
+  
+          <!-- Talla -->
+          <div class="col-md-2">
+            <label for="talla" class="form-label">Talla</label>
+            <input
+              id="talla"
+              name="talla"
+              type="text"
+              class="form-control"
+              required
+              [(ngModel)]="currentProducto.talla"
+            />
+          </div>
+  
+          <!-- Precio Venta -->
+          <div class="col-md-2">
+            <label for="precio_venta" class="form-label">Precio Venta</label>
+            <input
+              id="precio_venta"
+              name="precio_venta"
+              type="number"
+              class="form-control"
+              required
+              [(ngModel)]="currentProducto.precio_venta"
+            />
+          </div>
+  
+          <!-- Precio Compra -->
+          <div class="col-md-2">
+            <label for="precio_compra" class="form-label">Precio Compra</label>
+            <input
+              id="precio_compra"
+              name="precio_compra"
+              type="number"
+              class="form-control"
+              required
+              [(ngModel)]="currentProducto.precio_compra"
+            />
+          </div>
+  
+          <!-- Material -->
+          <div class="col-md-3">
+            <label for="material" class="form-label">Material</label>
+            <input
+              id="material"
+              name="material"
+              type="text"
+              class="form-control"
+              required
+              [(ngModel)]="currentProducto.material"
+            />
+          </div>
+  
+          <!-- Color -->
+          <div class="col-md-3">
+            <label for="color" class="form-label">Color</label>
+            <input
+              id="color"
+              name="color"
+              type="text"
+              class="form-control"
+              required
+              [(ngModel)]="currentProducto.color"
+            />
+          </div>
+  
+          <!-- Botones -->
+          <div class="col-12 d-flex justify-content-end">
+            <button type="submit" class="btn btn-success me-2" [disabled]="f.invalid">
+              {{ isEditing ? 'Guardar' : 'Registrar' }}
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="closeForm()">Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

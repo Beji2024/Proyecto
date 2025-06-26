@@ -34,4 +34,7 @@ export class PrincipalvenComponent {
   goToVentaven():void{
     this.router.navigate(['/ventasven']);
   }
+   goToProductos(){
+    this.router.navigate(['/productos']);
+  }
 }

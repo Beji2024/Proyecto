@@ -31,4 +31,8 @@ ngOnDestroy():void{
   goToPerfil(): void {
     this.router.navigate(['/perfil']);
   }
+  
+  goToProductos(){
+    this.router.navigate(['/productos']);
+  }
 }

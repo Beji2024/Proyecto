@@ -15,9 +15,7 @@ class Proveedor extends Model
         'nit',
         'celular',
         'email',
-        'direccion',
-        'producto',
-        'marca',
-        'valor_unitario'
+        'direccion'
     ];
+ 
 }

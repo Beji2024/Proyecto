@@ -11,20 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pedido', function (Blueprint $table) {
-            $table->id('idpedido');
-            $table->date('fec_ped');
-            $table->unsignedBigInteger('ped_prov');
-            $table->unsignedBigInteger('ped_est');
-            $table->unsignedBigInteger('ped_user');
-        
-            // Definir las claves foráneas
-            $table->foreign('ped_prov')->references('id')->on('proveedor')->onDelete('cascade');
-            $table->foreign('ped_est')->references('id')->on('estados')->onDelete('cascade');
-            $table->foreign('ped_user')->references('id')->on('usuarios')->onDelete('cascade');
-        
-            $table->timestamps();
-        });
+        Schema::create('pedidos', function (Blueprint $table) {
+    $table->id('idpedido');
+    $table->date('fec_ped');
+    $table->String('ped_prov');
+    $table->String('ped_user');
+
+    $table->foreign('ped_prov')->references('nit')->on('proveedor');
+    $table->foreign('ped_user')->references('num_doc')->on('usuarios');
+    $table->timestamps();
+});
+
         
     }
 
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pedido');
+        Schema::dropIfExists('pedidos');
     }
 };

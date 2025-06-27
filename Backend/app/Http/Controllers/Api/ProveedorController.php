@@ -30,9 +30,6 @@ class proveedorController extends Controller
             'celular' => 'required|digits:10',
             'email' => 'required|email|unique:proveedor',
             'direccion' => 'required|max:255',
-            'producto' => 'required|max:255',
-            'marca' => 'required|max:255',
-            'valor_unitario' => 'required|numeric'
         ], [
             'required' => 'El campo :attribute es obligatorio.',
             'unique' => 'El :attribute ya está registrado.',
@@ -56,9 +53,7 @@ class proveedorController extends Controller
             'celular' => $request->celular,
             'email' => $request->email,
             'direccion' => $request->direccion,
-            'producto' => $request->producto,
-            'marca' => $request->marca,
-            'valor_unitario' => $request->valor_unitario
+
         ]);
     
         if ($proveedor) {
@@ -108,10 +103,7 @@ public function update(Request $request, $id)
         'nit' => 'required|numeric|unique:proveedor,nit,'.$id,
         'celular' => 'required|digits:10',
         'email' => 'required|email|unique:proveedor,email,'.$id,
-        'direccion' => 'required|max:255',
-        'producto' => 'required|max:255',
-        'marca' => 'required|max:255',
-        'valor_unitario' => 'required|numeric'
+        'direccion' => 'required|max:255'
     ]);
 
     if ($validator->fails()) {

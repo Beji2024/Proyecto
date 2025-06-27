@@ -1,0 +1,123 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<form (ngSubmit)="submit()" class="container mt-4">
+
+  <!-- Fecha del pedido -->
+  <div class="mb-3 row">
+    <label for="fec_ped" class="col-sm-2 col-form-label">Fecha:</label>
+    <div class="col-sm-4">
+      <input id="fec_ped" type="date" class="form-control" [(ngModel)]="pedido.fec_ped" name="fec_ped" required />
+    </div>
+  </div>
+
+  <!-- Selección de Proveedor -->
+  <div class="mb-3 row">
+    <label for="ped_prov" class="col-sm-2 col-form-label">Proveedor:</label>
+    <div class="col-sm-4">
+      <select id="ped_prov" class="form-select" [(ngModel)]="pedido.ped_prov" name="proveedor" required>
+        <option value="" disabled selected>Seleccione un proveedor</option>
+        <option *ngFor="let p of proveedor" [value]="p.nit">
+          {{ p.nombre }}
+        </option>
+      </select>
+      <div class="mt-2 d-flex justify-content-between">
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="cargarProveedores(provPagination.current_page - 1)" [disabled]="provPagination.current_page === 1">
+          ← Anterior
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="cargarProveedores(provPagination.current_page + 1)" [disabled]="provPagination.current_page === provPagination.last_page">
+          Siguiente →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Selección de Usuario -->
+  <div class="mb-3 row">
+    <label for="ped_user" class="col-sm-2 col-form-label">Usuario:</label>
+    <div class="col-sm-4">
+      <select id="ped_user" class="form-select" [(ngModel)]="pedido.ped_user" name="usuario" required>
+        <option value="" disabled selected>Seleccione un usuario</option>
+        <option *ngFor="let u of usuarios" [value]="u.num_doc">
+          {{ u.nombres }} {{ u.apellidos }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Detalles del pedido -->
+  <h4>Detalles</h4>
+  <div class="mb-3 row align-items-end">
+
+    <!-- Selección de Mercancía -->
+    <div class="col-sm-3">
+      <label for="" class="col-sm-2 col-form-label">Producto:</label>
+      <select id="producto" class="form-select"
+        [(ngModel)]="newDetalle.det_p_mer"
+        name="det_p_mer"
+        (change)="asignarPrecioPorProducto()"
+        required>
+  <option value="" disabled selected>Seleccione un producto</option>
+  <option *ngFor="let m of mercancias" [ngValue]="m.id_pro">
+    {{ m.nombre }}
+  </option>
+</select>
+
+    </div>
+
+    <!-- Cantidad -->
+    <div class="col-sm-2">
+      <label for="cantidad" class="form-label">Cantidad:</label>
+      <input id="cantidad" type="number" class="form-control" [(ngModel)]="newDetalle.cantidad" name="cantidad" required />
+    </div>
+
+    <!-- Precio Unitario -->
+    <div class="col-sm-2">
+      <label for="precio_uni" class="form-label">Precio Unitario:</label>
+      <input id="precio_uni" type="number" step="0.01"
+       class="form-control"
+       [(ngModel)]="newDetalle.precio_uni"
+       name="precio_uni"
+       readonly />
+    </div>
+
+    <!-- Botones -->
+    <div class="col-sm-3 d-flex gap-2">
+      <button type="button" class="btn btn-primary" (click)="addDetalle()">Añadir</button>
+      <button type="submit" class="btn btn-success">Crear Pedido</button>
+      <button type="button" class="btn btn-secondary" (click)="goToRegistro()">Registro</button>
+    </div>
+
+  </div>
+  <table class="table table-striped table-bordered mb-4" *ngIf="pedido.detalles.length > 0">
+  <thead class="table-dark">
+    <tr>
+      <th>Proveedor</th>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Precio Unitario</th>
+      <th>Precio Total</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of pedido.detalles; let i = index">
+      <td>{{ obtenerNombreProveedor(pedido.ped_prov) }}</td>
+      <td>{{ obtenerNombreProducto(d.det_p_mer) }}</td>
+      <td>{{ d.cantidad }}</td>
+      <td>${{ d.precio_uni }}</td>
+      <td>${{ d.precio_tt }}</td>
+      <td>
+        <button type="button" class="btn btn-sm btn-danger" (click)="removeDetalle(i)">Eliminar</button>
+      </td>
+    </tr>
+
+    <!-- Fila de total al final -->
+    <tr class="table-secondary">
+      <td colspan="4" class="text-end"><strong>Total del pedido:</strong></td>
+      <td colspan="2"><strong>${{ calcularTotal() }}</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+</form>

@@ -60,6 +60,19 @@ export const routes: Routes = [
 {
   path: 'proveditar/:id',
   loadComponent: () => import('./components/principal/Proveedor/proveditar/proveditar.component').then(m => m.ProveditarComponent),
+
+
+  canActivate: [AuthGuard]
+},
+{
+  path: 'pedido',
+  loadComponent: () => import('./components/principal/pedido/pedido.component').then(m => m.PedidoComponent),
+  canActivate: [AuthGuard]
+}
+,
+{
+  path: 'registros-pedido',
+  loadComponent: () => import('./components/principal/pedido/registro/registro-pedido.component').then(m => m.RegistroPedidoComponent),
   canActivate: [AuthGuard]
 },
 {

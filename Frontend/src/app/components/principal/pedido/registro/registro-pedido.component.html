@@ -1,0 +1,73 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<div class="container mt-4">
+  <h2 class="mb-4">Registro de Pedidos</h2>
+
+  <div class="d-flex justify-content-end mb-2">
+    <input
+      type="text"
+      class="form-control w-25 me-2"
+      placeholder="Buscar por usuario o proveedor"
+      [(ngModel)]="busqueda"
+      (input)="filtrarPedidos()"
+    />
+    <button class="btn btn-outline-primary" (click)="filtrarPedidos()">Buscar</button>
+  </div>
+
+  <div class="table-responsive" *ngIf="pedidosFiltrados.length > 0; else noData">
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Usuario</th>
+          <th>Proveedor</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Precio Total</th>
+        </tr>
+      </thead>
+      <tbody>
+  <ng-container *ngFor="let pedido of pedidosFiltrados">
+    <ng-container *ngFor="let detalle of pedido.detalles; let i = index">
+      <tr >
+        <td *ngIf="i === 0" [attr.rowspan]="pedido.detalles.length">
+          {{ obtenerNombreUsuario(pedido.ped_user) }}
+        </td>
+        <td>{{ obtenerNombreProveedor(pedido.ped_prov) }}</td>
+        <td>{{ obtenerNombreProducto(detalle.det_p_mer) }}</td>
+        <td>{{ detalle.cantidad }}</td>
+        <td>{{ detalle.precio_uni | currency:'COP':'symbol' }}</td>
+        <td>{{ detalle.precio_tt | currency:'COP':'symbol' }}</td>
+      </tr>
+    </ng-container>
+  </ng-container>
+</tbody>
+
+
+    </table>
+
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <button
+        class="btn btn-outline-secondary"
+        (click)="cargarPedidos(currentPage - 1)"
+        [disabled]="currentPage === 1"
+      >
+        Anterior
+      </button>
+
+      <span>Página {{ currentPage }} de {{ lastPage }}</span>
+
+      <button
+        class="btn btn-outline-secondary"
+        (click)="cargarPedidos(currentPage + 1)"
+        [disabled]="currentPage === lastPage"
+      >
+        Siguiente
+      </button>
+    </div>
+  </div>
+
+  <ng-template #noData>
+    <p>No hay pedidos para mostrar.</p>
+  </ng-template>
+</div>

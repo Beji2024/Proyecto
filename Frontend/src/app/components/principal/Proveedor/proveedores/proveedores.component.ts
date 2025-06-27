@@ -8,10 +8,17 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponentComponent } from '../../header.component/header.component.component';
 
 
+
 @Component({
   selector: 'app-proveedores',
   templateUrl: './proveedores.component.html',
   imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, HeaderComponentComponent,],
+
+@Component({
+  selector: 'app-proveedores',
+  templateUrl: './proveedores.component.html',
+  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, HeaderComponentComponent],
+
 })
 export class ProveedoresComponent implements OnInit {
   proveedores: any[] = [];
@@ -52,9 +59,18 @@ cargarProveedores(page: number = 1): void {
   }
 
   editarProveedor(proveedor: any): void {
+
     console.log('Proveedor seleccionado:', proveedor);
     this.router.navigate(['/proveditar', proveedor.id]);
   }
+
+  if (!proveedor || !proveedor.id) {
+    console.error('Proveedor sin ID:', proveedor);
+    return;
+  }
+  this.router.navigate(['/proveditar', proveedor.id]);
+}
+
   
 
   buscarProveedor(): void {

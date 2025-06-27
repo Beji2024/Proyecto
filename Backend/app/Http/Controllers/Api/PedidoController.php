@@ -5,53 +5,54 @@ namespace App\Http\Controllers\Api;
 use App\Models\Pedido;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\DetallePed;
+use Illuminate\Support\Facades\Validator;
 
 class PedidoController extends Controller
 {
     public function index()
     {
-        return Pedido::all();
+        return Pedido::with('detalles')->paginate(10);
     }
 
-    public function store(Request $request)
+    public function store(Request $req)
 {
-    try {
-        $request->validate([
-            'fec_ped' => 'required|date',
-            'ped_prov' => 'required|integer',
-            'ped_est' => 'required|integer',
-            'ped_user' => 'required|integer',
-        ]);
+    $data = $req->validate([
+        'fec_ped'   => 'required|date',
+        'ped_prov'  => 'required|string|exists:proveedor,nit',
+        'ped_user'  => 'required|integer|exists:usuarios,num_doc',
+        'detalles'  => 'required|array|min:1',
+        'detalles.*.cantidad'    => 'required|integer|min:1',
+        'detalles.*.precio_uni'  => 'required|numeric|min:0',
+        'detalles.*.det_p_mer'   => 'required|integer|exists:mercancia,id_pro'
+    ]);
 
-        $pedido = Pedido::create($request->all());
-        return response()->json($pedido, 201);
+    try {
+        $pedido = Pedido::create($data);
+
+        foreach ($data['detalles'] as $d) {
+            DetallePed::create([
+                'cantidad'    => $d['cantidad'],
+                'precio_uni'  => $d['precio_uni'],
+                'precio_tt'   => $d['cantidad'] * $d['precio_uni'],
+                'det_p_mer'   => $d['det_p_mer'],
+                'det_p_ped'   => $pedido->idpedido
+            ]);
+        }
+
+        return response()->json(['success' => true, 'pedido' => $pedido], 201);
 
     } catch (\Exception $e) {
         return response()->json([
             'error' => $e->getMessage(),
-            'line' => $e->getLine(),
-            'file' => $e->getFile()
+            'trace' => $e->getTrace()
         ], 500);
     }
 }
 
 
-    public function show($id)
+    public function show(Pedido $pedido)
     {
-        $pedido = Pedido::findOrFail($id);
-        return $pedido;
-    }
-
-    public function update(Request $request, $id)
-    {
-        $pedido = Pedido::findOrFail($id);
-        $pedido->update($request->all());
-        return response()->json($pedido, 200);
-    }
-
-    public function destroy($id)
-    {
-        Pedido::destroy($id);
-        return response()->json(null, 204);
+        return $pedido->load('detalles');
     }
 }

@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
-
+import { HeaderComponentComponent } from '../../header.component/header.component.component';
 @Component({
   selector: 'app-proveedores',
   templateUrl: './proveedores.component.html',
@@ -51,9 +50,12 @@ cargarProveedores(page: number = 1): void {
   }
 
   editarProveedor(proveedor: any): void {
-    console.log('Proveedor seleccionado:', proveedor);
-    this.router.navigate(['/proveditar', proveedor.id]);
+  if (!proveedor || !proveedor.id) {
+    console.error('Proveedor sin ID:', proveedor);
+    return;
   }
+  this.router.navigate(['/proveditar', proveedor.id]);
+}
   
 
   buscarProveedor(): void {

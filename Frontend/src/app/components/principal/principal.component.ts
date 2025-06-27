@@ -41,4 +41,8 @@ export class PrincipalComponent {
   goToProveedor(){
     this.router.navigate(['/proveedor']);
   }
+   goToPedido() {
+  console.log("Redirigiendo a /pedido");
+  this.router.navigate(['/pedido']);
+}
 }

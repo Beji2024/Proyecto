@@ -10,7 +10,7 @@ class MercanciaController extends Controller
 {
     public function index()
     {
-        return Mercancia::all();
+         return response()->json(Mercancia::all());
     }
 
     public function store(Request $request)

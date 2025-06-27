@@ -25,9 +25,6 @@
         <th>Teléfono</th>
         <th>Correo</th>
         <th>Dirección</th>
-        <th>Producto</th>
-        <th>Marca</th>
-        <th>Valor unitario</th>
         <th>Editar/Eliminar</th>
       </tr>
     </thead>
@@ -38,9 +35,6 @@
         <td>{{ proveedor.celular }}</td>
         <td>{{ proveedor.email }}</td>
         <td>{{ proveedor.direccion }}</td>
-        <td>{{ proveedor.producto }}</td>
-        <td>{{ proveedor.marca }}</td>
-        <td>{{ proveedor.valor_unitario | currency:'COP':'symbol' }}</td>
         <td>
           <div class="d-flex gap-2">
             <button class="btn btn-info btn-sm" (click)="editarProveedor(proveedor)">Editar</button>

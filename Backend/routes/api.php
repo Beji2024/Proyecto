@@ -11,6 +11,8 @@ use App\Http\Controllers\Api\UsuarioController;
 use App\Http\Controllers\Api\SubcategoriaController;
 use App\Http\Controllers\Api\VentaController;
 use App\Http\Controllers\Api\ProductoController;
+use App\Http\Controllers\Api\MercanciaController;
+use App\Http\Controllers\Api\PedidoController;
 
 // RUTAS PÚBLICAS
 Route::post('/login', [AuthContoroller::class, 'login']);
@@ -51,6 +53,14 @@ Route::middleware(['auth:api'])->group(function () {
     Route::patch('/venta/{id}', [VentaController::class, 'update']);
     Route::put('/venta/{id}', [VentaController::class, 'update1']); // extra personalizada
     Route::delete('/venta/{id}', [VentaController::class, 'destroy']);
+
+    //mercancías
+    Route::apiResource('mercancia', MercanciaController::class);
+
+    // pedidos
+Route::apiResource('pedidos', PedidoController::class)->only([
+    'index', 'store', 'show'
+]);
 });
 
     

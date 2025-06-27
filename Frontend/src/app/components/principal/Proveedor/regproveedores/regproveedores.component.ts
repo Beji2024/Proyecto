@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
-
+import { HeaderComponentComponent } from '../../header.component/header.component.component';
 
 @Component({
   selector: 'app-regproveedores',

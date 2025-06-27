@@ -49,17 +49,28 @@ export const routes: Routes = [
   },
   {
   path: 'proveedor',
-  loadComponent: () => import('./Proveedor/proveedores/proveedores.component').then(m => m.ProveedoresComponent),
+  loadComponent: () => import('./components/principal/Proveedor/proveedores/proveedores.component').then(m => m.ProveedoresComponent),
   canActivate: [AuthGuard]
 },
 {
   path: 'regproveedores',
-  loadComponent: () => import('./Proveedor/regproveedores/regproveedores.component').then(m => m.RegproveedoresComponent),
+  loadComponent: () => import('./components/principal/Proveedor/regproveedores/regproveedores.component').then(m => m.RegproveedoresComponent),
   canActivate: [AuthGuard]
 },
 {
   path: 'proveditar/:id',
-  loadComponent: () => import('./Proveedor/proveditar/proveditar.component').then(m => m.ProveditarComponent),
+  loadComponent: () => import('./components/principal/Proveedor/proveditar/proveditar.component').then(m => m.ProveditarComponent),
+  canActivate: [AuthGuard]
+},
+{
+  path: 'pedido',
+  loadComponent: () => import('./components/principal/pedido/pedido.component').then(m => m.PedidoComponent),
+  canActivate: [AuthGuard]
+}
+,
+{
+  path: 'registros-pedido',
+  loadComponent: () => import('./components/principal/pedido/registro/registro-pedido.component').then(m => m.RegistroPedidoComponent),
   canActivate: [AuthGuard]
 }
 

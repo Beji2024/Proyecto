@@ -1,14 +1,14 @@
-
+import { Router, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponentComponent } from "../../components/principal/header.component/header.component.component";
-
+import { HeaderComponentComponent } from '../../header.component/header.component.component';
 @Component({
   selector: 'app-proveditar',
-  imports: [CommonModule, FormsModule, HttpClientModule, HeaderComponentComponent],
+  standalone: true,
+  imports: [CommonModule, FormsModule, HttpClientModule, HeaderComponentComponent,RouterModule],
   templateUrl: './proveditar.component.html',
   styleUrl: './proveditar.component.css'
 })

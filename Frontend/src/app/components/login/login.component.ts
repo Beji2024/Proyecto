@@ -38,10 +38,10 @@ export class LoginComponent {
         
         if(rol === 'Administrador'){
           this.router.navigate(['/principal']);
-        }else if(rol ==='Vendedor'){
-          this.router.navigate(['/usuarios']);
         }else if(rol ==='Bodeguero'){
-          this.router.navigate(['/usuarios']);
+          this.router.navigate(['/principalbod']);
+        }else if(rol ==='Vendedor'){
+          this.router.navigate(['/principalven']);
         }
       },
       error: (error) => {

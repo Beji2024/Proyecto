@@ -1,0 +1,49 @@
+
+
+<div class="container mt-5">
+  <h2>Crear Nueva Categoría</h2>
+
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Nombre de la categoría</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="nombreCategoria" placeholder="Ingrese el nombre de la categoría" required>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-success" (click)="crearCategoria()">Crear</button>
+  </div>
+
+  <!-- Modal de Confirmación -->
+  <div *ngIf="mostrarConfirmacion" class="modal-backdrop fade show" style="z-index: 1050;"></div>
+  <div *ngIf="mostrarConfirmacion" class="modal d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">¿Desea crear una nueva categoría?</h5>
+          <button type="button" class="btn-close" (click)="mostrarConfirmacion = false"></button>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" (click)="mostrarConfirmacion = false">Cancelar</button>
+          <button class="btn btn-primary" (click)="confirmarCreacion()">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Éxito -->
+  <div *ngIf="mostrarExito" class="modal-backdrop fade show" style="z-index: 1050;"></div>
+  <div *ngIf="mostrarExito" class="modal d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Categoría creada con éxito</h5>
+          <button type="button" class="btn-close" (click)="cerrarExito()"></button>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="cerrarExito()">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

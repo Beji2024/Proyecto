@@ -26,7 +26,11 @@ Route::middleware(['auth:api'])->group(function () {
 
     // Categorías
     Route::apiResource('categorias', CategoriaController::class);
-
+    Route::get('/mercancia/categoria/{id}', [MercanciaController::class, 'porCategoria']);
+    Route::get('/mercancia/subcategoria/{id}', [MercanciaController::class, 'porSubcategoria']);
+    
+    //SUBACTEGORIA
+    Route::apiResource('subcategorias', SubcategoriaController::class);
     // Proveedores
     Route::apiResource('proveedores', ProveedorController::class);
 

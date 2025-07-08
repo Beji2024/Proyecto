@@ -1,28 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { ProveedorService } from './proveedor.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HeaderComponentComponent } from '../../header.component/header.component.component';
-
 @Component({
   selector: 'app-proveedores',
-  standalone: true,
   templateUrl: './proveedores.component.html',
   imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, HeaderComponentComponent],
 })
 export class ProveedoresComponent implements OnInit {
   proveedores: any[] = [];
   busqueda: string = '';
-  currentPage: number = 1;
-  lastPage: number = 1;
 
   constructor(
     private http: HttpClient,
     private proveedorService: ProveedorService,
-    private router: Router
+    private router: Router,
+
   ) {}
 
   ngOnInit(): void {
@@ -33,13 +30,16 @@ export class ProveedoresComponent implements OnInit {
     });
   }
 
-  cargarProveedores(page: number = 1): void {
-    this.http.get<any>(`http://localhost:8000/api/proveedores?page=${page}`).subscribe(data => {
-      this.proveedores = data.data;
-      this.currentPage = data.current_page;
-      this.lastPage = data.last_page;
-    });
-  }
+  currentPage: number = 1;
+  lastPage: number = 1;
+
+cargarProveedores(page: number = 1): void {
+  this.http.get<any>(`http://localhost:8000/api/proveedores?page=${page}`).subscribe(data => {
+    this.proveedores = data.data;
+    this.currentPage = data.current_page;
+    this.lastPage = data.last_page;
+  });
+}
 
   eliminarProveedor(id: number): void {
     if (confirm('¿Estás seguro de que deseas eliminar este proveedor?')) {
@@ -50,22 +50,23 @@ export class ProveedoresComponent implements OnInit {
   }
 
   editarProveedor(proveedor: any): void {
-    if (!proveedor || !proveedor.id) {
-      console.error('Proveedor sin ID:', proveedor);
-      return;
-    }
-    this.router.navigate(['/proveditar', proveedor.id]);
+  if (!proveedor || !proveedor.id) {
+    console.error('Proveedor sin ID:', proveedor);
+    return;
   }
+  this.router.navigate(['/proveditar', proveedor.id]);
+}
+  
 
   buscarProveedor(): void {
     if (this.busqueda.trim() === '') {
       this.cargarProveedores();
     } else {
-      const termino = this.busqueda.toLowerCase();
       this.proveedores = this.proveedores.filter(p =>
-        p.nombre.toLowerCase().includes(termino) ||
-        p.marca.toLowerCase().includes(termino)
+        p.nombre.toLowerCase().includes(this.busqueda.toLowerCase()) ||
+        p.marca.toLowerCase().includes(this.busqueda.toLowerCase())
       );
     }
   }
 }
+

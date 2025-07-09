@@ -1,52 +1,51 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Producto } from '../modelos/producto';
+import { Categoria } from '../modelos/categoria';
+import { Subcategoria } from '../modelos/subcategoria';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
-  private apiUrl = 'http://localhost:8000/api'; // Cambia la URL si usas otro backend/puerto
+  private apiUrl = 'http://localhost:8000/api';
 
   constructor(private http: HttpClient) {}
 
-  // Obtener todos los productos
-  getProductos(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/mercancia`);
+  getProductos(): Observable<Producto[]> {
+    return this.http.get<Producto[]>(`${this.apiUrl}/mercancia`, {
+      params: { 'with': 'subcategoria.categoria' }
+    });
   }
 
-  // Crear un nuevo producto
-  createProducto(producto: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/mercancia`, producto);
+  createProducto(producto: Producto): Observable<Producto> {
+    return this.http.post<Producto>(`${this.apiUrl}/mercancia`, producto);
   }
 
-  // Actualizar un producto
-  updateProducto(id: number, producto: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/mercancia/${id}`, producto);
+  updateProducto(id: number, producto: Producto): Observable<Producto> {
+    return this.http.put<Producto>(`${this.apiUrl}/mercancia/${id}`, producto);
   }
 
-  // Eliminar un producto por ID
-  deleteProducto(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/mercancia/${id}`);
+  deleteProducto(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/mercancia/${id}`);
   }
 
-  // Obtener todas las categorías
-  getCategorias(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/categorias`);
+  getCategorias(): Observable<Categoria[]> {
+    return this.http.get<Categoria[]>(`${this.apiUrl}/categorias`);
   }
 
-  // Obtener todas las subcategorías
-  getSubcategorias(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/subcategorias`);
+  getSubcategorias(): Observable<Subcategoria[]> {
+    return this.http.get<Subcategoria[]>(`${this.apiUrl}/subcategorias`);
   }
 
-  // Obtener productos por categoría
-  getProductosPorCategoria(idCategoria: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/categoria/${idCategoria}`);
+  getProductosPorCategoria(idCategoria: number): Observable<Producto[]> {
+  return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/categoria/${idCategoria}`);
+}
+
+
+  getProductosPorSubcategoria(idSubcategoria: number): Observable<Producto[]> {
+  return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/subcategoria/${idSubcategoria}`);
   }
 
-  // Obtener productos por subcategoría
-  getProductosPorSubcategoria(idSubcategoria: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/subcategoria/${idSubcategoria}`);
-  }
 }

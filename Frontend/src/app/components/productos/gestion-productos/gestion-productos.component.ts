@@ -6,7 +6,6 @@ import { CategoriasService } from '../../../services/categorias.service';
 import { Categoria } from '../../../modelos/categoria';
 import { Subcategoria } from '../../../modelos/subcategoria';
 import { Producto } from '../../../modelos/producto';
-import { MenuCategoriasComponent } from "../../categorias y sub/menu-categorias/menu-categorias.component";
 import { HeaderComponentComponent } from "../../principal/header.component/header.component.component";
 
 @Component({
@@ -19,26 +18,24 @@ import { HeaderComponentComponent } from "../../principal/header.component/heade
 export class GestionProductosComponent implements OnInit {
   categorias: Categoria[] = [];
   subcategorias: Subcategoria[] = [];
-  filteredSubcategorias: Subcategoria[] = [];
-
   productos: Producto[] = [];
+  
+  // Estados
   isFormVisible = false;
   isEditing = false;
-
+  showDeleteModal = false;
+  isLoading = false;
+  errorMessage: string | null = null;
+  
+  // Filtros
+  filtroCategoria: number | null = null;
+  filtroSubcategoria: number | null = null;
+  
+  // Formulario
   categoriaSeleccionada: number | null = null;
   subcategoriaSeleccionada: number | null = null;
-
-  currentProducto: Partial<Producto> = {
-    id_pro: 0,
-    nombre: '',
-    cantidad: 0,
-    precio_venta: 0,
-    precio_compra: 0,
-    material: '',
-    color: '',
-    talla: 0, 
-    sub_mer: 0
-  };
+  currentProducto: Partial<Producto> = this.getEmptyProducto();
+  productoToDelete: Producto | null = null;
 
   constructor(
     private productosService: ProductosService,
@@ -46,53 +43,148 @@ export class GestionProductosComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.loadDatos();
-    this.loadProductos();
+    this.loadData();
   }
 
-  private loadDatos() {
-    this.categoriasService.getCategorias().subscribe(cats => this.categorias = cats);
-    this.categoriasService.getSubcategorias().subscribe(subs => {
-      this.subcategorias = subs;
-      this.filteredSubcategorias = [];
+  // Propiedad computada para subcategorías filtradas
+  get subcategoriasFiltradas(): Subcategoria[] {
+    return this.filtroCategoria 
+      ? this.subcategorias.filter(sub => sub.cat_sub === this.filtroCategoria)
+      : [];
+  }
+
+  // Propiedad computada para subcategorías del formulario
+  get subcategoriasForm(): Subcategoria[] {
+    return this.categoriaSeleccionada
+      ? this.subcategorias.filter(sub => sub.cat_sub === this.categoriaSeleccionada)
+      : [];
+  }
+
+  private loadData() {
+    this.isLoading = true;
+    this.errorMessage = null;
+
+    this.productosService.getProductos().subscribe({
+      next: (productos) => {
+        this.productos = productos;
+        this.loadCategorias();
+      },
+      error: (err) => {
+        console.error('Error loading productos:', err);
+        this.errorMessage = 'Error al cargar productos';
+        this.isLoading = false;
+      }
     });
   }
 
-  onCategoriaChange() {
-    if (this.categoriaSeleccionada != null) {
-      this.filteredSubcategorias = this.subcategorias.filter(
-        sub => sub.cat_sub === this.categoriaSeleccionada
-      );
+  private loadCategorias() {
+    this.categoriasService.getCategorias().subscribe({
+      next: (categorias) => {
+        this.categorias = categorias;
+        this.loadSubcategorias();
+      },
+      error: (err) => {
+        console.error('Error loading categorias:', err);
+        this.errorMessage = 'Error al cargar categorías';
+        this.isLoading = false;
+      }
+    });
+  }
+
+  private loadSubcategorias() {
+    this.categoriasService.getSubcategorias().subscribe({
+      next: (subcategorias) => {
+        this.subcategorias = subcategorias;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.error('Error loading subcategorias:', err);
+        this.errorMessage = 'Error al cargar subcategorías';
+        this.isLoading = false;
+      }
+    });
+  }
+
+  private getEmptyProducto(): Partial<Producto> {
+    return {
+      id_pro: 0,
+      nombre: '',
+      cantidad: 0,
+      precio_venta: 0,
+      precio_compra: 0,
+      material: '',
+      color: '',
+      talla: 0,
+      sub_mer: 0
+    };
+  }
+
+  filtrarPorCategoria(idCategoria: number | null) {
+    this.filtroCategoria = idCategoria;
+    this.filtroSubcategoria = null;
+    this.isLoading = true;
+
+    if (idCategoria) {
+      this.productosService.getProductosPorCategoria(idCategoria).subscribe({
+        next: (productos) => {
+          this.productos = productos;
+          this.isLoading = false;
+        },
+        error: (err) => {
+          console.error('Error al filtrar por categoría:', err);
+          this.errorMessage = 'Error al filtrar productos';
+          this.isLoading = false;
+        }
+      });
     } else {
-      this.filteredSubcategorias = [];
+      this.loadData();
     }
+  }
+
+  filtrarPorSubcategoria(idSubcategoria: number | null) {
+    this.filtroSubcategoria = idSubcategoria;
+    this.isLoading = true;
+
+    if (idSubcategoria) {
+      this.productosService.getProductosPorSubcategoria(idSubcategoria).subscribe({
+        next: (productos) => {
+          this.productos = productos;
+          this.isLoading = false;
+        },
+        error: (err) => {
+          console.error('Error al filtrar por subcategoría:', err);
+          this.errorMessage = 'Error al filtrar productos';
+          this.isLoading = false;
+        }
+      });
+    } else {
+      this.filtrarPorCategoria(this.filtroCategoria);
+    }
+  }
+
+  resetFiltros() {
+    this.filtroCategoria = null;
+    this.filtroSubcategoria = null;
+    this.loadData();
+  }
+
+  onCategoriaChange() {
     this.subcategoriaSeleccionada = null;
   }
 
   openForm(edit: boolean = false, prod?: Producto) {
     this.isFormVisible = true;
     this.isEditing = edit;
+    this.errorMessage = null;
 
     if (edit && prod) {
       this.currentProducto = { ...prod };
       this.categoriaSeleccionada = prod.subcategoria?.cat_sub || null;
-      this.onCategoriaChange();
       this.subcategoriaSeleccionada = prod.sub_mer;
     } else {
-      this.currentProducto = {
-        id_pro: 0,
-        nombre: '',
-        cantidad: 0,
-        precio_venta: 0,
-        precio_compra: 0,
-        material: '',
-        color: '',
-        talla: 0, 
-        sub_mer: 0
-      };
+      this.currentProducto = this.getEmptyProducto();
       this.categoriaSeleccionada = null;
       this.subcategoriaSeleccionada = null;
-      this.filteredSubcategorias = [];
     }
   }
 
@@ -101,24 +193,28 @@ export class GestionProductosComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.subcategoriaSeleccionada != null) {
-      this.currentProducto.sub_mer = this.subcategoriaSeleccionada;
+    if (!this.subcategoriaSeleccionada) {
+      this.errorMessage = 'Debe seleccionar una subcategoría';
+      return;
     }
 
-    if (this.isEditing && this.currentProducto.id_pro) {
-      this.productosService
-        .updateProducto(this.currentProducto.id_pro, this.currentProducto)
-        .subscribe(() => this.afterSave());
-    } else {
-      this.productosService
-        .createProducto(this.currentProducto)
-        .subscribe(() => this.afterSave());
-    }
-  }
+    this.currentProducto.sub_mer = this.subcategoriaSeleccionada;
+    const operation = this.isEditing && this.currentProducto.id_pro
+      ? this.productosService.updateProducto(this.currentProducto.id_pro, this.currentProducto as Producto)
+      : this.productosService.createProducto(this.currentProducto as Producto);
 
-  private afterSave() {
-    this.closeForm();
-    this.loadProductos();
+    this.isLoading = true;
+    operation.subscribe({
+      next: () => {
+        this.closeForm();
+        this.loadData();
+      },
+      error: (err) => {
+        console.error('Error saving product:', err);
+        this.errorMessage = 'Error al guardar el producto';
+        this.isLoading = false;
+      }
+    });
   }
 
   editProducto(prod: Producto) {
@@ -126,15 +222,30 @@ export class GestionProductosComponent implements OnInit {
   }
 
   deleteProducto(prod: Producto) {
-    if (!prod.id_pro) return;
-    this.productosService.deleteProducto(prod.id_pro)
-      .subscribe(() => this.loadProductos());
+    this.productoToDelete = prod;
+    this.showDeleteModal = true;
   }
 
-  private loadProductos() {
-    this.productosService.getProductos().subscribe({
-      next: data => this.productos = data,
-      error: err => console.error('Error cargando productos', err)
-    });
+  confirmDelete() {
+    if (this.productoToDelete?.id_pro) {
+      this.isLoading = true;
+      this.productosService.deleteProducto(this.productoToDelete.id_pro).subscribe({
+        next: () => {
+          this.closeDeleteModal();
+          this.loadData();
+        },
+        error: (err) => {
+          console.error('Error deleting product:', err);
+          this.errorMessage = 'Error al eliminar el producto';
+          this.closeDeleteModal();
+          this.isLoading = false;
+        }
+      });
+    }
+  }
+
+  closeDeleteModal() {
+    this.showDeleteModal = false;
+    this.productoToDelete = null;
   }
 }

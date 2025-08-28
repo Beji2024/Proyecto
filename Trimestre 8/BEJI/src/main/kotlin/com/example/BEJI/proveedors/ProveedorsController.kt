@@ -9,6 +9,7 @@ class ProveedorsController {
     lateinit var proveedorsService: ProveedorsService
 
     @GetMapping("/proveedores")
+
     fun obtenerProveedors():List<Proveedors>{
         return proveedorsService.obtenerproveedors()
     }
@@ -16,6 +17,7 @@ class ProveedorsController {
     fun obtenerproveedorsId(@PathVariable id : Int): List<Proveedors>{
         return proveedorsService.obtenerproveedorsId(id)
     }
+
     @PostMapping("/registrar")
     fun registrarProveedors(@RequestBody proveedors: Proveedors): String{
         var resultado = proveedorsService.registrarProveedors(proveedors)
@@ -46,4 +48,6 @@ class ProveedorsController {
             return "Usuario no encontrado"
         }
     }
+
 }
+

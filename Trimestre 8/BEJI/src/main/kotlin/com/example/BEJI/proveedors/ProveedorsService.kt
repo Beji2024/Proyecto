@@ -9,6 +9,7 @@ class ProveedorsService {
     @Autowired
     lateinit var jdbcTemplate: JdbcTemplate
 
+
     fun obtenerproveedors():List<Proveedors>{
         val sql = "SELECT * FROM proveedors"
         return jdbcTemplate.query(sql){rs, _->
@@ -31,6 +32,7 @@ class ProveedorsService {
             rs.getString("email"),
         )},id)
     }
+
     fun registrarProveedors(proveedors: Proveedors): Int{
         val sql = "INSERT INTO proveedors(nit,name,direccion,telefono,email,created_at)VALUES(?,?,?,?,?,NOW())"
         return jdbcTemplate.update(sql,

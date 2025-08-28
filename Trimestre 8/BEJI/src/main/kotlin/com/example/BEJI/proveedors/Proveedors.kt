@@ -14,12 +14,4 @@ data class Proveedors(
     fun getDireccion(): String{return this.direccion}
     fun getTelefono(): String{return this.telefono}
     fun getEmail(): String{return this.email}
-
-    //setters
-    fun setNit(nit: String){ this.nit = nit }
-    fun setName(name:String){ this.name = name}
-    fun setDireccion(direccion: String){ this.direccion = direccion}
-    fun setTelefono(telefono: String){ this.telefono = telefono}
-    fun setEmail(email: String){ this.email = email}
-
 }

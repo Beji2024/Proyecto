@@ -28,7 +28,7 @@ export class EditarComponent implements OnInit {
     this.editarForm = this.fb.group({
       direccion: ['', Validators.required],
       email: ['', Validators.required],
-      num_tel:['', Validators.required],
+      num_tel: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       tipo_doc: ['', Validators.required],
       rol_id: ['', Validators.required],
       apellidos: ['', Validators.required],
@@ -74,7 +74,7 @@ export class EditarComponent implements OnInit {
       this.usuariosService.actualizarUsuario(this.userId, this.editarForm.value).subscribe({
         next: (res) => {
           alert('Usuario actualizado con éxito');
-          this.router.navigate(['/usuarios']);
+          this.router.navigate(['/usuarios'],{replaceUrl: true});
         },
         error: (err) => {
           console.error('Error al actualizar usuario:', err);

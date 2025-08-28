@@ -19,7 +19,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="text-center align-middle" *ngFor="let venta of ventas">
+          <tr class="text-center align-middle" *ngFor="let venta of ventasPaginadas">
             <td>{{ venta.id }}</td>
             <td>{{ venta.fecha }}</td>
             <td>{{ venta.producto.referencia}}</td>
@@ -30,6 +30,29 @@
           </tr>
         </tbody>
       </table>
+      <nav *ngIf="totalPaginas > 1" class="d-flex justify-content-center mt-3">
+  <ul class="pagination">
+    <li class="page-item" [class.disabled]="paginaActual === 1">
+      <button class="page-link" (click)="cambiarPagina(paginaActual - 1)">
+        Anterior
+      </button>
+    </li>
+
+    <li class="page-item"
+        *ngFor="let pagina of paginas"
+        [class.active]="pagina === paginaActual">
+      <button class="page-link " (click)="cambiarPagina(pagina)">
+        {{ pagina }}
+      </button>
+    </li>
+
+    <li class="page-item" [class.disabled]="paginaActual === totalPaginas">
+      <button class="page-link" (click)="cambiarPagina(paginaActual + 1)">
+        Siguiente
+      </button>
+    </li>
+  </ul>
+</nav>
     </div>
   
     <ng-template #sinVentas>

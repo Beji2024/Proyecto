@@ -28,24 +28,24 @@ export class CambioComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Obtener el ID de la venta de la URL
+    
     this.ventaId = Number(this.route.snapshot.paramMap.get('id'));
 
-    // Llamar al servicio para obtener la venta por ID
+    
     this.ventaService.obtenerVenta(this.ventaId).subscribe({
-      next: (venta: Venta) => {  // Aquí se recibe la respuesta como 'venta'
+      next: (venta: Venta) => {  
         console.log('Datos de la venta:', venta);
 
-        // Inicializar el formulario con los datos de la venta
+        
         this.ventaForm = this.fb.group({
           nombre_cli: [venta.nombre_cli, [Validators.required]],
           direccion_cli: [venta.direccion_cli, [Validators.required]],
           correo_cli: [venta.correo_cli, [Validators.required]],
           num_tel_cli: [venta.num_tel_cli, [Validators.required]],
           num_doc_cli: [venta.num_doc_cli, [Validators.required]],
-          producto_id: [venta.producto.id, [Validators.required]],  // ID del producto actual (solo lectura)
-          nuevo_producto_id: [venta.producto.id, [Validators.required]],  // Campo editable para el nuevo producto
-          vendedor_id: [venta.vendedor_id, [Validators.required]], // ID del vendedor
+          producto_id: [venta.producto.id, [Validators.required]],  
+          nuevo_producto_id: [venta.producto.id, [Validators.required]],  
+          vendedor_id: [venta.vendedor_id, [Validators.required]], 
         });
       },
       error: (err) => {

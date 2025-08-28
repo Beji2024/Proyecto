@@ -25,11 +25,26 @@ export class CategoriasService {
 
   // Crear una nueva categoría
   crearCategoria(categoria: Categoria): Observable<Categoria> {
-    return this.http.post<Categoria>(this.apiUrlCategorias, categoria);
-  }
+  return this.http.post<Categoria>(this.apiUrlCategorias, categoria, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
+  });
+}
 
   // Crear una nueva subcategoría
   crearSubcategoria(subcategoria: { nom_sub: string, categoria: Categoria }): Observable<Subcategoria> {
     return this.http.post<Subcategoria>(this.apiUrlSubcategorias, subcategoria);
+  }
+  // Actualizar una categoría
+  actualizarCategoria(id: number, categoria: Categoria): Observable<Categoria> {
+    return this.http.put<Categoria>(`${this.apiUrlCategorias}/${id}`, categoria);
+  }
+
+  // Eliminar una categoría
+  eliminarCategoria(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrlCategorias}/${id}`);
   }
 }

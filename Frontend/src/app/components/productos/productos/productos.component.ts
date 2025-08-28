@@ -17,7 +17,7 @@ import { HeaderComponentComponent } from "../../principal/header.component/heade
     RouterModule,
     HeaderComponentComponent,
     MenuCategoriasComponent
-],
+  ],
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
@@ -34,32 +34,30 @@ export class ProductosComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Carga categorías y subcategorías antes de procesar la ruta
+    // Carga inicial de categorías y subcategorías
     this.categoriasService.getCategorias().subscribe(cats => {
       this.categorias = cats;
 
       this.categoriasService.getSubcategorias().subscribe(subs => {
         this.subcategorias = subs;
 
-        // Obtiene el parámetro de la ruta
+        // Detecta la ruta y determina qué cargar
         this.route.params.subscribe(params => {
-          const ruta = params['categoriaSub'] || params['nombre']; // 'categoriaSub' o 'nombre' dependiendo de cómo esté configurado
-          console.log('Ruta obtenida:', ruta); // Verifica el valor de la ruta
+          const ruta = params['categoriaSub'] || params['nombre'];
 
           if (ruta) {
             const partes = ruta.split('-');
+
             if (partes.length === 1) {
-              // Solo categoría
               const nombreCategoria = partes[0];
               this.filtrarPorCategoria(nombreCategoria);
             } else {
-              // Categoría + Subcategoría
               const nombreCategoria = partes[0];
-              const nombreSubcategoria = partes.slice(1).join('-'); // Maneja casos donde la subcategoría tiene guiones
+              const nombreSubcategoria = partes.slice(1).join('-');
               this.filtrarPorCategoriaYSubcategoria(nombreCategoria, nombreSubcategoria);
             }
           } else {
-            this.obtenerTodos(); // Si no hay categoría ni subcategoría, cargar todos los productos
+            this.obtenerTodos();
           }
         });
       });
@@ -76,6 +74,26 @@ export class ProductosComponent implements OnInit {
         this.error = err.message || 'Error al cargar productos.';
       }
     });
+  }
+
+  filtrarPorCategoria(nombreCategoria: string): void {
+    const categoria = this.categorias.find(cat => 
+      cat.name.toLowerCase() === nombreCategoria.toLowerCase()
+    );
+
+    if (categoria && categoria.id !== undefined) {
+      this.productosService.getProductosPorCategoria(categoria.id).subscribe({
+        next: (data) => {
+          this.productos = data;
+          this.error = null;
+        },
+        error: () => {
+          this.error = 'No se pudo cargar productos por categoría.';
+        }
+      });
+    } else {
+      this.error = 'Categoría no encontrada.';
+    }
   }
 
   filtrarPorCategoriaYSubcategoria(nombreCategoria: string, nombreSubcategoria: string): void {
@@ -95,31 +113,7 @@ export class ProductosComponent implements OnInit {
         }
       });
     } else {
-      this.error = 'Subcategoría no encontrada o mal escrita.';
-    }
-  }
-
-  filtrarPorCategoria(nombreCategoria: string): void {
-    // Verificamos si hay categorías y que el id esté definido
-    if (this.categorias && this.categorias.length > 0) {
-      const categoria = this.categorias.find(cat => cat.name.toLowerCase() === nombreCategoria.toLowerCase());
-      
-      // Verificamos que el id de la categoría sea válido (no undefined)
-      if (categoria && categoria.id !== undefined) {  // Aseguramos que id no sea undefined
-        this.productosService.getProductosPorCategoria(categoria.id).subscribe({
-          next: (data) => {
-            this.productos = data;
-            this.error = null;
-          },
-          error: () => {
-            this.error = 'No se pudo cargar productos por categoría.';
-          }
-        });
-      } else {
-        this.error = 'Categoría no encontrada o id inválido.';
-      }
-    } else {
-      this.error = 'No se han cargado las categorías.';
+      this.error = 'Subcategoría no encontrada o no coincide con la categoría.';
     }
   }
 }

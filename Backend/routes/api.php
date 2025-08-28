@@ -24,9 +24,24 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('/me', [AuthContoroller::class, 'me']);
     Route::post('/logout', [AuthContoroller::class, 'logout']);
 
+    //mercancia
+    Route::get('mercancia', [MercanciaController::class, 'index']);
+    Route::post('mercancia', [MercanciaController::class, 'store']);
+    Route::get('mercancia/{id}', [MercanciaController::class, 'show']);
+    Route::put('mercancia/{id}', [MercanciaController::class, 'update']);
+    Route::delete('mercancia/{id}', [MercanciaController::class, 'destroy']);
+    Route::get('/mercancia/categoria/{id}', [MercanciaController::class, 'porCategoria']);
+    Route::get('/mercancia/subcategoria/{id}', [MercanciaController::class, 'porSubcategoria']);
+    
     // Categorías
     Route::apiResource('categorias', CategoriaController::class);
 
+    // Subcategorías 
+    Route::get('subcategorias', [SubcategoriaController::class, 'index']);
+    Route::post('subcategorias', [SubcategoriaController::class, 'store']);
+    Route::get('subcategorias/{id}', [SubcategoriaController::class, 'show']);
+    Route::put('subcategorias/{id}', [SubcategoriaController::class, 'update']);
+    Route::delete('subcategorias/{id}', [SubcategoriaController::class, 'destroy']);
     // Proveedores
     Route::apiResource('proveedores', ProveedorController::class);
 

@@ -11,7 +11,7 @@ class SubcategoriaController extends Controller
     // Listar todas las subcategorías
     public function index()
     {
-        return Subcategoria::all();
+        return Subcategoria::with('categoria')->get();
     }
 
     // Mostrar una subcategoría por ID

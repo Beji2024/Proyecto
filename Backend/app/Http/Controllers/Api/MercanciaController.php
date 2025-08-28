@@ -8,15 +8,17 @@ use App\Http\Controllers\Controller;
 
 class MercanciaController extends Controller
 {
+    // Obtener todos los productos con la relación de subcategoría y categoría
     public function index()
     {
-         return response()->json(Mercancia::all());
+        return Mercancia::with('subcategoria.categoria')->get();
     }
 
+    // Crear una nueva mercancia
     public function store(Request $request)
     {
         $data = $request->validate([
-            'cantidad' => 'required|integer',
+           'cantidad' => 'required|integer',
             'nombre' => 'required|string|max:50',
             'talla' => 'required|integer',
             'precio_venta' => 'required|numeric',
@@ -30,31 +32,45 @@ class MercanciaController extends Controller
         return response()->json($mercancia, 201);
     }
 
+    // Mostrar un producto específico
     public function show(Mercancia $mercancia)
     {
-        return $mercancia;
+        return $mercancia->load('subcategoria.categoria');
     }
 
-    public function update(Request $request, Mercancia $mercancia)
+    // Filtrar mercancias por ID de subcategoría
+    public function porSubcategoria($id)
     {
-        $data = $request->validate([
-            'cantidad' => 'integer',
-            'nombre' => 'string|max:50',
-            'talla' => 'integer',
-            'precio_venta' => 'numeric',
-            'precio_compra' => 'numeric',
-            'material' => 'string|max:30',
-            'color' => 'string|max:20',
-            'sub_mer' => 'integer',
-        ]);
-
-        $mercancia->update($data);
-        return $mercancia;
+        return Mercancia::where('sub_mer', $id)
+            ->with('subcategoria.categoria') // Traemos las relaciones de subcategoria y categoria
+            ->get();
     }
 
-    public function destroy(Mercancia $mercancia)
+    // Filtrar mercancias por ID de categoría
+    public function porCategoria($id)
     {
-        $mercancia->delete();
-        return response()->noContent();
+        return Mercancia::whereHas('subcategoria.categoria', function ($query) use ($id) {
+            $query->where('id', $id); // Filtrar mercancias con la categoría correspondiente
+        })->with('subcategoria.categoria') ->get();
     }
+    
+    public function destroy($id)
+    {
+    $producto = Mercancia::find($id);
+
+    if (!$producto) {
+    return response()->json(['message' => 'Producto no encontrado'], 404);
+    }
+
+    $producto->delete();
+    return response()->json(['message' => 'Producto eliminado correctamente']);
+    }
+
+    public function update(Request $request, $id)
+{
+    $producto = Mercancia::findOrFail($id);
+    $producto->update($request->all());
+    return response()->json($producto);
+}
+
 }

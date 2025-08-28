@@ -30,9 +30,6 @@ export class RegproveedoresComponent {
       celular: [''],
       email: [''],
       direccion: [''],
-      producto: [''],
-      marca: [''],
-      valor_unitario: []
     });
   }
 

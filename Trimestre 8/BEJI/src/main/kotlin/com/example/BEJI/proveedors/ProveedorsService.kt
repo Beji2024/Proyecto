@@ -9,10 +9,10 @@ class ProveedorsService {
     @Autowired
     lateinit var jdbcTemplate: JdbcTemplate
 
-
-    fun obtenerproveedors():List<Array<String>>{
+    fun obtenerproveedors():List<Proveedors>{
         val sql = "SELECT * FROM proveedors"
-        return jdbcTemplate.query(sql){rs, _->arrayOf(
+        return jdbcTemplate.query(sql){rs, _->
+            Proveedors(
             rs.getString("name"),
             rs.getString("direccion"),
             rs.getString("nit"),
@@ -20,9 +20,10 @@ class ProveedorsService {
             rs.getString("email")
         )}
     }
-    fun obtenerproveedorsId(id:Int):List<Array<String>>{
+    fun obtenerproveedorsId(id:Int):List<Proveedors>{
         val sql = "SELECT * FROM proveedors WHERE id = ?"
-        return jdbcTemplate.query(sql, {rs, _->arrayOf(
+        return jdbcTemplate.query(sql, {rs, _->
+            Proveedors(
             rs.getString("name"),
             rs.getString("direccion"),
             rs.getString("nit"),

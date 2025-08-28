@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.BEJI.Usuarios
 import com.example.demoimport.Usuario
 import org.mindrot.jbcrypt.BCrypt
 import org.springframework.beans.factory.annotation.Autowired
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 import java.time.LocalDate
 
 @Service
-class ConexionServer {
+class UsuarioService {
     @Autowired
     lateinit var jdbcTemplate: JdbcTemplate
 

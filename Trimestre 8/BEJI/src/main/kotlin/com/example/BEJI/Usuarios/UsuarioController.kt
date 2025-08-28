@@ -1,6 +1,6 @@
-package com.example.demo
+package com.example.BEJI.Usuarios
 import com.example.demoimport.Usuario
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans. factory.annotation.Autowired
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -12,18 +12,18 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/usuarios")  // mejor tener un path base
-class ConexionController {
+class UsuarioController {
     @Autowired
-    lateinit var conexionServer: ConexionServer
+    lateinit var usuarioService: UsuarioService
 
     @GetMapping
     fun obtenerUsuarios(): List<Usuario> {
-        return conexionServer.obtenerUsuarios()
+        return usuarioService.obtenerUsuarios()
     }
 
     @PostMapping
     fun agregarUsuario(@RequestBody usuario: Usuario): String {
-        val filas = conexionServer.agregarUsuario(usuario)
+        val filas = usuarioService.agregarUsuario(usuario)
         return if (filas > 0) {
             "Persona agregada correctamente"
         } else {
@@ -36,7 +36,7 @@ class ConexionController {
         @PathVariable numDoc: String,
         @RequestBody usuario: Usuario
     ): String {
-        val filas = conexionServer.actualizarPersona(numDoc , usuario)
+        val filas = usuarioService.actualizarPersona(numDoc , usuario)
         return if (filas > 0) {
             "Persona actualizada correctamente"
         } else {
@@ -46,7 +46,7 @@ class ConexionController {
 
     @DeleteMapping("/{numDoc}")
     fun eliminarPersona(@PathVariable numDoc: String,): String {
-        val filas = conexionServer.eliminarPersona(numDoc)
+        val filas = usuarioService.eliminarPersona(numDoc)
         return if (filas > 0) {
             "Persona eliminada correctamente"
         } else {

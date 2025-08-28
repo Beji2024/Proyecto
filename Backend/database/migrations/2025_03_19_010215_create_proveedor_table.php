@@ -18,9 +18,6 @@ return new class extends Migration
             $table->string('celular');
             $table->string('email')->unique();
             $table->string('direccion');
-            $table->string('producto');
-            $table->string('marca');
-            $table->decimal('valor_unitario', 8, 2);
             $table->timestamps();
         });
     }

@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { HeaderComponentComponent } from './header.component/header.component.component';
 
-
 @Component({
   selector: 'app-principal',
   standalone: true,
@@ -38,4 +37,16 @@ export class PrincipalComponent {
   goToVenta(){
     this.router.navigate(['/venta']);
   }
+  goToProveedor(){
+    this.router.navigate(['/proveedor']);
+  }
+
+   goToProductos(){
+    this.router.navigate(['/productos']);
+  }
+
+   goToPedido() {
+  console.log("Redirigiendo a /pedido");
+  this.router.navigate(['/pedido']);
+}
 }

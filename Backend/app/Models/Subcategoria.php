@@ -18,5 +18,11 @@ class Subcategoria extends Model
         'nom_sub',
         'cat_sub'
     ];
+   
+
+public function categoria()
+{
+    return $this->belongsTo(Categoria::class, 'cat_sub', 'id');
 }
 
+}

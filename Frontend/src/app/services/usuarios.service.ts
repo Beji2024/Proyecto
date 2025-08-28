@@ -32,5 +32,9 @@ export class UsuariosService {
   obtenerRoles(): Observable<any[]> {
   return this.http.get<any[]>('http://localhost:8000/api/roles');
 }
+obtenerUsuarioActual() {
+  const userJson = localStorage.getItem('usuario');
+  return userJson ? JSON.parse(userJson) : null;
+}
 
 }

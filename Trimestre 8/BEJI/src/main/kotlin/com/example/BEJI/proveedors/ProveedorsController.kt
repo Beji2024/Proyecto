@@ -12,6 +12,10 @@ class ProveedorsController {
     fun obtenerProveedors():List<Array<String>>{
         return proveedorsService.obtenerproveedors()
     }
+    @GetMapping("proveedores/{id}")
+    fun obtenerProveedorsId(@PathVariable id: Int): List<Array<String>>{
+        return proveedorsService.obtenerproveedorsId(id)
+    }
     @PostMapping("/registrar")
     fun registrarProveedors(@RequestBody proveedors: Proveedors): String{
         var resultado = proveedorsService.registrarProveedors(proveedors)

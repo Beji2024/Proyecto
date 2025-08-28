@@ -20,6 +20,16 @@ class ProveedorsService {
             rs.getString("email")
         )}
     }
+    fun obtenerproveedorsId(id:Int):List<Array<String>>{
+        val sql = "SELECT * FROM proveedors WHERE id = ?"
+        return jdbcTemplate.query(sql, {rs, _->arrayOf(
+            rs.getString("name"),
+            rs.getString("direccion"),
+            rs.getString("nit"),
+            rs.getString("telefono"),
+            rs.getString("email"),
+        )},id)
+    }
     fun registrarProveedors(proveedors: Proveedors): Int{
         val sql = "INSERT INTO proveedors(nit,name,direccion,telefono,email,created_at)VALUES(?,?,?,?,?,NOW())"
         return jdbcTemplate.update(sql,

@@ -14,6 +14,4 @@ data class Proveedors(
     fun getDireccion(): String{return this.direccion}
     fun getTelefono(): String{return this.telefono}
     fun getEmail(): String{return this.email}
-
-
 }

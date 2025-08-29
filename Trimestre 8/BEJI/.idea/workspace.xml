@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="" />
+    <list default="true" id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/productos/Productos.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/productos/ProductosController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/productos/ProductosService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/subcategoria/Subcategorias.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/subcategoria/SubcategoriasController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/subcategoria/SubcategoriasServise.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.BejiApplicationKt" />
+        <item itemvalue="Kotlin.BejiApplicationKt" />
         <item itemvalue="Kotlin.BejiApplicationKt" />
         <item itemvalue="Kotlin.BejiApplicationKt" />
         <item itemvalue="Kotlin.BejiApplicationKt" />

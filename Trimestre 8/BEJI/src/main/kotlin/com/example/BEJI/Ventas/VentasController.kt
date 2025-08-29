@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 
 @RestController
-class VentaController {
+class VentasController {
     @Autowired
-    lateinit var ventaService: VentaService
+    lateinit var ventaService: VentasService
 
     @GetMapping("/ventas")
     fun obtenerVentas(): List<Array<String>> {
@@ -14,14 +14,14 @@ class VentaController {
     }
 
     @PostMapping("/registrarVenta")
-    fun registrarVenta(@RequestBody venta: Venta): String {
+    fun registrarVenta(@RequestBody venta: Ventas): String {
         val resultado = ventaService.registrarVenta(venta)
         return if (resultado > 0) "Venta registrada correctamente"
         else "Error al registrar la venta"
     }
 
     @PutMapping("/actualizarVenta/{id}")
-    fun actualizarVenta(@PathVariable id: Int, @RequestBody venta: Venta): String {
+    fun actualizarVenta(@PathVariable id: Int, @RequestBody venta: Ventas): String {
         val resultado = ventaService.actualizarVenta(id, venta)
         return if (resultado > 0) "Venta actualizada correctamente"
         else "Venta no encontrada"

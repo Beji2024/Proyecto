@@ -5,7 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Service
 
 @Service
-class VentaService {
+class VentasService {
     @Autowired
     lateinit var jdbcTemplate: JdbcTemplate
 
@@ -28,7 +28,7 @@ class VentaService {
     }
 
     // Registrar venta
-    fun registrarVenta(venta: Venta): Int {
+    fun registrarVenta(venta: Ventas): Int {
         val sql = """
             INSERT INTO venta (nombre_cli, direccion_cli, correo_cli, num_tel_cli, num_doc_cli, producto_id, cantidad, vendedor_id, estado_id, created_at) 
             VALUES (?,?,?,?,?,?,?,?,?,NOW())
@@ -47,7 +47,7 @@ class VentaService {
     }
 
     // Actualizar venta
-    fun actualizarVenta(id: Int, venta: Venta): Int {
+    fun actualizarVenta(id: Int, venta: Ventas): Int {
         val sql = """
             UPDATE venta SET nombre_cli=?, direccion_cli=?, correo_cli=?, num_tel_cli=?, num_doc_cli=?, producto_id=?, cantidad=?, vendedor_id=?, estado_id=?, updated_at=NOW()
             WHERE id=?

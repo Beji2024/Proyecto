@@ -1,6 +1,6 @@
 package com.example.BEJI.venta
 
-data class Venta(
+data class Ventas(
     private var nombre_cli: String,
     private var direccion_cli: String,
     private var correo_cli: String,

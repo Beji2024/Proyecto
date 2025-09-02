@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/estadoPedido")
 class EstadoPedidoController {
     @Autowired
-    lateinit var estadoPedidoService: EstadoPedidoService
+    lateinit var service: EstadoPedidoService
 
     @GetMapping
     fun obtenerEstadoPedido():List<EstadoPedido>{
-        return estadoPedidoService.obtenerEstadoPedido()
+        return service.obtenerEstadoPedido()
     }
     @GetMapping("{id}")
     fun obtenerEstadopedidoId(@PathVariable id : Int): EstadoPedido?{
-        return estadoPedidoService.obtenerEstadoPedidoId(id)
+        return service.obtenerEstadoPedidoId(id)
     }
     @PostMapping
     fun registrarEstadoPedido(@RequestBody estadoPedido: EstadoPedido): String{
-        var resultado = estadoPedidoService.registrarEstadoPedido(estadoPedido)
+        var resultado = service.registrarEstadoPedido(estadoPedido)
         if(resultado>0){
             return "El registro se realizo correctamente"
         }
@@ -29,20 +29,20 @@ class EstadoPedidoController {
     }
     @PutMapping("/{id}")
     fun actualizarEstadoPedido(@RequestBody estadoPedido: EstadoPedido,@PathVariable id: Int):String{
-        var resultado = estadoPedidoService.actualizarEstadoPedido(estadoPedido,id)
+        var resultado = service.actualizarEstadoPedido(estadoPedido,id)
         return if(resultado > 0){
-            "Usuario actualizado correctamente"
+            "Registro actualizado correctamente"
         }
-        else{"Usuario no encontrado"}
+        else{"Registro no encontrado"}
     }
     @DeleteMapping("/{id}")
     fun eliminarEstadoPedido(@PathVariable id: Int):String{
-        var resultado = estadoPedidoService.eliminarEstdoPedido(id)
+        var resultado = service.eliminarEstdoPedido(id)
         return if(resultado>0){
-            "Usuario eliminado sin problema"
+            "Registro eliminado sin problema"
         }
         else{
-            "Usuario no encontrado"
+            "Registro no encontrado"
         }
     }
 }

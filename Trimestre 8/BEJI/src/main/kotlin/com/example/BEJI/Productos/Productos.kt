@@ -1,4 +1,4 @@
-package com.example.BEJI.productos
+package com.example.BEJI.Productos
 
 data class Productos (
     private var id_pro: Int,

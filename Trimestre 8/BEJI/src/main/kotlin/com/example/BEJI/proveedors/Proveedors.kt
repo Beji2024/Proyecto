@@ -1,5 +1,5 @@
 package com.example.BEJI.proveedors
-import org.springframework.format.annotation.DateTimeFormat
+
 
 data class Proveedors(
     private var nit :String,

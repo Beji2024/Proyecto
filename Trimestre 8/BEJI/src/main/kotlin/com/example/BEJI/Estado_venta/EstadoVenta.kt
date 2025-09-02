@@ -1,4 +1,4 @@
-package com.example.BEJI.estado_venta
+package com.example.BEJI.Estado_venta
 
 data class EstadoVenta(
     private var id: Int,

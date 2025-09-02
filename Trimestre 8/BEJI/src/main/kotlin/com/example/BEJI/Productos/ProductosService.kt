@@ -1,4 +1,4 @@
-package com.example.BEJI.productos
+package com.example.BEJI.Productos
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Service

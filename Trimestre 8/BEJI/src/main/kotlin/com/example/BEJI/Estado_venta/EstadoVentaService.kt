@@ -1,7 +1,6 @@
-package com.example.BEJI.estado_venta
+package com.example.BEJI.Estado_venta
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.jdbc.core.JdbcTemplate
-import org.springframework.jdbc.core.queryForObject
 import org.springframework.stereotype.Service
 
 

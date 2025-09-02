@@ -1,4 +1,4 @@
-package com.example.BEJI.categorias
+package com.example.BEJI.Categorias
 
 data class Categorias (
     private var id: Int,

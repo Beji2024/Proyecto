@@ -1,4 +1,4 @@
-package com.example.BEJI.categorias
+package com.example.BEJI.Categorias
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Service

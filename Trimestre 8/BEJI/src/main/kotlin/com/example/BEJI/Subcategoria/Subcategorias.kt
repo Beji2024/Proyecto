@@ -1,4 +1,4 @@
-package com.example.BEJI.subcategoria
+package com.example.BEJI.Subcategoria
 
 data class Subcategorias(
  private var id_sub: Int,

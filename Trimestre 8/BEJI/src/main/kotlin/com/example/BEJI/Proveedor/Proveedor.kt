@@ -1,4 +1,4 @@
-package com.example.BEJI.proveedor
+package com.example.BEJI.Proveedor
 
 
 data class Proveedor(

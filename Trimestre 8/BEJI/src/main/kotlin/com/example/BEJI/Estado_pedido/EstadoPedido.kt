@@ -1,4 +1,4 @@
-package com.example.BEJI.estado_pedido
+package com.example.BEJI.Estado_pedido
 
 data class EstadoPedido(
     private var id : Int,

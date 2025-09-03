@@ -14,6 +14,7 @@ class ProveedorService {
         val sql = "SELECT * FROM proveedor"
         return jdbcTemplate.query(sql, RowMapper{ rs, _->
             Proveedor(
+                rs.getInt("id"),
             rs.getString("nombre"),
             rs.getString("nit"),
             rs.getString("celular"),
@@ -26,6 +27,7 @@ class ProveedorService {
         val sql = "SELECT * FROM proveedor WHERE id = ?"
         return jdbcTemplate.queryForObject(sql, RowMapper{ rs, _->
             Proveedor(
+                rs.getInt("id"),
             rs.getString("nombre"),
             rs.getString("nit"),
             rs.getString("celular"),
@@ -37,6 +39,7 @@ class ProveedorService {
         val sql = "SELECT * FROM proveedor WHERE nit = ?"
         return jdbcTemplate.queryForObject(sql, RowMapper{rs,_->
             Proveedor(
+                rs.getInt("id"),
                 rs.getString("nombre"),
                 rs.getString("nit"),
                 rs.getString("celular"),
@@ -55,6 +58,7 @@ class ProveedorService {
             proveedor.getEmail(),
             proveedor.getDireccion())
     }
+
     fun actualizarProveedor(id:Int, proveedor: Proveedor): Int{
         val sql = "UPDATE proveedor SET nombre=?,nit=?,celular=?,email=?,direccion=?,updated_at=NOW() WHERE id =?"
         return jdbcTemplate.update(sql,

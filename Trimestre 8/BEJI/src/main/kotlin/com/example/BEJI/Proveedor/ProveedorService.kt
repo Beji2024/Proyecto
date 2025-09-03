@@ -7,51 +7,36 @@ import org.springframework.jdbc.core.RowMapper
 @Service
 class ProveedorService {
     @Autowired
-    lateinit var jdbcTemplate: JdbcTemplate
+    private lateinit var consultaMysql: JdbcTemplate
 
-
-    fun obtenerproveedor():List<Proveedor>{
-        val sql = "SELECT * FROM proveedor"
-        return jdbcTemplate.query(sql, RowMapper{ rs, _->
-            Proveedor(
-                rs.getInt("id"),
+    var Mapeo = RowMapper{ rs, _->
+        Proveedor(
+            rs.getInt("id"),
             rs.getString("nombre"),
             rs.getString("nit"),
             rs.getString("celular"),
             rs.getString("email"),
             rs.getString("direccion")
-        )})
+        )}
+
+    fun obtenerproveedor():List<Proveedor>{
+        val sql = "SELECT * FROM proveedor"
+        return consultaMysql.query(sql, Mapeo)
     }
 
     fun obtenerproveedorId(id:Int):Proveedor?{
         val sql = "SELECT * FROM proveedor WHERE id = ?"
-        return jdbcTemplate.queryForObject(sql, RowMapper{ rs, _->
-            Proveedor(
-                rs.getInt("id"),
-            rs.getString("nombre"),
-            rs.getString("nit"),
-            rs.getString("celular"),
-            rs.getString("email"),
-            rs.getString("direccion"),
-        )},id)
+        return consultaMysql.queryForObject(sql, Mapeo,id)
     }
+
     fun obtenerproveedorNit(nit: String): Proveedor?{
         val sql = "SELECT * FROM proveedor WHERE nit = ?"
-        return jdbcTemplate.queryForObject(sql, RowMapper{rs,_->
-            Proveedor(
-                rs.getInt("id"),
-                rs.getString("nombre"),
-                rs.getString("nit"),
-                rs.getString("celular"),
-                rs.getString("email"),
-                rs.getString("direccion"),
-            )
-        },nit)
+        return consultaMysql.queryForObject(sql, Mapeo,nit)
     }
 
     fun registrarProveedor(proveedor: Proveedor): Int{
         val sql = "INSERT INTO proveedor(nombre,nit,celular,email,direccion,created_at)VALUES(?,?,?,?,?,NOW())"
-        return jdbcTemplate.update(sql,
+        return consultaMysql.update(sql,
             proveedor.getNombre(),
             proveedor.getNit(),
             proveedor.getCelular(),
@@ -61,16 +46,17 @@ class ProveedorService {
 
     fun actualizarProveedor(id:Int, proveedor: Proveedor): Int{
         val sql = "UPDATE proveedor SET nombre=?,nit=?,celular=?,email=?,direccion=?,updated_at=NOW() WHERE id =?"
-        return jdbcTemplate.update(sql,
+        return consultaMysql.update(sql,
             proveedor.getNombre(),
             proveedor.getNit(),
             proveedor.getCelular(),
             proveedor.getEmail(),
-            proveedor.getDireccion(),id)
+            proveedor.getDireccion(),
+            id)
     }
     fun eliminarProveedor(id:Int): Int{
         val sql = "Delete from proveedor where id=?"
-        return jdbcTemplate.update(sql,id)
+        return consultaMysql.update(sql,id)
     }
 
 }

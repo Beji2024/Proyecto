@@ -1,7 +1,7 @@
 package com.example.BEJI.Proveedor
 
-
-data class Proveedor(
+class Proveedor(
+    private var id : Int,
     private var nombre:String,
     private var nit :String,
     private var celular: String,
@@ -9,6 +9,7 @@ data class Proveedor(
     private var direccion: String
 ){
     //getters
+    fun getId(): Int{return  this.id}
     fun getNombre(): String{return this.nombre}
     fun getNit(): String{return this.nit}
     fun getCelular(): String{return this.celular}

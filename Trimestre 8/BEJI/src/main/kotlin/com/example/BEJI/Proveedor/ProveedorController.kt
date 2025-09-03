@@ -19,6 +19,11 @@ class ProveedorController {
         return proveedorService.obtenerproveedorId(id)
     }
 
+    @GetMapping("/nit/{nit}")
+    fun obtenerproveedorNit(@PathVariable nit:String): Proveedor?{
+        return proveedorService.obtenerproveedorNit(nit)
+    }
+
     @PostMapping
     fun registrarProveedor(@RequestBody proveedor: Proveedor): String{
         var resultado = proveedorService.registrarProveedor(proveedor)

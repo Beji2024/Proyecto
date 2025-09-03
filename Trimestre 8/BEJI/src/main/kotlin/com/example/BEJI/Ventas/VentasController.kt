@@ -9,7 +9,7 @@ class VentasController {
     lateinit var ventaService: VentasService
 
     @GetMapping("/ventas")
-    fun obtenerVentas(): List<Array<String>> {
+    fun obtenerVentas(): List<Ventas> {
         return ventaService.obtenerVentas()
     }
 

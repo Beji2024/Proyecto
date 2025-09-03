@@ -2,6 +2,7 @@ package com.example.BEJI.Proveedor
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Service
+import org.springframework.jdbc.core.RowMapper
 
 @Service
 class ProveedorService {
@@ -11,19 +12,19 @@ class ProveedorService {
 
     fun obtenerproveedor():List<Proveedor>{
         val sql = "SELECT * FROM proveedor"
-        return jdbcTemplate.query(sql){rs, _->
+        return jdbcTemplate.query(sql, RowMapper{ rs, _->
             Proveedor(
             rs.getString("nombre"),
             rs.getString("nit"),
             rs.getString("celular"),
             rs.getString("email"),
             rs.getString("direccion")
-        )}
+        )})
     }
 
     fun obtenerproveedorId(id:Int):Proveedor?{
         val sql = "SELECT * FROM proveedor WHERE id = ?"
-        return jdbcTemplate.queryForObject(sql, {rs, _->
+        return jdbcTemplate.queryForObject(sql, RowMapper{ rs, _->
             Proveedor(
             rs.getString("nombre"),
             rs.getString("nit"),
@@ -31,6 +32,18 @@ class ProveedorService {
             rs.getString("email"),
             rs.getString("direccion"),
         )},id)
+    }
+    fun obtenerproveedorNit(nit: String): Proveedor?{
+        val sql = "SELECT * FROM proveedor WHERE nit = ?"
+        return jdbcTemplate.queryForObject(sql, RowMapper{rs,_->
+            Proveedor(
+                rs.getString("nombre"),
+                rs.getString("nit"),
+                rs.getString("celular"),
+                rs.getString("email"),
+                rs.getString("direccion"),
+            )
+        },nit)
     }
 
     fun registrarProveedor(proveedor: Proveedor): Int{

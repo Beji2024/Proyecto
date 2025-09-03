@@ -9,25 +9,21 @@ class VentasService {
     @Autowired
     lateinit var jdbcTemplate: JdbcTemplate
 
-    // Obtener todas las ventas
-    fun obtenerVentas(): List<Array<String>> {
+    fun obtenerVentas(): List<Ventas> {
         val sql = "SELECT * FROM venta"
-        return jdbcTemplate.query(sql) { rs, _ -> arrayOf(
-            rs.getString("id"),
+        return jdbcTemplate.query(sql) { rs, _ -> Ventas(
             rs.getString("nombre_cli"),
             rs.getString("direccion_cli"),
             rs.getString("correo_cli"),
             rs.getString("num_tel_cli"),
             rs.getString("num_doc_cli"),
-            rs.getString("producto_id"),
-            rs.getString("cantidad"),
-            rs.getString("vendedor_id"),
-            rs.getString("fecha"),
-            rs.getString("estado_id")
+            rs.getLong("producto_id"),
+            rs.getInt("cantidad"),
+            rs.getLong("vendedor_id"),
+            rs.getLong("estado_id")
         )}
     }
 
-    // Registrar venta
     fun registrarVenta(venta: Ventas): Int {
         val sql = """
             INSERT INTO venta (nombre_cli, direccion_cli, correo_cli, num_tel_cli, num_doc_cli, producto_id, cantidad, vendedor_id, estado_id, created_at) 
@@ -46,7 +42,6 @@ class VentasService {
         )
     }
 
-    // Actualizar venta
     fun actualizarVenta(id: Int, venta: Ventas): Int {
         val sql = """
             UPDATE venta SET nombre_cli=?, direccion_cli=?, correo_cli=?, num_tel_cli=?, num_doc_cli=?, producto_id=?, cantidad=?, vendedor_id=?, estado_id=?, updated_at=NOW()
@@ -66,7 +61,7 @@ class VentasService {
         )
     }
 
-    // Eliminar venta
+
     fun eliminarVenta(id: Int): Int {
         val sql = "DELETE FROM venta WHERE id=?"
         return jdbcTemplate.update(sql, id)

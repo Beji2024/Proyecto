@@ -7,9 +7,14 @@ class SubcategoriasController {
     @Autowired
     lateinit var subcategoriasServise: SubcategoriasServise
     @GetMapping("/subcategorias")
-    fun obtenerSubcategorias(): List<Map<String, Any>>{
+    fun obtenerSubcategorias(): List<Subcategorias>{
         return subcategoriasServise.obtenerSubcategorias()
     }
+    @GetMapping("/subcategorias/categorias/{id}")
+    fun obtenerSubcategoriasPorCategoria(@PathVariable id: Int): List<Subcategorias>{
+        return subcategoriasServise.obtenerSubcategoriasPorCategoria(id)
+    }
+
     @PostMapping("/subcategorias")
     fun crearSubcategoria(@RequestBody subcategorias: Subcategorias): String{
         var resultado = subcategoriasServise.crearSubcategoria(subcategorias)

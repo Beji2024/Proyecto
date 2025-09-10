@@ -8,8 +8,16 @@ class ProductosController {
     @Autowired
     lateinit var productosService: ProductosService
     @GetMapping("/productos")
-    fun obtenerProductos(): List<Map<String, Any>>{
+    fun obtenerProductos(): List<Productos>{
         return productosService.obtenerProductos()
+    }
+    @GetMapping("/productos/subcategoria/{id}")
+    fun obtenerProductosPorSubcategoria(@PathVariable id: Int): List<Productos>{
+        return productosService.obtenerProductosPorSubcategoria(id)
+    }
+    @GetMapping("/productos/categoria/{id}")
+    fun obtenerProductosPorCategorias(@PathVariable id: Int): List<Productos>{
+        return productosService.obtenerProductosPorCategoria(id)
     }
     @PostMapping("/productos")
     fun crearProductos(@RequestBody productos: Productos): String{

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- 🟣 Parte superior morada (15%) -->
+    <LinearLayout
+            android:id="@+id/mainHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:background="#6A0DAD"
+            android:gravity="center">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestión de Usuarios"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- 📋 Contenido listado usuarios -->
+    <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.85"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+        <Button
+                android:id="@+id/btnRegistrarUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrar Nuevo Usuario"
+                android:layout_gravity="center"
+                android:padding="8dp"/>
+
+        <!-- 🟦 Recycler más pequeño y centrado -->
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="465dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:overScrollMode="ifContentScrolls"/>
+    </LinearLayout>
+
+</LinearLayout>

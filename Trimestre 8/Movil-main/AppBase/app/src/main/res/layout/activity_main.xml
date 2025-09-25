@@ -22,10 +22,10 @@
 			android:layout_marginTop="24dp"/>
 
 	<Button
-			android:id="@+id/btnProductos"
+			android:id="@+id/btnUsuarios"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="Productos"
+			android:text="Usuarios"
 			android:layout_marginTop="12dp"/>
 
 	<Button

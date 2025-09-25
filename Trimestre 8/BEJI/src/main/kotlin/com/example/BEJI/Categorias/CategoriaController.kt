@@ -39,5 +39,4 @@ class CategoriaController {
             return "Ups, no se pudo eliminar la categoria"
         }
     }
-
 }

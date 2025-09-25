@@ -78,7 +78,6 @@ class ProveedoresActivity : AppCompatActivity() {
 
     private fun editarProveedor(proveedor: Proveedor) {
         Toast.makeText(this, "Editar: ${proveedor.nombre}", Toast.LENGTH_SHORT).show()
-        // TODO: Abre un formulario para editar si implementas edición
     }
 
     private fun eliminarProveedor(proveedor: Proveedor) {

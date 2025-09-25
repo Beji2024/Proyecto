@@ -18,11 +18,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appinterface.Adapter.PersonaAdapter
 import com.example.appinterface.Api.DataResponse
 import com.example.appinterface.Api.RetrofitInstance
+import com.example.appinterface.Usuario.UsuarioActivity
 import com.example.appinterface.proveedor.ProveedoresActivity
 import com.google.android.material.appbar.MaterialToolbar
 
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,6 +37,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ProveedoresActivity::class.java)
             startActivity(intent)
         }
-
+        val buttonGoToUsuarioActivity: Button = findViewById(R.id.btnUsuarios)
+        buttonGoToUsuarioActivity.setOnClickListener {
+            val intent = Intent(this, UsuarioActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

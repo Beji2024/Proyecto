@@ -8,12 +8,11 @@
 
 	<com.google.android.material.appbar.MaterialToolbar
 			android:id="@+id/toolbar"
-			android:layout_width="match_parent"
-			android:layout_height="?attr/actionBarSize"
+			android:layout_width="697dp"
+			android:layout_height="wrap_content"
 			android:background="#6A1B9A"
 			app:title="Menú Principal"
-			app:titleTextColor="@android:color/white" />
-
+			app:titleTextColor="@android:color/white"/>
 	<Button
 			android:id="@+id/btnProveedores"
 			android:layout_width="match_parent"

@@ -3,6 +3,7 @@ package com.example.appinterface.Usuario
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appinterface.Adapter.UsuarioAdapter
 import com.example.appinterface.Api.RetrofitInstance
 import com.example.appinterface.R
+import com.google.android.material.appbar.MaterialToolbar
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,6 +36,21 @@ class UsuarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_usuario)
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        if (toolbar == null) {
+            Log.e("AddProveedorActivity", "toolbar es null -> revisa include y el id customToolbar")
+        } else {
+            setSupportActionBar(toolbar)
+            supportActionBar?.apply {
+                title = "Gestion de usuarios"
+                setDisplayHomeAsUpEnabled(true)
+            }
+
+            toolbar.setNavigationOnClickListener {
+                finish()
+            }
+        }
 
         val btnRegistroUsuario = findViewById<Button>(R.id.btnRegistrarUsuario)
         btnRegistroUsuario.setOnClickListener {

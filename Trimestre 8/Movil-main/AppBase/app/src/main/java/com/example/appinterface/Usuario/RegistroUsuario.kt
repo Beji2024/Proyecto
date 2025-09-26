@@ -1,5 +1,6 @@
 package com.example.appinterface.Usuario
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appinterface.Api.RetrofitInstance
 import com.example.appinterface.R
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.gson.Gson
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -32,9 +34,26 @@ class RegistroUsuario : AppCompatActivity() {
     private lateinit var btnRegistrar: Button
     private lateinit var btnCancelar: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registro_usuario)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        if (toolbar == null) {
+            Log.e("AddProveedorActivity", "toolbar es null -> revisa include y el id customToolbar")
+        } else {
+            setSupportActionBar(toolbar)
+            supportActionBar?.apply {
+                title = "Registrar Usuario"
+                setDisplayHomeAsUpEnabled(true)
+            }
+
+            toolbar.setNavigationOnClickListener {
+                Log.d("AddProveedorActivity", "Navigation click - finishing activity")
+                finish()
+            }
+        }
+
 
         // Inicializar vistas
         etNumDoc = findViewById(R.id.numdoc)

@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical">
 
-    <!-- 🟣 Parte superior morada (15%) -->
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.15"
-            android:background="#6A0DAD"
-            android:gravity="center">
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Registro de Usuario"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white" />
-    </LinearLayout>
+    <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- 📋 Contenido del formulario (85%) -->
+
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -34,74 +25,72 @@
                 android:orientation="vertical">
 
             <EditText
-                    android:id="@+id/numdoc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Número Documento"
-                    android:inputType="text" />
-
-            <EditText
                     android:id="@+id/nombres"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nombres"
-                    android:inputType="textPersonName" />
-
+                    android:inputType="textPersonName"/>
             <EditText
                     android:id="@+id/apellidos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Apellidos"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"/>
 
+            <EditText
+                    android:id="@+id/numdoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Número Documento"
+                    android:inputType="text"/>
             <EditText
                     android:id="@+id/direccion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Dirección"
-                    android:inputType="textPostalAddress" />
+                    android:inputType="textPostalAddress"/>
 
             <EditText
                     android:id="@+id/correo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Correo"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"/>
 
             <EditText
                     android:id="@+id/numTel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Teléfono"
-                    android:inputType="phone" />
+                    android:inputType="phone"/>
 
             <EditText
                     android:id="@+id/fecNac"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Fecha de Nacimiento"
-                    android:inputType="date" />
+                    android:inputType="date"/>
 
             <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Contraseña"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"/>
 
             <EditText
                     android:id="@+id/tipodoc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ID Tipo de Documento"
-                    android:inputType="number" />
+                    android:inputType="number"/>
 
             <EditText
                     android:id="@+id/rolId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ID Rol"
-                    android:inputType="number" />
+                    android:inputType="number"/>
 
             <Button
                     android:id="@+id/btnRegistrar"

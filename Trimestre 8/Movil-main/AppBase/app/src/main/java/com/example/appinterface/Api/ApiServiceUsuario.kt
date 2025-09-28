@@ -16,10 +16,12 @@ interface ApiServiceUsuario {
     fun postUsuarios(@Body usuario: Usuario): Call<ResponseBody>
 
     // Actualizar usuario (se pasa el numDoc en la URL)
-    @PUT("/usuarios/{numDoc}")
-    fun putUsuarios(@Path("numDoc") numDoc: String, @Body usuario: Usuario): Call<ResponseBody>
+    @PUT("usuarios/{numDoc}")
+    fun updateUsuario(@Path("numDoc") numDoc: String, @Body usuario: Usuario): Call<ResponseBody>
 
     // Eliminar usuario por numDoc
     @DELETE("/usuarios/{numDoc}")
     fun deleteUsuario(@Path("numDoc") numDoc: String): Call<ResponseBody>
+
+
 }

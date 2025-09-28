@@ -5,31 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/UsuarioAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Api/ApiServiceUsuario.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Usuario/EditarUsuarioActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Usuario/RegistroUsuario.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Usuario/Usuario.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Usuario/UsuarioActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/drawable/descarga.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_usuario.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/editar_usuario.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_usuario.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/registro_usuario.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Backend/app/Http/Controllers/Api/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/app/Http/Controllers/Api/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Backend/app/Http/Controllers/Api/VentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/app/Http/Controllers/Api/VentaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Backend/database/migrations/2025_04_17_010021_create_venta_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/database/migrations/2025_04_17_010021_create_venta_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/AppBase/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/AppBase/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/AppBase/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/AppBase/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Categorias/CategoriaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Categorias/CategoriaController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Usuarios/UsuarioController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Usuarios/UsuarioController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movil-main/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
@@ -39,10 +16,6 @@
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Api/RetrofitInstance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Api/RetrofitInstance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +75,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Rama-felipe",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/aprendiz.sena/Proyecto/Trimestre 8/Movil-main",
+    "last_opened_file_path": "C:/Users/Usuario/Proyecto-1/Trimestre 8/Movil-main",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

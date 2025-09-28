@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/appinterface/Usuarios/UsuarioActivity.kt
 package com.example.appinterface.Usuario
 
 import android.content.Intent
@@ -21,10 +20,6 @@ import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlin.collections.isNullOrEmpty
-import kotlin.collections.toMutableList
-import kotlin.jvm.java
-import kotlin.text.isEmpty
 
 class UsuarioActivity : AppCompatActivity() {
 
@@ -39,11 +34,11 @@ class UsuarioActivity : AppCompatActivity() {
 
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         if (toolbar == null) {
-            Log.e("AddProveedorActivity", "toolbar es null -> revisa include y el id customToolbar")
+            Log.e("UsuarioActivity", "toolbar es null -> revisa include y el id customToolbar")
         } else {
             setSupportActionBar(toolbar)
             supportActionBar?.apply {
-                title = "Gestion de usuarios"
+                title = "Gestión de usuarios"
                 setDisplayHomeAsUpEnabled(true)
             }
 
@@ -71,7 +66,7 @@ class UsuarioActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        mostrarUsuarios() // recarga al volver de registrar/editar
+        mostrarUsuarios()
     }
 
     private fun mostrarUsuarios() {
@@ -84,7 +79,7 @@ class UsuarioActivity : AppCompatActivity() {
                         adapter = UsuarioAdapter(
                             usuarios,
                             onEliminar = { usuario, position -> confirmarYEliminar(usuario, position) },
-                            onEditar = { usuario -> /* aquí aún no tenías lo de editar */ }
+                            onEditar = { usuario -> editarUsuario(usuario) }
                         )
                         rUsuario.adapter = adapter
                     } else {
@@ -101,6 +96,21 @@ class UsuarioActivity : AppCompatActivity() {
                 Toast.makeText(this@UsuarioActivity, "Error de conexión con la API", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    private fun editarUsuario(usuario: Usuario) {
+        val intent = Intent(this, EditarUsuarioActivity::class.java)
+        intent.putExtra("numDoc", usuario.numDoc)
+        intent.putExtra("nombres", usuario.nombres)
+        intent.putExtra("apellidos", usuario.apellidos)
+        intent.putExtra("direccion", usuario.direccion)
+        intent.putExtra("email", usuario.email)
+        intent.putExtra("numTel", usuario.numTel)
+        intent.putExtra("fecNac", usuario.fecNac)
+        intent.putExtra("password", usuario.password)
+        intent.putExtra("tipodoc", usuario.tipodocId)
+        intent.putExtra("rolId", usuario.rolId)
+        startActivity(intent)
     }
 
     private fun confirmarYEliminar(usuario: Usuario, position: Int) {

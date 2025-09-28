@@ -77,7 +77,14 @@ class ProveedoresActivity : AppCompatActivity() {
     }
 
     private fun editarProveedor(proveedor: Proveedor) {
-        Toast.makeText(this, "Editar: ${proveedor.nombre}", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, EditProveedorActivity::class.java)
+        intent.putExtra("id", proveedor.id)
+        intent.putExtra("nombre", proveedor.nombre)
+        intent.putExtra("nit", proveedor.nit)
+        intent.putExtra("celular", proveedor.celular)
+        intent.putExtra("email", proveedor.email)
+        intent.putExtra("direccion", proveedor.direccion)
+        startActivity(intent)
     }
 
     private fun eliminarProveedor(proveedor: Proveedor) {

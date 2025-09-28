@@ -34,11 +34,12 @@ class ProveedorAdapter(
     override fun onBindViewHolder(holder: ProveedorViewHolder, position: Int) {
         val proveedor = proveedores[position]
 
-        holder.tvNit.text = proveedor.nit
-        holder.tvNombre.text = proveedor.nombre
-        holder.tvDireccion.text = proveedor.direccion
-        holder.tvTelefono.text = proveedor.celular
-        holder.tvEmail.text = proveedor.email
+        holder.tvNombre.text = proveedor.nombre ?: ""
+        holder.tvNit.text = proveedor.nit ?: ""
+        holder.tvDireccion.text = proveedor.direccion ?: ""
+        holder.tvTelefono.text = proveedor.celular ?: ""
+        holder.tvEmail.text = proveedor.email ?: ""
+
 
         holder.btnEditar.setOnClickListener { onEditar(proveedor) }
         holder.btnEliminar.setOnClickListener { onEliminar(proveedor) }

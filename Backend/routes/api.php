@@ -18,7 +18,6 @@ use App\Http\Controllers\Api\PedidoController;
 Route::post('/login', [AuthContoroller::class, 'login']);
 
 // RUTAS PROTEGIDAS POR JWT
-Route::middleware(['auth:api'])->group(function () {
 
     // Auth
     Route::get('/me', [AuthContoroller::class, 'me']);
@@ -76,7 +75,6 @@ Route::middleware(['auth:api'])->group(function () {
     Route::apiResource('pedidos', PedidoController::class)->only([
     'index', 'store', 'show'
 ]);
-});
 
     
     

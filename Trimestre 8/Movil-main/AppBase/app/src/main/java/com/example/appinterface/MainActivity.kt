@@ -21,7 +21,7 @@ import com.example.appinterface.Api.RetrofitInstance
 import com.example.appinterface.Usuario.UsuarioActivity
 import com.example.appinterface.proveedor.ProveedoresActivity
 import com.google.android.material.appbar.MaterialToolbar
-
+import androidx.cardview.widget.CardView
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -32,15 +32,21 @@ class MainActivity : AppCompatActivity() {
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val btnProveedores = findViewById<Button>(R.id.btnProveedores)
-        btnProveedores.setOnClickListener {
+        val cardProveedores = findViewById<CardView>(R.id.cardProveedores)
+        cardProveedores.setOnClickListener {
             val intent = Intent(this, ProveedoresActivity::class.java)
             startActivity(intent)
         }
-        val buttonGoToUsuarioActivity: Button = findViewById(R.id.btnUsuarios)
-        buttonGoToUsuarioActivity.setOnClickListener {
+
+        val cardUsuarios = findViewById<CardView>(R.id.cardUsuarios)
+        cardUsuarios.setOnClickListener {
             val intent = Intent(this, UsuarioActivity::class.java)
             startActivity(intent)
+        }
+
+        val cardClientes = findViewById<CardView>(R.id.cardClientes)
+        cardClientes.setOnClickListener {
+            Toast.makeText(this, "Abrir Clientes", Toast.LENGTH_SHORT).show()
         }
     }
 }

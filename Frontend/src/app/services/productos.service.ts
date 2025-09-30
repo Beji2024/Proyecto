@@ -19,13 +19,14 @@ export class ProductosService {
     });
   }
 
-  createProducto(producto: Producto): Observable<Producto> {
-    return this.http.post<Producto>(`${this.apiUrl}/mercancia`, producto);
-  }
+  createProducto(producto: FormData): Observable<Producto> {
+  return this.http.post<Producto>(`${this.apiUrl}/mercancia`, producto);
+}
 
-  updateProducto(id: number, producto: Producto): Observable<Producto> {
-    return this.http.put<Producto>(`${this.apiUrl}/mercancia/${id}`, producto);
-  }
+updateProducto(id: number, producto: FormData): Observable<Producto> {
+  return this.http.post<Producto>(`${this.apiUrl}/mercancia/${id}?_method=PUT`, producto);
+  // usamos POST con _method=PUT porque FormData no se lleva bien con PUT en Laravel
+}
 
   deleteProducto(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/mercancia/${id}`);

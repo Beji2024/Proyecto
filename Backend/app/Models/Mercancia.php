@@ -22,7 +22,8 @@ class Mercancia extends Model
         'precio_compra',
         'material',
         'color',
-        'sub_mer'
+        'sub_mer',
+        'imagen'
     ];
 
     // Relación: una mercancia pertenece a una subcategoría

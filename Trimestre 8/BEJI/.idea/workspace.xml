@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="">
-
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Backend/app/Http/Controllers/Api/MercanciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/app/Http/Controllers/Api/MercanciaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Backend/app/Models/Mercancia.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/app/Models/Mercancia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/productos/productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/productos/productos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/modelos/producto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/modelos/producto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/services/productos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/services/productos.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Usuarios/UsuarioController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Usuarios/UsuarioController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Usuarios/UsuarioService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Usuarios/UsuarioService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/proveedors/Proveedors.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/proveedors/Proveedors.kt" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Categorias/CategoriaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/BEJI/Categorias/CategoriaController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +52,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "juan2522"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Beji2024/Proyecto.git",
+    "accountId": "3a2f7ea9-728c-4fd6-9acd-bf7d3ca7a201"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -69,7 +86,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Rama-felipe",
+    "git-widget-placeholder": "Rama-juan",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/juanm/OneDrive/Desktop/spring boot/Proyecto/Trimestre 8/BEJI"
   }
 }]]></component>
@@ -91,6 +109,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="" />

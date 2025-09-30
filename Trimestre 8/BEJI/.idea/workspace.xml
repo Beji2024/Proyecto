@@ -6,16 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/BEJI.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/PersonaAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/PersonaAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/UsuarioAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/UsuarioAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_add_proveedor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_add_proveedor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_edit_proveedores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_edit_proveedores.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_proveedores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_proveedores.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_usuario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_usuario.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_proveedor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_proveedor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_usuario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_usuario.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,22 +78,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.BejiApplicationKt.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Rama-felipe",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Usuario/Proyecto-1/Trimestre 8/Movil-main",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.BejiApplicationKt.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Rama-felipe&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aprendiz.sena/Proyecto/Trimestre 8/Movil-main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BejiApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.BEJI.BejiApplicationKt" />

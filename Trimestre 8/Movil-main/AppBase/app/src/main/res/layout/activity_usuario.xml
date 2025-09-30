@@ -11,8 +11,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
-    <!-- 📋 Contenido listado usuarios -->
     <LinearLayout
             android:id="@+id/main"
             android:layout_width="match_parent"
@@ -30,7 +28,6 @@
                 android:layout_gravity="center"
                 android:padding="8dp"/>
 
-        <!-- 🟦 Recycler más pequeño y centrado -->
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RecyUsuario"
                 android:layout_width="match_parent"
@@ -42,5 +39,4 @@
                 android:scrollbars="vertical"
                 android:overScrollMode="ifContentScrolls"/>
     </LinearLayout>
-
 </LinearLayout>

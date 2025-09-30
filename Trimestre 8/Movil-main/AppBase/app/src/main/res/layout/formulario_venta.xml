@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <!-- Cantidad -->
+        <EditText
+                android:id="@+id/etCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cantidad"
+                android:inputType="number"/>
+
+        <!-- Número de documento -->
+        <EditText
+                android:id="@+id/etNumDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de documento"
+                android:inputType="text"/>
+
+        <!-- Producto ID -->
+        <EditText
+                android:id="@+id/etProductoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID del producto"
+                android:inputType="number"/>
+
+        <!-- Vendedor ID -->
+        <EditText
+                android:id="@+id/etVendedorId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID del vendedor"
+                android:inputType="number"/>
+
+        <!-- Estado ID -->
+        <EditText
+                android:id="@+id/etEstadoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID del estado"
+                android:inputType="number"/>
+
+        <!-- Correo -->
+        <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo del cliente"
+                android:inputType="textEmailAddress"/>
+
+        <!-- Nombre del cliente -->
+        <EditText
+                android:id="@+id/etNombreCli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del cliente"
+                android:inputType="textPersonName"/>
+
+        <!-- Dirección del cliente -->
+        <EditText
+                android:id="@+id/etDireccionCli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:inputType="text"/>
+
+        <!-- Teléfono del cliente -->
+        <EditText
+                android:id="@+id/etNumTelCli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teléfono"
+                android:inputType="phone"/>
+
+    </LinearLayout>
+</ScrollView>

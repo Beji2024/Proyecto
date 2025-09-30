@@ -31,6 +31,7 @@
 		<activity android:name=".Usuario.UsuarioActivity"/>
 		<activity android:name=".Usuario.RegistroUsuario"/>
 		<activity android:name=".Usuario.EditarUsuarioActivity"/>
+		<activity android:name=".venta.VentasActivity" android:exported="true" />
 
 
 	</application>

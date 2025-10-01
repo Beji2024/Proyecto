@@ -40,8 +40,11 @@ class UsuarioAdapter(
 
     class UsuarioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvNombre: TextView = itemView.findViewById(R.id.tvNombre)
+        private val tvDireccion: TextView = itemView.findViewById(R.id.tvDireccion)
         private val tvEmail: TextView = itemView.findViewById(R.id.tvEmail)
         private val tvTelefono: TextView = itemView.findViewById(R.id.tvTelefono)
+        private val tvFecha: TextView = itemView.findViewById(R.id.tvFecha)
+        private val tvDocumento: TextView = itemView.findViewById(R.id.tvDocumento)
         private val btnEditar: Button = itemView.findViewById(R.id.button2)
         private val btnEliminar: Button = itemView.findViewById(R.id.button3)
 
@@ -52,11 +55,15 @@ class UsuarioAdapter(
             position: Int
         ) {
             tvNombre.text = "${usuario.nombres ?: ""} ${usuario.apellidos ?: ""}".trim()
+            tvDireccion.text = usuario.direccion ?: ""
             tvEmail.text = usuario.email ?: ""
             tvTelefono.text = usuario.numTel ?: ""
+            tvFecha.text = usuario.fecNac ?: ""
+            tvDocumento.text = usuario.numDoc ?: ""
 
             btnEditar.setOnClickListener { onEditar(usuario) }
             btnEliminar.setOnClickListener { onEliminar(usuario, position) }
         }
     }
 }
+

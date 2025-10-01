@@ -8,14 +8,12 @@
 		android:layout_height="match_parent"
 		tools:context=".MainActivity">
 
-
 	<include
 			android:id="@+id/toolbar"
 			layout="@layout/toolbar"
 			app:layout_constraintTop_toTopOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"/>
-
 
 	<Button
 			android:id="@+id/btnAgregarProveedor"

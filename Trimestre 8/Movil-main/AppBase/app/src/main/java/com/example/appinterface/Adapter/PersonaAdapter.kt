@@ -25,3 +25,4 @@ class PersonaAdapter(private val personas: List<String>) : RecyclerView.Adapter<
         }
     }
 }
+

@@ -33,13 +33,13 @@ class VentasAdapter(
     override fun onBindViewHolder(holder: VentaViewHolder, position: Int) {
         val venta = ventas[position]
 
-        // Mapeo de datos correctos del modelo
+
         holder.tvCliente.text = "Cliente: ${venta.nombreCli}"
         holder.tvCorreo.text = "Correo: ${venta.correoCli}"
         holder.tvCantidad.text = "Cantidad: ${venta.cantidad}"
         holder.tvProductoId.text = "Producto ID: ${venta.productoId}"
 
-        // Acciones de botones
+
         holder.btnEditar.setOnClickListener { onEditar(venta) }
         holder.btnEliminar.setOnClickListener { onEliminar(venta) }
     }

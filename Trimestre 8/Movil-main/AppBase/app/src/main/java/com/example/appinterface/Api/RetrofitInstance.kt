@@ -33,7 +33,7 @@ object RetrofitInstance {
         .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
         .create()
 
-    // 🔹 Logging para depuración
+
     private val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }

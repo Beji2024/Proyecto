@@ -8,7 +8,7 @@
 		android:layout_height="match_parent"
 		tools:context=".MainActivity">
 
-	<!-- Toolbar fijo arriba -->
+
 	<include
 			android:id="@+id/toolbar"
 			layout="@layout/toolbar"

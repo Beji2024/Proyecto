@@ -30,14 +30,12 @@ class VentasActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.apply {
             title = "Inventarios Sport10"
-            setDisplayHomeAsUpEnabled(true) //
+            setDisplayHomeAsUpEnabled(true)
         }
 
-        // Inicializar RecyclerView y lista
         rvVentas = findViewById(R.id.rvVentas)
         listaVentas = mutableListOf()
 
-        // Inicializar Adapter con lambdas de Editar y Eliminar
         ventasAdapter = VentasAdapter(
             listaVentas,
             onEditar = { venta -> mostrarFormularioEditarVenta(venta) },
@@ -51,11 +49,9 @@ class VentasActivity : AppCompatActivity() {
         btnAgregarVenta = findViewById(R.id.btnAgregarVenta)
         btnAgregarVenta.setOnClickListener { mostrarFormularioCrearVenta() }
 
-        // ⚠️ No tocamos cómo se muestran las ventas
         obtenerVentas()
     }
 
-    // ------------------- CREAR VENTA -------------------
     private fun mostrarFormularioCrearVenta() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Crear Venta")
@@ -135,7 +131,6 @@ class VentasActivity : AppCompatActivity() {
             })
     }
 
-    // ------------------- EDITAR VENTA -------------------
     private fun mostrarFormularioEditarVenta(venta: Ventas) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Editar Venta")
@@ -152,7 +147,6 @@ class VentasActivity : AppCompatActivity() {
         val etDireccionCli = view.findViewById<EditText>(R.id.etDireccionCli)
         val etNumTelCli = view.findViewById<EditText>(R.id.etNumTelCli)
 
-        // Prellenar con datos actuales
         etCantidad.setText(venta.cantidad.toString())
         etNumDoc.setText(venta.numDocCli)
         etProductoId.setText(venta.productoId.toString())
@@ -231,7 +225,6 @@ class VentasActivity : AppCompatActivity() {
         }
     }
 
-    // ------------------- ELIMINAR VENTA -------------------
     private fun confirmarEliminar(venta: Ventas) {
         AlertDialog.Builder(this)
             .setTitle("Eliminar venta")
@@ -269,7 +262,6 @@ class VentasActivity : AppCompatActivity() {
         }
     }
 
-    // ------------------- OBTENER VENTAS -------------------
     private fun obtenerVentas() {
         RetrofitInstance.api.obtenerVentas().enqueue(object : Callback<List<Ventas>> {
             override fun onResponse(call: Call<List<Ventas>>, response: Response<List<Ventas>>) {

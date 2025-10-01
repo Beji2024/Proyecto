@@ -5,7 +5,7 @@
 			  android:layout_height="match_parent"
 			  android:orientation="vertical">
 
-	<!-- Toolbar -->
+
 	<com.google.android.material.appbar.MaterialToolbar
 			android:id="@+id/toolbar"
 			android:layout_width="match_parent"
@@ -14,7 +14,6 @@
 			app:title="Menú Principal"
 			app:titleTextColor="@android:color/white" />
 
-	<!-- Contenido desplazable -->
 	<ScrollView
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
@@ -25,7 +24,6 @@
 				android:layout_height="wrap_content"
 				android:orientation="vertical">
 
-			<!-- Card Usuarios -->
 			<androidx.cardview.widget.CardView
 					android:id="@+id/cardUsuarios"
 					android:layout_width="match_parent"
@@ -63,7 +61,6 @@
 				</LinearLayout>
 			</androidx.cardview.widget.CardView>
 
-			<!-- Card Proveedores -->
 			<androidx.cardview.widget.CardView
 					android:id="@+id/cardProveedores"
 					android:layout_width="match_parent"
@@ -101,7 +98,6 @@
 				</LinearLayout>
 			</androidx.cardview.widget.CardView>
 
-			<!-- Card Clientes -->
 			<androidx.cardview.widget.CardView
 					android:id="@+id/cardClientes"
 					android:layout_width="match_parent"

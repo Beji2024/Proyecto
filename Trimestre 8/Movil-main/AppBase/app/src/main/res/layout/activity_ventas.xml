@@ -15,9 +15,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Botón justo debajo del toolbar -->
-
-    <!-- Lista de ventas debajo del botón -->
     <Button
             android:id="@+id/btnAgregarVenta"
             android:text="Agregar Venta"

@@ -13,7 +13,7 @@
 			android:orientation="vertical"
 			android:padding="12dp">
 
-		<!-- Nombre del cliente -->
+
 		<TextView
 				android:id="@+id/tvCliente"
 				android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
 				android:textStyle="bold"
 				android:paddingBottom="4dp" />
 
-		<!-- Correo -->
+
 		<TextView
 				android:id="@+id/tvCorreo"
 				android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
 				android:textSize="14sp"
 				android:paddingBottom="4dp" />
 
-		<!-- Cantidad -->
+
 		<TextView
 				android:id="@+id/tvCantidad"
 				android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
 				android:textSize="14sp"
 				android:paddingBottom="4dp" />
 
-		<!-- Producto ID -->
+
 		<TextView
 				android:id="@+id/tvProductoId"
 				android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
 				android:textSize="14sp"
 				android:paddingBottom="8dp" />
 
-		<!-- Botones -->
+
 		<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"

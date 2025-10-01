@@ -55,7 +55,6 @@ class RegistroUsuario : AppCompatActivity() {
         }
 
 
-        // Inicializar vistas
         etNumDoc = findViewById(R.id.numdoc)
         etNombres = findViewById(R.id.nombres)
         etApellidos = findViewById(R.id.apellidos)

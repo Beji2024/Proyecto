@@ -12,7 +12,7 @@
 			android:layout_height="wrap_content"
 			android:orientation="vertical">
 
-		<!-- Nombre principal -->
+
 		<TextView
 				android:id="@+id/tvNombre"
 				android:layout_width="match_parent"
@@ -22,7 +22,7 @@
 				android:textSize="18sp"
 				android:textColor="@android:color/black" />
 
-		<!-- Datos secundarios -->
+
 		<TextView
 				android:id="@+id/tvNit"
 				android:layout_width="match_parent"
@@ -55,7 +55,7 @@
 				android:textSize="14sp"
 				android:textColor="@android:color/darker_gray" />
 
-		<!-- Botones alineados a la derecha -->
+
 		<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"

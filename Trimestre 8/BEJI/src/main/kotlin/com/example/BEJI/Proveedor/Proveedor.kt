@@ -9,7 +9,7 @@ class Proveedor(
     private var direccion: String
 ){
     //getters
-    fun getId(): Int{return  this.id}
+    fun getId(): Int {return this.id}
     fun getNombre(): String{return this.nombre}
     fun getNit(): String{return this.nit}
     fun getCelular(): String{return this.celular}

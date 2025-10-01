@@ -1,5 +1,4 @@
 <app-header></app-header>
-
 <div class="container mt-5">
   <h2 class="mb-4">Gestión de Productos</h2>
 
@@ -127,6 +126,13 @@
                    class="form-control" required [(ngModel)]="currentProducto.color" />
           </div>
 
+          <!-- Imagen -->
+          <div class="col-md-6">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input id="imagen" name="imagen" type="file" class="form-control"
+                  (change)="onFileSelected($event)" accept="image/*" />
+          </div>
+
           <!-- Botones -->
           <div class="col-12 d-flex justify-content-end mt-3">
             <button type="submit" class="btn btn-success me-2" [disabled]="f.invalid || isLoading">
@@ -164,6 +170,7 @@
             <thead class="table-dark">
               <tr>
                 <th>#</th>
+                <th>Imagen</th> <!-- 🔹 Nueva columna -->
                 <th>Nombre</th>
                 <th>Categoría</th>
                 <th>Subcategoría</th>
@@ -178,6 +185,10 @@
             <tbody>
               <tr *ngFor="let prod of productos; let i = index">
                 <td>{{ i + 1 }}</td>
+                <td>
+                  <img *ngIf="prod.imagen" [src]="'http://localhost:8000' + prod.imagen" 
+                       alt="Imagen producto" width="50" height="50" class="rounded">
+                </td>
                 <td>{{ prod.nombre }}</td>
                 <td>{{ prod.subcategoria?.categoria?.name || 'N/A' }}</td>
                 <td>{{ prod.subcategoria?.nom_sub || 'N/A' }}</td>

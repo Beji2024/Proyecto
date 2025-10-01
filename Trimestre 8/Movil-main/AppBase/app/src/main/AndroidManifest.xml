@@ -14,7 +14,6 @@
 			android:theme="@style/Theme.AppInterface"
 			tools:targetApi="31">
 
-		<!-- MainActivity con intent-filter -->
 		<activity
 				android:name=".MainActivity"
 				android:exported="true">
@@ -24,13 +23,13 @@
 			</intent-filter>
 		</activity>
 
-		<!-- Otras actividades -->
 		<activity android:name=".proveedor.ProveedoresActivity" android:exported="true" />
 		<activity android:name=".proveedor.AddProveedorActivity" />
 		<activity android:name=".proveedor.EditProveedorActivity"/>
 		<activity android:name=".Usuario.UsuarioActivity"/>
 		<activity android:name=".Usuario.RegistroUsuario"/>
 		<activity android:name=".Usuario.EditarUsuarioActivity"/>
+		<activity android:name=".venta.VentasActivity" android:exported="true" />
 
 
 	</application>

@@ -22,6 +22,7 @@ import com.example.appinterface.Usuario.UsuarioActivity
 import com.example.appinterface.proveedor.ProveedoresActivity
 import com.google.android.material.appbar.MaterialToolbar
 import androidx.cardview.widget.CardView
+import com.example.appinterface.venta.VentasActivity
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -46,7 +47,8 @@ class MainActivity : AppCompatActivity() {
 
         val cardClientes = findViewById<CardView>(R.id.cardClientes)
         cardClientes.setOnClickListener {
-            Toast.makeText(this, "Abrir Clientes", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, VentasActivity::class.java)
+            startActivity(intent)
         }
     }
 }

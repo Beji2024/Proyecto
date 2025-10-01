@@ -54,7 +54,6 @@ class EditarUsuarioActivity : AppCompatActivity() {
         val btnActualizar = findViewById<Button>(R.id.btnActualizar)
         val btnCancelar = findViewById<Button>(R.id.btnCancelar)
 
-        // Recuperar datos del Intent
         etNumDoc.setText(intent.getStringExtra("numDoc"))
         etNombres.setText(intent.getStringExtra("nombres"))
         etApellidos.setText(intent.getStringExtra("apellidos"))

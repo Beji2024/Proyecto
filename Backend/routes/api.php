@@ -18,7 +18,6 @@ use App\Http\Controllers\Api\PedidoController;
 Route::post('/login', [AuthContoroller::class, 'login']);
 
 // RUTAS PROTEGIDAS POR JWT
-Route::middleware(['auth:api'])->group(function () {
 
     // Auth
     Route::get('/me', [AuthContoroller::class, 'me']);
@@ -59,7 +58,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::apiResource('tipo-docs', TipoDocController::class);
 
     // Roles
-    Route::get('/roles', [RolController::class, 'index']);
+    Route::apiResource('/roles', RolController::class);
 
     // Ventas (algunas rutas personalizadas además del CRUD)
     Route::get('/venta', [VentaController::class, 'index']);
@@ -73,10 +72,9 @@ Route::middleware(['auth:api'])->group(function () {
     Route::apiResource('mercancia', MercanciaController::class);
 
     // pedidos
-Route::apiResource('pedidos', PedidoController::class)->only([
+    Route::apiResource('pedidos', PedidoController::class)->only([
     'index', 'store', 'show'
 ]);
-});
 
     
     

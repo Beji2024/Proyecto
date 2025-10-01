@@ -1,6 +1,7 @@
 import { Subcategoria } from './subcategoria';
 
 export interface Producto {
+imagen: any;
   id_pro: number;            // coincide con tu PK en migración
   cantidad: number;
   nombre: string;

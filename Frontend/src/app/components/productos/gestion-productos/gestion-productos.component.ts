@@ -19,6 +19,7 @@ export class GestionProductosComponent implements OnInit {
   categorias: Categoria[] = [];
   subcategorias: Subcategoria[] = [];
   productos: Producto[] = [];
+  selectedFile: File | null = null;
   
   // Estados
   isFormVisible = false;
@@ -115,7 +116,8 @@ export class GestionProductosComponent implements OnInit {
       material: '',
       color: '',
       talla: 0,
-      sub_mer: 0
+      sub_mer: 0,
+      imagen: ''
     };
   }
 
@@ -186,10 +188,19 @@ export class GestionProductosComponent implements OnInit {
       this.categoriaSeleccionada = null;
       this.subcategoriaSeleccionada = null;
     }
+    this.selectedFile = null;
   }
 
   closeForm() {
     this.isFormVisible = false;
+  }
+
+  // Captura archivo seleccionado
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFile = input.files[0];
+    }
   }
 
   onSubmit() {
@@ -199,15 +210,29 @@ export class GestionProductosComponent implements OnInit {
     }
 
     this.currentProducto.sub_mer = this.subcategoriaSeleccionada;
+
+    // Construimos FormData
+    const formData = new FormData();
+    Object.entries(this.currentProducto).forEach(([key, value]) => {
+      if (value !== null && value !== undefined) {
+        formData.append(key, value.toString());
+      }
+    });
+
+    if (this.selectedFile) {
+      formData.append('imagen', this.selectedFile);
+    }
+
     const operation = this.isEditing && this.currentProducto.id_pro
-      ? this.productosService.updateProducto(this.currentProducto.id_pro, this.currentProducto as Producto)
-      : this.productosService.createProducto(this.currentProducto as Producto);
+      ? this.productosService.updateProducto(this.currentProducto.id_pro!, formData)
+      : this.productosService.createProducto(formData);
 
     this.isLoading = true;
     operation.subscribe({
       next: () => {
         this.closeForm();
         this.loadData();
+        this.selectedFile = null;
       },
       error: (err) => {
         console.error('Error saving product:', err);

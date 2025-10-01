@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/PersonaAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/PersonaAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/UsuarioAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/java/com/example/appinterface/Adapter/UsuarioAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_add_proveedor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_add_proveedor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_edit_proveedores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_edit_proveedores.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_proveedores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_proveedores.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_usuario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_usuario.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_proveedor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_proveedor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_usuario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_usuario.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/../.." source="origin/Rama_juan" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="Rama_juan" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "juan2522"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Beji2024/Proyecto.git",
+    "accountId": "3a2f7ea9-728c-4fd6-9acd-bf7d3ca7a201"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="31tPmW5um6DBaSS0YXlMrnLo21t" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.BejiApplicationKt.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Rama-felipe&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aprendiz.sena/Proyecto/Trimestre 8/Movil-main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="BejiApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.BEJI.BejiApplicationKt" />
+      <module name="BEJI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.BejiApplicationKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="" />
+      <created>1756340554635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756340554635</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Rama_juan" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

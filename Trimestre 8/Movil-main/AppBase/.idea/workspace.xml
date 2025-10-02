@@ -32,110 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05b85a33-16c7-41b6-98a4-bf503a965a26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_scalars_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/AppBase.AppInterface.app.androidTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/AppBase.AppInterface.app.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/AppBase.AppInterface.app.unitTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/Movil.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/8.10.2/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/file-system.probe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/kotlin/errors/errors-1758642438589.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/AppBase.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/1/d/1dda76baba38c63406b61e730380ba18671c0abb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/3/1/319150c1308808de46e81e34be06b3527ac8fa18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/7/4/749edfcc96398253e5b3416184e95c46621da850" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/c/2/c288ea301f9bc8ee5b9e989749d8667d61c3f0ae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/d/2/d2a4383452aad84a18429a5844d31330a012a9e6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/androidTest/java/com/example/appinterface/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Adapter/UsuarioAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Api/ApiService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Api/ApiServiceUsuario.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Api/DataResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Api/RetrofitInstance.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Usuarios/EditarUsuarioActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Usuarios/RegistroUsuario.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Usuarios/Usuario.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/java/com/example/appinterface/Usuarios/UsuarioActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/drawable/descarga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/layout/activity_usuario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/layout/editar_usuario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/layout/item_usuario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/layout/registro_usuario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/mipmap/marquez.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/values-night/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/app/src/test/java/com/example/appinterface/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Android/AppBase/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/build-attribution/androidGradlePluginAttributionData" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/build-attribution/androidGradlePluginAttributionData.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_9_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appinterface/Api/RetrofitInstance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appinterface/Api/RetrofitInstance.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/appinterface/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/appinterface/MainActivity.kt" afterDir="false" />
@@ -173,24 +70,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "juan2522"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;juan2522&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Beji2024/Proyecto.git",
-    "accountId": "3a2f7ea9-728c-4fd6-9acd-bf7d3ca7a201"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Beji2024/Proyecto.git&quot;,
+    &quot;accountId&quot;: &quot;3a2f7ea9-728c-4fd6-9acd-bf7d3ca7a201&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="33RRl4MuJPJyfu1Er1oakNDUCDs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -201,10 +98,11 @@
     "Android App.AppBase.AppInterface.app.executor": "Run",
     "Android App.MainActivity.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Rama-juan",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/juanm/repositorios/Proyecto/Trimestre 8/Movil-main/AppBase",
+    "last_opened_file_path": "C:/Users/juanm/repositorios/Proyecto-1/Trimestre 8",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"

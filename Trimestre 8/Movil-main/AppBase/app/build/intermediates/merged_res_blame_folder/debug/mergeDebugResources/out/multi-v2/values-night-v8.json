@@ -4,6 +4,25 @@
             "outputFile": "com.example.appinterface.app-mergeDebugResources-31:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\juanm\\repositorios\\Proyecto-1\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "1",
+                        "startOffsets": "96",
+                        "endLines": "5",
+                        "endColumns": "9",
+                        "endOffsets": "303"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "9",
+                        "endOffsets": "155"
+                    }
+                },
+                {
                     "source": "C:\\Users\\juanm\\.gradle\\caches\\8.10.2\\transforms\\9687dbf69ffedffc858888e2954e0140\\transformed\\appcompat-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -35,25 +54,6 @@
                         "startOffsets": "792,867,978,1067,1168,1275,1382,1481,1588,1691,1818,1906,2030,2132,2234,2350,2452,2566,2694,2810,2932,3068,3188,3322,3442,3554,3769,3886,4010,4140,4262,4400,4534,4650",
                         "endColumns": "74,110,88,100,106,106,98,106,102,126,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "862,973,1062,1163,1270,1377,1476,1583,1686,1813,1901,2025,2127,2229,2345,2447,2561,2689,2805,2927,3063,3183,3317,3437,3549,3675,3881,4005,4135,4257,4395,4529,4645,4765"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\juanm\\repositorios\\Proyecto\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "1",
-                        "startOffsets": "96",
-                        "endLines": "5",
-                        "endColumns": "9",
-                        "endOffsets": "303"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "9",
-                        "endOffsets": "155"
                     }
                 }
             ]

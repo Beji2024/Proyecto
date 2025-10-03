@@ -1,15 +1,15 @@
 import { Subcategoria } from './subcategoria';
 
 export interface Producto {
-imagen: any;
-  id_pro: number;            // coincide con tu PK en migración
-  cantidad: number;
+  id_pro: number;
   nombre: string;
-  talla: number;             // según tu definición en la migración
+  cantidad: number;
   precio_venta: number;
   precio_compra: number;
   material: string;
   color: string;
-  sub_mer: number;           // FK a subcategoría
-  subcategoria?: Subcategoria; // si traes la relación con with()
+  talla: number;
+  sub_mer: number;
+  imagen: string;   // 👈 importante
+  subcategoria?: any; 
 }

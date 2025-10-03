@@ -30,7 +30,7 @@ return new class extends Migration
             
             $table->foreign('producto_id')->references('id')->on('producto')->onDelete('cascade');
             $table->foreign('vendedor_id')->references('id')->on('usuarios')->onDelete('cascade');
-            $table->foreign('estado_id')->references('id')->on('estado')->onDelete('cascade');
+            $table->foreign('estado_id')->references('id')->on('estado_venta')->onDelete('cascade');
         });
     }
     public function down(): void

@@ -1,6 +1,6 @@
 package com.example.BEJI.Usuarios
 import com.example.demoimport.Usuario
-import org.springframework.beans. factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/usuarios")  // mejor tener un path base
+@RequestMapping("/usuarios")
 class UsuarioController {
     @Autowired
+    
     lateinit var usuarioService: UsuarioService
 
     @GetMapping

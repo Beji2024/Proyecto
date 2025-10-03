@@ -7,26 +7,26 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/proveedores")
 class ProveedorController {
     @Autowired
-    lateinit var proveedorService: ProveedorService
+    lateinit var servicio: ProveedorService
 
     @GetMapping
     fun obtenerProveedor():List<Proveedor>{
-        return proveedorService.obtenerproveedor()
+        return servicio.obtenerproveedor()
     }
 
     @GetMapping("/{id}")
     fun obtenerproveedorId(@PathVariable id : Int): Proveedor?{
-        return proveedorService.obtenerproveedorId(id)
+        return servicio.obtenerproveedorId(id)
     }
 
     @GetMapping("/nit/{nit}")
     fun obtenerproveedorNit(@PathVariable nit:String): Proveedor?{
-        return proveedorService.obtenerproveedorNit(nit)
+        return servicio.obtenerproveedorNit(nit)
     }
 
     @PostMapping
     fun registrarProveedor(@RequestBody proveedor: Proveedor): String{
-        var resultado = proveedorService.registrarProveedor(proveedor)
+        var resultado = servicio.registrarProveedor(proveedor)
         if(resultado>0){
             return "Usuario registrado sin problemas"
         }
@@ -37,7 +37,7 @@ class ProveedorController {
 
     @PutMapping("/{id}")
     fun actualizarProveedor(@PathVariable id:Int,@RequestBody proveedor: Proveedor):String{
-        var resultado = proveedorService.actualizarProveedor(id,proveedor)
+        var resultado = servicio.actualizarProveedor(id,proveedor)
         if(resultado>0){
             return "Usuario actualizado con exito"
         }else{
@@ -47,7 +47,7 @@ class ProveedorController {
 
     @DeleteMapping("/{id}")
     fun eliminarProveedor(@PathVariable id:Int): String{
-        var resultado = proveedorService.eliminarProveedor(id)
+        var resultado = servicio.eliminarProveedor(id)
         if(resultado>0){
             return "Usuario eliminado correctamente"
         }

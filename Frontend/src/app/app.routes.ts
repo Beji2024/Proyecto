@@ -143,11 +143,41 @@ export const routes: Routes = [
     path: 'productos/nueva-subcategoria',
     loadComponent: () => import('./components/categorias y sub/nueva-subcategoria/nueva-subcategoria.component').then(m => m.NuevaSubcategoriaComponent),
   },
+  {
+    path: 'productosbo',
+    loadComponent: () => import('./components/principalbod/productosbod/productos/productos.component').then(m => m.ProductosComponent),
+  },
+  {
+    path: 'productosbo/gestionbo',
+    loadComponent: () => import('./components/principalbod/productosbod/gestion-productos/gestion-productos.component').then(m => m.GestionProductosComponent),
+    
+  },
+  {
+    path: 'productosbo/nueva-categoriabo',
+    loadComponent: () => import('./components/principalbod/categorias_bodegero/nueva-categoria/nueva-categoria.component').then(m => m.NuevaCategoriaComponent),
+  },
+  {
+    path: 'productosbo/nueva-subcategoriabo',
+    loadComponent: () => import('./components/principalbod/categorias_bodegero/nueva-subcategoria/nueva-subcategoria.component').then(m => m.NuevaSubcategoriaComponent),
+  },
+
+  // principalven
+  {
+    path: 'productosven',
+    loadComponent: () => import('./components/principalven/productosven/productos/productos.component').then(m => m.ProductosComponent),
+  },
   // Ruta dinámica DEBE IR AL FINAL
   {
     path: 'productos/:categoriaSub',
     loadComponent: () => import('./components/productos/productos/productos.component').then(m => m.ProductosComponent),
+  },
+  {
+    path: 'productosbo/:categoriaSub',
+    loadComponent: () => import('./components/principalbod/productosbod/productos/productos.component').then(m => m.ProductosComponent),
+  },
+  {
+    path: 'productosven/:categoriaSub',
+    loadComponent: () => import('./components/principalbod/productosbod/productos/productos.component').then(m => m.ProductosComponent),
   }
-
 
 ];

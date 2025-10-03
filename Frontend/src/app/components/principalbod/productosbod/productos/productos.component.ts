@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { ProductosService } from '../../../../services/productos.service';
+import { Producto } from '../../../../modelos/producto';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-
+import { CategoriasService } from '../../../../services/categorias.service';
+import { Subcategoria } from '../../../../modelos/subcategoria';
+import { Categoria } from '../../../../modelos/categoria';
+import { MenuCategoriasComponent } from "../../categorias_bodegero/menu-categorias/menu-categorias.component";
+import { HeaderbodComponent } from "../../headerbod/headerbod.component";
 import { FormsModule } from '@angular/forms';
-import { MenuCategoriasComponent } from '../../categorias y sub/menu-categorias/menu-categorias.component';
-import { HeaderbodComponent } from '../../principalbod/headerbod/headerbod.component';
-import { Producto } from '../../../modelos/producto';
-import { Subcategoria } from '../../../modelos/subcategoria';
-import { Categoria } from '../../../modelos/categoria';
-import { ProductosService } from '../../../services/productos.service';
-import { CategoriasService } from '../../../services/categorias.service';
 @Component({
   selector: 'app-productos',
   standalone: true,

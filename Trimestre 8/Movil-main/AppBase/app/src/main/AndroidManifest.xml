@@ -30,7 +30,8 @@
 		<activity android:name=".Usuario.RegistroUsuario"/>
 		<activity android:name=".Usuario.EditarUsuarioActivity"/>
 		<activity android:name=".venta.VentasActivity" android:exported="true" />
-
+		<activity android:name=".Productos.ProductosActivity"/>
+		<activity android:name=".Productos.GestionProductosActivity"/>
 
 	</application>
 </manifest>

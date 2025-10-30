@@ -53,4 +53,11 @@ object RetrofitInstance {
     val api: VentasApi by lazy {
         retrofit.create(VentasApi::class.java)
     }
+    val instance: ProductosApi by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ProductosApi::class.java)
+    }
 }

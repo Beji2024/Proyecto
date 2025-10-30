@@ -162,7 +162,6 @@ export const routes: Routes = [
     path: 'productos/:categoriaSub',
     loadComponent: () => import('./components/productos/productos/productos.component').then(m => m.ProductosComponent),
 
-  },
   {
     path: 'productosbo/:categoriaSub',
     loadComponent: () => import('./components/principalbod/productosbod/productos/productos.component').then(m => m.ProductosComponent),
@@ -170,6 +169,7 @@ export const routes: Routes = [
   {
     path: 'productosven/:categoriaSub',
     loadComponent: () => import('./components/principalbod/productosbod/productos/productos.component').then(m => m.ProductosComponent),
+  
   }
 
 ];

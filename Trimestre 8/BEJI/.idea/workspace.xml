@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="591e501c-c6ec-4b74-8921-3b48916b8609" name="Changes" comment="">
-<<<<<<< HEAD
+
       <change afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/principalbod/categorias_bodegero/menu-categorias/menu-categorias.component.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/principalbod/categorias_bodegero/menu-categorias/menu-categorias.component.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/principalbod/categorias_bodegero/menu-categorias/menu-categorias.component.spec.ts" afterDir="false" />
@@ -257,12 +257,7 @@
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_usuario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/app/src/main/res/layout/item_usuario.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Movil-main/AppBase/local.properties" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/productos/productos.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/productos/productos.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/productos/productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/productos/productos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
->>>>>>> cceaedcbd219eb0cc4fb8de01c04b6d537de6294
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,11 +326,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-<<<<<<< HEAD
+
     &quot;git-widget-placeholder&quot;: &quot;Merging Rama-felipe&quot;,
-=======
-    &quot;git-widget-placeholder&quot;: &quot;Rama-juan&quot;,
->>>>>>> cceaedcbd219eb0cc4fb8de01c04b6d537de6294
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/juanm/OneDrive/Desktop/spring boot/Proyecto/Trimestre 8/BEJI&quot;
   }

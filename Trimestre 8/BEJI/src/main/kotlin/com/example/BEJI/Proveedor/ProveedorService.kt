@@ -58,5 +58,4 @@ class ProveedorService {
         val sql = "Delete from proveedor where id=?"
         return consultaMysql.update(sql,id)
     }
-
 }

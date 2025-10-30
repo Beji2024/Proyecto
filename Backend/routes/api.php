@@ -41,12 +41,13 @@ Route::post('/login', [AuthContoroller::class, 'login']);
     Route::get('subcategorias/{id}', [SubcategoriaController::class, 'show']);
     Route::put('subcategorias/{id}', [SubcategoriaController::class, 'update']);
     Route::delete('subcategorias/{id}', [SubcategoriaController::class, 'destroy']);
+
     // Proveedores
     Route::apiResource('proveedores', ProveedorController::class);
 
     // Usuarios
     Route::apiResource('usuarios', UsuarioController::class);
-    Route::get('/vendedores', [UsuarioController::class, 'getVendedores']); // extra
+    Route::get('/vendedores', [UsuarioController::class, 'getVendedores']); 
 
     // Estados
     Route::apiResource('estados', EstadoController::class);
@@ -56,16 +57,16 @@ Route::post('/login', [AuthContoroller::class, 'login']);
 
     // Tipo de documento
     Route::apiResource('tipo-docs', TipoDocController::class);
-
+    
     // Roles
     Route::apiResource('/roles', RolController::class);
 
-    // Ventas (algunas rutas personalizadas además del CRUD)
+    // Ventas 
     Route::get('/venta', [VentaController::class, 'index']);
     Route::post('/venta', [VentaController::class, 'store']);
     Route::get('/venta/{id}', [VentaController::class, 'show']);
     Route::patch('/venta/{id}', [VentaController::class, 'update']);
-    Route::put('/venta/{id}', [VentaController::class, 'update1']); // extra personalizada
+    Route::put('/venta/{id}', [VentaController::class, 'update1']); 
     Route::delete('/venta/{id}', [VentaController::class, 'destroy']);
 
     //mercancías
@@ -75,6 +76,6 @@ Route::post('/login', [AuthContoroller::class, 'login']);
     Route::apiResource('pedidos', PedidoController::class)->only([
     'index', 'store', 'show'
 ]);
-
+ 
     
     

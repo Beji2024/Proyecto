@@ -14,12 +14,11 @@ public class AceptarAlerta implements Interaction {
         WebDriver driver = ThucydidesWebDriverSupport.getDriver();
 
         try {
-            // Esperar un momento para que aparezca la alerta
             Thread.sleep(1000);
 
             Alert alert = driver.switchTo().alert();
             System.out.println("Texto de la alerta: " + alert.getText());
-            alert.accept(); // Clic en "Aceptar"
+            alert.accept();
 
         } catch (Exception e) {
             System.out.println("No se encontró ninguna alerta: " + e.getMessage());

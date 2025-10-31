@@ -1,0 +1,36 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"><style>
+
+.bg-morado[_ngcontent-ng-c551859659] {
+  background-color: #a30dda !important;
+}
+.text-center[_ngcontent-ng-c551859659] {
+  text-shadow:
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+h2[_ngcontent-ng-c551859659] {
+  text-shadow:
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+/*# sourceMappingURL=/header.component.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-principal><app-header _nghost-ng-c551859659=""><div _ngcontent-ng-c551859659="" class="d-flex justify-content-between align-items-center mb-0 bg-morado"><h1 _ngcontent-ng-c551859659="" class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;"> SISTEMA DE INVENTARIO </h1><h2 _ngcontent-ng-c551859659="" class="text-white custom-h2"> SPORT 10 </h2><div _ngcontent-ng-c551859659="" class="d-grid gap-2 btn-success ms-3"><button _ngcontent-ng-c551859659="" class="btn btn-success btn btn btn-light me-5">Cerrar sesion</button><h6 _ngcontent-ng-c551859659="" id="rol" class="text-white me-5 text-center" style="font-family: me-5;"> administrador </h6></div></div></app-header><div class="d-flex justify-content-between align-items-center mb-0 bg-morado"><h1 class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;"> SISTEMA DE INVENTARIO </h1><h2 class="text-white custom-h2 s2"> SPORT 10 </h2><a class="text-white me-4"> Cerrar Sesión </a></div><div class="container mt-5"><div class="row"><div class="col-md-4"><div class="box d-flex justify-content-center align-items-center shadow"><a class="text-decoration-none text-secondary"><h2>Usuario</h2></a><img src="https://cdn-icons-gif.flaticon.com/14251/14251527.gif" alt="Ir a usuarios" id="usuarios" class="w-50" style="cursor: pointer; width: 200px;"></div></div><div class="col-md-4"><div class="box d-flex justify-content-center align-items-center shadow"><a class="text-decoration-none text-secondary"><h2>Producto</h2></a><img src="https://cdn-icons-gif.flaticon.com/16312/16312730.gif" class="w-50"></div></div><div class="col-md-4"><div class="box d-flex justify-content-center align-items-center shadow"><a class="text-decoration-none text-secondary"><h2>Compra</h2></a><img src="https://cdn-icons-gif.flaticon.com/12707/12707631.gif" alt="Ir a Compra" class="w-50" style="cursor: pointer; width: 200px;"></div></div></div><div class="row mt-3"><div class="col-md-4"><div class="box d-flex justify-content-center align-items-center shadow"><a class="text-decoration-none text-secondary"><h2>Proveedor</h2></a><img src="https://cdn-icons-gif.flaticon.com/12339/12339191.gif" alt="ir a Proveedor" class="w-50" style="cursor: pointer; width: 200px;"></div></div><div class="col-md-4"><div class="box d-flex justify-content-center align-items-center shadow"><a class="text-decoration-none text-secondary"><h2>Venta</h2></a><img src="https://cdn-icons-gif.flaticon.com/12707/12707615.gif" alt="Ir a Venta" class="w-50" style="cursor: pointer; width: 200px;"></div></div><div class="col-md-4"><div class="box d-flex justify-content-center align-items-center shadow"><a class="text-decoration-none text-secondary"><h2>Informes</h2></a><img src="https://cdn-icons-gif.flaticon.com/15579/15579063.gif" alt="" class="w-50"></div></div></div></div><router-outlet></router-outlet><!--container--></app-principal><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-FH23CRGU.js">
+
+
+</body></html>

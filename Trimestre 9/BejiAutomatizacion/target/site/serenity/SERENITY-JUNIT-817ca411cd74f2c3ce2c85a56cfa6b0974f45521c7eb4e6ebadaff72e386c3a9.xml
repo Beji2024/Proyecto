@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Registrar un usuario en pagina web de Sport10" skipped="0" tests="1" time="16.6" timestamp="2025-10-30 04:18:01"><testcase name="Verificar el registro exitoso de un nuevo usuario"><failure message="Expected validacion registro&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validacion registro&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Registrar un usuario en pagina web de Sport10" skipped="0" tests="1" time="18.64" timestamp="2025-10-31 09:00:34"><testcase name="Verificar el registro exitoso de un nuevo usuario"><failure message="Expected validacion registro&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validacion registro&#13;
 Expected: is &lt;true&gt;&#13;
      but: was &lt;false&gt;</failure><system-err>Expected validacion registro&#13;
 Expected: is &lt;true&gt;&#13;
      but: was &lt;false&gt;&#13;
 co.com.Automatizacion.stepsdefinitions.RegistrarUsuarioStepDefinition.seDebeVerificarQueElUsuarioEsteRegistradoEnLaSeccionDeRegistros(RegistrarUsuarioStepDefinition.java:27)&#13;
-✽.Se debe verificar que el usuario este registrado en la seccion de registros(src/test/resources/features/registrar_usuario.feature:17)&#13;
+✽.Se debe verificar que el usuario este registrado en la seccion de registros(src/test/resources/features/registrar_usuario.feature:23)&#13;
 </system-err></testcase></testsuite>

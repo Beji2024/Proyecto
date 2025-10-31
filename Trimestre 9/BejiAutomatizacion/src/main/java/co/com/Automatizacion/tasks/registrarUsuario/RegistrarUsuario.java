@@ -12,6 +12,7 @@ import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import co.com.Automatizacion.utils.hooks.registrarUsuario.VaribaleRegistro;
 import co.com.Automatizacion.interactions.registrarUsuario.AceptarAlerta;
+import java.util.Random;
 
 public class RegistrarUsuario implements Task{
     private List<DatosRegistro>datos;
@@ -22,14 +23,17 @@ public class RegistrarUsuario implements Task{
     }
     String doc = "Cédula de ciudadanía";
     String rol = "Administrador";
+    Random rand = new Random();
+    int numero = rand.nextInt(100);
     AceptarAlerta alerta = new AceptarAlerta();
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
+                AceptarAlerta.ahora(),
                 Click.on(BTN_USUARIO),
                 Click.on(BTN_NUEVO),
                 Click.on(INPUT_NUMDOCUMENTO),
-                Enter.theValue(datos.get(0).getNum_doc()).into(INPUT_NUMDOCUMENTO),
+                Enter.theValue(datos.get(0).getNum_doc()+numero).into(INPUT_NUMDOCUMENTO),
                 Click.on(INPUT_NOMBRES),
                 Enter.theValue(datos.get(0).getNombres()).into(INPUT_NOMBRES),
                 Click.on(INPUT_APELLIDOS),
@@ -37,7 +41,7 @@ public class RegistrarUsuario implements Task{
                 Click.on(INPUT_DIRECCION),
                 Enter.theValue(datos.get(0).getDireccion()).into(INPUT_DIRECCION),
                 Click.on(INPUT_CORREO),
-                Enter.theValue(datos.get(0).getEmail()).into(INPUT_CORREO),
+                Enter.theValue(datos.get(0).getEmail()+numero).into(INPUT_CORREO),
                 Click.on(INPUT_TELEFONO),
                 Enter.theValue(datos.get(0).getNum_tel()).into(INPUT_TELEFONO),
                 Click.on(INPUT_FECHA),
@@ -49,9 +53,8 @@ public class RegistrarUsuario implements Task{
                 Click.on(INPUT_ROL),
                 SelectFromOptions.byVisibleText(rol).from(INPUT_ROL),
                 Click.on(BTN_ENVIAR),
-                alerta.ahora()
-
+                AceptarAlerta.ahora()
         );
-        theActorInTheSpotlight().remember(VaribaleRegistro.registro.toString(),datos.get(0).getNum_doc());
+        theActorInTheSpotlight().remember(VaribaleRegistro.registro.toString(),datos.get(0).getNum_doc()+numero);
     }
 }

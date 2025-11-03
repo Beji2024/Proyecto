@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="24"
+        android:minSdkVersion="25"
         android:targetSdkVersion="35" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -27,8 +27,6 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppInterface" >
-
-        <!-- MainActivity con intent-filter -->
         <activity
             android:name="com.example.appinterface.MainActivity"
             android:exported="true" >
@@ -38,8 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Otras actividades -->
         <activity
             android:name="com.example.appinterface.proveedor.ProveedoresActivity"
             android:exported="true" />
@@ -48,6 +44,9 @@
         <activity android:name="com.example.appinterface.Usuario.UsuarioActivity" />
         <activity android:name="com.example.appinterface.Usuario.RegistroUsuario" />
         <activity android:name="com.example.appinterface.Usuario.EditarUsuarioActivity" />
+        <activity
+            android:name="com.example.appinterface.venta.VentasActivity"
+            android:exported="true" />
         <activity android:name="com.example.appinterface.Productos.ProductosActivity" />
         <activity android:name="com.example.appinterface.Productos.GestionProductosActivity" />
 

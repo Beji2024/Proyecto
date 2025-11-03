@@ -12,11 +12,7 @@ class UsuarioController extends Controller
 {
     public function index()
     {
-        $user = auth()->user();
-
-        if (!$user || $user->rol->name !== 'Administrador') {
-           return response()->json(['error' => 'No autorizado'], 403);
-        }
+        
         $usuarios = Usuario::with(['rol', 'tipodoc'])->get();
         return response()->json($usuarios);
     }

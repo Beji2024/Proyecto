@@ -1,31 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductosService } from '../../../services/productos.service';
-import { Producto } from '../../../modelos/producto';
+
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { CategoriasService } from '../../../services/categorias.service';
+
+import { FormsModule } from '@angular/forms';
+import { MenuCategoriasComponent } from '../../categorias y sub/menu-categorias/menu-categorias.component';
+import { HeaderbodComponent } from '../../principalbod/headerbod/headerbod.component';
+import { Producto } from '../../../modelos/producto';
 import { Subcategoria } from '../../../modelos/subcategoria';
 import { Categoria } from '../../../modelos/categoria';
-import { MenuCategoriasComponent } from "../../categorias y sub/menu-categorias/menu-categorias.component";
-import { HeaderComponentComponent } from "../../principal/header.component/header.component.component";
-
+import { ProductosService } from '../../../services/productos.service';
+import { CategoriasService } from '../../../services/categorias.service';
 @Component({
   selector: 'app-productos',
   standalone: true,
   imports: [
     CommonModule,
     RouterModule,
-    HeaderComponentComponent,
-    MenuCategoriasComponent
+    FormsModule,
+    MenuCategoriasComponent,
+    HeaderbodComponent
   ],
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
   productos: Producto[] = [];
+  todosLosProductos: Producto[] = [];
   subcategorias: Subcategoria[] = [];
   categorias: Categoria[] = [];
   error: string | null = null;
+  terminoBusqueda: string = '';
 
   constructor(
     private productosService: ProductosService,
@@ -34,14 +39,12 @@ export class ProductosComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Carga inicial de categorías y subcategorías
     this.categoriasService.getCategorias().subscribe(cats => {
       this.categorias = cats;
 
       this.categoriasService.getSubcategorias().subscribe(subs => {
         this.subcategorias = subs;
 
-        // Detecta la ruta y determina qué cargar
         this.route.params.subscribe(params => {
           const ruta = params['categoriaSub'] || params['nombre'];
 
@@ -67,6 +70,7 @@ export class ProductosComponent implements OnInit {
   obtenerTodos(): void {
     this.productosService.getProductos().subscribe({
       next: (data) => {
+        this.todosLosProductos = data;
         this.productos = data;
         this.error = null;
       },
@@ -84,6 +88,7 @@ export class ProductosComponent implements OnInit {
     if (categoria && categoria.id !== undefined) {
       this.productosService.getProductosPorCategoria(categoria.id).subscribe({
         next: (data) => {
+          this.todosLosProductos = data;
           this.productos = data;
           this.error = null;
         },
@@ -105,6 +110,7 @@ export class ProductosComponent implements OnInit {
     if (subcategoria) {
       this.productosService.getProductosPorSubcategoria(subcategoria.id_sub).subscribe({
         next: (data) => {
+          this.todosLosProductos = data;
           this.productos = data;
           this.error = null;
         },
@@ -116,5 +122,14 @@ export class ProductosComponent implements OnInit {
       this.error = 'Subcategoría no encontrada o no coincide con la categoría.';
     }
   }
-}
 
+  buscarProductos(): void {
+  const termino = this.terminoBusqueda.toLowerCase();
+  this.productos = this.todosLosProductos.filter(p =>
+    String(p.nombre).toLowerCase().includes(termino) ||
+    String(p.material).toLowerCase().includes(termino) ||
+    String(p.color).toLowerCase().includes(termino) ||
+    String(p.talla).toLowerCase().includes(termino)
+    );
+  }
+}

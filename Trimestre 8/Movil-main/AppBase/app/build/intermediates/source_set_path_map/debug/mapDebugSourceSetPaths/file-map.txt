@@ -27,10 +27,10 @@ com.example.appinterface.app-annotation-experimental-1.4.1-25 C:\Users\juanm\.gr
 com.example.appinterface.app-lifecycle-livedata-2.6.2-26 C:\Users\juanm\.gradle\caches\8.10.2\transforms\e041bc43b88110062ee97ed3ceb98d47\transformed\lifecycle-livedata-2.6.2\res
 com.example.appinterface.app-lifecycle-process-2.6.2-27 C:\Users\juanm\.gradle\caches\8.10.2\transforms\e52f6ad4ab14d413e2b454883442c16d\transformed\lifecycle-process-2.6.2\res
 com.example.appinterface.app-transition-1.5.0-28 C:\Users\juanm\.gradle\caches\8.10.2\transforms\e661f0f7f6d2df3aa34d9273c5291b3b\transformed\transition-1.5.0\res
-com.example.appinterface.app-pngs-29 C:\Users\juanm\repositorios\Proyecto\Trimestre 8\Movil-main\AppBase\app\build\generated\res\pngs\debug
-com.example.appinterface.app-resValues-30 C:\Users\juanm\repositorios\Proyecto\Trimestre 8\Movil-main\AppBase\app\build\generated\res\resValues\debug
-com.example.appinterface.app-packageDebugResources-31 C:\Users\juanm\repositorios\Proyecto\Trimestre 8\Movil-main\AppBase\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.appinterface.app-packageDebugResources-32 C:\Users\juanm\repositorios\Proyecto\Trimestre 8\Movil-main\AppBase\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.appinterface.app-debug-33 C:\Users\juanm\repositorios\Proyecto\Trimestre 8\Movil-main\AppBase\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.appinterface.app-debug-34 C:\Users\juanm\repositorios\Proyecto\Trimestre 8\Movil-main\AppBase\app\src\debug\res
-com.example.appinterface.app-main-35 C:\Users\juanm\repositorios\Proyecto\Trimestre 8\Movil-main\AppBase\app\src\main\res
+com.example.appinterface.app-pngs-29 C:\Users\juanm\repositorios\Proyecto-1\Trimestre 8\Movil-main\AppBase\app\build\generated\res\pngs\debug
+com.example.appinterface.app-resValues-30 C:\Users\juanm\repositorios\Proyecto-1\Trimestre 8\Movil-main\AppBase\app\build\generated\res\resValues\debug
+com.example.appinterface.app-packageDebugResources-31 C:\Users\juanm\repositorios\Proyecto-1\Trimestre 8\Movil-main\AppBase\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.appinterface.app-packageDebugResources-32 C:\Users\juanm\repositorios\Proyecto-1\Trimestre 8\Movil-main\AppBase\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.appinterface.app-debug-33 C:\Users\juanm\repositorios\Proyecto-1\Trimestre 8\Movil-main\AppBase\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.appinterface.app-debug-34 C:\Users\juanm\repositorios\Proyecto-1\Trimestre 8\Movil-main\AppBase\app\src\debug\res
+com.example.appinterface.app-main-35 C:\Users\juanm\repositorios\Proyecto-1\Trimestre 8\Movil-main\AppBase\app\src\main\res

@@ -18,9 +18,6 @@ public function detalles()
 }
   public function proveedor()
     {
-        // ped_prov es la FK en pedidos, nit es la PK o columna única en proveedor
         return $this->belongsTo(Proveedor::class, 'ped_prov', 'nit');
-    
-
-}
+    }
 }

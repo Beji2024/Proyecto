@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 31-10-2025 09:00</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-11-2025 21:11</span>
     <br style="clear:left"/>
 </div>
 
@@ -197,9 +197,9 @@ Para dejar registro de los usuarios que desee
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Verificar el registro exitoso de un nuevo usuario
+                                <span class="error-color">Verificar el registro exitoso de un nuevo usuario
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -222,7 +222,7 @@ Para dejar registro de los usuarios que desee
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Assertion error: Expected validacion registroExpected: is (true) but: was (false)</span>
+                    <span class="error-message error-message-title">No such session exception: invalid session id: session deleted as the browser has closed the connection</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -238,11 +238,11 @@ Para dejar registro de los usuarios que desee
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>java.lang.AssertionError </h4>
+                    <h4>org.openqa.selenium.NoSuchSessionException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>co.com.Automatizacion.stepsdefinitions.RegistrarUsuarioStepDefinition.seDebeVerificarQueElUsuarioEsteRegistradoEnLaSeccionDeRegistros(RegistrarUsuarioStepDefinition.java:27)<br />✽.Se debe verificar que el usuario este registrado en la seccion de registros(src/test/resources/features/registrar_usuario.feature:23)<br /></pre>
+                        <pre>co.com.Automatizacion.tasks.registrarUsuario.RegistrarUsuario.performAs(RegistrarUsuario.java:31)<br />co.com.Automatizacion.stepsdefinitions.RegistrarUsuarioStepDefinition.ingresaLosDatosNecesariosParaElRegistroDelUsuario(RegistrarUsuarioStepDefinition.java:22)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
                 </div>
@@ -257,58 +257,45 @@ Para dejar registro de los usuarios que desee
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Dado que el administrador este en la pagina" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Administrador abrir pagina" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" administrador opens the Inicio pagina" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Administrador abrir pagina (completed)" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Dado que el administrador este en la pagina (completed)" width="1925"/>
-                <img src="98ccaff82783fb0054880be8e0054f8feef096d73d5f8e17b30e020761122e1d.png" title=" Cuando ingrese las crendenciales para loguearse:
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Dado que el administrador este en la pagina" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Administrador abrir pagina" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" administrador opens the Inicio pagina" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Administrador abrir pagina (completed)" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Dado que el administrador este en la pagina (completed)" width="1370"/>
+                <img src="24734a3aec48c774ee509f4fce785748eb7451f95bbcde755dcb82032b20212b.png" title=" Cuando ingrese las crendenciales para loguearse:
 | email | password |
-| felipe@gmail.com | 6543sdadwq22.,,.21 |" width="1925"/>
-                <img src="98ccaff82783fb0054880be8e0054f8feef096d73d5f8e17b30e020761122e1d.png" title=" Administrador login" width="1925"/>
-                <img src="98ccaff82783fb0054880be8e0054f8feef096d73d5f8e17b30e020761122e1d.png" title=" administrador clicks on Correo electronico" width="1925"/>
-                <img src="91ad168912d0f5b3da94df817bd43f332d608ac418a9558d2a8cdfe8efef8c0e.png" title=" administrador enters 'felipe@gmail.com' into Correo electronico" width="1925"/>
-                <img src="81e1e482566c59eaac09e7af619e424dc13e89ddfe81a9c57c15f80cb92d3893.png" title=" administrador clicks on Contrase&ntilde;a" width="1925"/>
-                <img src="649bee0d972bcc3be2852213983744e7f9151b4c4e4e76af2a424b80cda73091.png" title=" administrador enters '6543sdadwq22.,,.21' into Contrase&ntilde;a" width="1925"/>
-                <img src="81ad54c4fda59d95c41dedfb1372e4839c16b9dc2efa31c80822e9e8abbe24a5.png" title=" administrador clicks on Boton de ingreso" width="1925"/>
-                <img src="81ad54c4fda59d95c41dedfb1372e4839c16b9dc2efa31c80822e9e8abbe24a5.png" title=" Administrador login (completed)" width="1925"/>
-                <img src="81ad54c4fda59d95c41dedfb1372e4839c16b9dc2efa31c80822e9e8abbe24a5.png" title=" Cuando ingrese las crendenciales para loguearse:
+| felipe@gmail.com | 6543sdadwq22.,,.21 |" width="1370"/>
+                <img src="24734a3aec48c774ee509f4fce785748eb7451f95bbcde755dcb82032b20212b.png" title=" Administrador login" width="1370"/>
+                <img src="24734a3aec48c774ee509f4fce785748eb7451f95bbcde755dcb82032b20212b.png" title=" administrador clicks on Correo electronico" width="1370"/>
+                <img src="bef5c10ee509118aacd3142876f2df2d55017aa53cdf28e7b61f26be3e0ff692.png" title=" administrador enters 'felipe@gmail.com' into Correo electronico" width="1370"/>
+                <img src="88cab846b74c78a211e84dded1d4d36bb69f4fd0f2aec4b90d275ad98ab430d2.png" title=" administrador clicks on Contrase&ntilde;a" width="1370"/>
+                <img src="db69cfc2032fc914c97d55133fc1dbbc802bed1fd5e908d03dea2470ddedb01f.png" title=" administrador enters '6543sdadwq22.,,.21' into Contrase&ntilde;a" width="1370"/>
+                <img src="74e6ca4ae848e55aa16367f69a307756c25a7dad6f99a0fcdbabdc3d50d1f5cb.png" title=" administrador clicks on Boton de ingreso" width="1370"/>
+                <img src="74e6ca4ae848e55aa16367f69a307756c25a7dad6f99a0fcdbabdc3d50d1f5cb.png" title=" Administrador login (completed)" width="1370"/>
+                <img src="74e6ca4ae848e55aa16367f69a307756c25a7dad6f99a0fcdbabdc3d50d1f5cb.png" title=" Cuando ingrese las crendenciales para loguearse:
 | email | password |
-| felipe@gmail.com | 6543sdadwq22.,,.21 | (completed)" width="1925"/>
-                <img src="81ad54c4fda59d95c41dedfb1372e4839c16b9dc2efa31c80822e9e8abbe24a5.png" title=" Dado que el usuario se encuentre en la pagina en el modulo de usuarios" width="1925"/>
-                <img src="6d8fe360a16ba1178a353e7c45c7310398bbd3c0b1479a89cdace1dfe643a95d.png" title=" Cuando ingresa los datos necesarios para el registro del usuario:
+| felipe@gmail.com | 6543sdadwq22.,,.21 | (completed)" width="1370"/>
+                <img src="572493e68a1541e210104d6088eaec198d62c062b149f5d35806689cba9a829a.png" title=" Dado que el usuario se encuentre en la pagina en el modulo de usuarios" width="1370"/>
+                <img src="572493e68a1541e210104d6088eaec198d62c062b149f5d35806689cba9a829a.png" title=" Administrador abrir pagina" width="1370"/>
+                <img src="572493e68a1541e210104d6088eaec198d62c062b149f5d35806689cba9a829a.png" title=" administrador opens the Inicio pagina" width="1370"/>
+                <img src="572493e68a1541e210104d6088eaec198d62c062b149f5d35806689cba9a829a.png" title=" Administrador abrir pagina (completed)" width="1370"/>
+                <img src="572493e68a1541e210104d6088eaec198d62c062b149f5d35806689cba9a829a.png" title=" Dado que el usuario se encuentre en la pagina en el modulo de usuarios (completed)" width="1370"/>
+                <img src="9085e28c38be30cf0f17c29fe09deb8f3b270c95b955ef25ac3ef46b1a217e40.png" title=" Cuando ingresa los datos necesarios para el registro del usuario:
 | num_doc | nombres | apellidos | direccion | email | num_tel | fec_nac | password |
-| 111222333 | Pepito | Perez | Cl 34 #32-2 | pepito@gmail.com | 3334445553 | 10-10-2025 | 123456 |" width="1925"/>
-                <img src="6d8fe360a16ba1178a353e7c45c7310398bbd3c0b1479a89cdace1dfe643a95d.png" title=" Administrador registrar usuario" width="1925"/>
-                <img src="6d8fe360a16ba1178a353e7c45c7310398bbd3c0b1479a89cdace1dfe643a95d.png" title=" Administrador aceptar alerta" width="1925"/>
-                <img src="8de605b702725f934c3d75e9a7a7a7959026f925e2f5ab0f9b25666d33afecc8.png" title=" administrador clicks on Boton de modulo usuarios" width="1925"/>
-                <img src="bed9e57ae6e49deb34efe886945169b42c3d61dcb09ebd980f847eebb90b9d67.png" title=" administrador clicks on Boton para registro" width="1925"/>
-                <img src="b9a4c9f2cd068474761410b6fc6ab031a43f30326ea7a437a91dfe1735563625.png" title=" administrador clicks on Numero de documento" width="1925"/>
-                <img src="078eb321d8c5d50a08c573855e8a171343b38d878b0bb3d3458031bff27c8a5b.png" title=" administrador enters '11122233318' into Numero de documento" width="1925"/>
-                <img src="521468c34573d8543c254b0a855780cad65b87e0773ce6e05494bdfcab450ac8.png" title=" administrador clicks on Nombres" width="1925"/>
-                <img src="9b1dee4578942382fa972176d0e9833f7fc80d8969d6c5c4f72c596aa9d1a79c.png" title=" administrador enters 'Pepito' into Nombres" width="1925"/>
-                <img src="f58ffa0f4888b8104ab0ad856ffc29812b331d9a78e40755778f988821880f3b.png" title=" administrador clicks on Apellidos" width="1925"/>
-                <img src="8671aa46752d0b4e0e023ec8dedfbd60055ecadaa707ae7f7bda33d91161c657.png" title=" administrador enters 'Perez' into Apellidos" width="1925"/>
-                <img src="c7218d195d92e54ff76026e2398756cbda486f47845aef7e1d2871b377850aa0.png" title=" administrador clicks on Direccion" width="1925"/>
-                <img src="00062e4466f2e55cc9a0436e0e29ed2e9c7936c9c8b3c8f146668c19f3fa8eba.png" title=" administrador enters 'Cl 34 #32-2' into Direccion" width="1925"/>
-                <img src="ea9a7dadb3c32655b9942ccc786d37e4a20d39f0144b4ce8db36ecab1ca43f85.png" title=" administrador clicks on Correo electronico" width="1925"/>
-                <img src="252d2d7f736fd7f6f33097148330240716ba3729c8063011650d234810e22f1a.png" title=" administrador enters 'pepito@gmail.com18' into Correo electronico" width="1925"/>
-                <img src="e6b8b37ad22f907054ba570a464323aa81c5e6cc69aaea607a21093924518b77.png" title=" administrador clicks on Numero de telefono" width="1925"/>
-                <img src="4c539ab39d18e35abf19284d9fc4a0fa3f7211d64a36de91587f0462e57310d9.png" title=" administrador enters '3334445553' into Numero de telefono" width="1925"/>
-                <img src="870d522015dc42d1133d54256dbee9da03b78537777fb8c334176c18aeab6876.png" title=" administrador clicks on Fecha de nacimiento" width="1925"/>
-                <img src="4709110c82a5c3ff794afb485f1dcc8143327634a402885f07a9e14d2d8a8468.png" title=" administrador enters '10-10-2025' into Fecha de nacimiento" width="1925"/>
-                <img src="83fad798182e479d78cba774e0357209a598a33a65bdcecc5ef71d0cd7c3c856.png" title=" administrador clicks on Contrase&ntilde;a" width="1925"/>
-                <img src="232463caa2a8f17520a57b642432a619e84e1db1aa23c5badc1a9c0a5e576775.png" title=" administrador enters '123456' into Contrase&ntilde;a" width="1925"/>
-                <img src="ae5acd0de2fb60cbae1872bb622b973228cb57397b5b2a336874b3cec723015d.png" title=" administrador clicks on Tipo de documento" width="1925"/>
-                <img src="222261c6561d992773ae06b8223f40d59bd4efce4638af91179065899c19ac1c.png" title=" administrador select C&eacute;dula de ciudadan&iacute;a on Tipo de documento" width="1925"/>
-                <img src="4ff59012f8ef6703026e4cf537ef63a9052c7c31403de57d90e81c9eb2af37d0.png" title=" administrador clicks on Rol del usuario" width="1925"/>
-                <img src="848c1e3e09070a1839fd3e9c2aeff6c7740c23c71ab1ca4ff4e7ef80da56e470.png" title=" administrador select Administrador on Rol del usuario" width="1925"/>
-                <img src="884895870473524a7afa91f10dc2c6e8efb5c5c7a871fa532e1c9236e95f1875.png" title=" administrador clicks on Enviar formulario" width="1925"/>
-                <img src="a157553ffc737aa129a23a21825420dde5c941f5072c5e58e5bcc9fe2a3b3c87.png" title=" Administrador aceptar alerta" width="1925"/>
-                <img src="a157553ffc737aa129a23a21825420dde5c941f5072c5e58e5bcc9fe2a3b3c87.png" title=" Administrador registrar usuario (completed)" width="1925"/>
-                <img src="a157553ffc737aa129a23a21825420dde5c941f5072c5e58e5bcc9fe2a3b3c87.png" title=" Cuando ingresa los datos necesarios para el registro del usuario:
-| num_doc | nombres | apellidos | direccion | email | num_tel | fec_nac | password |
-| 111222333 | Pepito | Perez | Cl 34 #32-2 | pepito@gmail.com | 3334445553 | 10-10-2025 | 123456 | (completed): <span class='failing-color'>FAILURE</span>" width="1925"/>
+| 111222333 | Pepito | Perez | Cl 34 #32-2 | pepito@gmail.com | 3334445553 | 10-10-2025 | 123456 |" width="1370"/>
+                <img src="9085e28c38be30cf0f17c29fe09deb8f3b270c95b955ef25ac3ef46b1a217e40.png" title=" Administrador registrar usuario" width="1370"/>
+                <img src="9085e28c38be30cf0f17c29fe09deb8f3b270c95b955ef25ac3ef46b1a217e40.png" title=" Administrador aceptar alerta" width="1370"/>
+                <img src="9f12292e87ba07e062b29e6d45b0d01cb1f641ffc488d6ba8c0936b57ff82ecf.png" title=" administrador clicks on Boton de modulo usuarios" width="1370"/>
+                <img src="54f4c45e243a34ecd8ad9514da2327eb1d4fc47570417ee39e65f82f8845de43.png" title=" administrador clicks on Boton para registro" width="1370"/>
+                <img src="d3b170c19f634acca67087afc0acf49a4c707115c6dd92470b7f79b4af3c3e3e.png" title=" administrador clicks on Numero de documento" width="1370"/>
+                <img src="3b39301f4bc8e88fa26e0e43d7774e26a2e37041b652993e7842b2540fe4a989.png" title=" administrador enters '11122233313' into Numero de documento" width="1370"/>
+                <img src="89f749d0d0b4e71ef916407f5192c3d4e05df674cf4cf0ac3f6476f1b6d0a016.png" title=" administrador clicks on Nombres" width="1370"/>
+                <img src="569c5fa9e8bc3785e173543396c97f3dbc40387f6b13ee911fb883672eb1d591.png" title=" administrador enters 'Pepito' into Nombres" width="1370"/>
+                <img src="bae63e37410e11f9d151848b38fd28d72823fa9ec952df49ba0278865e95ccf0.png" title=" administrador clicks on Apellidos" width="1370"/>
+                <img src="efe419cea2a3bff455be5e86cf46c5d41cdd17bf417c300fd1d5cf3d220d1870.png" title=" administrador enters 'Perez' into Apellidos" width="1370"/>
+                <img src="7da5b75c9ae635bb1c2787355887d6530306987f97941da821d92708d9984b09.png" title=" administrador clicks on Direccion" width="1370"/>
+                <img src="99dc3cc7cf42a67ebe965cb1c335ddab14d6cfff4f84b1be11e107d6b3da14fc.png" title=" administrador enters 'Cl 34 #32-2' into Direccion" width="1370"/>
+                <img src="51fdff2031ff559de6903b2d6154bbc9978a28bd6994240033f4b9544f3c9370.png" title=" administrador clicks on Correo electronico: <span class='error-color'>ERROR</span>" width="1370"/>
             </div>
         </div>
 

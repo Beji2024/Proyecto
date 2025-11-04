@@ -12,7 +12,7 @@
       Dado que el administrador este en la pagina
       Cuando ingrese las crendenciales para loguearse:
         | email            | password |
-        | felipe@gmail.com | 6543sdadwq22.,,.21   |
+        | felipe@gmail.com | 123456   |
       Entonces Se debe verificar que el administrador haya ingresado correctamente a la página y tenga acceso a sus funciones
 
 

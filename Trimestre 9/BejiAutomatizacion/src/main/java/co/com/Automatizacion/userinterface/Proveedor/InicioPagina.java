@@ -1,4 +1,4 @@
-package co.com.Automatizacion.tasks.Proveedor;
+package co.com.Automatizacion.userinterface.Proveedor;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;

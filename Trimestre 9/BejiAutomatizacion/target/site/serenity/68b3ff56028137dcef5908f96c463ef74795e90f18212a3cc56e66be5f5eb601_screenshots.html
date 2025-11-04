@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 31-10-2025 08:49</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-11-2025 20:01</span>
     <br style="clear:left"/>
 </div>
 
@@ -197,9 +197,9 @@ Para tener acceso a las funciones de gestion de inventario y usuarios
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Validar el inicio de sesion exitoso
+                                <span class="failing-color">Validar el inicio de sesion exitoso
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -216,29 +216,67 @@ Para tener acceso a las funciones de gestion de inventario y usuarios
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected validacion loginExpected: is (true) but: was (false)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.Automatizacion.stepsdefinitions.LoginStepDefinition.seDebeVerificarQueElAdministradorHayaIngresadoCorrectamenteALaPáginaYTengaAccesoASusFunciones(LoginStepDefinition.java:30)<br />✽.Se debe verificar que el administrador haya ingresado correctamente a la página y tenga acceso a sus funciones(src/test/resources/features/login.feature:16)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource10596770046829801207.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Dado que el administrador este en la pagina" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Administrador abrir pagina" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" administrador opens the Inicio pagina" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Administrador abrir pagina (completed)" width="1925"/>
-                <img src="eff8ae68e699985d94977c3b3873bf1568697e711494cc7b9d303c40a6df4c2b.png" title=" Dado que el administrador este en la pagina (completed)" width="1925"/>
-                <img src="6b3e931bb95ca9a428496ccac8a514f17acce9dd23a13bf16cf1127c02bec770.png" title=" Cuando ingrese las crendenciales para loguearse:
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Dado que el administrador este en la pagina" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Administrador abrir pagina" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" administrador opens the Inicio pagina" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Administrador abrir pagina (completed)" width="1370"/>
+                <img src="820fb4c3b7f9bfc765a42f96eac68c8e6d5e077cd47e3d9126a7e489442ff92f.png" title=" Dado que el administrador este en la pagina (completed)" width="1370"/>
+                <img src="74593b613b665d2a1beeb7f0e4a2d0b5939651d138d125f3158fe8b5faa6a7bc.png" title=" Cuando ingrese las crendenciales para loguearse:
 | email | password |
-| felipe@gmail.com | 654321 |" width="1925"/>
-                <img src="6b3e931bb95ca9a428496ccac8a514f17acce9dd23a13bf16cf1127c02bec770.png" title=" Administrador login" width="1925"/>
-                <img src="6b3e931bb95ca9a428496ccac8a514f17acce9dd23a13bf16cf1127c02bec770.png" title=" administrador clicks on Correo electronico" width="1925"/>
-                <img src="91ad168912d0f5b3da94df817bd43f332d608ac418a9558d2a8cdfe8efef8c0e.png" title=" administrador enters 'felipe@gmail.com' into Correo electronico" width="1925"/>
-                <img src="3345169222852f568b1da27811c912295f8a9b1ba2d9a7ae659dcd36f1f8ec32.png" title=" administrador clicks on Contrase&ntilde;a" width="1925"/>
-                <img src="031c3b0b6ec1532870dc9a2d7aa34d4021ef5701c6fc1023c4f11ab6b74c5e8d.png" title=" administrador enters '654321' into Contrase&ntilde;a" width="1925"/>
-                <img src="1f89f673582c8c9b1b20aa833bce8dc9d2559976cf76c684bf5ae6ca5013e1ef.png" title=" administrador clicks on Boton de ingreso" width="1925"/>
-                <img src="1f89f673582c8c9b1b20aa833bce8dc9d2559976cf76c684bf5ae6ca5013e1ef.png" title=" Administrador login (completed)" width="1925"/>
-                <img src="1f89f673582c8c9b1b20aa833bce8dc9d2559976cf76c684bf5ae6ca5013e1ef.png" title=" Cuando ingrese las crendenciales para loguearse:
+| felipe@gmail.com | 123456 |" width="1370"/>
+                <img src="74593b613b665d2a1beeb7f0e4a2d0b5939651d138d125f3158fe8b5faa6a7bc.png" title=" Administrador login" width="1370"/>
+                <img src="74593b613b665d2a1beeb7f0e4a2d0b5939651d138d125f3158fe8b5faa6a7bc.png" title=" administrador clicks on Correo electronico" width="1370"/>
+                <img src="bef5c10ee509118aacd3142876f2df2d55017aa53cdf28e7b61f26be3e0ff692.png" title=" administrador enters 'felipe@gmail.com' into Correo electronico" width="1370"/>
+                <img src="6cafd9b4dbd9b12bafbd495d6498f16fef46d0d3693d44adc7c6c2fddf791bae.png" title=" administrador clicks on Contrase&ntilde;a" width="1370"/>
+                <img src="076e5e5518a9fe7d410805edc3858918803b44d8d82e26e73e87771c5a3af96c.png" title=" administrador enters '123456' into Contrase&ntilde;a" width="1370"/>
+                <img src="ef933fbaf054075fdf78afb845ec718a9042c38a7d1902256656ff6b9ec51273.png" title=" administrador clicks on Boton de ingreso" width="1370"/>
+                <img src="ef933fbaf054075fdf78afb845ec718a9042c38a7d1902256656ff6b9ec51273.png" title=" Administrador login (completed)" width="1370"/>
+                <img src="ef933fbaf054075fdf78afb845ec718a9042c38a7d1902256656ff6b9ec51273.png" title=" Cuando ingrese las crendenciales para loguearse:
 | email | password |
-| felipe@gmail.com | 654321 | (completed)" width="1925"/>
-                <img src="6d8fe360a16ba1178a353e7c45c7310398bbd3c0b1479a89cdace1dfe643a95d.png" title=" Entonces Se debe verificar que el administrador haya ingresado correctamente a la p&aacute;gina y tenga acceso a sus funciones" width="1925"/>
-                <img src="6d8fe360a16ba1178a353e7c45c7310398bbd3c0b1479a89cdace1dfe643a95d.png" title=" Then validacion login" width="1925"/>
-                <img src="6d8fe360a16ba1178a353e7c45c7310398bbd3c0b1479a89cdace1dfe643a95d.png" title=" Entonces Se debe verificar que el administrador haya ingresado correctamente a la p&aacute;gina y tenga acceso a sus funciones (completed): <span class='success-color'>SUCCESS</span>" width="1925"/>
+| felipe@gmail.com | 123456 | (completed)" width="1370"/>
+                <img src="5b1e370aee81441b627fac09d34806332d3498e2679dc3fd4eab225e6b920065.png" title=" Entonces Se debe verificar que el administrador haya ingresado correctamente a la p&aacute;gina y tenga acceso a sus funciones" width="1370"/>
+                <img src="5b1e370aee81441b627fac09d34806332d3498e2679dc3fd4eab225e6b920065.png" title=" Then validacion login: <span class='failing-color'>FAILURE</span>" width="1370"/>
             </div>
         </div>
 

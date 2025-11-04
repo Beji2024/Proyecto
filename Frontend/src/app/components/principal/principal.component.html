@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class=" d-flex justify-content-between align-items-center mb-0  bg-morado">
-    <h1 class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;">
+    <h1 id="titulo" class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;" >
       SISTEMA DE INVENTARIO
     </h1>
     <h2 class="text-white custom-h2 s2">
@@ -25,7 +25,7 @@
         <div class="box d-flex justify-content-center align-items-center shadow">
         <a class="text-decoration-none text-secondary" >
           <h2>Producto</h2></a>
-          <img class="w-50" src="https://cdn-icons-gif.flaticon.com/16312/16312730.gif" (click)="goToProductos()"></div>
+          <img class="w-50" src="https://cdn-icons-gif.flaticon.com/16312/16312730.gif" (click)="goToProductos()" id="producto"></div>
       </div>
       <div class="col-md-4">
         <div class="box d-flex justify-content-center align-items-center shadow">
@@ -45,7 +45,7 @@
           <img class="w-50" src="https://cdn-icons-gif.flaticon.com/12339/12339191.gif"
           alt="ir a Proveedor"
           style="cursor: pointer; width: 200px;"
-          (click)="goToProveedor()"></div>
+          (click)="goToProveedor()" id="proveedor"></div>
       </div>
       <div class="col-md-4">
         <div class="box d-flex justify-content-center align-items-center shadow">

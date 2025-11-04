@@ -12,11 +12,7 @@ class UsuarioController extends Controller
 {
     public function index()
     {
-        $user = auth()->user();
-
-        if (!$user || $user->rol->name !== 'Administrador') {
-           return response()->json(['error' => 'No autorizado'], 403);
-        }
+        
         $usuarios = Usuario::with(['rol', 'tipodoc'])->get();
         return response()->json($usuarios);
     }
@@ -52,7 +48,7 @@ class UsuarioController extends Controller
 
         $usuario->update($request->only(
             'num_doc', 'nombres', 'apellidos', 'direccion',
-            'email', 'num_tel', 'fec_nac', 'tipodoc_id', 'rol_id'
+            'email', 'num_tel', 'fec_nac','password' , 'tipodoc_id', 'rol_id',
         ));
 
         if ($request->password) {

@@ -60,8 +60,6 @@ export const routes: Routes = [
 {
   path: 'proveditar/:id',
   loadComponent: () => import('./components/principal/Proveedor/proveditar/proveditar.component').then(m => m.ProveditarComponent),
-
-
   canActivate: [AuthGuard]
 },
 {
@@ -129,25 +127,28 @@ export const routes: Routes = [
 {
     path: 'productos',
     loadComponent: () => import('./components/productos/productos/productos.component').then(m => m.ProductosComponent),
+    canActivate:[AuthGuard]
   },
   {
     path: 'productos/gestion',
     loadComponent: () => import('./components/productos/gestion-productos/gestion-productos.component').then(m => m.GestionProductosComponent),
+    canActivate:[AuthGuard]
     
   },
   {
     path: 'productos/nueva-categoria',
     loadComponent: () => import('./components/categorias y sub/nueva-categoria/nueva-categoria.component').then(m => m.NuevaCategoriaComponent),
+    canActivate:[AuthGuard]
   },
   {
     path: 'productos/nueva-subcategoria',
     loadComponent: () => import('./components/categorias y sub/nueva-subcategoria/nueva-subcategoria.component').then(m => m.NuevaSubcategoriaComponent),
+    canActivate:[AuthGuard]
   },
   // Ruta dinámica DEBE IR AL FINAL
   {
     path: 'productos/:categoriaSub',
     loadComponent: () => import('./components/productos/productos/productos.component').then(m => m.ProductosComponent),
+    canActivate:[AuthGuard]
   }
-
-
 ];

@@ -9,7 +9,7 @@
       <div class="w-75 mx-auto mt-1 mb-1">
         <label class="input-group mb-1" for="num_doc">Número de documento:</label>
         <input class="form-control" id="num_doc" formControlName="num_doc" type="text"
-         [ngClass]="{ 'is-invalid': registroForm.get('num_doc')?.invalid && registroForm.get('num_doc')?.touched }"/>
+         [ngClass]="{ 'is-invalid': registroForm.get('num_doc')?.invalid && registroForm.get('num_doc')?.touched }" />
         <div class="invalid-feedback" *ngIf="registroForm.get('num_doc')?.hasError('required') && registroForm.get('num_doc')?.touched">
           El número de documento es obligatorio.
       </div>
@@ -125,7 +125,7 @@
     </div>
 
       <div class="col-auto d-flex justify-content-center mb-5">
-        <button class="btn btn-success" type="submit" [disabled]="registroForm.invalid">Registrar</button>
+        <button class="btn btn-success" type="submit" [disabled]="registroForm.invalid" id="enviar">Registrar</button>
       </div>
       
     </form>

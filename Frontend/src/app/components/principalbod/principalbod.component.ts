@@ -33,6 +33,6 @@ ngOnDestroy():void{
   }
   
   goToProductos(){
-    this.router.navigate(['/productos']);
+    this.router.navigate(['/productosbo']);
   }
 }

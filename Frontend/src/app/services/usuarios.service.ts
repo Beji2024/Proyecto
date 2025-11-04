@@ -16,25 +16,24 @@ export class UsuariosService {
     return this.http.get<Usuario[]>(this.apiUrl);
   }
   eliminarUsuario(id: number): Observable<any> {
-  const url = `${this.apiUrl}/${id}`;
-  return this.http.delete(url);
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
 }
   registrarUsuario(usuario: any) {
-  return this.http.post<any>('http://localhost:8000/api/usuarios', usuario);
+    return this.http.post<Usuario>(this.apiUrl, usuario);
 }
   actualizarUsuario(id: number, datos: any) {
     console.log('Datos enviados al backend:', datos);
-  return this.http.put(`${this.apiUrl}/${id}`, datos);
+    return this.http.put(`${this.apiUrl}/${id}`, datos);
 }
   obtenerUsuarioPorId(id: number): Observable<Usuario> {
-  return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
+    return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
 }
   obtenerRoles(): Observable<any[]> {
-  return this.http.get<any[]>('http://localhost:8000/api/roles');
+    return this.http.get<any[]>(this.apiRolesUrl);
 }
-obtenerUsuarioActual() {
-  const userJson = localStorage.getItem('usuario');
-  return userJson ? JSON.parse(userJson) : null;
+  obtenerUsuarioActual() {
+    const userJson = localStorage.getItem('usuario');
+    return userJson ? JSON.parse(userJson) : null;
 }
-
 }

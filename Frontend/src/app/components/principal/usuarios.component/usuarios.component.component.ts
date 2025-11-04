@@ -65,6 +65,7 @@ export class UsuariosComponent implements OnInit {
     this.usuariosService.eliminarUsuario(id).subscribe({
       next: () => {
         this.usuarios = this.usuarios.filter(usuario => usuario.id !== id);
+        this.actualizarUsuariosPaginados();
         console.log(`Usuario con id ${id} eliminado.`);
       },
       error: (error) => {

@@ -1,13 +1,13 @@
 package co.com.Automatizacion.stepsdefinitions;
-import co.com.Automatizacion.models.registrarUsuario.DatosRegistro;
-import co.com.Automatizacion.tasks.registrarUsuario.AbrirPagina;
+import co.com.Automatizacion.models.DatosRegistro;
+import co.com.Automatizacion.tasks.AbrirPagina;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import co.com.Automatizacion.tasks.registrarUsuario.RegistrarUsuario;
-import co.com.Automatizacion.questions.registrarUsuario.ValidacionRegistro;
+import co.com.Automatizacion.tasks.RegistrarUsuario;
+import co.com.Automatizacion.questions.ValidacionRegistro;
 import java.util.List;
 
 public class RegistrarUsuarioStepDefinition {

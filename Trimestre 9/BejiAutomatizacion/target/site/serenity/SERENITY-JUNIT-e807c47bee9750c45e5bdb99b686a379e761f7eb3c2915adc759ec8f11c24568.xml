@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Eliminar un usuario en pagina web de Sport10" skipped="0" tests="1" time="7.19" timestamp="2025-11-04 12:59:54"><testcase name="Verificar que se elimina el usuario"><error message="No se encontraron registros para eliminar." type="java.lang.RuntimeException">No se encontraron registros para eliminar.</error><system-err>No se encontraron registros para eliminar.&#13;
-co.com.Automatizacion.tasks.eliminarUsuario.EliminarUsuario.performAs(EliminarUsuario.java:44)&#13;
+co.com.Automatizacion.tasks.EliminarUsuario.performAs(EliminarUsuario.java:44)&#13;
 co.com.Automatizacion.stepsdefinitions.EliminarUsuarioStepDefinition.deEnElBotonDeEliminarYConfirmeLaAccion(EliminarUsuarioStepDefinition.java:19)&#13;
 cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;

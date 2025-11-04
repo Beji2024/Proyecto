@@ -1,7 +1,6 @@
 package co.com.Automatizacion.stepsdefinitions;
 
-import co.com.Automatizacion.tasks.eliminarUsuario.EliminarUsuario;
-import co.com.Automatizacion.tasks.registrarUsuario.AbrirPagina;
+import co.com.Automatizacion.tasks.AbrirPagina;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
@@ -16,7 +15,7 @@ public class EliminarUsuarioStepDefinition {
 
     @Cuando("^de en el boton de eliminar y confirme la accion$")
     public void deEnElBotonDeEliminarYConfirmeLaAccion() {
-        theActorInTheSpotlight().attemptsTo(EliminarUsuario.());
+        theActorInTheSpotlight().attemptsTo();
     }
 
     @Entonces("^Se debe verificar que el usuario se hay eliminado de la pagina web$")

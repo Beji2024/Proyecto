@@ -63,9 +63,10 @@ public class RegistrarUsuario implements Task {
                 Click.on(INPUT_ROL),
                 SelectFromOptions.byVisibleText(rol).from(INPUT_ROL),
                 Click.on(BTN_ENVIAR),
+                scrollBottom,
                 AceptarAlerta.ahora()
         );
-        // Guardamos el número de documento generado en la memoria del actor
+
         theActorInTheSpotlight().remember(RegistroVariable.usuario.toString(), datos.get(0).getNum_doc() + numero);
     }
 }

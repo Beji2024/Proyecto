@@ -51,7 +51,7 @@ public class ValidacionRegistro implements Question<Boolean> {
 
                 for (WebElementFacade celda : documentos) {
                     String textoCelda = celda.getText().trim();
-                    logger.info("   → Documento en tabla: '{}'", textoCelda);
+                    logger.info("Documento en tabla: '{}'", textoCelda);
 
                     if (textoCelda.contains(documento.trim())) {
                         logger.info("Documento '{}' encontrado en la página {}", documento, pagina);

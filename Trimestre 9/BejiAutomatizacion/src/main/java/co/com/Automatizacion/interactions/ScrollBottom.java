@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import static net.serenitybdd.screenplay.Tasks.instrumented;
 public  class ScrollBottom  implements Task{
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -13,7 +12,7 @@ public  class ScrollBottom  implements Task{
         Actions actions = new Actions(driver);
 
         // Realiza múltiples "PAGE_DOWN" hasta el final
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 10; i++) {
             actions.sendKeys(org.openqa.selenium.Keys.PAGE_DOWN).perform();
             try {
                 Thread.sleep(50);

@@ -1,6 +1,47 @@
 package co.com.Automatizacion.tasks;
 
-public class EliminarUsuario{
+import static co.com.Automatizacion.userinterface.EliminarUsuario.*;
+import co.com.Automatizacion.interactions.ScrollBottom;
+import co.com.Automatizacion.utils.hooks.RegistroVariable;
+import net.serenitybdd.core.Serenity;
+import net.serenitybdd.core.pages.WebElementFacade;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+import co.com.Automatizacion.interactions.AceptarAlerta;
 
+import java.util.List;
+
+public class EliminarUsuario implements Task {
+
+AceptarAlerta aceptarAlerta = new AceptarAlerta();
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        ScrollBottom scrollBottom = new ScrollBottom();
+
+        // Ir al módulo de usuario
+        actor.attemptsTo(
+                Click.on(BTN_USUARIO),
+                scrollBottom,
+                Click.on(BTN_SIGUIENTE),
+                Click.on(BTN_SIGUIENTE)
+        );
+        List<WebElementFacade> documentos = COLUMNA_DOCUMENTO.resolveAllFor(actor);
+        String documentoAEliminar = documentos.get(documentos.size() - 1).getText().trim();
+        Serenity.setSessionVariable(RegistroVariable.usuario.toString()).to(documentoAEliminar);
+        actor.remember(RegistroVariable.usuario.toString(), documentoAEliminar);
+        // Guardar el último documento eliminado
+
+        // Hacer clic en el último botón de eliminar
+        actor.attemptsTo(
+                Click.on(BTN_ELIMINAR),
+                aceptarAlerta,
+                scrollBottom
+        );
+    }
+    public static EliminarUsuario eliminar() {
+       return instrumented(EliminarUsuario.class);
+    }
 }
 

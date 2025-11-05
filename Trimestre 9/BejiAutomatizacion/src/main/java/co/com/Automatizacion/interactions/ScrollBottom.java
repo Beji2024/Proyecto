@@ -11,7 +11,6 @@ public  class ScrollBottom  implements Task{
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
         Actions actions = new Actions(driver);
 
-        // Realiza múltiples "PAGE_DOWN" hasta el final
         for (int i = 0; i < 10; i++) {
             actions.sendKeys(org.openqa.selenium.Keys.PAGE_DOWN).perform();
             try {

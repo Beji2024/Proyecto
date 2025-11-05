@@ -20,7 +20,7 @@ AceptarAlerta aceptarAlerta = new AceptarAlerta();
     public <T extends Actor> void performAs(T actor) {
         ScrollBottom scrollBottom = new ScrollBottom();
 
-        // Ir al módulo de usuario
+
         actor.attemptsTo(
                 Click.on(BTN_USUARIO),
                 scrollBottom,
@@ -31,10 +31,8 @@ AceptarAlerta aceptarAlerta = new AceptarAlerta();
         String documentoAEliminar = documentos.get(documentos.size() - 1).getText().trim();
         Serenity.setSessionVariable(RegistroVariable.usuario.toString()).to(documentoAEliminar);
         actor.remember(RegistroVariable.usuario.toString(), documentoAEliminar);
-        // Guardar el último documento eliminado
 
-        // Hacer clic en el último botón de eliminar
-        actor.attemptsTo(
+                actor.attemptsTo(
                 Click.on(BTN_ELIMINAR),
                 aceptarAlerta,
                 scrollBottom

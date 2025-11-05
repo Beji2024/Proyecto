@@ -1,4 +1,5 @@
 package co.com.Automatizacion.stepsdefinitions;
+
 import co.com.Automatizacion.models.DatosRegistro;
 import co.com.Automatizacion.tasks.AbrirPagina;
 import cucumber.api.java.es.Dado;
@@ -14,7 +15,6 @@ public class RegistrarUsuarioStepDefinition {
     @Dado("^que el usuario se encuentre en la pagina de pruebas en el modulo de usuarios$")
     public void queElUsuarioSeEncuentreEnLaPaginaDePruebasEnElMduloDeUsuarios() {
         theActorInTheSpotlight().wasAbleTo(AbrirPagina.pagina());
-
     }
 
     @Cuando("^ingresa los datos necesarios para el registro del usuario:$")

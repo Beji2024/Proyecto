@@ -14,7 +14,7 @@
         <div class="list-group list-group-flush mx-5 w-100 mb-3 mt-5" > 
         <td class="list-group-item documento"> <b class="m-3">Documento:</b> {{ usuario.num_doc }}</td>
         <td class="list-group-item"> <b class="m-3">Nombres:</b> {{ usuario.nombres }}</td>
-        <td class="list-group-item"><b class="m-3">Apellidos:</b> {{ usuario.apellidos }}</td>
+        <td class="list-group-item apellidos"><b class="m-3">Apellidos:</b> {{ usuario.apellidos }}</td>
         <td class="list-group-item"><b class="m-3">Direccion:</b>{{ usuario.direccion }}</td>
         <td class="list-group-item"> <b class="m-3">Email:</b> {{ usuario.email }}</td>
         <td class="list-group-item"> <b class="m-3">Telefono:</b>{{ usuario.num_tel }}</td>
@@ -26,7 +26,7 @@
         <div>
           <tr class="d-flex mx-5">
             <td class="list-group-item m-2">  
-              <button (click)="editarUsuario(usuario.id)" class="btn btn-success shadow">Editar</button>
+              <button id="Editar" (click)="editarUsuario(usuario.id)" class="btn btn-success shadow">Editar</button>
             </td> 
             <td><button id="Eliminar" (click)="eliminarUsuario(usuario.id)" class="btn btn-danger m-2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button></td>
           </tr>

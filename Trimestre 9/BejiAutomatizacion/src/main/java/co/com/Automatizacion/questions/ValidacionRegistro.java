@@ -70,7 +70,6 @@ public class ValidacionRegistro implements Question<Boolean> {
                     break;
                 }
 
-                //Aquí usas tu clase Screenplay ScrollBottom
                 actor.attemptsTo(ScrollBottom.completo());
 
                 logger.info("Pasando a la siguiente página...");

@@ -38,7 +38,7 @@ public class RegistrarUsuario implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                AceptarAlerta.ahora(),
+
                 Click.on(BTN_USUARIO),
                 Click.on(BTN_NUEVO),
                 Click.on(INPUT_NUMDOCUMENTO),

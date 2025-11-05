@@ -13,7 +13,7 @@
         
             <div class="input-group mb-3">
                 <label class="input-group-text mt-4" for="apellidos">Apellidos</label>
-                <input class="form-control mt-4" id="apellidos" type="text" formControlName="apellidos" />
+                <input  class="form-control mt-4" id="apellidos" type="text" formControlName="apellidos" />
             </div>
             <div *ngIf="editarForm.get('apellidos')?.touched && editarForm.get('apellidos')?.invalid" class="text-danger mb-2 ms-2">
                 El apellido es obligatorio.
@@ -50,7 +50,7 @@
 
 
             <div class="input-group mb-3 d-flex justify-content-center align-items-center"  >
-                <button class="input-group-text mt-4 " type="submit" [disabled]="editarForm.invalid">Guardar cambios</button>
+                <button id="enviar" class="input-group-text mt-4 " type="submit" [disabled]="editarForm.invalid">Guardar cambios</button>
             </div>
             
           </form>

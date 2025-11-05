@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Automatizacion</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="f05066303eb818b78d3c5b17bc85cf3db87def6b38f06d3bc6ed70f08b40041f.html">Registrar Un Nuevo Proveedor</a></span>
+                > <span class="truncate-60"><a
+                    href="6e8b3d201df8f6b9b612b70a88416f47341def5cf5f90c0135719f6c083edbc1.html">Registrar un proveedor exitosamente </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 04-11-2025 21:28</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Registrar Un Nuevo Proveedor </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como administrador del sistema<br />
+Quiero registrar un nuevo proveedor<br />
+Para mantener actualizado el listado de proveedores
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="1b1ab645410234c69b4ca3ab84d6a94cb730d490a2d4ea8a66522bb5a11a5722.html">Registrar Proveedor
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Registrar un proveedor exitosamente
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="48758f0e86dd726218be8d02fd0e180b619160a9654b8e4dde807395850884cd.png" title=" Dado que el administrador ingresa al m&oacute;dulo de proveedores con sus credenciales:
+| email | password |
+| felipe@gmail.com | Br_23Kzn88Ql-1 |" width="1370"/>
+                <img src="48758f0e86dd726218be8d02fd0e180b619160a9654b8e4dde807395850884cd.png" title=" Administrador ingresar modulo proveedor" width="1370"/>
+                <img src="48758f0e86dd726218be8d02fd0e180b619160a9654b8e4dde807395850884cd.png" title=" Administrador abrir pagina" width="1370"/>
+                <img src="48758f0e86dd726218be8d02fd0e180b619160a9654b8e4dde807395850884cd.png" title=" Administrador opens the Inicio pagina" width="1370"/>
+                <img src="48758f0e86dd726218be8d02fd0e180b619160a9654b8e4dde807395850884cd.png" title=" Administrador abrir pagina (completed)" width="1370"/>
+                <img src="bf81ae405cc9b602a4a6b16b6967e825e8d4a28719c06246df4d19a3a550623f.png" title=" Administrador login" width="1370"/>
+                <img src="bf81ae405cc9b602a4a6b16b6967e825e8d4a28719c06246df4d19a3a550623f.png" title=" Administrador clicks on Correo electronico" width="1370"/>
+                <img src="bef5c10ee509118aacd3142876f2df2d55017aa53cdf28e7b61f26be3e0ff692.png" title=" Administrador enters 'felipe@gmail.com' into Correo electronico" width="1370"/>
+                <img src="88cab846b74c78a211e84dded1d4d36bb69f4fd0f2aec4b90d275ad98ab430d2.png" title=" Administrador clicks on Contrase&ntilde;a" width="1370"/>
+                <img src="432f0c3805f8ec0680a52fbebe110a7e1804195b8dc2cf94ef38e525920ffeed.png" title=" Administrador enters 'Br_23Kzn88Ql-1' into Contrase&ntilde;a" width="1370"/>
+                <img src="228fe0a064ee17e3d3e826692e4a87a3bc5404da94597e5229756be7c2822ae0.png" title=" Administrador clicks on Boton de ingreso" width="1370"/>
+                <img src="228fe0a064ee17e3d3e826692e4a87a3bc5404da94597e5229756be7c2822ae0.png" title=" Administrador login (completed)" width="1370"/>
+                <img src="59a9bb6adadbf905e60e67386f59a25111355fe93331704c700b8c55dcd7856a.png" title=" Then validar inicio" width="1370"/>
+                <img src="5af74f1072e6c335f6314aba20389a648cb23941eeca0b93500086139455b409.png" title=" Administrador ir proveedor" width="1370"/>
+                <img src="5af74f1072e6c335f6314aba20389a648cb23941eeca0b93500086139455b409.png" title=" Administrador clicks on Bot&oacute;n para ir a proveedor" width="1370"/>
+                <img src="5af74f1072e6c335f6314aba20389a648cb23941eeca0b93500086139455b409.png" title=" Administrador ir proveedor (completed)" width="1370"/>
+                <img src="5af74f1072e6c335f6314aba20389a648cb23941eeca0b93500086139455b409.png" title=" Administrador ingresar modulo proveedor (completed)" width="1370"/>
+                <img src="5af74f1072e6c335f6314aba20389a648cb23941eeca0b93500086139455b409.png" title=" Dado que el administrador ingresa al m&oacute;dulo de proveedores con sus credenciales:
+| email | password |
+| felipe@gmail.com | Br_23Kzn88Ql-1 | (completed)" width="1370"/>
+                <img src="ddbc34e178140af1d405266fbb72339cac020979eb965735ab0f1c3fc7b7aa68.png" title=" Cuando haga clic en el bot&oacute;n registrar proveedor" width="1370"/>
+                <img src="ddbc34e178140af1d405266fbb72339cac020979eb965735ab0f1c3fc7b7aa68.png" title=" Administrador btn registrar" width="1370"/>
+                <img src="ddbc34e178140af1d405266fbb72339cac020979eb965735ab0f1c3fc7b7aa68.png" title=" Administrador clicks on Bot&oacute;n para registrar proveedor" width="1370"/>
+                <img src="ddbc34e178140af1d405266fbb72339cac020979eb965735ab0f1c3fc7b7aa68.png" title=" Administrador btn registrar (completed)" width="1370"/>
+                <img src="ddbc34e178140af1d405266fbb72339cac020979eb965735ab0f1c3fc7b7aa68.png" title=" Cuando haga clic en el bot&oacute;n registrar proveedor (completed)" width="1370"/>
+                <img src="e453349001b99438e59633522124c35547188bb2ce051f026f614d5baf7a9010.png" title=" Y complete el formulario con los siguientes datos:
+| nombre | nit | celular | email | direccion |
+| Calzado Ejemplo SAS | 9701234567 | 3104567890 | ventas@calzadoejemplo.com | Calle 99 #88-77 Cali |" width="1370"/>
+                <img src="e453349001b99438e59633522124c35547188bb2ce051f026f614d5baf7a9010.png" title=" Administrador formulario proveedor" width="1370"/>
+                <img src="e453349001b99438e59633522124c35547188bb2ce051f026f614d5baf7a9010.png" title=" Administrador clicks on Campo nombre del proveedor" width="1370"/>
+                <img src="b444e916318b6f011af7702c17ccba98b760b53f620bad67bc7c79916d29dc96.png" title=" Administrador enters 'Calzado Ejemplo SAS' into Campo nombre del proveedor" width="1370"/>
+                <img src="f3649761e41f940e9db04779aaa5f3efa9ba46ce11ae57c1b83aca812db1ecd9.png" title=" Administrador clicks on Campo nit del proveedor" width="1370"/>
+                <img src="3097a55f01c941dea073e72764db283a7b4ee8a2be5dc4799138301108f26019.png" title=" Administrador enters '9701234567' into Campo nit del proveedor" width="1370"/>
+                <img src="0a31f7605127064711d2a5d698e01242c20f51281e144f0bda7ef51d50c2d5dc.png" title=" Administrador clicks on Campo celular del proveedor" width="1370"/>
+                <img src="5effa92103dcff104e20287b527d79d25663f45137de5a1d7e26cd81b9f11d64.png" title=" Administrador enters '3104567890' into Campo celular del proveedor" width="1370"/>
+                <img src="b7f1abe9fd4b52095bbc524dc731a835e393d3c07084d46333e5f6b2ec95796d.png" title=" Administrador clicks on Campo email del proveedor" width="1370"/>
+                <img src="d4e17f7757744dd75d2119a1716497e12971bc98fd23c01b0bb3d013b8b2aca4.png" title=" Administrador enters 'ventas@calzadoejemplo.com' into Campo email del proveedor" width="1370"/>
+                <img src="fe502a9a690ec6242154bc3985748f13daf43ab86238dbc095c38d40f92368b9.png" title=" Administrador clicks on Campo direccion del proveedor" width="1370"/>
+                <img src="38514adfe85d8304cf4d65bd5cb6d1321a09d3526d910e5761afa225c960396e.png" title=" Administrador enters 'Calle 99 #88-77 Cali' into Campo direccion del proveedor" width="1370"/>
+                <img src="5af74f1072e6c335f6314aba20389a648cb23941eeca0b93500086139455b409.png" title=" Administrador formulario proveedor (completed)" width="1370"/>
+                <img src="5af74f1072e6c335f6314aba20389a648cb23941eeca0b93500086139455b409.png" title=" Y complete el formulario con los siguientes datos:
+| nombre | nit | celular | email | direccion |
+| Calzado Ejemplo SAS | 9701234567 | 3104567890 | ventas@calzadoejemplo.com | Calle 99 #88-77 Cali | (completed)" width="1370"/>
+                <img src="f1d84b0d3c986a1e5f7eaf9e1c972df2f3dd2b41f6a1b4b7e23bf77bcf30b0ee.png" title=" Entonces se debe verificar que el proveedor haya sido registrado correctamente" width="1370"/>
+                <img src="f1d84b0d3c986a1e5f7eaf9e1c972df2f3dd2b41f6a1b4b7e23bf77bcf30b0ee.png" title=" Then validar registro proveedor" width="1370"/>
+                <img src="f1d84b0d3c986a1e5f7eaf9e1c972df2f3dd2b41f6a1b4b7e23bf77bcf30b0ee.png" title=" Entonces se debe verificar que el proveedor haya sido registrado correctamente (completed): <span class='success-color'>SUCCESS</span>" width="1370"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.1</span>
+</div>
+</body>
+</html>

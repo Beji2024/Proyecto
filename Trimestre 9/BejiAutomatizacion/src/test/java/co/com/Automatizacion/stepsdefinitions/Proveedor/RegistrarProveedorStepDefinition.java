@@ -1,55 +1,44 @@
-package co.com.Automatizacion.stepsdefinitions;
+package co.com.Automatizacion.stepsdefinitions.Proveedor;
 
 import co.com.Automatizacion.models.Proveedor.DatosProveedor;
 import co.com.Automatizacion.models.login.DatosLogin;
-import co.com.Automatizacion.questions.Proveedor.ValidarInicio;
-import co.com.Automatizacion.tasks.Proveedor.BTN_Registrar;
-import co.com.Automatizacion.tasks.Proveedor.Formulario_Proveedor;
-import co.com.Automatizacion.tasks.Proveedor.IrProveedor;
-import co.com.Automatizacion.tasks.login.AbrirPagina;
-import co.com.Automatizacion.tasks.login.Login;
+import co.com.Automatizacion.questions.Proveedor.ValidarRegistroProveedor;
+import co.com.Automatizacion.tasks.Proveedor.*;
 import cucumber.api.java.es.*;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
 
+import static co.com.Automatizacion.questions.Proveedor.ValidarEdicionProveedor.correctamente;
+import static co.com.Automatizacion.questions.Proveedor.ValidarRegistroProveedor.conNombre;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class RegistrarProveedorStepDefinition {
+    private String nombreProveedorRegistrado;
 
-    @Dado("^que el administrador esté en la página de login$")
-    public void queElAdministradorEsteEnLaPaginaDeLogin() {
+    @Dado("^que el administrador ingresa al módulo de proveedores con sus credenciales:$")
+    public void ingresarAlModuloDeProveedores(List<DatosLogin> datosLogin) {
         setTheStage(new OnlineCast());
-        theActorCalled("Administrador").wasAbleTo(AbrirPagina.pagina());
-    }
-
-    @Cuando("^ingrese las credenciales:$")
-    public void ingreseLasCredenciales(List<DatosLogin> datosLogin) {
-        theActorInTheSpotlight().attemptsTo(Login.login(datosLogin));
-    }
-    @Entonces("^se debe verificar que el administrador haya ingresado correctamente al sistema$")
-    public void seDebeVerificarElIngresoCorrecto() {
-        theActorInTheSpotlight().should(seeThat(ValidarInicio.Ingreso()));
-    }
-
-    @Cuando("^se dirija al módulo de proveedores$")
-    public void seDirijaAlModuloDeProveedores() {
-        theActorInTheSpotlight().attemptsTo(IrProveedor.irProveedor());
+        theActorCalled("Administrador").attemptsTo(
+                IngresarModuloProveedor.con(datosLogin)
+        );
     }
 
     @Cuando("^haga clic en el botón registrar proveedor$")
-    public void hagaClicEnElBotonRegistrar() {
+    public void clicEnRegistrar() {
         theActorInTheSpotlight().attemptsTo(BTN_Registrar.btn_registrar());
     }
 
     @Cuando("^complete el formulario con los siguientes datos:$")
-    public void completeElFormularioConLosSiguientesDatos(List<DatosProveedor> datos) {
+    public void llenarFormulario(List<DatosProveedor> datos) {
+        nombreProveedorRegistrado = datos.get(0).getNombre();
         theActorInTheSpotlight().attemptsTo(Formulario_Proveedor.conDatos(datos));
     }
 
     @Entonces("^se debe verificar que el proveedor haya sido registrado correctamente$")
     public void seDebeVerificarQueElProveedorHayaSidoRegistradoCorrectamente() {
-        // Aquí puedes agregar la validación del mensaje de éxito o la existencia del proveedor registrado
+        theActorInTheSpotlight().should(seeThat(conNombre(nombreProveedorRegistrado)));
     }
 }
+

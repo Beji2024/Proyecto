@@ -1,22 +1,18 @@
 #language:es
 #author: Breiner Rj
+Característica: Registrar un nuevo proveedor
+  Como administrador del sistema
+  Quiero registrar un nuevo proveedor
+  Para mantener actualizado el listado de proveedores
 
-Característica: Gestionar proveedores en Sport10
-  Como administrador del sistema Sport10
-  Quiero iniciar sesión y registrar nuevos proveedores
-  Para mantener actualizada la información en el sistema de inventario
-
-  @LoginYProveedor
-  Escenario: Inicio de sesión y registro exitoso de un nuevo proveedor
-    Dado que el administrador esté en la página de login
-    Cuando ingrese las credenciales:
-      | email            | password       |
+  @RegistrarProveedor
+  Escenario: Registrar un proveedor exitosamente
+    Dado que el administrador ingresa al módulo de proveedores con sus credenciales:
+      | email            | password           |
       | felipe@gmail.com | Br_23Kzn88Ql-1 |
-    Entonces se debe verificar que el administrador haya ingresado correctamente al sistema
-
-    Cuando se dirija al módulo de proveedores
-    Y haga clic en el botón registrar proveedor
+    Cuando haga clic en el botón registrar proveedor
     Y complete el formulario con los siguientes datos:
-      | nombre         | nit        | celular   | email                       | direccion               |
-      | Calzado Nuevo  | 9601234567 | 3112223344 | contacto@calzadonuevo.com   | Calle 45 #10-22 Bogotá |
+      | nombre             | nit        | celular     | email                       | direccion             |
+      | Calzado Ejemplo SAS| 9701234567 | 3104567890  | ventas@calzadoejemplo.com   | Calle 99 #88-77 Cali |
     Entonces se debe verificar que el proveedor haya sido registrado correctamente
+

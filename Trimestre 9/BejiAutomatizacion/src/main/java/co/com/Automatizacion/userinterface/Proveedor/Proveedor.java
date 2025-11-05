@@ -30,8 +30,13 @@ public class Proveedor extends PageObject {
     public static final Target INPUT_CONFIRMACION = Target.the("Mensaje de inicio del sistema")
             .located(By.id("Titulo"));
     public static Target BTN_ELIMINAR_PROVEEDOR(String nit) {
-        return Target.the("Botón eliminar proveedor con NIT: " + nit)
-                .locatedBy("//td[contains(text(),'{0}')]/following-sibling::td//button[contains(@class,'btn-danger')]");
+        return Target.the("botón eliminar proveedor")
+                .located(By.xpath("//td[text()='" + nit + "']/following-sibling::td//button[contains(@class,'btn-danger')]"));
+    }
+
+    public static Target BTN_EDITAR_PROVEEDOR(String nit) {
+        return Target.the("Botón editar proveedor con NIT: " + nit)
+                .locatedBy("//td[contains(text(),'{0}')]/following-sibling::td//button[contains(@class,'btn-info')]");
     }
 
 }

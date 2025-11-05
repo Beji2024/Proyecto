@@ -1,20 +1,14 @@
 #language: es
 #author: Breiner Bj
-
-Característica: Eliminar un proveedor en la página web de Sport10
-  Como administrador de la página web
-  Quiero registrar proveedores en la página web
-  Para dejar registro de los proveedores que desee
-
-  Antecedentes:
-    Dado que el administrador esté en la página
-    Cuando ingrese las credenciales para loguearse:
-      | email            | password       |
-      | felipe@gmail.com | Br_23Kzn88Ql-1 |
+Característica: Eliminar proveedor
+  Como administrador del sistema
+  Quiero eliminar un proveedor existente
+  Para mantener la base de datos actualizada
 
   @EliminarProveedor
-  Escenario: Verificar que se elimina el proveedor
-    Dado que el administrador se encuentre en la página en el módulo de proveedores
-    Y exista un proveedor registrado con NIT "9601234567"
-    Cuando dé en el botón de eliminar y confirme la acción
-    Entonces se debe verificar que el proveedor con NIT "9601234567" se haya eliminado de la página web
+  Escenario: Eliminar proveedor exitosamente
+    Dado que el administrador esté en el módulo de proveedores con las credenciales:
+      | email            | password       |
+      | felipe@gmail.com | Br_23Kzn88Ql-1 |
+    Cuando el administrador elimine el proveedor con NIT 940345678
+    Entonces el proveedor con NIT 940345678 no debe aparecer en la lista

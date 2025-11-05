@@ -34,7 +34,7 @@ public class Formulario_Proveedor implements Task {
     public <T extends Actor> void performAs(T actor) {
         DatosProveedor proveedor = datos.get(0);
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 30);
 
         actor.attemptsTo(
                 Click.on(TXT_NOMBRE),
@@ -60,14 +60,14 @@ public class Formulario_Proveedor implements Task {
             Alert alert1 = driver.switchTo().alert();
             alert1.accept();
         } catch (Exception e) {
-            System.out.println("⚠️ No se encontró el primer alert: " + e.getMessage());
+            System.out.println("No se encontró el primer alert: " + e.getMessage());
         }
         try {
             wait.until(ExpectedConditions.alertIsPresent());
             Alert alert2 = driver.switchTo().alert();
             alert2.accept();
         } catch (Exception e) {
-            System.out.println("⚠️ No se encontró el segundo alert: " + e.getMessage());
+            System.out.println("No se encontró el segundo alert: " + e.getMessage());
         }
     }
 }

@@ -2,12 +2,9 @@ package co.com.Automatizacion.questions;
 
 import co.com.Automatizacion.userinterface.RegistrarUsuario;
 import co.com.Automatizacion.utils.hooks.RegistroVariable;
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,10 +24,7 @@ public class ValidacionRegistro implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         try {
             // Recuperar el número de documento almacenado
-            String documento = Serenity.sessionVariableCalled(RegistroVariable.usuario.toString());
-            if (documento == null) {
-                documento = actor.recall(RegistroVariable.usuario.toString());
-            }
+            String documento = actor.recall(RegistroVariable.usuario.toString());
 
             if (documento == null) {
                 logger.error("No se encontró el número de documento en memoria para validar.");
@@ -39,7 +33,6 @@ public class ValidacionRegistro implements Question<Boolean> {
 
             logger.info("Validando si el documento '{}' está en los registros...", documento);
 
-            WebDriver driver = BrowseTheWeb.as(actor).getDriver();
             boolean encontrado = false;
             int pagina = 1;
 
@@ -63,9 +56,9 @@ public class ValidacionRegistro implements Question<Boolean> {
                 if (encontrado) break;
 
                 // Buscar botón “Siguiente”
-                List<WebElementFacade> botonesSiguiente = RegistrarUsuario.BTN_SIGUIENTE.resolveAllFor(actor);
+                List<WebElementFacade> siguiente = RegistrarUsuario.BTN_SIGUIENTE.resolveAllFor(actor);
 
-                if (botonesSiguiente.isEmpty() || !botonesSiguiente.get(0).isVisible()) {
+                if (siguiente.isEmpty() || !siguiente.get(0).isVisible()) {
                     logger.warn("No hay más páginas para recorrer o el botón 'Siguiente' no está visible.");
                     break;
                 }
@@ -73,8 +66,8 @@ public class ValidacionRegistro implements Question<Boolean> {
                 actor.attemptsTo(ScrollBottom.completo());
 
                 logger.info("Pasando a la siguiente página...");
-                botonesSiguiente.get(0).click();
-                Thread.sleep(2000); // Espera para cargar la nueva página
+                siguiente.get(0).click();
+                Thread.sleep(2000);
 
                 pagina++;
             }

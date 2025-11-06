@@ -26,8 +26,8 @@ public class EditarUsuario implements Task{
     }
 
     String rol = "Administrador";
-    Random rand =new Random();
-    int numero = rand.nextInt(1000);
+    Random random =new Random();
+    int numero = random.nextInt(1000);
     AceptarAlerta alerta = new AceptarAlerta();
     ScrollBottom scrollBottom = new ScrollBottom();
     @Override
@@ -51,7 +51,7 @@ public class EditarUsuario implements Task{
                 Click.on(INPUT_ROL),
                 SelectFromOptions.byVisibleText(rol).from(INPUT_ROL),
                 Click.on(BTN_ENVIAR),
-                AceptarAlerta.ahora()
+                alerta
         );
         theActorInTheSpotlight().remember(RegistroVariable.usuario.toString(), datos.get(0).getApellidos()+numero);
     }

@@ -7,11 +7,11 @@ public class EliminarUsuario extends PageObject {
     public static Target BTN_USUARIO = Target.the("Boton de modulo usuario")
             .located(By.id("usuarios"));
     public static final Target COLUMNA_DOCUMENTO = Target.the("columna de documentos")
-            .locatedBy("//td[contains(@class, 'list-group-item') and contains(@class, 'documento')]");
+            .locatedBy("//td[@class='list-group-item documento']");
     public static Target BTN_SIGUIENTE = Target.the("Siguiente pagina boton")
             .located(By.id("siguiente"));
     public static final Target BTN_ELIMINAR = Target.the("Botón eliminar del último usuario")
-            .locatedBy("(//button[contains(@class,'btn-danger') and contains(.,'Eliminar')])[last()]");
+            .located(By.xpath("(//button[@id='eliminar'])[last()]"));
 }
 
 

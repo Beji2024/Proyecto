@@ -1,10 +1,7 @@
 package co.com.Automatizacion.questions;
 
 import co.com.Automatizacion.userinterface.EliminarUsuario;
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.serenitybdd.screenplay.Actor;
@@ -23,18 +20,14 @@ public class ValidacionEliminar implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         try {
-            String documento = Serenity.sessionVariableCalled(RegistroVariable.usuario.toString());
-            if (documento == null) {
-                documento = actor.recall(RegistroVariable.usuario.toString());
-            }
+            String documento = actor.recall(RegistroVariable.usuario.toString());
             if (documento == null) {
                 logger.error("No se encontró el número de documento para validar");
-                return false; // Si no hay documento, no puede validarse
+                return false;
             }
 
             logger.info("Validando que el documento '{}' ya no esté en los registros...", documento);
 
-            WebDriver driver = BrowseTheWeb.as(actor).getDriver();
             boolean encontrado = false;
 
             // Solo revisar la página actual

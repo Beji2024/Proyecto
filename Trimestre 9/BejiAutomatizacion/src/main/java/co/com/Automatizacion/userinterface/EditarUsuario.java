@@ -8,8 +8,7 @@ public class EditarUsuario  extends PageObject{
     public static Target BTN_SIGUIENTE = Target.the("Boton de siguiente pagina")
             .located(By.id("siguiente"));
     public static final Target BTN_EDITAR = Target.the("Botón de editar registro")
-            .located(By.xpath("(//button[contains(@class,'btn-success') and normalize-space(text())='Editar'])[last()]"));
-
+            .located(By.xpath("(//button[@id='editar'])[last()]"));
     public static Target INPUT_NOMBRES = Target.the("Campo de nombres")
             .located(By.id("nombres"));
     public static Target INPUT_APELLIDOS = Target.the("Campo de apellidos")
@@ -23,5 +22,5 @@ public class EditarUsuario  extends PageObject{
     public static Target BTN_ENVIAR = Target.the("Boton de enviar")
             .located(By.id("enviar"));
     public static final Target COLUMNA_APELLIDO = Target.the("columna de documentos")
-            .locatedBy("//td[contains(@class, 'list-group-item') and contains(@class, 'apellidos')]");
+            .locatedBy("//td[@class='list-group-item apellidos']");
 }

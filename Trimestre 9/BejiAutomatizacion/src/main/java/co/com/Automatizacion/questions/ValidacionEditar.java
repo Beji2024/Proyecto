@@ -3,11 +3,8 @@ package co.com.Automatizacion.questions;
 import co.com.Automatizacion.interactions.ScrollBottom;
 import co.com.Automatizacion.userinterface.EditarUsuario;
 import co.com.Automatizacion.utils.hooks.RegistroVariable;
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import org.openqa.selenium.WebDriver;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import net.serenitybdd.screenplay.Actor;
@@ -22,17 +19,14 @@ public class ValidacionEditar implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor){
         try {
-            String apellido = Serenity.sessionVariableCalled(RegistroVariable.usuario.toString());
-            if (apellido == null) {
-                apellido = actor.recall(RegistroVariable.usuario.toString());
-            }
+            String apellido = actor.recall(RegistroVariable.usuario.toString());
 
             if (apellido == null) {
                 logger.error("No se encontro el apellido de en memoria para validar");
                 return false;
             }
             logger.info("Validando si el apellido '{}' esta en los registros...", apellido);
-            WebDriver driver = BrowseTheWeb.as(actor).getDriver();
+
             boolean encontrado = false;
             int pagina = 1;
 

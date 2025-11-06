@@ -64,7 +64,7 @@ public class RegistrarUsuario implements Task {
                 SelectFromOptions.byVisibleText(rol).from(INPUT_ROL),
                 Click.on(BTN_ENVIAR),
                 scrollBottom,
-                AceptarAlerta.ahora()
+                alerta
         );
 
         theActorInTheSpotlight().remember(RegistroVariable.usuario.toString(), datos.get(0).getNum_doc() + numero);

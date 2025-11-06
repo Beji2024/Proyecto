@@ -15,7 +15,7 @@ import java.util.List;
 
 public class EliminarUsuario implements Task {
 
-AceptarAlerta aceptarAlerta = new AceptarAlerta();
+AceptarAlerta aceptar = new AceptarAlerta();
     @Override
     public <T extends Actor> void performAs(T actor) {
         ScrollBottom scrollBottom = new ScrollBottom();
@@ -34,7 +34,7 @@ AceptarAlerta aceptarAlerta = new AceptarAlerta();
 
                 actor.attemptsTo(
                 Click.on(BTN_ELIMINAR),
-                aceptarAlerta,
+                aceptar,
                 scrollBottom
         );
     }

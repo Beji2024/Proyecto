@@ -1,7 +1,7 @@
 package co.com.Automatizacion.stepsdefinitions.Proveedor;
 
 import co.com.Automatizacion.models.Proveedor.DatosProveedor;
-import co.com.Automatizacion.models.login.DatosLogin;
+import co.com.Automatizacion.models.Usuarios.DatosLogin;
 import co.com.Automatizacion.questions.Proveedor.ValidarRegistroProveedor;
 import co.com.Automatizacion.tasks.Proveedor.*;
 import cucumber.api.java.es.*;
@@ -9,7 +9,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
 
-import static co.com.Automatizacion.questions.Proveedor.ValidarEdicionProveedor.correctamente;
+import static co.com.Automatizacion.questions.Proveedor.ValidarEdicionProveedor.tituloVisible;
 import static co.com.Automatizacion.questions.Proveedor.ValidarRegistroProveedor.conNombre;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;

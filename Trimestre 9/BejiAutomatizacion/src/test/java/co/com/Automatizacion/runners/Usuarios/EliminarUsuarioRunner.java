@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/eliminar_usuario.feature",
+        features = "src/test/resources/features/Usuarios/eliminar_usuario.feature",
         glue = {"co.com.Automatizacion.stepsdefinitions", "co.com.Automatizacion.utils.hooks"},
         snippets = SnippetType.CAMELCASE
 )

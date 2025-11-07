@@ -9,7 +9,7 @@ Característica: Registrar un nuevo proveedor
   Escenario: Registrar un proveedor exitosamente
     Dado que el administrador ingresa al módulo de proveedores con sus credenciales:
       | email            | password           |
-      | felipe@gmail.com | Br_23Kzn88Ql-1 |
+      | felipe@gmail.com | skjdahkjshdu13432.,- |
     Cuando haga clic en el botón registrar proveedor
     Y complete el formulario con los siguientes datos:
       | nombre             | nit        | celular     | email                       | direccion             |

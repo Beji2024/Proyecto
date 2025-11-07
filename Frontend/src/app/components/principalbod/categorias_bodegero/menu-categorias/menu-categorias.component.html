@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" style="color: white; padding-left:60px; padding-right: 80px;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!-- Botón Home -->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/productosbo'">
+            Home
+          </a>
+        </li>
+
+        <!-- Categorías -->
+        <li *ngFor="let cat of categorias" class="nav-item dropdown">
+          <a 
+            class="nav-link dropdown-toggle" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false">
+            {{ cat.name }}
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" [routerLink]="generarRuta(cat.name)">
+                Ver todo en {{ cat.name }}
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li *ngFor="let sub of obtenerSubcategorias(cat.id! )">
+              <a class="dropdown-item" [routerLink]="generarRuta(cat.name, sub.nom_sub)">
+                {{ sub.nom_sub }}
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Más opciones -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" role="button" data-bs-toggle="dropdown">
+            <i class="fa-solid fa-cogs" style="color: #ffffff;"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-start">
+            <li>
+              <a class="dropdown-item" routerLink="/productosbo/nueva-categoriabo">
+                Nueva categoría
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/productosbo/nueva-subcategoriabo">
+                Nueva subcategoría
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/productosbo/gestionbo">
+                Gestión de productos
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      
+    </div>
+  </div>
+</nav>

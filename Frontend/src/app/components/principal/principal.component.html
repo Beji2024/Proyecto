@@ -1,66 +1,58 @@
 <app-header></app-header>
-<div class=" d-flex justify-content-between align-items-center mb-0  bg-morado">
-    <h1 class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;">
-      SISTEMA DE INVENTARIO
-    </h1>
-    <h2 class="text-white custom-h2 s2">
-      SPORT 10
-    </h2>
-  <a class="text-white me-4">
-    Cerrar Sesión
-  </a>
-  </div>  
-  
-  <div class="container mt-5"><div class="row">
-      <div class="col-md-4 ">
-        <div class="box d-flex justify-content-center align-items-center shadow ">
-          <a  class="text-decoration-none text-secondary">
-            <h2>Usuario</h2></a>
-            <img class="w-50" src="https://cdn-icons-gif.flaticon.com/14251/14251527.gif"
-            alt="Ir a usuarios" 
-            style="cursor: pointer; width: 200px;" 
-            (click)="goToUsuarios()"></div>
-      </div>
-      <div class="col-md-4">
-        <div class="box d-flex justify-content-center align-items-center shadow">
-        <a class="text-decoration-none text-secondary" >
-          <h2>Producto</h2></a>
-          <img class="w-50" src="https://cdn-icons-gif.flaticon.com/16312/16312730.gif" (click)="goToProductos()"></div>
-      </div>
-      <div class="col-md-4">
-        <div class="box d-flex justify-content-center align-items-center shadow">
-          <a class="text-decoration-none text-secondary" ><h2>Compra</h2></a>
-          <img class="w-50" src="https://cdn-icons-gif.flaticon.com/12707/12707631.gif" alt=""
-          alt="Ir a Compra" 
-            style="cursor: pointer; width: 200px;" 
-            (click)="goToPedido()">
-        </div>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Contenido principal -->
+<div class="container mt-5">
+  <div class="row g-4">
+    
+    <!-- Tarjeta Usuario -->
+    <div class="col-md-4">
+      <div  id="usuarios" class="box text-center shadow-sm" (click)="goToUsuarios()">
+        <h2>Usuario</h2>
+        <img src="https://cdn-icons-gif.flaticon.com/14251/14251527.gif" alt="Ir a usuarios" />
       </div>
     </div>
-    <div class="row mt-3">
-      <div class="col-md-4">
-        <div class="box d-flex justify-content-center align-items-center shadow">
-          <a class="text-decoration-none text-secondary">
-            <h2>Proveedor</h2></a>
-          <img class="w-50" src="https://cdn-icons-gif.flaticon.com/12339/12339191.gif"
-          alt="ir a Proveedor"
-          style="cursor: pointer; width: 200px;"
-          (click)="goToProveedor()"></div>
-      </div>
-      <div class="col-md-4">
-        <div class="box d-flex justify-content-center align-items-center shadow">
-          <a class="text-decoration-none text-secondary">
-            <h2>Venta</h2></a>
-            <img class="w-50" src="https://cdn-icons-gif.flaticon.com/12707/12707615.gif" 
-          alt="Ir a Venta"
-          style="cursor: pointer; width: 200px;"
-          (click)="goToVenta()"></div>
-      </div>
-      <div class="col-md-4">
-        <div class="box d-flex justify-content-center align-items-center shadow"><a class="text-decoration-none text-secondary"><h2>Informes</h2></a><img class="w-50" src="https://cdn-icons-gif.flaticon.com/15579/15579063.gif" alt=""></div>
+
+    <!-- Tarjeta Producto -->
+    <div class="col-md-4">
+      <div class="box text-center shadow-sm" (click)="goToProductos()">
+        <h2>Producto</h2>
+        <img src="https://cdn-icons-gif.flaticon.com/16312/16312730.gif" alt="Ir a productos" />
       </div>
     </div>
+
+    <!-- Tarjeta Compra -->
+    <div class="col-md-4">
+      <div class="box text-center shadow-sm" (click)="goToPedido()">
+        <h2>Compra</h2>
+        <img src="https://cdn-icons-gif.flaticon.com/12707/12707631.gif" alt="Ir a compra" />
+      </div>
+    </div>
+
+    <!-- Tarjeta Proveedor -->
+    <div class="col-md-4">
+      <div class="box text-center shadow-sm" (click)="goToProveedor()">
+        <h2>Proveedor</h2>
+        <img src="https://cdn-icons-gif.flaticon.com/12339/12339191.gif" alt="Ir a proveedor" />
+      </div>
+    </div>
+
+    <!-- Tarjeta Venta -->
+    <div class="col-md-4">
+      <div class="box text-center shadow-sm" (click)="goToVenta()">
+        <h2>Venta</h2>
+        <img src="https://cdn-icons-gif.flaticon.com/12707/12707615.gif" alt="Ir a venta" />
+      </div>
+    </div>
+
+    <!-- Tarjeta Informes -->
+    <div class="col-md-4">
+      <div class="box text-center shadow-sm">
+        <h2>Informes</h2>
+        <img src="https://cdn-icons-gif.flaticon.com/15579/15579063.gif" alt="Ir a informes" />
+      </div>
+    </div>
+
   </div>
-  <router-outlet></router-outlet>
-  
-  
+</div>
+
+<router-outlet></router-outlet>

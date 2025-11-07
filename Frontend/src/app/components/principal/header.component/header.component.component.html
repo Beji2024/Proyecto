@@ -1,15 +1,20 @@
-<div class=" d-flex justify-content-between align-items-center mb-0 bg-morado">
-    <h1 class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;">
-      SISTEMA DE INVENTARIO
-    </h1>
-    <h2 class="text-white custom-h2">
-      SPORT 10
-    </h2>
+<div class="header bg-morado d-flex justify-content-between align-items-center px-4 py-3 shadow">
+  
 
-    <div class="d-grid gap-2 btn-success ms-3">
-      <button (click)="confirmarLogout()" class="btn btn-danger" class="btn btn-success   btn btn btn-light me-5" >Cerrar sesion</button>
-      <h6 class="text-white  me-5 text-center" style="font-family: me-5">
-        administrador
-      </h6>
-    </div>
+  
+  <!-- Título -->
+  <h1 class="marca mb-0 ms-3">SISTEMA DE INVENTARIO</h1>
+
+  <!-- Marca -->
+  <h2 class="marca mb-0">SPORT 10</h2>
+
+  <!-- Usuario y logout -->
+  <div class="acciones text-end me-5 ">
+    <h6 id="rol" class="rol mb-2 me-1">Administrador</h6>
+    <button (click)="confirmarLogout()" class="btn-cerrar-sesion">
+      Cerrar sesión
+    </button>
+  </div>
 </div>
+
+

@@ -1,35 +1,53 @@
 <router-outlet>
-<app-header> </app-header>
-<app-menu-categorias></app-menu-categorias>
+  <app-headerbod></app-headerbod>
+  <app-menu-categorias></app-menu-categorias>
 
-<div class="productos container mt-4">
-  <h2 class="mb-4">Todos los productos</h2>
+  <div class="productos container mt-4">
+    
+    <div class="d-flex justify-content-start mb-3">
+      <input
+        type="text"
+        class="form-control w-25"
+        placeholder="Buscar producto..."
+        [(ngModel)]="terminoBusqueda"
+        (input)="buscarProductos()"
+      />
+    </div>
 
-  <div *ngIf="productos.length > 0; else noProductos">
-    <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let producto of productos">
-        <div class="card" style="width: 18rem; height: 25rem;">
-          <img src="assets/img/niño.avif" class="card-img-top" alt="Producto">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <div>
-              <h5 class="card-title">{{ producto.nombre }}</h5>
-              <p class="card-text">Material: {{ producto.material }}</p>
-              <p class="card-text">Color: {{ producto.color }}</p>
-              <p class="card-text">Talla: {{ producto.talla }}</p>
-              <p class="card-text fw-bold">{{ producto.precio_venta | currency }}</p>
-            </div>
-            <div class="btn btn-sm mt-auto">
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
-                Añadir
-              </button>
+    <h2 class="mb-4">Todos los productos</h2>
+
+    
+    <div *ngIf="productos.length > 0; else noProductos">
+      <div class="row">
+        <div 
+          class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4" 
+          *ngFor="let producto of productos"
+        >
+          <div class="card h-100">
+            <img 
+              [src]="'http://127.0.0.1:8000' + producto.imagen" 
+              class="card-img-top" 
+              alt="{{ producto.nombre }}"
+            >
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <p class="card-text">Material: {{ producto.material }}</p>
+                <p class="card-text">Color: {{ producto.color }}</p>
+                <p class="card-text">Talla: {{ producto.talla }}</p>
+                <p class="card-text fw-bold">
+                  {{ producto.precio_venta | currency:'COP':'symbol':'1.0-0' }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <ng-template #noProductos>
-    <p>No hay productos disponibles.</p>
-  </ng-template>
-</div>
+    
+    <ng-template #noProductos>
+      <p>No hay productos disponibles.</p>
+    </ng-template>
+  </div>
+</router-outlet>

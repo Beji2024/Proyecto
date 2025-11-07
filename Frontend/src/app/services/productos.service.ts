@@ -19,12 +19,12 @@ export class ProductosService {
     });
   }
 
-  createProducto(producto: Producto): Observable<Producto> {
-    return this.http.post<Producto>(`${this.apiUrl}/mercancia`, producto);
+  createProducto(producto: FormData): Observable<Producto> {
+  return this.http.post<Producto>(`${this.apiUrl}/mercancia`, producto);
   }
 
-  updateProducto(id: number, producto: Producto): Observable<Producto> {
-    return this.http.put<Producto>(`${this.apiUrl}/mercancia/${id}`, producto);
+  updateProducto(id: number, producto: FormData): Observable<Producto> {
+    return this.http.post<Producto>(`${this.apiUrl}/mercancia/${id}?_method=PUT`, producto);
   }
 
   deleteProducto(id: number): Observable<void> {
@@ -40,12 +40,11 @@ export class ProductosService {
   }
 
   getProductosPorCategoria(idCategoria: number): Observable<Producto[]> {
-  return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/categoria/${idCategoria}`);
-}
-
+    return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/categoria/${idCategoria}`);
+  }
 
   getProductosPorSubcategoria(idSubcategoria: number): Observable<Producto[]> {
-  return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/subcategoria/${idSubcategoria}`);
+    return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/subcategoria/${idSubcategoria}`);
   }
 
 }

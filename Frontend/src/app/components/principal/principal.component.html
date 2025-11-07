@@ -1,10 +1,9 @@
 <app-header></app-header>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-<!-- Contenido principal -->
 <div class="container mt-5">
   <div class="row g-4">
     
-    <!-- Tarjeta Usuario -->
+
     <div class="col-md-4">
       <div  id="usuarios" class="box text-center shadow-sm" (click)="goToUsuarios()">
         <h2>Usuario</h2>
@@ -12,7 +11,7 @@
       </div>
     </div>
 
-    <!-- Tarjeta Producto -->
+
     <div class="col-md-4">
       <div class="box text-center shadow-sm" (click)="goToProductos()">
         <h2>Producto</h2>
@@ -20,7 +19,7 @@
       </div>
     </div>
 
-    <!-- Tarjeta Compra -->
+
     <div class="col-md-4">
       <div class="box text-center shadow-sm" (click)="goToPedido()">
         <h2>Compra</h2>
@@ -28,7 +27,6 @@
       </div>
     </div>
 
-    <!-- Tarjeta Proveedor -->
     <div class="col-md-4">
       <div class="box text-center shadow-sm" (click)="goToProveedor()">
         <h2>Proveedor</h2>
@@ -36,7 +34,7 @@
       </div>
     </div>
 
-    <!-- Tarjeta Venta -->
+
     <div class="col-md-4">
       <div class="box text-center shadow-sm" (click)="goToVenta()">
         <h2>Venta</h2>
@@ -44,7 +42,6 @@
       </div>
     </div>
 
-    <!-- Tarjeta Informes -->
     <div class="col-md-4">
       <div class="box text-center shadow-sm">
         <h2>Informes</h2>
@@ -56,3 +53,4 @@
 </div>
 
 <router-outlet></router-outlet>
+

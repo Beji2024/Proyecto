@@ -1,4 +1,4 @@
-package co.com.Automatizacion.models;
+package co.com.Automatizacion.models.Usuarios;
 
 public class DatosRegistro {
     private String num_doc;

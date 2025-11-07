@@ -1,8 +1,8 @@
-package co.com.Automatizacion.stepsdefinitions;
+package co.com.Automatizacion.stepsdefinitions.Usuarios;
 
-import co.com.Automatizacion.questions.ValidacionEliminar;
-import co.com.Automatizacion.tasks.AbrirPagina;
-import co.com.Automatizacion.tasks.EliminarUsuario;
+import co.com.Automatizacion.questions.Usuarios.ValidacionEliminar;
+import co.com.Automatizacion.tasks.Usuarios.AbrirPagina;
+import co.com.Automatizacion.tasks.Usuarios.EliminarUsuario;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;

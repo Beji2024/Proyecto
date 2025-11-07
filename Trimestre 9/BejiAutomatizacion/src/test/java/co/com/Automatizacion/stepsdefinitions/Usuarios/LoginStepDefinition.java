@@ -1,9 +1,9 @@
-package co.com.Automatizacion.stepsdefinitions;
+package co.com.Automatizacion.stepsdefinitions.Usuarios;
 
-import co.com.Automatizacion.models.DatosLogin;
-import co.com.Automatizacion.questions.ValidacionLogin;
-import co.com.Automatizacion.tasks.AbrirPagina;
-import co.com.Automatizacion.tasks.Login;
+import co.com.Automatizacion.models.Usuarios.DatosLogin;
+import co.com.Automatizacion.questions.Usuarios.ValidacionLogin;
+import co.com.Automatizacion.tasks.Usuarios.AbrirPagina;
+import co.com.Automatizacion.tasks.Usuarios.Login;
 import java.util.List;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Cuando;

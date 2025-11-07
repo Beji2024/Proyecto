@@ -1,4 +1,4 @@
-package co.com.Automatizacion.runners;
+package co.com.Automatizacion.runners.Usuarios;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/editar_usuario.feature",
+        features = "src/test/resources/features/registrar_usuario.feature",
         glue = {"co.com.Automatizacion.stepsdefinitions", "co.com.Automatizacion.utils.hooks"},
         snippets = SnippetType.CAMELCASE
 )
-public class EditarUsuarioRunner {
+public class RegistrarUsuarioRunner {
 }

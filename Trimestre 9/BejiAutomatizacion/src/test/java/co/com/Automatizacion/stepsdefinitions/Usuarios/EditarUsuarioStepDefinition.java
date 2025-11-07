@@ -1,15 +1,15 @@
-package co.com.Automatizacion.stepsdefinitions;
+package co.com.Automatizacion.stepsdefinitions.Usuarios;
 
-import co.com.Automatizacion.models.DatosEditar;
-import co.com.Automatizacion.tasks.AbrirPagina;
-import co.com.Automatizacion.tasks.EditarUsuario;
+import co.com.Automatizacion.models.Usuarios.DatosEditar;
+import co.com.Automatizacion.tasks.Usuarios.AbrirPagina;
+import co.com.Automatizacion.tasks.Usuarios.EditarUsuario;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import co.com.Automatizacion.questions.ValidacionEditar;
+import co.com.Automatizacion.questions.Usuarios.ValidacionEditar;
 
 public class EditarUsuarioStepDefinition {
     @Dado("^que el usuario se encuentre en la pagina en el modulo de usuarios para editar$")

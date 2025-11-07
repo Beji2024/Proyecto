@@ -1,4 +1,4 @@
-package co.com.Automatizacion.questions;
+package co.com.Automatizacion.questions.Usuarios;
 
 import net.serenitybdd.screenplay.Question;
 import org.slf4j.Logger;
@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.questions.Text;
 
-import static co.com.Automatizacion.userinterface.Login.ROL;
+import static co.com.Automatizacion.userinterface.Usuarios.Login.ROL;
 public class ValidacionLogin implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionLogin.class);

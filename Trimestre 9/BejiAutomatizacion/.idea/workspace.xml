@@ -4,7 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f79c791f-edee-44f5-9c1e-3bb590c12a7c" name="Changes" comment="" />
+    <list default="true" id="f79c791f-edee-44f5-9c1e-3bb590c12a7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/DatosEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/Usuarios/DatosEditar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/DatosLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/Usuarios/DatosLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/DatosRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/Usuarios/DatosRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/ValidacionEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Usuarios/ValidacionEditar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/ValidacionEliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Usuarios/ValidacionEliminar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/ValidacionLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Usuarios/ValidacionLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/ValidacionRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Usuarios/ValidacionRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/AbrirPagina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Usuarios/AbrirPagina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/EditarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Usuarios/EditarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/EliminarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Usuarios/EliminarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Usuarios/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/RegistrarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Usuarios/RegistrarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/EditarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Usuarios/EditarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/EliminarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Usuarios/EliminarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/InicioPagina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Usuarios/InicioPagina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Usuarios/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/RegistrarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Usuarios/RegistrarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/utils/hooks/PreparacionEscenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/utils/hooks/Usuarios/PreparacionEscenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/utils/hooks/RegistroVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/utils/hooks/Usuarios/RegistroVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/EditarUsuarioRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/EditarUsuarioRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/EliminarUsuarioRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/EliminarUsuarioRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/LoginRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/LoginRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/RegistrarUsuarioRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/RegistrarUsuarioRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/EditarUsuarioStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Usuarios/EditarUsuarioStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/EliminarUsuarioStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Usuarios/EliminarUsuarioStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/LoginStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Usuarios/LoginStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/RegistrarUsuarioStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Usuarios/RegistrarUsuarioStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/editar_usuario.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Usuarios/editar_usuario.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/eliminar_usuario.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Usuarios/eliminar_usuario.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Usuarios/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/registrar_usuario.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Usuarios/registrar_usuario.feature" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +50,26 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="BejiAutomatizacion" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,24 +90,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Scenario: Validar el inicio de sesion exitoso.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build BejiAutomatizacion.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditarUsuarioRunner.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EliminarUsuarioRunner.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginRunner.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrarUsuarioRunner.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Rama-Felipe&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aprendiz.sena/Proyecto/Trimestre 9/BejiAutomatizacion&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/aprendiz.sena/Downloads/BejiAutomatizacion/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Scenario: Validar el inicio de sesion exitoso.executor": "Run",
+    "Gradle.Build BejiAutomatizacion.executor": "Run",
+    "Gradle.EditarUsuarioRunner.executor": "Run",
+    "Gradle.EliminarUsuarioRunner.executor": "Run",
+    "Gradle.LoginRunner.executor": "Run",
+    "Gradle.RegistrarUsuarioRunner.executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/aprendiz.sena/Proyecto/Trimestre 9/BejiAutomatizacion",
+    "onboarding.tips.debug.path": "C:/Users/aprendiz.sena/Downloads/BejiAutomatizacion/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\aprendiz.sena\Downloads\BejiAutomatizacion\src\test\java\co\com\Automatizacion\runners" />

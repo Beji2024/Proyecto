@@ -1,6 +1,6 @@
-package co.com.Automatizacion.tasks;
+package co.com.Automatizacion.tasks.Usuarios;
 
-import co.com.Automatizacion.userinterface.InicioPagina;
+import co.com.Automatizacion.userinterface.Usuarios.InicioPagina;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Open;

@@ -1,7 +1,7 @@
-package co.com.Automatizacion.questions;
+package co.com.Automatizacion.questions.Usuarios;
 
-import co.com.Automatizacion.userinterface.RegistrarUsuario;
-import co.com.Automatizacion.utils.hooks.RegistroVariable;
+import co.com.Automatizacion.userinterface.Usuarios.RegistrarUsuario;
+import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;

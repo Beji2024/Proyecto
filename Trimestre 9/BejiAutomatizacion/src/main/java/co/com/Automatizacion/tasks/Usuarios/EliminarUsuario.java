@@ -1,8 +1,8 @@
-package co.com.Automatizacion.tasks;
+package co.com.Automatizacion.tasks.Usuarios;
 
-import static co.com.Automatizacion.userinterface.EliminarUsuario.*;
+import static co.com.Automatizacion.userinterface.Usuarios.EliminarUsuario.*;
 import co.com.Automatizacion.interactions.ScrollBottom;
-import co.com.Automatizacion.utils.hooks.RegistroVariable;
+import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;

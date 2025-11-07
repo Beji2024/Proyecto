@@ -1,13 +1,13 @@
-package co.com.Automatizacion.tasks;
+package co.com.Automatizacion.tasks.Usuarios;
 import co.com.Automatizacion.interactions.AceptarAlerta;
 import co.com.Automatizacion.interactions.ScrollBottom;
-import co.com.Automatizacion.utils.hooks.RegistroVariable;
+import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
 import net.serenitybdd.screenplay.Task;
-import co.com.Automatizacion.models.DatosEditar;
+import co.com.Automatizacion.models.Usuarios.DatosEditar;
 import java.util.List;
 import java.util.Random;
 import net.serenitybdd.screenplay.Actor;
-import static co.com.Automatizacion.userinterface.EditarUsuario.*;
+import static co.com.Automatizacion.userinterface.Usuarios.EditarUsuario.*;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;

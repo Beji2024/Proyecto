@@ -1,4 +1,4 @@
-package co.com.Automatizacion.utils.hooks;
+package co.com.Automatizacion.utils.hooks.Usuarios;
 
 import cucumber.api.java.Before;
 import net.serenitybdd.screenplay.actors.OnlineCast;

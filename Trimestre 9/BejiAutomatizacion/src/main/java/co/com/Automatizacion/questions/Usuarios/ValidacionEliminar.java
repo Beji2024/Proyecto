@@ -1,11 +1,11 @@
-package co.com.Automatizacion.questions;
+package co.com.Automatizacion.questions.Usuarios;
 
-import co.com.Automatizacion.userinterface.EliminarUsuario;
+import co.com.Automatizacion.userinterface.Usuarios.EliminarUsuario;
 import net.serenitybdd.screenplay.Question;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.serenitybdd.screenplay.Actor;
-import co.com.Automatizacion.utils.hooks.RegistroVariable;
+import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
 import net.serenitybdd.core.pages.WebElementFacade;
 import java.util.List;
 

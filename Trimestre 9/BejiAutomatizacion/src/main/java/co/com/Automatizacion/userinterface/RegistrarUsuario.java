@@ -10,7 +10,7 @@ public class RegistrarUsuario extends PageObject {
             .located(By.id("usuarios"));
     public static Target BTN_NUEVO = Target.the("Boton para registro")
             .located(By.id("nuevo"));
-    public static Target INPUT_NUMDOCUMENTO =Target.the("Numero de documento")
+    public static Target INPUT_NUMDOCUMENTO = Target.the("Numero de documento")
             .located(By.id("num_doc"));
     public static Target INPUT_NOMBRES = Target.the("Nombres")
             .located(By.id("nombres"));
@@ -35,4 +35,5 @@ public class RegistrarUsuario extends PageObject {
     public static Target BTN_SIGUIENTE = Target.the("Siguiente pagina boton")
             .located(By.id("siguiente"));
     public static final Target COLUMNA_DOCUMENTO = Target.the("columna de documentos")
-            .locatedBy("//td[@class='list-group-item documento']");}
+            .locatedBy("//p[b[text()='Documento:']]");
+}

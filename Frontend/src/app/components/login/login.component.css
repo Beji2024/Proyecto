@@ -1,8 +1,81 @@
-#ss{
-    margin-top:5% ;
+/* Contenedor general */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e8f0fe, #ffffff);
 }
 
-section{
-    width: 90%;
-    margin: auto;
+/* Sección principal */
+section {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Tarjeta principal */
+#ss.login-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+h3{
+    color: #6a0dad;
+}
+#ss.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen lateral */
+.login-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 5px #4b0082;
+}
+
+/* Botón */
+.btn-primary {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #6a0dad;
+}
+
+.btn-primary:hover {
+  background-color: #4b0082;
+}
+
+/* Título */
+h3 {
+  letter-spacing: 0.5px;
+}
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .login-container {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .login-card {
+    margin-top: 2rem;
+  }
 }

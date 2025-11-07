@@ -1,9 +1,9 @@
 package co.com.Automatizacion.tasks.Proveedor;
 
-import co.com.Automatizacion.models.login.DatosLogin;
+import co.com.Automatizacion.models.Usuarios.DatosLogin;
 import co.com.Automatizacion.questions.Proveedor.ValidarInicio;
-import co.com.Automatizacion.tasks.login.AbrirPagina;
-import co.com.Automatizacion.tasks.login.Login;
+import co.com.Automatizacion.tasks.Usuarios.AbrirPagina;
+import co.com.Automatizacion.tasks.Usuarios.Login;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

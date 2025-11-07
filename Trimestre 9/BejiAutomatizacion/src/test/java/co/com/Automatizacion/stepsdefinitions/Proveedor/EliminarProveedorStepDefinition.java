@@ -1,6 +1,6 @@
 package co.com.Automatizacion.stepsdefinitions.Proveedor;
 
-import co.com.Automatizacion.models.login.DatosLogin;
+import co.com.Automatizacion.models.Usuarios.DatosLogin;
 import co.com.Automatizacion.tasks.Proveedor.AbrirPagina;
 import co.com.Automatizacion.tasks.Proveedor.EliminarProveedor;
 import co.com.Automatizacion.tasks.Proveedor.IngresarModuloProveedor;

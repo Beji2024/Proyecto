@@ -7,11 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/RegistrarProveedor.feature",
+        features = "src/test/resources/features/Proveedor/RegistrarProveedor.feature",
         glue = "co.com.Automatizacion.stepsdefinitions",
-        snippets = SnippetType.CAMELCASE,
-        plugin = {"pretty", "html:target/cucumber-reports/registrar"},
-        tags = "@RegistrarProveedor"
+        snippets = SnippetType.CAMELCASE
 )
 public class RegistrarProveedorRunner {
 }

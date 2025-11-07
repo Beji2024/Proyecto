@@ -7,11 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/EditarProveedor.feature",
+        features = "src/test/resources/features/Proveedor/EditarProveedor.feature",
         glue = "co.com.Automatizacion.stepsdefinitions",
-        snippets = SnippetType.CAMELCASE,
-        plugin = {"pretty", "html:target/cucumber-reports/editar"},
-        tags = "@EditarProveedor"
+        snippets = SnippetType.CAMELCASE
 )
 public class EditarProveedorRunner {
 }

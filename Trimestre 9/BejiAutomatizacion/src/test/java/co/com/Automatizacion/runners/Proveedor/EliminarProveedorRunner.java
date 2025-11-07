@@ -7,11 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/EliminarProveedor.feature",
+        features = "src/test/resources/features/Proveedor/EliminarProveedor.feature",
         glue = "co.com.Automatizacion.stepsdefinitions",
-        snippets = SnippetType.CAMELCASE,
-        plugin = {"pretty", "html:target/cucumber-reports/eliminar"},
-        tags = "@EliminarProveedor"
+        snippets = SnippetType.CAMELCASE
 )
 public class EliminarProveedorRunner {
 }

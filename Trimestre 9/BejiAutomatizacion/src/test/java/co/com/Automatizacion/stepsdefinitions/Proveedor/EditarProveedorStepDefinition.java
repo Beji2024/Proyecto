@@ -1,7 +1,7 @@
 package co.com.Automatizacion.stepsdefinitions.Proveedor;
 
 import co.com.Automatizacion.models.Proveedor.DatosProveedor;
-import co.com.Automatizacion.models.login.DatosLogin;
+import co.com.Automatizacion.models.Usuarios.DatosLogin;
 import co.com.Automatizacion.questions.Proveedor.ValidarEdicionProveedor;
 import co.com.Automatizacion.tasks.Proveedor.EditarProveedor;
 import co.com.Automatizacion.tasks.Proveedor.IngresarModuloProveedor;

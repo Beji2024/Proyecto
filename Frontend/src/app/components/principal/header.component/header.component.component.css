@@ -1,19 +1,105 @@
 .bg-morado {
-    background-color: #a30dda !important;
+  background: linear-gradient(90deg, #6e42a4, #9b59b6, #c48bd4); /* morado -> lavanda -> rosa suave */
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.marca {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+  135deg,
+  #ddd8da,  
+  #fcfbfc,  
+  #ff9bda,  
+  #cba6ff,  
+  #eb87a7
+);
+
+
+
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 10px rgba(196, 139, 212, 0.3);
+  animation: rainbowMove 8s linear infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes rainbowMove {
+  0% {
+    background-position: 0%;
   }
-.text-center{
-    text-shadow: 
-      2px 2px 0 black,
-      -2px -2px 0 black,
-      2px -2px 0 black,
-      -2px 2px 0 black;
+  100% {
+    background-position: 300%;
+  }
+}
+
+.marca:hover {
+  text-shadow: 0 0 20px rgba(196, 139, 212, 0.6),
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.rol {
+  font-family: 'Orbitron', sans-serif;
+  color: #e6dfff;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+
+.btn-cerrar-sesion {
+  background-color: #ffffff;
+  color: #6e42a4;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #f3e6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(110, 66, 164, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .titulo {
+    font-size: 1.8rem;
+    text-align: center;
   }
 
-h2 {
-    text-shadow: 
-      2px 2px 0 black,
-      -2px -2px 0 black,
-      2px -2px 0 black,
-      -2px 2px 0 black;
+  .marca {
+    font-size: 1.3rem;
   }
-  
+
+  .acciones {
+    align-items: center;
+  }
+
+  .btn-cerrar-sesion {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}

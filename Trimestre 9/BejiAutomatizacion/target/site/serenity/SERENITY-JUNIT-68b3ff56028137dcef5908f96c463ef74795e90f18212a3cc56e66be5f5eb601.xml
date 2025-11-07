@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Loguearse en la pagina Sport10" skipped="0" tests="1" time="13.73" timestamp="2025-11-03 08:01:13"><testcase name="Validar el inicio de sesion exitoso"><failure message="Expected validacion login&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validacion login&#13;
-Expected: is &lt;true&gt;&#13;
-     but: was &lt;false&gt;</failure><system-err>Expected validacion login&#13;
-Expected: is &lt;true&gt;&#13;
-     but: was &lt;false&gt;&#13;
-co.com.Automatizacion.stepsdefinitions.LoginStepDefinition.seDebeVerificarQueElAdministradorHayaIngresadoCorrectamenteALaPáginaYTengaAccesoASusFunciones(LoginStepDefinition.java:30)&#13;
-✽.Se debe verificar que el administrador haya ingresado correctamente a la página y tenga acceso a sus funciones(src/test/resources/features/login.feature:16)&#13;
-</system-err></testcase></testsuite>

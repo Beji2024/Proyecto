@@ -4,9 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #e8f0fe, #ffffff);
-}
-
+background: linear-gradient(to bottom, #f9f5e3, #eedfc1);}
 /* Sección principal */
 section {
   width: 90%;

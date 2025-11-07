@@ -32,7 +32,7 @@ public class RegistrarUsuario implements Task {
     String doc = "Cédula de ciudadanía";
     String rol = "Administrador";
     Random rand = new Random();
-    int numero = rand.nextInt(100);
+    int numero = rand.nextInt(1000);
     AceptarAlerta alerta = new AceptarAlerta();
 
     @Override

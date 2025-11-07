@@ -1,72 +1,51 @@
-/* ======== ENCABEZADO ======== */
-.bg-morado {
-  background: linear-gradient(90deg, #4b0082, #6a0dad);
-}
 
-.titulo-principal {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-.subtitulo {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-}
-
-.cerrar-sesion {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 16px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.cerrar-sesion:hover {
-  background: #fff;
-  color: #6a0dad !important;
-}
-
-
+/* ======== TARJETAS ======== */
 .box {
-  background: #fff;
+  background: #ffffff;
   border-radius: 15px;
-  padding: 30px 20px;
+  padding: 35px 20px;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 1px solid #f0f0f0;
+  border: 2px solid rgba(106, 13, 173, 0.15); /* borde más visible con tono morado translúcido */
+  box-shadow: 0 4px 15px rgba(75, 0, 130, 0.05);
 }
 
 .box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(106, 13, 173, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(75, 0, 130, 0.15);
+  border-color: rgba(106, 13, 173, 0.3); /* el borde se resalta un poco más al pasar el mouse */
 }
 
 .box h2 {
   color: #4b0082;
   font-weight: 700;
+  font-size: 1.4rem;
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .box img {
-  width: 200px;
+  width: 150px;
   height: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
 }
 
 .box:hover img {
   transform: scale(1.1);
+  opacity: 1;
 }
+
 
 /* ======== GENERAL ======== */
 body {
-  background-color: #f7f7fc;
-  font-family: 'Poppins', sans-serif;
+  background-color: #f8f6fb;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(106, 13, 173, 0.05) 1px, transparent 0);
+  background-size: 30px 30px;
 }
+
+
 
 .container {
   max-width: 1200px;
@@ -74,6 +53,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* ======== RESPONSIVE ======== */
@@ -92,6 +72,12 @@ a {
   }
 
   .box {
-    padding: 20px 10px;
+    padding: 25px 15px;
+  }
+
+  .bg-morado {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 }

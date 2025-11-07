@@ -1,11 +1,11 @@
-package co.com.Automatizacion.stepsdefinitions;
+package co.com.Automatizacion.stepsdefinitions.Proveedor;
 
 import co.com.Automatizacion.models.login.DatosLogin;
 import co.com.Automatizacion.questions.login.ValidacionLogin;
 import co.com.Automatizacion.tasks.login.AbrirPagina;
 import co.com.Automatizacion.tasks.login.Login;
 import java.util.List;
-import cucumber.api.DataTable;
+
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;

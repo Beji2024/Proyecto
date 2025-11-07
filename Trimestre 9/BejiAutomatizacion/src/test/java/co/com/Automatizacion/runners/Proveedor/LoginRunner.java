@@ -1,4 +1,4 @@
-package co.com.Automatizacion.runners;
+package co.com.Automatizacion.runners.Proveedor;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;

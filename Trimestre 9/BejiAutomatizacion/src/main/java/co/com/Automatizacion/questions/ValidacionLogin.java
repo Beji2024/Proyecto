@@ -15,7 +15,7 @@ public class ValidacionLogin implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor){
         try{
-            String rol = "administrador";
+            String rol = "Administrador";
             logger.info("Validando que el logueo sea correcto");
             String validar = Text.of(ROL).viewedBy(actor).asString();
 

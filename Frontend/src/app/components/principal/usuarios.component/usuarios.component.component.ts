@@ -18,7 +18,7 @@ export class UsuariosComponent implements OnInit {
   usuariosPaginados: Usuario[] = [];
 
   paginaActual: number = 1;
-  usuariosPorPagina: number = 2;
+  usuariosPorPagina: number = 3;
 
   constructor(private usuariosService: UsuariosService, private router: Router) {}
 

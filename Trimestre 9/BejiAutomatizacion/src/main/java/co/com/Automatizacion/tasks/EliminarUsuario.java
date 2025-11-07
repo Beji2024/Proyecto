@@ -24,6 +24,7 @@ AceptarAlerta aceptar = new AceptarAlerta();
         actor.attemptsTo(
                 Click.on(BTN_USUARIO),
                 scrollBottom,
+                scrollBottom,
                 Click.on(BTN_SIGUIENTE),
                 Click.on(BTN_SIGUIENTE)
         );

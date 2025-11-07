@@ -52,7 +52,6 @@ class UsuarioService {
         }.firstOrNull()
     }
 
-
     fun agregarUsuario(usuario: Usuario): Int {
         val passwordCifrada = BCrypt.hashpw(usuario.getPassword(), BCrypt.gensalt())
         val sql = """

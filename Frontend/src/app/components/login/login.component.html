@@ -11,17 +11,17 @@
               <form (ngSubmit)="login()">
                 <!--Correo-->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input [(ngModel)]="email" name="email" placeholder="Correo electrónico" required class="form-control">
+                  <input [(ngModel)]="email" name="email" placeholder="Correo electrónico" required class="form-control" id="email">
                   <label class="form-label" for="form2Example1"></label>
                 </div>
                 <!--Contra-->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input [(ngModel)]="password" name="password" placeholder="Contraseña" type="password" required class="form-control">
+                  <input [(ngModel)]="password" name="password" placeholder="Contraseña" type="password" required class="form-control" id="password">
                   <label class="form-label" for="form2Example2"></label>
                 </div>
                 <!--Boton-->
                 <div class="d-grid gap-2">
-                  <button class="btn btn-primary mb-4" type="submit">Ingresar</button>
+                  <button class="btn btn-primary mb-4" type="submit" id="ingresar">Ingresar</button>
                   <div *ngIf="error" class="alert alert-danger text-center mt-3">
                     {{ error }}
                   </div>

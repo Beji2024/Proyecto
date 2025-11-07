@@ -22,6 +22,7 @@ import com.example.appinterface.Usuario.UsuarioActivity
 import com.example.appinterface.proveedor.ProveedoresActivity
 import com.google.android.material.appbar.MaterialToolbar
 import androidx.cardview.widget.CardView
+import com.example.appinterface.Productos.ProductosActivity
 import com.example.appinterface.venta.VentasActivity
 
 class MainActivity : AppCompatActivity() {
@@ -48,6 +49,11 @@ class MainActivity : AppCompatActivity() {
         val cardClientes = findViewById<CardView>(R.id.cardClientes)
         cardClientes.setOnClickListener {
             val intent = Intent(this, VentasActivity::class.java)
+            startActivity(intent)
+        }
+        val cardProductos = findViewById<CardView>(R.id.cardProductos)
+        cardProductos.setOnClickListener {
+            val intent = Intent(this, ProductosActivity::class.java)
             startActivity(intent)
         }
     }

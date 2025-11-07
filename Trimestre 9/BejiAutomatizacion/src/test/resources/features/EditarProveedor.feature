@@ -10,7 +10,7 @@ Característica: Editar proveedor existente
     Dado que el administrador haya accedido al módulo de proveedores con las credenciales:
       | email            | password       |
       | felipe@gmail.com | Br_23Kzn88Ql-1 |
-    Cuando el administrador edite el proveedor con NIT 930234567 con los siguientes datos:
-      | nombre                  | nit        | celular     | email                       | direccion                 |
-      | Calzados Deportivos SAS | 930234567  | 3115557788  | contacto@calzadosdeportivos.com | Av. 9 #100-99 Cali     |
+    Cuando el administrador edite el proveedor con NIT 9701234567 con los siguientes datos:
+      | celular    | email                           | direccion          |
+      | 3115557788 | contacto@calzadosdeportivos.com | Av. 9 #100-99 Cali |
     Entonces se debe verificar que el proveedor haya sido actualizado correctamente

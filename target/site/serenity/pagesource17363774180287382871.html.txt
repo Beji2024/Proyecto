@@ -1,0 +1,44 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"><style>
+
+.bg-morado[_ngcontent-ng-c1744167533] {
+  background-color: #a30dda !important;
+}
+.text-center[_ngcontent-ng-c1744167533] {
+  text-shadow:
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+h2[_ngcontent-ng-c1744167533] {
+  text-shadow:
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+/*# sourceMappingURL=/header.component.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-consultar-venta><app-header _nghost-ng-c1744167533=""><div _ngcontent-ng-c1744167533="" class="d-flex justify-content-between align-items-center mb-0 bg-morado"><h1 _ngcontent-ng-c1744167533="" id="Titulo" class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;"> SISTEMA DE INVENTARIO </h1><h2 _ngcontent-ng-c1744167533="" class="text-white custom-h2"> SPORT 10 </h2><div _ngcontent-ng-c1744167533="" class="d-grid gap-2 btn-success ms-3"><button _ngcontent-ng-c1744167533="" class="btn btn-success btn btn btn-light me-5">Cerrar sesion</button><h6 _ngcontent-ng-c1744167533="" id="rol" class="text-white me-5 text-center" style="font-family: me-5;"> administrador </h6></div></div></app-header><div class="container mt-4"><div class="d-flex justify-content-center align-items-center mb-5 mt-4"><h4 class="text-center mt-4 mb-0">Registros de ventas</h4></div><div><table class="table table-bordered table-striped"><thead class="table-dark"><tr class="text-center align-middle"><th>Codigo de venta</th><th>Fecha</th><th>Referencia</th><th>Cantidad</th><th>Cliente</th><th>Telefono cliente</th><th>Vendedor</th></tr></thead><tbody><tr class="text-center align-middle"><td>2</td><td>2025-04-16 21:32:06</td><td>Puma Sport</td><td>4</td><td>Elmer Candamil</td><td>3229873564</td><td>Breiner Gustavo</td></tr><tr class="text-center align-middle"><td>3</td><td>2025-04-16 22:14:12</td><td>Nike Sports</td><td>12</td><td>wqedw</td><td>1232131</td><td>Breiner Gustavo</td></tr><tr class="text-center align-middle"><td>4</td><td>2025-04-16 22:15:39</td><td>Puma Sport</td><td>32</td><td>Elver Galarga</td><td>3112456298</td><td>Breiner Gustavo</td></tr><tr class="text-center align-middle"><td>5</td><td>2025-04-16 22:30:59</td><td>Adidas Sport</td><td>2</td><td>Elver Galarga</td><td>3123547254</td><td>Breiner Gustavo</td></tr><tr class="text-center align-middle"><td>6</td><td>2025-04-17 12:00:53</td><td>Adidas Sport</td><td>4</td><td>Lucas</td><td>3508675674</td><td>Juan Esteban</td></tr><tr class="text-center align-middle"><td>7</td><td>2025-04-17 12:55:34</td><td>Adidas Sport</td><td>1</td><td>Carlos</td><td>3229675643</td><td>Breiner Gustavo</td></tr><tr class="text-center align-middle"><td>8</td><td>2025-04-17 13:31:00</td><td>Nike Sports</td><td>3</td><td>Camila</td><td>3002002343</td><td>Juan Esteban</td></tr><tr class="text-center align-middle"><td>9</td><td>2025-04-17 14:37:28</td><td>Puma Sport</td><td>1</td><td>Daniela</td><td>3209786451</td><td>Juan Esteban</td></tr><tr class="text-center align-middle"><td>10</td><td>2025-04-18 18:20:50</td><td>Puma Sport</td><td>1</td><td>Albeiro</td><td>3112456453</td><td>Juan Esteban</td></tr><tr class="text-center align-middle"><td>12</td><td>2025-04-18 21:12:45</td><td>Nike Sports</td><td>1</td><td>Jairo</td><td>3109785230</td><td>Ivan Mate</td></tr><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></tbody></table><nav class="d-flex justify-content-center mt-3"><ul class="pagination"><li class="page-item disabled"><button class="page-link"> Anterior </button></li><li class="page-item active"><button class="page-link"> 1 </button></li><li class="page-item"><button class="page-link"> 2 </button></li><!--bindings={
+  "ng-reflect-ng-for-of": "1,2"
+}--><li class="page-item"><button class="page-link"> Siguiente </button></li></ul></nav><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--container--></div></app-consultar-venta><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-FH23CRGU.js">
+
+
+</body></html>

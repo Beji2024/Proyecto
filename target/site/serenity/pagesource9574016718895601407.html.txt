@@ -1,0 +1,60 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"><style>
+
+.bg-morado[_ngcontent-ng-c1744167533] {
+  background-color: #a30dda !important;
+}
+.text-center[_ngcontent-ng-c1744167533] {
+  text-shadow:
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+h2[_ngcontent-ng-c1744167533] {
+  text-shadow:
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+}
+/*# sourceMappingURL=/header.component.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-crear-venta><app-header _nghost-ng-c1744167533=""><div _ngcontent-ng-c1744167533="" class="d-flex justify-content-between align-items-center mb-0 bg-morado"><h1 _ngcontent-ng-c1744167533="" id="Titulo" class="text-center text-white ms-3" style="font-family: calibri; font-size: 80px;"> SISTEMA DE INVENTARIO </h1><h2 _ngcontent-ng-c1744167533="" class="text-white custom-h2"> SPORT 10 </h2><div _ngcontent-ng-c1744167533="" class="d-grid gap-2 btn-success ms-3"><button _ngcontent-ng-c1744167533="" class="btn btn-success btn btn btn-light me-5">Cerrar sesion</button><h6 _ngcontent-ng-c1744167533="" id="rol" class="text-white me-5 text-center" style="font-family: me-5;"> administrador </h6></div></div></app-header><div class="container w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5"><div class="d-flex justify-content-center align-items-center h-25"><h4 class="text-center mt-4 mb-0">Registro de venta</h4></div><form novalidate="" class="w-75 mx-auto mt-3 mb-0 ng-untouched ng-pristine ng-invalid" ng-reflect-form="[object Object]"><div class="input-group mb-3"><label for="nombre_cli" class="input-group-text mt-4">Nombre del cliente</label><input type="text" id="nombre_cli" formcontrolname="nombre_cli" class="form-control mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="nombre_cli"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="direccion_cli" class="input-group-text mt-4">Dirección del cliente</label><input type="text" id="direccion_cli" formcontrolname="direccion_cli" class="form-control mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="direccion_cli"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="correo_cli" class="input-group-text mt-4">Correo del cliente</label><input type="text" id="correo_cli" formcontrolname="correo_cli" class="form-control mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="correo_cli"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="num_tel_cli" class="input-group-text mt-4">Numero de telefono del cliente</label><input type="text" id="num_tel_cli" formcontrolname="num_tel_cli" class="form-control mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="num_tel_cli"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="num_doc_cli" class="input-group-text mt-4">Numero de documento del cliente</label><input type="text" id="num_doc_cli" formcontrolname="num_doc_cli" class="form-control mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="num_doc_cli"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="producto_id" class="input-group-text mt-4">Referencia</label><select id="producto_id" formcontrolname="producto_id" class="form-select mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="producto_id"><option value="" ng-reflect-value="">Seleccione una Referencia</option><option value="1" ng-reflect-value="1"> Nike Sports </option><option value="2" ng-reflect-value="2"> Adidas Sport </option><option value="3" ng-reflect-value="3"> Puma Sport </option><option value="5" ng-reflect-value="5"> Fila Sport </option><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></select><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="cantidad" class="input-group-text mt-4">Cantidad</label><input type="number" id="cantidad" formcontrolname="cantidad" class="form-control mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="cantidad"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="vendedor_id" class="input-group-text mt-4">Vendedor</label><select id="vendedor_id" formcontrolname="vendedor_id" class="form-select mt-4 ng-untouched ng-pristine ng-invalid" ng-reflect-name="vendedor_id"><option value="" ng-reflect-value="">Seleccione un vendedor</option><option value="14" ng-reflect-value="14"> Breiner Gustavo Rojas Sarabia </option><option value="20" ng-reflect-value="20"> Ivan Mate Garcia </option><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></select><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="col-auto d-flex justify-content-center mt-5"><button type="submit" class="btn btn-success shadow">Registrar Venta</button></div></form><div class="col-auto d-flex justify-content-center mt-4"><!--bindings={
+  "ng-reflect-ng-if": ""
+}--><!--bindings={
+  "ng-reflect-ng-if": ""
+}--></div></div></app-crear-venta><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-FH23CRGU.js">
+
+
+</body></html>

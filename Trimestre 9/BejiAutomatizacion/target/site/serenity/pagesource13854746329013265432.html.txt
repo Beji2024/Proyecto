@@ -1,0 +1,141 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style>
+
+.bg-morado[_ngcontent-ng-c2507701728] {
+  background:
+    linear-gradient(
+      90deg,
+      #6e42a4,
+      #9b59b6,
+      #c48bd4);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.marca[_ngcontent-ng-c2507701728] {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background:
+    linear-gradient(
+      135deg,
+      #ddd8da,
+      #fcfbfc,
+      #ff9bda,
+      #cba6ff,
+      #eb87a7);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(196, 139, 212, 0.3);
+  animation: _ngcontent-ng-c2507701728_rainbowMove 8s linear infinite;
+  transition: all 0.3s ease;
+}
+@keyframes _ngcontent-ng-c2507701728_rainbowMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+.marca[_ngcontent-ng-c2507701728]:hover {
+  text-shadow: 0 0 20px rgba(196, 139, 212, 0.6), ;
+}
+.acciones[_ngcontent-ng-c2507701728] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.rol[_ngcontent-ng-c2507701728] {
+  font-family: "Orbitron", sans-serif;
+  color: #e6dfff;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+.btn-cerrar-sesion[_ngcontent-ng-c2507701728] {
+  background-color: #ffffff;
+  color: #6e42a4;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-cerrar-sesion[_ngcontent-ng-c2507701728]:hover {
+  background-color: #f3e6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(110, 66, 164, 0.25);
+}
+@media (max-width: 992px) {
+  .titulo[_ngcontent-ng-c2507701728] {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .marca[_ngcontent-ng-c2507701728] {
+    font-size: 1.3rem;
+  }
+  .acciones[_ngcontent-ng-c2507701728] {
+    align-items: center;
+  }
+  .btn-cerrar-sesion[_ngcontent-ng-c2507701728] {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  .header[_ngcontent-ng-c2507701728] {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+/*# sourceMappingURL=/header.component.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-gestion-productos><app-header _nghost-ng-c2507701728=""><div _ngcontent-ng-c2507701728="" class="header bg-morado d-flex justify-content-between align-items-center px-4 py-3 shadow"><h1 _ngcontent-ng-c2507701728="" id="Titulo" class="marca mb-0 ms-3">SISTEMA DE INVENTARIO</h1><h2 _ngcontent-ng-c2507701728="" class="marca mb-0">SPORT 10</h2><div _ngcontent-ng-c2507701728="" class="acciones text-end me-5"><h6 _ngcontent-ng-c2507701728="" id="rol" class="rol mb-2 me-1">Administrador</h6><button _ngcontent-ng-c2507701728="" class="btn-cerrar-sesion"> Cerrar sesión </button></div></div></app-header><div class="container mt-5"><h2 class="mb-4">Gestión de Productos</h2><!--bindings={
+  "ng-reflect-ng-if": null
+}--><div class="card mb-3"><div class="card-body"><div class="row g-3 align-items-center"><div class="col-md-4"><label for="filtroCategoria" class="form-label">Filtrar por categoría</label><select id="filtroCategoria" class="form-select ng-untouched ng-pristine ng-valid"><option value="0: null">Todas las categorías</option><option value="1: 1" ng-reflect-ng-value="1"> Niño </option><option value="2: 2" ng-reflect-ng-value="2"> Hombre </option><option value="3: 3" ng-reflect-ng-value="3"> Mujer </option><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></select></div><div class="col-md-4"><label for="filtroSubcategoria" class="form-label">Filtrar por subcategoría</label><select id="filtroSubcategoria" class="form-select ng-untouched ng-pristine" ng-reflect-is-disabled="true" disabled=""><option value="0: null">Todas las subcategorías</option><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></select></div><div class="col-md-4 d-flex align-items-end"><button class="btn btn-outline-secondary" disabled=""> Limpiar filtros </button></div></div></div></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div class="card"><div class="card-header bg-primary text-white d-flex justify-content-between align-items-center"><h5>Listado de Productos</h5><button id="nuevoProducto" class="btn btn-light"><i class="bi bi-plus-circle"></i> Nuevo Producto </button></div><div class="card-body"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div><div class="table-responsive"><table class="table table-striped table-hover"><thead class="table-dark"><tr><th>#</th><th>Imagen</th><th>Nombre</th><th>Categoría</th><th>Subcategoría</th><th>Cantidad</th><th>Precio Venta</th><th>Material</th><th>Color</th><th>Talla</th><th>Acciones</th></tr></thead><tbody><tr><td>1</td><td><img alt="Imagen producto" width="50" height="50" class="rounded" src="http://localhost:8000/storage/mercancias/rjIlo8c2oI8iLTIhtzhITgJTlU87Xjh2BWPh5W3r.jpg"><!--bindings={
+  "ng-reflect-ng-if": "/storage/mercancias/rjIlo8c2oI"
+}--></td><td>Zapatos de mujer formal</td><td>Mujer</td><td>Elegante</td><td>20</td><td>$350,000.00</td><td>Cuero</td><td>plata</td><td>36</td><td><div role="group" class="btn-group"><button id="editar" title="Editar" class="btn btn-warning btn-sm me-2"> Editar <i class="bi bi-pencil"></i></button><button id="eliminar" title="Eliminar" class="btn btn-danger btn-sm"> Eliminar <i class="bi bi-trash"></i></button></div></td></tr><tr><td>2</td><td><img alt="Imagen producto" width="50" height="50" class="rounded" src="http://localhost:8000/storage/mercancias/boFKFEurfSahs8qJCPxWdJvm5GAyGDJTTc5SjcYf.jpg"><!--bindings={
+  "ng-reflect-ng-if": "/storage/mercancias/boFKFEurfS"
+}--></td><td>Zapatos Elegantes de Hombre</td><td>Hombre</td><td>Elegante</td><td>10</td><td>$220,000.00</td><td>Lienzo</td><td>Cafe</td><td>41</td><td><div role="group" class="btn-group"><button id="editar" title="Editar" class="btn btn-warning btn-sm me-2"> Editar <i class="bi bi-pencil"></i></button><button id="eliminar" title="Eliminar" class="btn btn-danger btn-sm"> Eliminar <i class="bi bi-trash"></i></button></div></td></tr><tr><td>3</td><td><img alt="Imagen producto" width="50" height="50" class="rounded" src="http://localhost:8000/storage/mercancias/wDRshhEUM6w9CV8ELAlims0kqI1wmUqYad5Sue9K.jpg"><!--bindings={
+  "ng-reflect-ng-if": "/storage/mercancias/wDRshhEUM6"
+}--></td><td>Zapatos de Niño formal</td><td>Niño</td><td>Elegante</td><td>12</td><td>$300,000.00</td><td>Cuero sintético</td><td>Azul</td><td>16</td><td><div role="group" class="btn-group"><button id="editar" title="Editar" class="btn btn-warning btn-sm me-2"> Editar <i class="bi bi-pencil"></i></button><button id="eliminar" title="Eliminar" class="btn btn-danger btn-sm"> Eliminar <i class="bi bi-trash"></i></button></div></td></tr><tr><td>4</td><td><img alt="Imagen producto" width="50" height="50" class="rounded" src="http://localhost:8000/storage/mercancias/Gvzu5iwulqlWlsUO7WIseNFzbXqdjWla9iPhAG0J.jpg"><!--bindings={
+  "ng-reflect-ng-if": "/storage/mercancias/Gvzu5iwulq"
+}--></td><td>Zapatos de Hombre deportivo</td><td>Hombre</td><td>Deportivo</td><td>18</td><td>$450,000.00</td><td>Cuero</td><td>Azul</td><td>42</td><td><div role="group" class="btn-group"><button id="editar" title="Editar" class="btn btn-warning btn-sm me-2"> Editar <i class="bi bi-pencil"></i></button><button id="eliminar" title="Eliminar" class="btn btn-danger btn-sm"> Eliminar <i class="bi bi-trash"></i></button></div></td></tr><tr><td>5</td><td><img alt="Imagen producto" width="50" height="50" class="rounded" src="http://localhost:8000/storage/mercancias/fvDckF2tH65Ydaf570tyWChC55CnySlKwLiGG7VK.jpg"><!--bindings={
+  "ng-reflect-ng-if": "/storage/mercancias/fvDckF2tH6"
+}--></td><td>Zapatos de Hombre Plataforma</td><td>Hombre</td><td>Plataforma</td><td>25</td><td>$200,000.00</td><td>Cuero</td><td>Negro</td><td>39</td><td><div role="group" class="btn-group"><button id="editar" title="Editar" class="btn btn-warning btn-sm me-2"> Editar <i class="bi bi-pencil"></i></button><button id="eliminar" title="Eliminar" class="btn btn-danger btn-sm"> Eliminar <i class="bi bi-trash"></i></button></div></td></tr><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></tbody></table></div></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--container--></div></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></app-gestion-productos><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-X5Y36L34.js">
+
+
+</body></html>

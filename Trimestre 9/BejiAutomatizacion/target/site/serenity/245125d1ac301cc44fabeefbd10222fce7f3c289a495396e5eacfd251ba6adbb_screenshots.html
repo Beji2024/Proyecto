@@ -157,7 +157,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-11-2025 21:34</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-11-2025 18:38</span>
     <br style="clear:left"/>
 </div>
 
@@ -200,9 +200,9 @@ Para dejar registro de los productos que desee
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Registrar un nuevo producto correctamente
+                                <span class="error-color">Registrar un nuevo producto correctamente
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -225,7 +225,7 @@ Para dejar registro de los productos que desee
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                    <span class="error-message error-message-title">Web driver exception: The following error occurred: unknown error: Call WaitForPendingNavigations only on the parent WebView</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -241,20 +241,13 @@ Para dejar registro de los productos que desee
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                    <h4>org.openqa.selenium.WebDriverException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>co.com.Automatizacion.tasks.Producto.CrearProducto.performAs(CrearProducto.java:30)<br />co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.crearNuevoProducto(CrearProductoStepDefinition.java:46)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>co.com.Automatizacion.tasks.Producto.IngresarModuloProducto.performAs(IngresarModuloProducto.java:37)<br />co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.ingresarModuloProductos(CrearProductoStepDefinition.java:25)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: org.openqa.selenium.TimeoutException
-                    </h4>
-                    <div>
-                            <pre>Expected condition failed: waiting for By.id: Producto to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
-                        <pre>co.com.Automatizacion.tasks.Producto.CrearProducto.performAs(CrearProducto.java :30)<br />co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.crearNuevoProducto(CrearProductoStepDefinition.java :46)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
@@ -262,31 +255,16 @@ Para dejar registro de los productos que desee
 
 
                 <div class="panel-body">
-                    <a href="pagesource13854746329013265432.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="7c365cb92103d1154cc726cb9264334e7a08df053af4782f96d07a035929b8d0.png" title=" Dado que el administrador est&eacute; en el m&oacute;dulo de productos con las credenciales:
+                <img src="048d680ef78c56338bd3d5f6003d75768f69473cdf35e3def75f20f3a5b707cd.png" title=" Dado que el administrador est&eacute; en el m&oacute;dulo de productos con las credenciales:
 | email | password |
-| felipe@gmail.com | 123456 |" width="1584"/>
-                <img src="7c365cb92103d1154cc726cb9264334e7a08df053af4782f96d07a035929b8d0.png" title=" Administrador ingresar modulo producto" width="1584"/>
-                <img src="7c365cb92103d1154cc726cb9264334e7a08df053af4782f96d07a035929b8d0.png" title=" Administrador opens the Login" width="1584"/>
-                <img src="3393f1ca26c38267e2a14ecd8a5190c0255b62069b31b2d8355a0e3273867ad7.png" title=" Administrador enters 'felipe@gmail.com' into Correo electronico" width="1584"/>
-                <img src="5fd623a00575f72940669b9d6fbd86911b69cc26766c75d984276423f1b505b7.png" title=" Administrador enters '123456' into Contrase&ntilde;a" width="1584"/>
-                <img src="9a5d009609afbdfcdfda4582cb7417c987a41ddcf0c7d7d7886edf547f62fece.png" title=" Administrador clicks on Boton de ingreso" width="1584"/>
-                <img src="304ef0dfc28961132192cee0a1a47ad0e1f1f0a783419fb9209845cf3e65cf3e.png" title=" Administrador clicks on Modulo Productos" width="1584"/>
-                <img src="28ad7ee38fa68e7d5298445201b47f7be145adfd61c852cfab074da442c9eb88.png" title=" Administrador clicks on mas opciones" width="1584"/>
-                <img src="4063c4fdcbb1dd38ea67fe82d35338df735959085a3fc38aeb6bfa67190ef095.png" title=" Administrador clicks on Modulo Gestionar Productos" width="1584"/>
-                <img src="4063c4fdcbb1dd38ea67fe82d35338df735959085a3fc38aeb6bfa67190ef095.png" title=" Administrador ingresar modulo producto (completed)" width="1584"/>
-                <img src="4063c4fdcbb1dd38ea67fe82d35338df735959085a3fc38aeb6bfa67190ef095.png" title=" Dado que el administrador est&eacute; en el m&oacute;dulo de productos con las credenciales:
-| email | password |
-| felipe@gmail.com | 123456 | (completed)" width="1584"/>
-                <img src="4ee49aee5a107dff139ec63dc22a67d6ddce41df75b960e87e52b093d239f78d.png" title=" Cuando el administrador cree un nuevo producto con los siguientes datos:
-| nombre_producto | categoria | subcategoria | cantidad | talla | precio_venta | precio_compra | material | color | imagen |
-| Camisa Nike | Ropa | Deportiva | 10 | M | 80000 | 50000 | Algod&oacute;n | Blanco |  |" width="1584"/>
-                <img src="4ee49aee5a107dff139ec63dc22a67d6ddce41df75b960e87e52b093d239f78d.png" title=" Administrador crear producto" width="1584"/>
-                <img src="4ee49aee5a107dff139ec63dc22a67d6ddce41df75b960e87e52b093d239f78d.png" title=" Administrador clicks on Modulo Productos: <span class='failing-color'>FAILURE</span>" width="1584"/>
+| felipe@gmail.com | 123456 |" width="1925"/>
+                <img src="048d680ef78c56338bd3d5f6003d75768f69473cdf35e3def75f20f3a5b707cd.png" title=" Administrador ingresar modulo producto" width="1925"/>
+                <img src="048d680ef78c56338bd3d5f6003d75768f69473cdf35e3def75f20f3a5b707cd.png" title=" Administrador opens the Login: <span class='error-color'>ERROR</span>" width="1925"/>
             </div>
         </div>
 

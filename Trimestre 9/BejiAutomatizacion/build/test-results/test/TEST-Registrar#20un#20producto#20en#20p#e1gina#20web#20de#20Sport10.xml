@@ -1,53 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Registrar un producto en página web de Sport10" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-10T02:34:46" hostname="LA_MAQUINA" time="14.058">
+<testsuite name="Registrar un producto en página web de Sport10" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-10T23:38:52" hostname="LA_MAQUINA" time="15.871">
   <properties/>
-  <testcase name="Registrar un nuevo producto correctamente" classname="Registrar un producto en página web de Sport10" time="14.058">
-    <failure message="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1149)
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$pZB3owmS.performAs$accessor$TLdizIp4(Unknown Source)
-	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base@15.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@15.0.2/java.lang.reflect.Method.invoke(Method.java:564)
-	at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
-	at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
-	at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
-	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
-	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
-	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$pZB3owmS.performAs(Unknown Source)
-	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
-	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
-	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
-	at app//co.com.Automatizacion.tasks.Producto.CrearProducto.performAs(CrearProducto.java:30)
-	at app//co.com.Automatizacion.tasks.Producto.CrearProducto$ByteBuddy$8gNiVdMA.performAs$accessor$hvASrszx(Unknown Source)
-	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base@15.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@15.0.2/java.lang.reflect.Method.invoke(Method.java:564)
-	at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
-	at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
-	at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
-	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
-	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
-	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
-	at app//co.com.Automatizacion.tasks.Producto.CrearProducto$ByteBuddy$8gNiVdMA.performAs(Unknown Source)
-	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
-	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
-	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
-	at app//co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.crearNuevoProducto(CrearProductoStepDefinition.java:46)
-	at ✽.el administrador cree un nuevo producto con los siguientes datos:(src/test/resources/features/Productos/CrearProducto.feature:16)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.id: Producto to be enabled (tried for 5 second(s) with 100 milliseconds interval)
-	at app//org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+  <testcase name="Registrar un nuevo producto correctamente" classname="Registrar un producto en página web de Sport10" time="15.871">
+    <failure message="net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: unknown error: Call WaitForPendingNavigations only on the parent WebView&#10;  (Session info: chrome=142.0.7444.61)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LA_MAQUINA', ip: '10.1.208.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.61, chrome: {chromedriverVersion: 142.0.7444.59 (4b8153ab58d3..., userDataDir: C:\Users\juanm\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54910}, goog:processID: 15336, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 3173b433cd3221ea2e07fa1dc206bfed&#10;*** Element info: {Using=id, value=email}" type="net.serenitybdd.core.exceptions.SerenityManagedException">net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: unknown error: Call WaitForPendingNavigations only on the parent WebView
+  (Session info: chrome=142.0.7444.61)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LA_MAQUINA', ip: '10.1.208.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.61, chrome: {chromedriverVersion: 142.0.7444.59 (4b8153ab58d3..., userDataDir: C:\Users\juanm\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54910}, goog:processID: 15336, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3173b433cd3221ea2e07fa1dc206bfed
+*** Element info: {Using=id, value=email}
+	at java.base@15.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@15.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base@15.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@15.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base@15.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at app//org.openqa.selenium.By$ById.findElement(By.java:188)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)
+	at app//net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:18)
+	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)
+	at app//net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)
+	at app//net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1146)
 	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$pZB3owmS.performAs$accessor$TLdizIp4(Unknown Source)
+	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.type(WebElementFacadeImpl.java:811)
+	at app//net.serenitybdd.screenplay.actions.EnterValueIntoTarget.performAs(EnterValueIntoTarget.java:18)
+	at app//net.serenitybdd.screenplay.actions.EnterValueIntoTarget$ByteBuddy$cmMZZkb1.performAs$accessor$ML4gXFMq(Unknown Source)
 	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base@15.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,12 +46,12 @@ Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: wait
 	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
 	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
 	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$pZB3owmS.performAs(Unknown Source)
+	at app//net.serenitybdd.screenplay.actions.EnterValueIntoTarget$ByteBuddy$cmMZZkb1.performAs(Unknown Source)
 	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
 	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
 	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
-	at app//co.com.Automatizacion.tasks.Producto.CrearProducto.performAs(CrearProducto.java:30)
-	at app//co.com.Automatizacion.tasks.Producto.CrearProducto$ByteBuddy$8gNiVdMA.performAs$accessor$hvASrszx(Unknown Source)
+	at app//co.com.Automatizacion.tasks.Producto.IngresarModuloProducto.performAs(IngresarModuloProducto.java:37)
+	at app//co.com.Automatizacion.tasks.Producto.IngresarModuloProducto$ByteBuddy$TWfuwxfS.performAs$accessor$cH61otf4(Unknown Source)
 	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base@15.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -74,11 +62,11 @@ Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: wait
 	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
 	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
 	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
-	at app//co.com.Automatizacion.tasks.Producto.CrearProducto$ByteBuddy$8gNiVdMA.performAs(Unknown Source)
+	at app//co.com.Automatizacion.tasks.Producto.IngresarModuloProducto$ByteBuddy$TWfuwxfS.performAs(Unknown Source)
 	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
 	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
 	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
-	at app//co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.crearNuevoProducto(CrearProductoStepDefinition.java:46)
+	at app//co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.ingresarModuloProductos(CrearProductoStepDefinition.java:25)
 	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@15.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base@15.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -134,49 +122,18 @@ Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: wait
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#Producto&quot;}
-  (Session info: chrome=142.0.7444.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LA_MAQUINA', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.61, chrome: {chromedriverVersion: 142.0.7444.59 (4b8153ab58d3..., userDataDir: C:\Users\juanm\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52817}, goog:processID: 16920, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 25d2b061969f1cc2ed704925491bd8c9
-*** Element info: {Using=id, value=Producto}
-	at java.base@15.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@15.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base@15.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@15.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base@15.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at app//org.openqa.selenium.By$ById.findElement(By.java:188)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at app//net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)
-	at app//net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:18)
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)
-	at app//net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)
-	at app//net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 91 more
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[nov. 09, 2025 9:34:47 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[nov. 10, 2025 6:38:53 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --incognito, goog:chromeOptions: {args: [--incognito], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
-Starting ChromeDriver 142.0.7444.59 (4b8153ab58d3c3f4c9f7e4baad9616ecf80db5fa-refs/branch-heads/7444_52@{#4}) on port 37645
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
+Starting ChromeDriver 142.0.7444.59 (4b8153ab58d3c3f4c9f7e4baad9616ecf80db5fa-refs/branch-heads/7444_52@{#4}) on port 32875
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 37645.
-nov. 09, 2025 9:34:49 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+ChromeDriver was started successfully on port 32875.
+nov. 10, 2025 6:38:56 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
@@ -186,9 +143,9 @@ INFORMACIÓN: Detected dialect: W3C
  (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
           \_\                                                            
 
-TEST FAILED: Registrar un nuevo producto correctamente
---------------------------------------------------------------------------
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Administrador clicks on Modulo Productos
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected enabled element was not enabled
+TEST FAILED WITH ERROR: Registrar un nuevo producto correctamente
+---------------------------------------------------------------------
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Administrador enters 'felipe@gmail.com' into Correo electronico
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - The following error occurred: unknown error: Call WaitForPendingNavigations only on the parent WebView
 ]]></system-err>
 </testsuite>

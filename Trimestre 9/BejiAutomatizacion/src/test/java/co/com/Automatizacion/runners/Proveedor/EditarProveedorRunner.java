@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/Proveedor/EditarProveedor.feature",
         glue = "co.com.Automatizacion.stepsdefinitions",
+        plugin = {"pretty","html:target/cucumber-reports"},
         snippets = SnippetType.CAMELCASE
 )
 public class EditarProveedorRunner {

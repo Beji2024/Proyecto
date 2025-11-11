@@ -13,13 +13,11 @@ use App\Http\Controllers\Api\VentaController;
 use App\Http\Controllers\Api\ProductoController;
 use App\Http\Controllers\Api\MercanciaController;
 use App\Http\Controllers\Api\PedidoController;
-use App\Http\Controllers\Api\ImagenController;
 
 // RUTAS PÚBLICAS
 Route::post('/login', [AuthContoroller::class, 'login']);
 
 // RUTAS PROTEGIDAS POR JWT
-Route::middleware(['auth:api'])->group(function () {
 
     // Auth
     Route::get('/me', [AuthContoroller::class, 'me']);
@@ -33,7 +31,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::delete('mercancia/{id}', [MercanciaController::class, 'destroy']);
     Route::get('/mercancia/categoria/{id}', [MercanciaController::class, 'porCategoria']);
     Route::get('/mercancia/subcategoria/{id}', [MercanciaController::class, 'porSubcategoria']);
-    Route::get('/mercancia/{id}/imagen', [MercanciaController::class, 'imagenPorId']);
+    
     // Categorías
     Route::apiResource('categorias', CategoriaController::class);
 
@@ -43,12 +41,13 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('subcategorias/{id}', [SubcategoriaController::class, 'show']);
     Route::put('subcategorias/{id}', [SubcategoriaController::class, 'update']);
     Route::delete('subcategorias/{id}', [SubcategoriaController::class, 'destroy']);
+
     // Proveedores
     Route::apiResource('proveedores', ProveedorController::class);
 
     // Usuarios
     Route::apiResource('usuarios', UsuarioController::class);
-    Route::get('/vendedores', [UsuarioController::class, 'getVendedores']); // extra
+    Route::get('/vendedores', [UsuarioController::class, 'getVendedores']); 
 
     // Estados
     Route::apiResource('estados', EstadoController::class);
@@ -58,28 +57,25 @@ Route::middleware(['auth:api'])->group(function () {
 
     // Tipo de documento
     Route::apiResource('tipo-docs', TipoDocController::class);
-
+    
     // Roles
-    Route::get('/roles', [RolController::class, 'index']);
+    Route::apiResource('/roles', RolController::class);
 
-    // Ventas (algunas rutas personalizadas además del CRUD)
+    // Ventas 
     Route::get('/venta', [VentaController::class, 'index']);
     Route::post('/venta', [VentaController::class, 'store']);
     Route::get('/venta/{id}', [VentaController::class, 'show']);
     Route::patch('/venta/{id}', [VentaController::class, 'update']);
-    Route::put('/venta/{id}', [VentaController::class, 'update1']); // extra personalizada
+    Route::put('/venta/{id}', [VentaController::class, 'update1']); 
     Route::delete('/venta/{id}', [VentaController::class, 'destroy']);
 
     //mercancías
     Route::apiResource('mercancia', MercanciaController::class);
-    
+
     // pedidos
-Route::apiResource('pedidos', PedidoController::class)->only([
+    Route::apiResource('pedidos', PedidoController::class)->only([
     'index', 'store', 'show'
 ]);
-});
-
-    //imagenes
-    Route::post('/imagenes', [ImagenController::class, 'store']);
-
+ 
+    
     

@@ -4,7 +4,7 @@
             "outputFile": "com.example.appinterface.app-mergeDebugResources-31:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\juanm\\repositorios\\Proyecto-1\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\juanm\\OneDrive\\Desktop\\spring boot\\Proyecto\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "1",

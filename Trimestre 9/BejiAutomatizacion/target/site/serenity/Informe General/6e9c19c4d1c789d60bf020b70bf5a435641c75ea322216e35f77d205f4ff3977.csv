@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Editar un usuario en pagina web de Sport10","Verificar la modificacion exitosa de datos de un usuario","SUCCESS","2025-11-11T10:57:04.2462417-05:00[America/Bogota]","0.0","31.3"
+"Eliminar un usuario en pagina web de Sport10","Verificar que se elimina el usuario","SUCCESS","2025-11-11T10:57:48.5210677-05:00[America/Bogota]","0.0","19.26"
+"Loguearse en la pagina Sport10","Validar el inicio de sesion exitoso","SUCCESS","2025-11-11T10:55:00.0638769-05:00[America/Bogota]","0.0","15.03"
+"Registrar un usuario en pagina web de Sport10","Verificar el registro exitoso de un nuevo usuario","SUCCESS","2025-11-11T10:55:31.1414263-05:00[America/Bogota]","0.0","62.28"

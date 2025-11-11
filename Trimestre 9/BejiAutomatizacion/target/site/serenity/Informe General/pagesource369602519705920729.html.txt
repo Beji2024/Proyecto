@@ -1,0 +1,160 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style>
+
+.box[_ngcontent-ng-c1616305551] {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 35px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid rgba(106, 13, 173, 0.15);
+  box-shadow: 0 4px 15px rgba(75, 0, 130, 0.05);
+}
+.box[_ngcontent-ng-c1616305551]:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(75, 0, 130, 0.15);
+  border-color: rgba(106, 13, 173, 0.3);
+}
+.box[_ngcontent-ng-c1616305551]   h2[_ngcontent-ng-c1616305551] {
+  color: #4b0082;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+}
+.box[_ngcontent-ng-c1616305551]   img[_ngcontent-ng-c1616305551] {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+.box[_ngcontent-ng-c1616305551]:hover   img[_ngcontent-ng-c1616305551] {
+  transform: scale(1.1);
+  opacity: 1;
+}
+body[_ngcontent-ng-c1616305551] {
+  background-color: #f8f6fb;
+  background-image:
+    radial-gradient(
+      circle at 1px 1px,
+      rgba(106, 13, 173, 0.05) 1px,
+      transparent 0);
+  background-size: 30px 30px;
+}
+.container[_ngcontent-ng-c1616305551] {
+  max-width: 1200px;
+}
+a[_ngcontent-ng-c1616305551] {
+  text-decoration: none;
+  color: inherit;
+}
+@media (max-width: 768px) {
+  .titulo-principal[_ngcontent-ng-c1616305551] {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .subtitulo[_ngcontent-ng-c1616305551] {
+    display: none;
+  }
+  .cerrar-sesion[_ngcontent-ng-c1616305551] {
+    font-size: 0.9rem;
+  }
+  .box[_ngcontent-ng-c1616305551] {
+    padding: 25px 15px;
+  }
+  .bg-morado[_ngcontent-ng-c1616305551] {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+/*# sourceMappingURL=/principal.component.css.map */</style><style>
+
+.login-container[_ngcontent-ng-c1191042825] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      #f9f5e3,
+      #eedfc1);
+}
+section[_ngcontent-ng-c1191042825] {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+#ss.login-card[_ngcontent-ng-c1191042825] {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+h3[_ngcontent-ng-c1191042825] {
+  color: #6a0dad;
+}
+#ss.login-card[_ngcontent-ng-c1191042825]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.login-image[_ngcontent-ng-c1191042825] {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.form-control[_ngcontent-ng-c1191042825] {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+.form-control[_ngcontent-ng-c1191042825]:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 5px #4b0082;
+}
+.btn-primary[_ngcontent-ng-c1191042825] {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #6a0dad;
+}
+.btn-primary[_ngcontent-ng-c1191042825]:hover {
+  background-color: #4b0082;
+}
+h3[_ngcontent-ng-c1191042825] {
+  letter-spacing: 0.5px;
+}
+@media (max-width: 768px) {
+  .login-container[_ngcontent-ng-c1191042825] {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .login-card[_ngcontent-ng-c1191042825] {
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=/login.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-login _nghost-ng-c1191042825=""><div _ngcontent-ng-c1191042825="" class="login-container"><section _ngcontent-ng-c1191042825="" class="text-center text-lg-start"><div _ngcontent-ng-c1191042825="" id="ss" class="shadow login-card"><div _ngcontent-ng-c1191042825="" class="row g-0 align-items-center"><div _ngcontent-ng-c1191042825="" class="col-lg-5 ms-5 d-none d-lg-block"><img _ngcontent-ng-c1191042825="" src="assets/imagenes/Logo.jpeg" alt="Login image" class="img-fluid login-image"></div><div _ngcontent-ng-c1191042825="" class="col-lg-6"><div _ngcontent-ng-c1191042825="" class="card-body p-5"><h3 _ngcontent-ng-c1191042825="" class="mb-4 fw-bold text-center">Bienvenido</h3><p _ngcontent-ng-c1191042825="" class="text-muted text-center mb-4">Inicia sesión para continuar</p><form _ngcontent-ng-c1191042825="" novalidate="" class="ng-dirty ng-touched ng-valid ng-submitted"><div _ngcontent-ng-c1191042825="" class="form-outline mb-4"><input _ngcontent-ng-c1191042825="" name="email" type="email" placeholder="Correo electrónico" required="" id="email" class="form-control ng-dirty ng-valid ng-touched" ng-reflect-required="" ng-reflect-name="email" ng-reflect-model="felipe@gmail.com"></div><div _ngcontent-ng-c1191042825="" class="form-outline mb-4"><input _ngcontent-ng-c1191042825="" name="password" placeholder="Contraseña" type="password" required="" id="password" class="form-control ng-dirty ng-valid ng-touched" ng-reflect-required="" ng-reflect-name="password" ng-reflect-model="skjdahkjshdu13432.,-"></div><div _ngcontent-ng-c1191042825="" class="d-grid gap-2"><button _ngcontent-ng-c1191042825="" type="submit" id="ingresar" class="btn btn-primary btn-lg"> Ingresar </button></div><!--bindings={
+  "ng-reflect-ng-if": ""
+}--></form></div></div></div></div></section></div></app-login><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-QXTTOI44.js">
+<link rel="modulepreload" href="chunk-6V2EA77Q.js">
+
+
+</body></html>

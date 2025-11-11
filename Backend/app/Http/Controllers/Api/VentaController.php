@@ -56,6 +56,7 @@ class VentaController extends Controller
     }
     $venta->estado_id = $request->estado_id;
     $venta->save(); 
+    \Log::info('Venta actualizada:', ['venta' => $venta]); 
     
     return response()->json([
         'message' => 'Estado actualizado correctamente',

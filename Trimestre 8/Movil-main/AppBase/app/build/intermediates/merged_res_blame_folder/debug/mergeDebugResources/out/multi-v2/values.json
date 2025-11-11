@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\juanm\\repositorios\\Proyecto-1\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\juanm\\OneDrive\\Desktop\\spring boot\\Proyecto\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "1",
@@ -35,6 +35,23 @@
                         "startOffsets": "131164",
                         "endColumns": "49",
                         "endOffsets": "131209"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\juanm\\OneDrive\\Desktop\\spring boot\\Proyecto\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "1,1",
+                        "startOffsets": "54,94",
+                        "endColumns": "38,38",
+                        "endOffsets": "91,131"
+                    },
+                    "to": {
+                        "startLines": "643,962",
+                        "startColumns": "4,4",
+                        "startOffsets": "32937,56613",
+                        "endColumns": "41,41",
+                        "endOffsets": "32974,56650"
                     }
                 },
                 {
@@ -88,6 +105,25 @@
                         "startOffsets": "124065",
                         "endColumns": "42",
                         "endOffsets": "124103"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\juanm\\OneDrive\\Desktop\\spring boot\\Proyecto\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "1,1",
+                        "startOffsets": "96,310",
+                        "endLines": "5,7",
+                        "endColumns": "9,68",
+                        "endOffsets": "305,377"
+                    },
+                    "to": {
+                        "startLines": "2481,6378",
+                        "startColumns": "4,4",
+                        "startOffsets": "173951,446489",
+                        "endLines": "2484,6378",
+                        "endColumns": "9,71",
+                        "endOffsets": "174051,446556"
                     }
                 },
                 {
@@ -220,25 +256,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\juanm\\repositorios\\Proyecto-1\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2,7",
-                        "startColumns": "1,1",
-                        "startOffsets": "96,310",
-                        "endLines": "5,7",
-                        "endColumns": "9,68",
-                        "endOffsets": "305,377"
-                    },
-                    "to": {
-                        "startLines": "2481,6378",
-                        "startColumns": "4,4",
-                        "startOffsets": "173951,446489",
-                        "endLines": "2484,6378",
-                        "endColumns": "9,71",
-                        "endOffsets": "174051,446556"
-                    }
-                },
-                {
                     "source": "C:\\Users\\juanm\\.gradle\\caches\\8.10.2\\transforms\\9e83b03f99aba5b78b240a3349a5fe1e\\transformed\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,6,16",
@@ -310,23 +327,6 @@
                         "startOffsets": "120574,120614,121746,121970,122025,123521,123566,123620,123676,123728,123780,123829,123890",
                         "endColumns": "39,46,42,54,46,44,53,55,51,51,48,60,49",
                         "endOffsets": "120609,120656,121784,122020,122067,123561,123615,123671,123723,123775,123824,123885,123935"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\juanm\\repositorios\\Proyecto-1\\Trimestre 8\\Movil-main\\AppBase\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "1,1",
-                        "startOffsets": "54,94",
-                        "endColumns": "38,38",
-                        "endOffsets": "91,131"
-                    },
-                    "to": {
-                        "startLines": "643,962",
-                        "startColumns": "4,4",
-                        "startOffsets": "32937,56613",
-                        "endColumns": "41,41",
-                        "endOffsets": "32974,56650"
                     }
                 },
                 {

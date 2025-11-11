@@ -13,11 +13,13 @@ use App\Http\Controllers\Api\VentaController;
 use App\Http\Controllers\Api\ProductoController;
 use App\Http\Controllers\Api\MercanciaController;
 use App\Http\Controllers\Api\PedidoController;
+use App\Http\Controllers\Api\ImagenController;
 
 // RUTAS PÚBLICAS
 Route::post('/login', [AuthContoroller::class, 'login']);
 
 // RUTAS PROTEGIDAS POR JWT
+Route::middleware(['auth:api'])->group(function () {
 
     // Auth
     Route::get('/me', [AuthContoroller::class, 'me']);
@@ -31,7 +33,7 @@ Route::post('/login', [AuthContoroller::class, 'login']);
     Route::delete('mercancia/{id}', [MercanciaController::class, 'destroy']);
     Route::get('/mercancia/categoria/{id}', [MercanciaController::class, 'porCategoria']);
     Route::get('/mercancia/subcategoria/{id}', [MercanciaController::class, 'porSubcategoria']);
-    
+    Route::get('/mercancia/{id}/imagen', [MercanciaController::class, 'imagenPorId']);
     // Categorías
     Route::apiResource('categorias', CategoriaController::class);
 
@@ -58,7 +60,7 @@ Route::post('/login', [AuthContoroller::class, 'login']);
     Route::apiResource('tipo-docs', TipoDocController::class);
 
     // Roles
-    Route::apiResource('/roles', RolController::class);
+    Route::get('/roles', [RolController::class, 'index']);
 
     // Ventas (algunas rutas personalizadas además del CRUD)
     Route::get('/venta', [VentaController::class, 'index']);
@@ -70,11 +72,14 @@ Route::post('/login', [AuthContoroller::class, 'login']);
 
     //mercancías
     Route::apiResource('mercancia', MercanciaController::class);
-
+    
     // pedidos
-    Route::apiResource('pedidos', PedidoController::class)->only([
+Route::apiResource('pedidos', PedidoController::class)->only([
     'index', 'store', 'show'
 ]);
+});
 
-    
+    //imagenes
+    Route::post('/imagenes', [ImagenController::class, 'store']);
+
     

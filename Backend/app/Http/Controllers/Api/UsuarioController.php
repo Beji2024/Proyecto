@@ -72,8 +72,8 @@ class UsuarioController extends Controller
     public function getVendedores()
     {
         $vendedores = Usuario::whereHas('rol', function($query) {
-            $query->where('name', 'Vendedor'); 
-        })->with(['rol', 'tipodoc'])->get(); 
+            $query->where('name', 'Vendedor'); // Asegúrate de que 'nombre' sea el campo correcto en tu tabla de roles
+        })->with(['rol', 'tipodoc'])->get(); // Asegura que la relación con rol y tipo de documento esté cargada
 
         return response()->json($vendedores);
     }

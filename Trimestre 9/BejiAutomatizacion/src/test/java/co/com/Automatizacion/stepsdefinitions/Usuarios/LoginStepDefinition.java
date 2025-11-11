@@ -23,7 +23,6 @@ public class LoginStepDefinition {
         theActorInTheSpotlight().attemptsTo(Login.login(datos));
 
     }
-
     @Entonces("^Se debe verificar que el administrador haya ingresado correctamente a la página y tenga acceso a sus funciones$")
     public void seDebeVerificarQueElAdministradorHayaIngresadoCorrectamenteALaPáginaYTengaAccesoASusFunciones() {
         theActorInTheSpotlight().should(seeThat(ValidacionLogin.validacionLogin()));

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Registrar un producto en página web de Sport10" skipped="0" tests="1" time="31.97" timestamp="2025-11-10 08:03:10"><testcase name="Registrar un nuevo producto correctamente"><failure message="&#13;&#10;Expected: an element that is visible&#13;&#10;     but: no matching element found by id: Producto" type="java.lang.AssertionError">&#13;
+Expected: an element that is visible&#13;
+     but: no matching element found by id: Producto</failure><system-err>&#13;
+Expected: an element that is visible&#13;
+     but: no matching element found by id: Producto&#13;
+co.com.Automatizacion.tasks.Producto.IngresarModuloProducto.performAs(IngresarModuloProducto.java:44)&#13;
+co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.ingresarModuloProductos(CrearProductoStepDefinition.java:25)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>

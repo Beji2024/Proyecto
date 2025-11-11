@@ -1,8 +1,9 @@
 package co.com.Automatizacion.userinterface.Usuarios;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
-
+@DefaultUrl(value= "http://localhost:4200/principal")
 public class Login extends PageObject{
 
     public static Target INPUT_EMAIL = Target.the("Correo electronico")

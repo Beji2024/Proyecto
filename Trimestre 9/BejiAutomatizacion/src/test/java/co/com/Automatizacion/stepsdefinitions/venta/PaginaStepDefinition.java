@@ -1,9 +1,8 @@
 package co.com.Automatizacion.stepsdefinitions.venta;
 
-import co.com.Automatizacion.tasks.login.venta.ClickEnVenta;
 
-import co.com.Automatizacion.tasks.login.venta.*;
-import co.com.Automatizacion.userinterface.login.venta.ClickEnConsultarVenta;
+import co.com.Automatizacion.tasks.venta.*;
+import co.com.Automatizacion.userinterface.venta.ClickEnConsultarVenta;
 import cucumber.api.DataTable;
 import cucumber.api.java.es.Cuando;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -44,7 +43,7 @@ public class PaginaStepDefinition {
     public void elAdministradorHaceClickEnCrearVenta() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 ClickCrearVenta.ahora(),
-                Esperar.segundos(3)
+                Esperar.segundos(4)
         );
     }
 
@@ -73,21 +72,19 @@ public class PaginaStepDefinition {
     public void elAdministradorVuelveAConsultarVenta() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 ClickEnConsultarVenta.ahora(),
-                Esperar.segundos(5)
+                Esperar.segundos(2),
+                VolverAtras.ahora(),
+                Esperar.segundos(2)
         );
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    @Cuando("el administrador hace click en la imagen de venta")
+    public void elAdministradorHaceClickEnLaImagenDeVenta() {
+        theActorInTheSpotlight().attemptsTo(
+                ClickEnImagenVentaTask.ahora(),
+                Esperar.segundos(3)
+        );
+    }
 
 
 }

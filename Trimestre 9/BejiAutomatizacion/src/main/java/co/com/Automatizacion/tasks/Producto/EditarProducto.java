@@ -26,9 +26,6 @@ public class EditarProducto implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(Producto.BTN_PRODUCTO),
-                Click.on(Producto.BTN_MASOPCIONES),
-                Click.on(Producto.BTN_GESTIONARPRODUCTOS),
                 Click.on(Producto.BTN_EDITAR),
 
                 Clear.field(Producto.CAMPO_NOMBRE),

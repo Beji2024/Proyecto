@@ -1,7 +1,7 @@
 package co.com.Automatizacion.tasks.login.venta;
 
 import java.util.List;
-import co.com.Automatizacion.models.login.DatosLogin;
+import co.com.Automatizacion.models.Usuarios.DatosLogin;
 import static co.com.Automatizacion.userinterface.login.venta.Login.*;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Task;

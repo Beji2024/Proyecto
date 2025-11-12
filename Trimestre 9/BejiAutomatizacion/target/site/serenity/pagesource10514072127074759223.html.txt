@@ -1,0 +1,150 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style>
+
+.card-img-top[_ngcontent-ng-c688114408] {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+/*# sourceMappingURL=/productos.component.css.map */</style><style>
+
+.bg-morado[_ngcontent-ng-c2507701728] {
+  background:
+    linear-gradient(
+      90deg,
+      #6e42a4,
+      #9b59b6,
+      #c48bd4);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.marca[_ngcontent-ng-c2507701728] {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background:
+    linear-gradient(
+      135deg,
+      #ddd8da,
+      #fcfbfc,
+      #ff9bda,
+      #cba6ff,
+      #eb87a7);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(196, 139, 212, 0.3);
+  animation: _ngcontent-ng-c2507701728_rainbowMove 8s linear infinite;
+  transition: all 0.3s ease;
+}
+@keyframes _ngcontent-ng-c2507701728_rainbowMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+.marca[_ngcontent-ng-c2507701728]:hover {
+  text-shadow: 0 0 20px rgba(196, 139, 212, 0.6), ;
+}
+.acciones[_ngcontent-ng-c2507701728] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.rol[_ngcontent-ng-c2507701728] {
+  font-family: "Orbitron", sans-serif;
+  color: #e6dfff;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+.btn-cerrar-sesion[_ngcontent-ng-c2507701728] {
+  background-color: #ffffff;
+  color: #6e42a4;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-cerrar-sesion[_ngcontent-ng-c2507701728]:hover {
+  background-color: #f3e6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(110, 66, 164, 0.25);
+}
+@media (max-width: 992px) {
+  .titulo[_ngcontent-ng-c2507701728] {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .marca[_ngcontent-ng-c2507701728] {
+    font-size: 1.3rem;
+  }
+  .acciones[_ngcontent-ng-c2507701728] {
+    align-items: center;
+  }
+  .btn-cerrar-sesion[_ngcontent-ng-c2507701728] {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  .header[_ngcontent-ng-c2507701728] {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+/*# sourceMappingURL=/header.component.component.css.map */</style><style>
+
+.nav-item.dropdown[_ngcontent-ng-c3765121025]:hover   .dropdown-menu[_ngcontent-ng-c3765121025] {
+  display: block;
+}
+.navbar-nav[_ngcontent-ng-c3765121025]   .dropdown-menu[_ngcontent-ng-c3765121025] {
+  display: none;
+}
+.nav-item.dropdown[_ngcontent-ng-c3765121025]   a[_ngcontent-ng-c3765121025]:hover {
+  cursor: pointer;
+}
+.nav-item.dropdown[_ngcontent-ng-c3765121025]   .dropdown-menu[_ngcontent-ng-c3765121025]   a[_ngcontent-ng-c3765121025] {
+  transition: background-color 0.3s ease;
+}
+.nav-item.dropdown[_ngcontent-ng-c3765121025]   .dropdown-menu[_ngcontent-ng-c3765121025]   a[_ngcontent-ng-c3765121025]:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=/menu-categorias.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-productos _nghost-ng-c688114408=""><router-outlet _ngcontent-ng-c688114408=""><app-header _ngcontent-ng-c688114408="" _nghost-ng-c2507701728=""><div _ngcontent-ng-c2507701728="" class="header bg-morado d-flex justify-content-between align-items-center px-4 py-3 shadow"><h1 _ngcontent-ng-c2507701728="" id="Titulo" class="marca mb-0 ms-3">SISTEMA DE INVENTARIO</h1><h2 _ngcontent-ng-c2507701728="" class="marca mb-0">SPORT 10</h2><div _ngcontent-ng-c2507701728="" class="acciones text-end me-5"><h6 _ngcontent-ng-c2507701728="" id="rol" class="rol mb-2 me-1">Administrador</h6><button _ngcontent-ng-c2507701728="" class="btn-cerrar-sesion"> Cerrar sesión </button></div></div></app-header><app-menu-categorias _ngcontent-ng-c688114408="" _nghost-ng-c3765121025=""><nav _ngcontent-ng-c3765121025="" data-bs-theme="dark" class="navbar navbar-expand-lg bg-primary" style="color: white; padding-left: 60px; padding-right: 80px;"><div _ngcontent-ng-c3765121025="" class="container-fluid"><button _ngcontent-ng-c3765121025="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" class="navbar-toggler"><span _ngcontent-ng-c3765121025="" class="navbar-toggler-icon"></span></button><div _ngcontent-ng-c3765121025="" id="navbarSupportedContent" class="collapse navbar-collapse"><ul _ngcontent-ng-c3765121025="" class="navbar-nav me-auto mb-2 mb-lg-0"><li _ngcontent-ng-c3765121025="" class="nav-item"><a _ngcontent-ng-c3765121025="" class="nav-link" ng-reflect-router-link="/productos" href="/productos"> Home </a></li><li _ngcontent-ng-c3765121025="" class="nav-item dropdown"><a _ngcontent-ng-c3765121025="" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle"> Niño </a><ul _ngcontent-ng-c3765121025="" class="dropdown-menu"><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Niño" href="/productos/Ni%C3%B1o"> Ver todo en Niño </a></li><li _ngcontent-ng-c3765121025=""><hr _ngcontent-ng-c3765121025="" class="dropdown-divider"></li><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Niño-Elegante" href="/productos/Ni%C3%B1o-Elegante"> Elegante </a></li><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--></ul></li><li _ngcontent-ng-c3765121025="" class="nav-item dropdown"><a _ngcontent-ng-c3765121025="" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle"> Hombre </a><ul _ngcontent-ng-c3765121025="" class="dropdown-menu"><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Hombre" href="/productos/Hombre"> Ver todo en Hombre </a></li><li _ngcontent-ng-c3765121025=""><hr _ngcontent-ng-c3765121025="" class="dropdown-divider"></li><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Hombre-Elegante" href="/productos/Hombre-Elegante"> Elegante </a></li><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Hombre-Deportivo" href="/productos/Hombre-Deportivo"> Deportivo </a></li><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Hombre-Plataforma" href="/productos/Hombre-Plataforma"> Plataforma </a></li><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></ul></li><li _ngcontent-ng-c3765121025="" class="nav-item dropdown"><a _ngcontent-ng-c3765121025="" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle"> Mujer </a><ul _ngcontent-ng-c3765121025="" class="dropdown-menu"><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Mujer" href="/productos/Mujer"> Ver todo en Mujer </a></li><li _ngcontent-ng-c3765121025=""><hr _ngcontent-ng-c3765121025="" class="dropdown-divider"></li><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" class="dropdown-item" ng-reflect-router-link="/productos/Mujer-Elegante" href="/productos/Mujer-Elegante"> Elegante </a></li><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--></ul></li><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-ng-c3765121025="" class="nav-item dropdown"><a _ngcontent-ng-c3765121025="" role="button" data-bs-toggle="dropdown" class="nav-link show" aria-expanded="true"><i _ngcontent-ng-c3765121025="" id="masOpciones" class="fa-solid fa-cogs" style="color: #ffffff;"></i></a><ul _ngcontent-ng-c3765121025="" class="dropdown-menu dropdown-menu-start show" data-bs-popper="static"><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" routerlink="/productos/nueva-categoria" class="dropdown-item" ng-reflect-router-link="/productos/nueva-categoria" href="/productos/nueva-categoria"> Gestionar categorías </a></li><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" routerlink="/productos/nueva-subcategoria" class="dropdown-item" ng-reflect-router-link="/productos/nueva-subcategoria" href="/productos/nueva-subcategoria"> Gestionar subcategorías </a></li><li _ngcontent-ng-c3765121025=""><a _ngcontent-ng-c3765121025="" id="gestionarProductos" routerlink="/productos/gestion" class="dropdown-item" ng-reflect-router-link="/productos/gestion" href="/productos/gestion"> Gestionard productos </a></li></ul></li></ul></div></div></nav></app-menu-categorias><div _ngcontent-ng-c688114408="" class="productos container mt-4"><div _ngcontent-ng-c688114408="" class="d-flex justify-content-start mb-3"><input _ngcontent-ng-c688114408="" type="text" placeholder="Buscar producto..." class="form-control w-25 ng-untouched ng-pristine ng-valid" ng-reflect-model=""></div><h2 _ngcontent-ng-c688114408="" class="mb-4">Todos los productos</h2><p _ngcontent-ng-c688114408="">No hay productos disponibles.</p><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></router-outlet><!--container--></app-productos><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-QXTTOI44.js">
+<link rel="modulepreload" href="chunk-6V2EA77Q.js">
+
+
+</body></html>

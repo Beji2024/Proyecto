@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f79c791f-edee-44f5-9c1e-3bb590c12a7c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/principal/header.component/header.component.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/principal/header.component/header.component.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/principal/principal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/principal/principal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/assets/imagenes/NGSO.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Producto/ValidarEliminacionProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/categorias y sub/menu-categorias/menu-categorias.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/categorias y sub/menu-categorias/menu-categorias.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/modelos/producto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/modelos/producto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
@@ -15,77 +16,37 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/models/DatosEditar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/models/DatosLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/models/DatosRegistro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/questions/ValidacionEditar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/questions/ValidacionEliminar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/questions/ValidacionLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/questions/ValidacionRegistro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/tasks/AbrirPagina.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/tasks/EditarUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/tasks/EliminarUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/tasks/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/tasks/RegistrarUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/userinterface/EditarUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/userinterface/EliminarUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/userinterface/InicioPagina.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/userinterface/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/userinterface/RegistrarUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/utils/hooks/PreparacionEscenario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/Automatizacion/utils/hooks/RegistroVariable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/runners/EditarUsuarioRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/runners/EliminarUsuarioRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/runners/LoginRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/runners/RegistrarUsuarioRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/stepsdefinitions/EditarUsuarioStepDefinition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/stepsdefinitions/EliminarUsuarioStepDefinition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/stepsdefinitions/LoginStepDefinition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/Automatizacion/stepsdefinitions/RegistrarUsuarioStepDefinition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Editar#20un#20usuario#20en#20pagina#20web#20de#20Sport10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/co.com.Automatizacion.runners.EditarUsuarioRunner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/co.com.Automatizacion.runners.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/driver/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/features/editar_usuario.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/features/eliminar_usuario.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/features/login.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/features/registrar_usuario.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Editar#20un#20usuario#20en#20pagina#20web#20de#20Sport10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-co.com.Automatizacion.runners.EditarUsuarioRunner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/RegistrarUsuario.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/LoginRunner.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Proveedor/IngresarModuloProveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Proveedor/IngresarModuloProveedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Proveedor/EditarProveedorRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Proveedor/EditarProveedorRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Proveedor/EliminarProveedorRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Proveedor/EliminarProveedorRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Proveedor/LoginRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Proveedor/RegistrarProveedorRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Proveedor/RegistrarProveedorRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/EditarUsuarioRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/EditarUsuarioRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/EliminarUsuarioRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/EliminarUsuarioRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/LoginRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/LoginRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/RegistrarUsuarioRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/runners/Usuarios/RegistrarUsuarioRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Proveedor/EditarProveedorStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Proveedor/EditarProveedorStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Proveedor/EliminarProveedorStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Proveedor/EliminarProveedorStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Proveedor/LoginStepDefinition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Proveedor/RegistrarProveedorStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Proveedor/RegistrarProveedorStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Usuarios/LoginStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Usuarios/LoginStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Proveedor/EditarProveedor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Proveedor/EditarProveedor.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Proveedor/EliminarProveedor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Proveedor/EliminarProveedor.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Proveedor/RegistrarProveedor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Proveedor/RegistrarProveedor.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Proveedor/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Proveedor/login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/registrar/formatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/registrar/formatter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/registrar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/registrar/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/registrar/jquery-1.8.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/registrar/jquery-1.8.2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/registrar/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/registrar/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/registrar/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/registrar/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/Producto/DatosProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/Producto/DatosProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Producto/ValidarCreacionProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Producto/ValidarCreacionProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/CrearProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/CrearProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EditarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EliminarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EliminarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/venta/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/venta/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Productos/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Productos/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EditarProductosStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EditarProductosStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EliminarProductosStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EliminarProductosStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Productos/CrearProducto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Productos/CrearProducto.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Productos/EditarProducto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Productos/EditarProducto.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Productos/EliminarProducto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Productos/EliminarProducto.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb_screenshots.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb_screenshots.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,8 +87,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="Testing" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;juan2522&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Beji2024/Proyecto.git&quot;,
+    &quot;accountId&quot;: &quot;3a2f7ea9-728c-4fd6-9acd-bf7d3ca7a201&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -140,9 +118,11 @@
   "keyToString": {
     "Cucumber Java.Scenario: Validar el inicio de sesion exitoso.executor": "Run",
     "Gradle.Build BejiAutomatizacion.executor": "Run",
+    "Gradle.CrearProductoRunner.executor": "Run",
     "Gradle.EditarProveedorRunner.executor": "Run",
     "Gradle.EditarUsuarioRunner (1).executor": "Run",
     "Gradle.EditarUsuarioRunner.executor": "Run",
+    "Gradle.EliminarProductoRunner.executor": "Run",
     "Gradle.EliminarProveedorRunner.executor": "Run",
     "Gradle.EliminarUsuarioRunner (1).executor": "Run",
     "Gradle.EliminarUsuarioRunner.executor": "Run",
@@ -152,7 +132,7 @@
     "Gradle.RegistrarUsuarioRunner (1).executor": "Run",
     "Gradle.RegistrarUsuarioRunner.executor": "Run",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Rama-Felipe",
+    "git-widget-placeholder": "Rama__juan",
     "last_opened_file_path": "C:/Users/aprendiz.sena/Proyecto/Trimestre 9/BejiAutomatizacion",
     "onboarding.tips.debug.path": "C:/Users/aprendiz.sena/Downloads/BejiAutomatizacion/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Project",
@@ -171,8 +151,8 @@
       <recent name="C:\Users\aprendiz.sena\Downloads\BejiAutomatizacion\src\test\resources\features" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.EliminarProveedorRunner">
-    <configuration name="EditarProveedorRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.EliminarProductoRunner">
+    <configuration name="CrearProductoRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -185,7 +165,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;co.com.Automatizacion.runners.Proveedor.EditarProveedorRunner&quot;" />
+            <option value="&quot;co.com.Automatizacion.runners.Productos.CrearProductoRunner&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,7 +176,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="EditarUsuarioRunner (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EliminarProductoRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -209,7 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;co.com.Automatizacion.runners.Usuarios.EditarUsuarioRunner&quot;" />
+            <option value="&quot;co.com.Automatizacion.runners.Productos.EliminarProductoRunner&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -294,11 +274,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.EliminarProveedorRunner" />
+        <item itemvalue="Gradle.EliminarProductoRunner" />
+        <item itemvalue="Gradle.CrearProductoRunner" />
         <item itemvalue="Gradle.RegistrarProveedorRunner" />
-        <item itemvalue="Gradle.EditarProveedorRunner" />
-        <item itemvalue="Gradle.EditarUsuarioRunner (1)" />
         <item itemvalue="Gradle.EliminarUsuarioRunner (1)" />
+        <item itemvalue="Gradle.EliminarProveedorRunner" />
       </list>
     </recent_temporary>
   </component>

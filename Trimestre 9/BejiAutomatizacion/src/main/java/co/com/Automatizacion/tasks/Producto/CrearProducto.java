@@ -8,12 +8,12 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.WebDriver;
 
+import java.io.File;
+import java.nio.file.Paths;
+
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class CrearProducto implements Task {
 
@@ -31,24 +31,16 @@ public class CrearProducto implements Task {
     public <T extends Actor> void performAs(T actor) {
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
 
-        actor.attemptsTo(
-                Click.on(Producto.BTN_PRODUCTO),
-                Click.on(Producto.BTN_MASOPCIONES),
-                Click.on(Producto.BTN_GESTIONARPRODUCTOS)
-        );
-
-
-        try {
-            Thread.sleep(90000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+        String rutaImagen = Paths.get("src/test/resources/Imagenes/" + datosProducto.getImagen())
+                .toAbsolutePath().toString();
+        File archivo = new File(rutaImagen);
+        if (!archivo.exists()) {
+            throw new RuntimeException("No se encontró la imagen en: " + rutaImagen);
         }
 
         actor.attemptsTo(
-                WaitUntil.the(Producto.BTN_NUEVOPRODUCTO, isVisible()).forNoMoreThan(15).seconds(),
-                WaitUntil.the(Producto.BTN_NUEVOPRODUCTO, isEnabled()).forNoMoreThan(15).seconds(),
+                co.com.Automatizacion.tasks.login.venta.Esperar.segundos(15),
                 Click.on(Producto.BTN_NUEVOPRODUCTO),
-
                 Enter.theValue(datosProducto.getNombreProducto()).into(Producto.CAMPO_NOMBRE),
                 SelectFromOptions.byVisibleText(datosProducto.getCategoria()).from(Producto.CAMPO_CATEGORIA),
                 SelectFromOptions.byVisibleText(datosProducto.getSubcategoria()).from(Producto.CAMPO_SUBCATEGORIA),
@@ -58,8 +50,10 @@ public class CrearProducto implements Task {
                 Enter.theValue(String.valueOf(datosProducto.getPrecioCompra())).into(Producto.CAMPO_PRECIO_COMPRA),
                 Enter.theValue(datosProducto.getMaterial()).into(Producto.CAMPO_MATERIAL),
                 Enter.theValue(datosProducto.getColor()).into(Producto.CAMPO_COLOR),
+                Enter.keyValues(rutaImagen).into(Producto.CAMPO_IMAGEN),
                 Click.on(Producto.BTN_GUARDAR)
         );
     }
 }
+
 

@@ -10,6 +10,6 @@ export interface Producto {
   color: string;
   talla: number;
   sub_mer: number;
-  imagen: string;   //  importante
+  imagen: string;   
   subcategoria?: any; 
 }

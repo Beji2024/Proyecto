@@ -9,7 +9,7 @@ Característica: Editar un producto en la página web de Sport10
   Antecedentes:
     Dado que el administrador esté en el módulo de productos con las credenciales:
       | email            | password |
-      | felipe@gmail.com | 123456   |
+      | felipe@gmail.com | skjdahkjshdu13432.,-   |
 
   @EditarProductos
   Escenario: Editar el último producto registrado correctamente

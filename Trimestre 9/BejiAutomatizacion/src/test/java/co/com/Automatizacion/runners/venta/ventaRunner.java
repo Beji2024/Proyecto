@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/venta/venta.feature",
         glue = {"co.com.Automatizacion.stepsdefinitions", "co.com.Automatizacion.utils.hooks.login"},
+        plugin = {"pretty","html:target/cucumber-reports"},
         snippets = SnippetType.CAMELCASE
 )
 public class ventaRunner {

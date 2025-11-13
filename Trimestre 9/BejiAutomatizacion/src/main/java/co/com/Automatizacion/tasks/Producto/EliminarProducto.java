@@ -34,7 +34,7 @@ public class EliminarProducto implements Task {
                 Click.on(Producto.BTN_ELIMINAR_ULTIMO),
                 WaitUntil.the(Producto.BTN_ELIMINARCONFIRMACION, isVisible()).forNoMoreThan(5).seconds(),
                 Click.on(Producto.BTN_ELIMINARCONFIRMACION),
-                co.com.Automatizacion.tasks.login.venta.Esperar.segundos(30)
+                co.com.Automatizacion.tasks.venta.Esperar.segundos(30)
         );
 
     }

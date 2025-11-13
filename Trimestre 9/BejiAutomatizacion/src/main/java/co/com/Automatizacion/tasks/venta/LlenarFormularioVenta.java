@@ -1,7 +1,7 @@
-package co.com.Automatizacion.tasks.login.venta;
+package co.com.Automatizacion.tasks.venta;
 
 
-import co.com.Automatizacion.userinterface.login.venta.FormularioVenta;
+import co.com.Automatizacion.userinterface.venta.FormularioVenta;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

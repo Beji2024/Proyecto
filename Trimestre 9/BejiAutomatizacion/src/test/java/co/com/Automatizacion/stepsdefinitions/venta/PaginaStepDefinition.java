@@ -18,7 +18,7 @@ public class PaginaStepDefinition {
     @Cuando("el administrador hace click en Venta")
     public void elAdministradorHaceClickEnVenta() {
         theActorInTheSpotlight().attemptsTo(
-                ClickEnVenta.ahora()
+                ClickEnConsultarVenta.ahora()
         );
     }
 

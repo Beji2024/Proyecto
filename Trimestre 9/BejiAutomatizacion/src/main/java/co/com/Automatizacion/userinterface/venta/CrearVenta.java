@@ -1,4 +1,4 @@
-package co.com.Automatizacion.userinterface.login.venta;
+package co.com.Automatizacion.userinterface.venta;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;

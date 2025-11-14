@@ -1,4 +1,4 @@
-package co.com.Automatizacion.userinterface.login.venta;
+package co.com.Automatizacion.userinterface.venta;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;

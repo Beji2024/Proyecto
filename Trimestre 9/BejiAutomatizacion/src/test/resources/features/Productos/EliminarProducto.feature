@@ -9,7 +9,7 @@ Característica: Eliminar un producto en la página web de Sport10
   Antecedentes:
     Dado que el administrador esté en el módulo de productos con las credenciales:
       | email            | password |
-      | felipe@gmail.com | 123456   |
+      | felipe@gmail.com | skjdahkjshdu13432.,-   |
 
   @EliminarProductos
   Escenario: Eliminar el último producto registrado correctamente

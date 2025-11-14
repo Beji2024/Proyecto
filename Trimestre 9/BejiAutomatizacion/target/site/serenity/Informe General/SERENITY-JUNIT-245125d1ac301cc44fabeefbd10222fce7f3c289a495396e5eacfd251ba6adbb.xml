@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Registrar un producto en página web de Sport10" skipped="0" tests="1" time="17.45" timestamp="2025-11-11 11:00:18"><testcase name="Registrar un nuevo producto correctamente"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
-co.com.Automatizacion.tasks.Producto.CrearProducto.performAs(CrearProducto.java:34)&#13;
-co.com.Automatizacion.stepsdefinitions.Productos.CrearProductoStepDefinition.crearNuevoProducto(CrearProductoStepDefinition.java:46)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Registrar un producto en página web de Sport10" skipped="0" tests="1" time="36.09" timestamp="2025-11-13 11:17:18"><testcase name="Registrar un nuevo producto correctamente"/></testsuite>

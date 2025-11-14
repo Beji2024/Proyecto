@@ -1,4 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Registrar un producto en página web de Sport10","Registrar un nuevo producto correctamente","FAILURE","2025-11-11T11:00:18.1506011-05:00[America/Bogota]","0.0","17.45"
-"Editar un producto en página web de Sport10","Verificar la modificación exitosa de un producto","ERROR","2025-11-11T11:00:43.4122155-05:00[America/Bogota]","0.0","0.46"
-"Eliminar un producto en la página web de Sport10","Verificar la eliminación exitosa de un producto","ERROR","2025-11-11T11:00:58.2271289-05:00[America/Bogota]","0.0","0.48"
+"Editar un producto en la página web de Sport10","Editar el último producto registrado correctamente","ERROR","2025-11-13T11:18:09.7598386-05:00[America/Bogota]","0.0","17.69"
+"Eliminar un producto en la página web de Sport10","Eliminar el último producto registrado correctamente","FAILURE","2025-11-13T11:18:38.7600904-05:00[America/Bogota]","0.0","46.36"

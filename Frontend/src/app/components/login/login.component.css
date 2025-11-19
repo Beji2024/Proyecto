@@ -49,6 +49,27 @@ h3{
   box-shadow: 0 0 5px #4b0082;
 }
 
+/* Password toggle */
+.input-with-toggle {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.password-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106,13,173,0.15);
+}
+
 /* Botón */
 .btn-primary {
   border-radius: 10px;

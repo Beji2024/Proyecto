@@ -6,7 +6,7 @@
         <!-- Imagen lateral -->
         <div class="col-lg-5 ms-5 d-none d-lg-block">
           <img 
-            src="assets/imagenes/Logo.jpeg" 
+            src="assets/imagenes/BEJI_LOGO.png" 
             alt="Login image"
             class="img-fluid login-image"
           />
@@ -18,43 +18,81 @@
             <h3 class="mb-4 fw-bold  text-center">Bienvenido</h3>
             <p class="text-muted text-center mb-4">Inicia sesión para continuar</p>
 
-            <form (ngSubmit)="login()">
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
               <!-- Correo -->
-              <div class="form-outline mb-4">
+              <div class="form-outline mb-3 position-relative">
                 <input 
                   [(ngModel)]="email" 
+                  #emailModel="ngModel"
                   name="email" 
                   type="email"
                   placeholder="Correo electrónico" 
-                  required 
+                  required
+                  email
                   class="form-control"
                   id="email"
+                  title="Ingrese el correo electrónico registrado en Sport10."
+                  aria-label="Correo electrónico"
                 />
+                <div *ngIf="(emailModel.invalid && (emailModel.touched || loginForm.submitted))" class="text-danger small mt-1">
+                  <div *ngIf="emailModel.errors?.['required']">El correo es obligatorio.</div>
+                  <div *ngIf="emailModel.errors?.['email']">Ingrese un correo válido.</div>
+                </div>
               </div>
 
               <!-- Contraseña -->
-              <div class="form-outline mb-4">
-                <input 
-                  [(ngModel)]="password" 
-                  name="password" 
-                  placeholder="Contraseña" 
-                  type="password" 
-                  required 
-                  class="form-control"
-                  id="password"
-                />
+              <div class="form-outline mb-3 position-relative">
+                <div class="input-with-toggle">
+                  <input 
+                    [(ngModel)]="password" 
+                    #passwordModel="ngModel"
+                    name="password" 
+                    placeholder="Contraseña" 
+                    [type]="showPassword ? 'text' : 'password'" 
+                    required 
+                    minlength="8"
+                    class="form-control"
+                    id="password"
+                    title="La contraseña distingue mayúsculas y minúsculas. Mínimo 8 caracteres."
+                    aria-label="Contraseña"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary password-toggle"
+                    (click)="togglePassword()"
+                    [attr.aria-pressed]="showPassword"
+                    title="Mostrar / ocultar contraseña"
+                  >
+                    <span *ngIf="!showPassword">👁️</span>
+                    <span *ngIf="showPassword">🙈</span>
+                  </button>
+                </div>
+                <div *ngIf="(passwordModel.invalid && (passwordModel.touched || loginForm.submitted))" class="text-danger small mt-1">
+                  <div *ngIf="passwordModel.errors?.['required']">La contraseña es obligatoria.</div>
+                  <div *ngIf="passwordModel.errors?.['minlength']">La contraseña debe tener mínimo 8 caracteres.</div>
+                </div>
+                <div class="form-text text-muted mt-1">La contraseña distingue mayúsculas y minúsculas. Mínimo 8 caracteres.</div>
               </div>
 
-              <!-- Botón -->
+              <!-- Botón y carga -->
               <div class="d-grid gap-2">
-                <button class="btn btn-primary btn-lg" type="submit" id="ingresar">
-                  Ingresar
+                <button class="btn btn-primary btn-lg" type="submit" id="ingresar" [disabled]="loading">
+                  <span *ngIf="!loading">Ingresar</span>
+                  <span *ngIf="loading">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    &nbsp;Validando credenciales...
+                  </span>
                 </button>
               </div>
 
               <!-- Mensaje de error -->
               <div *ngIf="error" class="alert alert-danger text-center mt-3">
                 {{ error }}
+              </div>
+
+              <!-- Ayuda rápida / soporte -->
+              <div class="text-center mt-3">
+                <a class="text-muted" href="mailto:admin@example.com" title="Contacte al administrador para restablecer la contraseña">¿No puede ingresar? Contacte al administrador para restablecer la contraseña</a>
               </div>
             </form>
           </div>

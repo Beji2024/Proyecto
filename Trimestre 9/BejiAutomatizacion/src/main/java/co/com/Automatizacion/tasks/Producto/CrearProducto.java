@@ -39,7 +39,7 @@ public class CrearProducto implements Task {
         }
 
         actor.attemptsTo(
-                co.com.Automatizacion.tasks.login.venta.Esperar.segundos(15),
+                co.com.Automatizacion.tasks.venta.Esperar.segundos(15),
                 Click.on(Producto.BTN_NUEVOPRODUCTO),
                 Enter.theValue(datosProducto.getNombreProducto()).into(Producto.CAMPO_NOMBRE),
                 SelectFromOptions.byVisibleText(datosProducto.getCategoria()).from(Producto.CAMPO_CATEGORIA),

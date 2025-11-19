@@ -10,8 +10,8 @@ Característica: Loguearse en la pagina Sport10
   Escenario: Validar el inicio de sesion exitoso
     Dado que el administrador este en la pagina
     Cuando ingrese las crendenciales para loguearse:
-      | email                | password    |
-      | felipe@gmail.com | skjdahkjshdu13432.,-  |
+      | email            | password             |
+      | felipe@gmail.com | skjdahkjshdu13432.,- |
     Y el administrador hace click en Venta
     Y el administrador hace click en Consultar venta
     Y el administrador vuelve atras

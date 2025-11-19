@@ -1,4 +1,4 @@
-package co.com.Automatizacion.tasks.login.venta;
+package co.com.Automatizacion.tasks.venta;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

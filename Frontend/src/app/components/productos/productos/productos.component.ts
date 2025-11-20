@@ -5,7 +5,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 import { MenuCategoriasComponent } from '../../categorias y sub/menu-categorias/menu-categorias.component';
-import { HeaderbodComponent } from '../../principalbod/headerbod/headerbod.component';
+import { HeaderComponentComponent } from '../../principal/header.component/header.component.component';
 import { Producto } from '../../../modelos/producto';
 import { Subcategoria } from '../../../modelos/subcategoria';
 import { Categoria } from '../../../modelos/categoria';
@@ -19,7 +19,7 @@ import { CategoriasService } from '../../../services/categorias.service';
     RouterModule,
     FormsModule,
     MenuCategoriasComponent,
-    HeaderbodComponent
+    HeaderComponentComponent
   ],
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']

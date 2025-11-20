@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Editar un producto en la página web de Sport10","Editar el último producto registrado correctamente","ERROR","2025-11-13T11:18:09.7598386-05:00[America/Bogota]","0.0","17.69"
+"Eliminar un producto en la página web de Sport10","Eliminar el último producto registrado correctamente","FAILURE","2025-11-13T11:18:38.7600904-05:00[America/Bogota]","0.0","46.36"

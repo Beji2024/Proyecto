@@ -55,13 +55,11 @@ export class RegistroPedidoComponent implements OnInit {
 cargarPedidos(page: number = 1) {
   this.pedidoSvc.getPedidos(page).subscribe(res => {
     this.pedidos = res.data;
-    this.pedidosFiltrados = this.pedidos; // o aplicar filtro si tienes
+    this.pedidosFiltrados = this.pedidos; 
     this.currentPage = res.current_page;
     this.lastPage = res.last_page;
   });
 }
-
-
 
   filtrarPedidos() {
     const term = this.busqueda.toLowerCase();

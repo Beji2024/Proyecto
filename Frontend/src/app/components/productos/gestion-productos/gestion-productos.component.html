@@ -135,7 +135,11 @@
 
           <!-- Botones -->
           <div class="col-12 d-flex justify-content-end mt-3">
+<<<<<<< HEAD
             <button id="sumbitForm" type="submit" class="btn btn-success me-2" [disabled]="f.invalid || isLoading">
+=======
+            <button id="submit" type="submit" class="btn btn-success me-2" [disabled]="f.invalid || isLoading">
+>>>>>>> 18e8930b7b9e2bfa3724a8a7e49dfff8973d0548
               <span *ngIf="isLoading" class="spinner-border spinner-border-sm"></span>
               {{ isEditing ? 'Guardar' : 'Registrar' }}
             </button>
@@ -166,7 +170,7 @@
 
       <div *ngIf="productos.length > 0; else noProd">
         <div class="table-responsive">
-          <table class="table table-striped table-hover">
+          <table id="tablaProductos" class="table table-striped table-hover">
             <thead class="table-dark">
               <tr>
                 <th>#</th>

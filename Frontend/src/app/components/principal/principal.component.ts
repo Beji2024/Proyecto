@@ -17,14 +17,11 @@ export class PrincipalComponent {
     if (confirmLogout) {
       localStorage.removeItem('token');
       this.router.navigate(['/login']);
-    } else {
-      
-      history.pushState(null, '', window.location.href);
     }
+      
   };
 
   constructor(private router: Router) {
-    history.pushState(null, '', window.location.href);
     window.addEventListener('popstate', this.popStateHandler);
   }
   ngOnDestroy(): void {

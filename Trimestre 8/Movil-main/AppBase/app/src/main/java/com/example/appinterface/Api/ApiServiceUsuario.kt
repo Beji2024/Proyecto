@@ -18,6 +18,4 @@ interface ApiServiceUsuario {
 
     @DELETE("/usuarios/{numDoc}")
     fun deleteUsuario(@Path("numDoc") numDoc: String): Call<ResponseBody>
-
-
 }

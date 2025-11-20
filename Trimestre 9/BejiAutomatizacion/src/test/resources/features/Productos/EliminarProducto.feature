@@ -7,6 +7,7 @@ Característica: Eliminar un producto en la página web de Sport10
   Para mantener actualizado el inventario y retirar los productos que ya no estén disponibles
 
   Antecedentes:
+<<<<<<< HEAD
     Dado que el administrador este en la pagina
     Cuando ingrese las crendenciales para loguearse:
       | email            | password             |
@@ -25,3 +26,13 @@ Característica: Eliminar un producto en la página web de Sport10
     Y dé clic en la opción "Eliminar" correspondiente a ese producto
     Y confirme la acción de eliminación
     Entonces se debe verificar que el producto eliminado ya no aparezca en la tabla de productos registrados
+=======
+    Dado que el administrador esté en el módulo de productos con las credenciales:
+      | email            | password |
+      | felipe@gmail.com | skjdahkjshdu13432.,-   |
+
+  @EliminarProductos
+  Escenario: Eliminar el último producto registrado correctamente
+    Cuando el administrador elimine el último producto de la lista
+    Entonces el producto debe desaparecer de la lista de productos
+>>>>>>> 18e8930b7b9e2bfa3724a8a7e49dfff8973d0548

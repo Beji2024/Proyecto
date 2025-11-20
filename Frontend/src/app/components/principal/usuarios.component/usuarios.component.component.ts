@@ -18,7 +18,7 @@ export class UsuariosComponent implements OnInit {
   usuariosPaginados: Usuario[] = [];
 
   paginaActual: number = 1;
-  usuariosPorPagina: number = 2;
+  usuariosPorPagina: number = 3;
 
   constructor(private usuariosService: UsuariosService, private router: Router) {}
 
@@ -65,6 +65,7 @@ export class UsuariosComponent implements OnInit {
     this.usuariosService.eliminarUsuario(id).subscribe({
       next: () => {
         this.usuarios = this.usuarios.filter(usuario => usuario.id !== id);
+        this.actualizarUsuariosPaginados();
         console.log(`Usuario con id ${id} eliminado.`);
       },
       error: (error) => {

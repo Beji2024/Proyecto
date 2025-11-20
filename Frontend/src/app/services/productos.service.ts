@@ -21,12 +21,11 @@ export class ProductosService {
 
   createProducto(producto: FormData): Observable<Producto> {
   return this.http.post<Producto>(`${this.apiUrl}/mercancia`, producto);
-}
+  }
 
-updateProducto(id: number, producto: FormData): Observable<Producto> {
-  return this.http.post<Producto>(`${this.apiUrl}/mercancia/${id}?_method=PUT`, producto);
-  // usamos POST con _method=PUT porque FormData no se lleva bien con PUT en Laravel
-}
+  updateProducto(id: number, producto: FormData): Observable<Producto> {
+    return this.http.post<Producto>(`${this.apiUrl}/mercancia/${id}?_method=PUT`, producto);
+  }
 
   deleteProducto(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/mercancia/${id}`);
@@ -41,12 +40,11 @@ updateProducto(id: number, producto: FormData): Observable<Producto> {
   }
 
   getProductosPorCategoria(idCategoria: number): Observable<Producto[]> {
-  return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/categoria/${idCategoria}`);
-}
-
+    return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/categoria/${idCategoria}`);
+  }
 
   getProductosPorSubcategoria(idSubcategoria: number): Observable<Producto[]> {
-  return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/subcategoria/${idSubcategoria}`);
+    return this.http.get<Producto[]>(`${this.apiUrl}/mercancia/subcategoria/${idSubcategoria}`);
   }
 
 }

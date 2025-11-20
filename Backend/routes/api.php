@@ -17,8 +17,6 @@ use App\Http\Controllers\Api\PedidoController;
 // RUTAS PÚBLICAS
 Route::post('/login', [AuthContoroller::class, 'login']);
 
-// RUTAS PROTEGIDAS POR JWT
-
     // Auth
     Route::get('/me', [AuthContoroller::class, 'me']);
     Route::post('/logout', [AuthContoroller::class, 'logout']);
@@ -77,7 +75,10 @@ Route::post('/login', [AuthContoroller::class, 'login']);
     'index', 'store', 'show'
 ]);
  
+<<<<<<< HEAD
     
     
     
+=======
+>>>>>>> 18e8930b7b9e2bfa3724a8a7e49dfff8973d0548
     

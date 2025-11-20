@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Editar proveedor existente","Editar un proveedor exitosamente","SUCCESS","2025-11-13T11:20:13.969851-05:00[America/Bogota]","0.0","17.98"
+"Eliminar proveedor","Eliminar proveedor exitosamente","SUCCESS","2025-11-13T11:20:41.702697-05:00[America/Bogota]","0.0","16.84"
+"Registrar un nuevo proveedor","Registrar un proveedor exitosamente","SUCCESS","2025-11-13T11:19:39.595189-05:00[America/Bogota]","0.0","22.66"
+"Loguearse en la pagina Sport10","Validar el inicio de sesion exitoso","SUCCESS","2025-11-13T11:21:16.5609955-05:00[America/Bogota]","0.0","11.19"

@@ -37,4 +37,8 @@ public class DatosProducto {
     public String getMaterial() { return material; }
     public String getColor() { return color; }
     public String getImagen() { return imagen; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18e8930b7b9e2bfa3724a8a7e49dfff8973d0548
 }

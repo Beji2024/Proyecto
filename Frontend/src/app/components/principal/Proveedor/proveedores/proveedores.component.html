@@ -45,13 +45,13 @@
     </tbody>
   </table>
   <div class="d-flex justify-content-between align-items-center mt-3">
-  <button class="btn btn-outline-secondary" (click)="cargarProveedores(currentPage - 1)" [disabled]="currentPage === 1">
+  <button id="btn-anterior" class="btn btn-outline-secondary" (click)="cargarProveedores(currentPage - 1)" [disabled]="currentPage === 1">
     Anterior
   </button>
   
-  <span>Página {{ currentPage }} de {{ lastPage }}</span>
+  <span id="pagina-actual">Página {{ currentPage }} de {{ lastPage }}</span>
   
-  <button class="btn btn-outline-secondary" (click)="cargarProveedores(currentPage + 1)" [disabled]="currentPage === lastPage">
+  <button  id="btn-siguiente" class="btn btn-outline-secondary" (click)="cargarProveedores(currentPage + 1)" [disabled]="currentPage === lastPage">
     Siguiente
   </button>
 </div>

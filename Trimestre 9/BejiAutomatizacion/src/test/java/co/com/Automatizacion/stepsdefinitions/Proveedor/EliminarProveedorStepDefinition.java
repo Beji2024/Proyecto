@@ -1,7 +1,6 @@
 package co.com.Automatizacion.stepsdefinitions.Proveedor;
 
 import co.com.Automatizacion.models.Usuarios.DatosLogin;
-import co.com.Automatizacion.tasks.Proveedor.AbrirPagina;
 import co.com.Automatizacion.tasks.Proveedor.EliminarProveedor;
 import co.com.Automatizacion.tasks.Proveedor.IngresarModuloProveedor;
 import cucumber.api.java.es.Dado;
@@ -23,14 +22,14 @@ public class EliminarProveedorStepDefinition {
         theActorCalled("Administrador").attemptsTo(IngresarModuloProveedor.con(datosLogin));
     }
 
-    @Cuando("^el administrador elimine el proveedor con NIT (.*)$")
-    public void eliminarProveedor(String nit) {
-        theActorInTheSpotlight().attemptsTo(EliminarProveedor.conNIT(nit));
+    @Cuando("^el administrador elimine un proveedor aleatorio$")
+    public void eliminarProveedorAleatorio() {
+        theActorInTheSpotlight().attemptsTo(EliminarProveedor.deTodasLasPaginas());
     }
 
-    @Entonces("^el proveedor con NIT (.*) no debe aparecer en la lista$")
-    public void verificarEliminacion(String nit) {
-        theActorInTheSpotlight().should(seeThat(noExiste(nit)));
+    @Entonces("^el proveedor eliminado no debe aparecer en la lista$")
+    public void verificarEliminacionAleatoria() {
+        String nitEliminado = theActorInTheSpotlight().recall("NIT_ELIMINADO");
+        theActorInTheSpotlight().should(seeThat(noExiste(nitEliminado)));
     }
-
 }

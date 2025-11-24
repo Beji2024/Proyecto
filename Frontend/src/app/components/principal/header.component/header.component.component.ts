@@ -12,6 +12,10 @@ import { Router } from '@angular/router';
 export class HeaderComponentComponent {
   constructor(private router: Router) {}
 
+  irInicio() {
+    this.router.navigate(['/principal']); // Aquí va tu ruta principal
+  }
+
   confirmarLogout() {
     const confirmAction = window.confirm('¿Estás seguro de que deseas cerrar sesión?');
     if (confirmAction) {

@@ -63,8 +63,8 @@
                     [attr.aria-pressed]="showPassword"
                     title="Mostrar / ocultar contraseña"
                   >
-                    <span *ngIf="!showPassword">👁️</span>
-                    <span *ngIf="showPassword">🙈</span>
+                    <span *ngIf="!showPassword"></span>
+                    <span *ngIf="showPassword"></span>
                   </button>
                 </div>
                 <div *ngIf="(passwordModel.invalid && (passwordModel.touched || loginForm.submitted))" class="text-danger small mt-1">

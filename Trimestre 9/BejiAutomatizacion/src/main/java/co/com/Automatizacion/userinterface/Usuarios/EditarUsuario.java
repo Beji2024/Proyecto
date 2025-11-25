@@ -21,6 +21,8 @@ public class EditarUsuario  extends PageObject{
             .located(By.id("rol_id"));
     public static Target BTN_ENVIAR = Target.the("Boton de enviar")
             .located(By.id("enviar"));
+    public static Target INPUT_CLAVE = Target.the("Campo contraseña")
+            .located(By.id("password"));
     public static final Target COLUMNA_APELLIDO = Target.the("columna de apellidos")
             .locatedBy("h5.fw-bold.mb-2 span.apellido");
 

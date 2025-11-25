@@ -37,6 +37,15 @@
             </div>
 
             <div class="input-group ">
+                <label class="input-group-text mt-2" for="password">Contraseña</label>
+                <input class="form-control mt-2" id="password" type="text" formControlName="password"/>
+            </div>
+            <div *ngIf="editarForm.get('password')?.touched && editarForm.get('password')?.invalid" class="text-danger mb-2 ms-2">
+                <div *ngIf="editarForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</div>
+                <div *ngIf="editarForm.get('password')?.errors?.['pattern']">Debe contener almenos 8 caracteres.</div>
+            </div>
+
+            <div class="input-group ">
                 <label class="input-group-text mt-2" for="rol_id">Rol</label>
                 <select class="form-control mt-2" id="rol_id" formControlName="rol_id">
                 <option value="">Seleccione un rol</option>

@@ -32,7 +32,8 @@ export class EditarComponent implements OnInit {
       tipo_doc: ['', Validators.required],
       rol_id: ['', Validators.required],
       apellidos: ['', Validators.required],
-      nombres:['',Validators.required]
+      nombres:['',Validators.required],
+      password:['', Validators.required]
     });
   }
 
@@ -61,7 +62,8 @@ export class EditarComponent implements OnInit {
           tipo_doc: usuario.tipodoc_id,
           rol_id: usuario.rol_id,
           nombres: usuario.nombres,
-          apellidos: usuario.apellidos
+          apellidos: usuario.apellidos,
+          password: usuario.password
         });
       },
       error: (err) => console.error('Error al cargar el usuario', err)

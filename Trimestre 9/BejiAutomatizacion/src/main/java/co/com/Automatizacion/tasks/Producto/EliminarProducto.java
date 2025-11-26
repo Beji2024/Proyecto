@@ -1,13 +1,12 @@
 package co.com.Automatizacion.tasks.Producto;
 
+import co.com.Automatizacion.interactions.Esperar;
 import co.com.Automatizacion.userinterface.Productos.Producto;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.List;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -34,7 +33,7 @@ public class EliminarProducto implements Task {
                 Click.on(Producto.BTN_ELIMINAR_ULTIMO),
                 WaitUntil.the(Producto.BTN_ELIMINARCONFIRMACION, isVisible()).forNoMoreThan(5).seconds(),
                 Click.on(Producto.BTN_ELIMINARCONFIRMACION),
-                co.com.Automatizacion.tasks.venta.Esperar.segundos(30)
+                Esperar.segundos(30)
         );
 
     }

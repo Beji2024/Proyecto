@@ -1,5 +1,6 @@
 package co.com.Automatizacion.tasks.Producto;
 
+import co.com.Automatizacion.interactions.Esperar;
 import co.com.Automatizacion.models.Producto.DatosProducto;
 import co.com.Automatizacion.userinterface.Productos.Producto;
 import net.serenitybdd.screenplay.Actor;
@@ -39,7 +40,7 @@ public class CrearProducto implements Task {
         }
 
         actor.attemptsTo(
-                co.com.Automatizacion.tasks.venta.Esperar.segundos(15),
+                Esperar.segundos(15),
                 Click.on(Producto.BTN_NUEVOPRODUCTO),
                 Enter.theValue(datosProducto.getNombreProducto()).into(Producto.CAMPO_NOMBRE),
                 SelectFromOptions.byVisibleText(datosProducto.getCategoria()).from(Producto.CAMPO_CATEGORIA),

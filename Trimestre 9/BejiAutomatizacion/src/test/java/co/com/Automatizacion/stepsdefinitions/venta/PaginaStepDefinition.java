@@ -1,6 +1,7 @@
 package co.com.Automatizacion.stepsdefinitions.venta;
 
 
+import co.com.Automatizacion.interactions.Esperar;
 import co.com.Automatizacion.tasks.venta.*;
 import co.com.Automatizacion.userinterface.venta.ClickEnConsultarVenta;
 import cucumber.api.DataTable;

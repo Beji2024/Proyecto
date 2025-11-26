@@ -53,7 +53,7 @@ public class ValidacionEditar implements Question<Boolean> {
 
                     logger.info("Pasando a la siguiente página...");
                     siguiente.get(0).click();
-                    Thread.sleep(2000);
+                    Thread.sleep(10);
                     pagina++;
                 }
                 if (!encontrado) {

@@ -29,27 +29,19 @@ public class Proveedor extends PageObject {
 
     public static final Target INPUT_CONFIRMACION = Target.the("Mensaje de inicio del sistema")
             .located(By.id("Titulo"));
+
+    public static final Target COLUMNA_NIT = Target.the("columna NIT del proveedor")
+            .located(By.xpath("//table//tbody//tr//td[2]"));
+
+    public static Target BTN_SIGUIENTE =
+            Target.the("Botón siguiente página")
+                    .located(By.xpath("//button[contains(normalize-space(.),'Siguiente')]"));
     public static Target BTN_ELIMINAR_PROVEEDOR(String nit) {
         return Target.the("botón eliminar proveedor")
                 .located(By.xpath("//td[text()='" + nit + "']/following-sibling::td//button[contains(@class,'btn-danger')]"));
     }
 
-    public static Target BTN_EDITAR_PROVEEDOR =
-            Target.the("botón editar proveedor")
-                    .locatedBy("//tr[td[contains(text(),'{0}')]]//button[contains(@class,'btn-info')]");
 
-    public static Target EDT_CELULAR = Target.the("Campo celular del proveedor")
-            .located(By.id("celular"));
-
-    public static Target EDT_EMAIL = Target.the("Campo email del proveedor")
-            .located(By.id("email"));
-    public static Target EDT_DIRECCION = Target.the("Campo direccion del proveedor")
-            .located(By.id("direccion"));
-
-    public static Target BTN_ACTUALIZAR = Target.the("Botón actualizar")
-            .located(By.xpath("//button[text()='Actualizar']"));
-    public static Target TITULO_DATOS_PROVEEDORES = Target.the("Título de la página DATOS PROVEEDORES")
-            .located(By.xpath("//h2[contains(text(), 'DATOS PROVEEDORES')]"));
 }
 
 

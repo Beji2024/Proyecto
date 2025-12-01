@@ -1,5 +1,6 @@
 package co.com.Automatizacion.tasks.Producto;
 
+import co.com.Automatizacion.interactions.Esperar;
 import co.com.Automatizacion.models.Producto.DatosProducto;
 import co.com.Automatizacion.userinterface.Productos.Producto;
 import net.serenitybdd.screenplay.Actor;
@@ -25,19 +26,21 @@ public class EditarProducto implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(
-                Click.on(Producto.BTN_EDITAR),
+                Click.on(Producto.BTN_EDITAR_ULTIMO),
 
                 Clear.field(Producto.CAMPO_NOMBRE),
                 Enter.theValue(datosProducto.getNombreProducto()).into(Producto.CAMPO_NOMBRE),
 
                 SelectFromOptions.byVisibleText(datosProducto.getCategoria()).from(Producto.CAMPO_CATEGORIA),
                 SelectFromOptions.byVisibleText(datosProducto.getSubcategoria()).from(Producto.CAMPO_SUBCATEGORIA),
+
                 Clear.field(Producto.CAMPO_CANTIDAD),
                 Enter.theValue(String.valueOf(datosProducto.getCantidad())).into(Producto.CAMPO_CANTIDAD),
 
                 Clear.field(Producto.CAMPO_TALLA),
-                Enter.theValue(String.valueOf(datosProducto.getTalla())).into(Producto.CAMPO_TALLA),
+                Enter.theValue(datosProducto.getTalla()).into(Producto.CAMPO_TALLA),
 
                 Clear.field(Producto.CAMPO_PRECIO_VENTA),
                 Enter.theValue(String.valueOf(datosProducto.getPrecioVenta())).into(Producto.CAMPO_PRECIO_VENTA),
@@ -51,7 +54,9 @@ public class EditarProducto implements Task {
                 Clear.field(Producto.CAMPO_COLOR),
                 Enter.theValue(datosProducto.getColor()).into(Producto.CAMPO_COLOR),
 
-                Click.on(Producto.BTN_GUARDAR)
+                Click.on(Producto.BTN_GUARDAR),
+                Esperar.segundos(10)
         );
     }
 }
+

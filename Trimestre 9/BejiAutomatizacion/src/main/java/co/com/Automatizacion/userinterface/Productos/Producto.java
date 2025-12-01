@@ -56,6 +56,7 @@ public class Producto extends PageObject {
         return Target.the("producto con nombre " + nombreProducto)
                 .locatedBy("//td[contains(text(),'" + nombreProducto + "')]");
     }
+
     public static final Target BTN_ELIMINAR_ULTIMO = Target.the("botón eliminar del último producto en la tabla")
             .locatedBy("(//table[contains(@class,'table-striped') or contains(@class,'table-hover')]//button[contains(text(),'Eliminar')])[last()]");
 
@@ -63,5 +64,8 @@ public class Producto extends PageObject {
             .locatedBy("//table[contains(@class,'table-striped')]/tbody/tr");
 
     public static final By NOMBRE_PRODUCTO_EN_FILA = By.xpath(".//td[1]");
+
+    public static final Target BTN_EDITAR_ULTIMO = Target.the("botón editar del último producto en la tabla")
+            .locatedBy("(//table[contains(@class,'table-striped') or contains(@class,'table-hover')]//button[contains(text(),'Editar')])[last()]");
 
 }

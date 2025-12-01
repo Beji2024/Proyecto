@@ -71,24 +71,29 @@ class MercanciaController extends Controller
     return response()->json(['message' => 'Producto eliminado correctamente']);
     }
 
-    public function update(Request $request, $id)
+   public function update(Request $request, $id)
 {
     $producto = Mercancia::findOrFail($id);
 
     $data = $request->validate([
-        'cantidad' => 'required|integer',
-        'nombre' => 'required|string|max:50',
-        'talla' => 'required|integer',
-        'precio_venta' => 'required|numeric',
-        'precio_compra' => 'required|numeric',
-        'material' => 'required|string|max:30',
-        'color' => 'required|string|max:20',
-        'sub_mer' => 'required|integer',
-        'imagen' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        'cantidad' => 'integer',
+        'nombre' => 'string|max:50',
+        'talla' => 'integer',
+        'precio_venta' => 'numeric',
+        'precio_compra' => 'numeric',
+        'material' => 'string|max:30',
+        'color' => 'string|max:20',
+        'sub_mer' => 'integer',
+        'imagen' => 'nullable', // <-- importante
     ]);
 
-    // si viene una nueva imagen, reemplazar
+    // Validación solo si viene archivo
     if ($request->hasFile('imagen')) {
+
+        $request->validate([
+            'imagen' => 'image|mimes:jpg,jpeg,png|max:2048'
+        ]);
+
         $path = $request->file('imagen')->store('mercancias', 'public');
         $data['imagen'] = '/storage/' . $path;
     }

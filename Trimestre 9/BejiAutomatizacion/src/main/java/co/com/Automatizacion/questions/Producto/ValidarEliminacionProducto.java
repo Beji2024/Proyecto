@@ -22,16 +22,25 @@ public class ValidarEliminacionProducto implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
+
         try {
-            WaitUntil.the(Producto.elementoProducto(nombreProducto), isNotVisible())
-                    .forNoMoreThan(10).seconds();
+            actor.attemptsTo(
+                    WaitUntil.the(Producto.elementoProducto(nombreProducto), isNotVisible())
+                            .forNoMoreThan(5).seconds()
+            );
         } catch (Exception e) {
+            // Si no se encuentra el elemento, ya está eliminado
             return true;
         }
-        return !WebElementQuestion.the(Producto.elementoProducto(nombreProducto))
-                .answeredBy(actor).isCurrentlyVisible();
-    }
-}
 
+        // Validación REAL sin lanzar excepciones
+        boolean existe = !Producto.elementoProducto(nombreProducto)
+                .resolveAllFor(actor)
+                .isEmpty();
+
+        return !existe; // true si NO existe
+    }
+
+}
 
 

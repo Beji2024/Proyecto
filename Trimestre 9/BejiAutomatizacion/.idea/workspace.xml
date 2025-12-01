@@ -5,48 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f79c791f-edee-44f5-9c1e-3bb590c12a7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Producto/ValidarEliminacionProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/categorias y sub/menu-categorias/menu-categorias.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/categorias y sub/menu-categorias/menu-categorias.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/components/productos/gestion-productos/gestion-productos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/src/app/modelos/producto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/src/app/modelos/producto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/Producto/DatosProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/models/Producto/DatosProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Producto/ValidarCreacionProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/questions/Producto/ValidarCreacionProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/CrearProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/CrearProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EditarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EliminarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/Producto/EliminarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/venta/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/tasks/venta/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Productos/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/Automatizacion/userinterface/Productos/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EditarProductosStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EditarProductosStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EliminarProductosStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/Automatizacion/stepsdefinitions/Productos/EliminarProductosStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Productos/CrearProducto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Productos/CrearProducto.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Productos/EditarProducto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Productos/EditarProducto.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Productos/EliminarProducto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Productos/EliminarProducto.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb_screenshots.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb_screenshots.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-245125d1ac301cc44fabeefbd10222fce7f3c289a495396e5eacfd251ba6adbb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,33 +78,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Scenario: Validar el inicio de sesion exitoso.executor": "Run",
-    "Gradle.Build BejiAutomatizacion.executor": "Run",
-    "Gradle.CrearProductoRunner.executor": "Run",
-    "Gradle.EditarProveedorRunner.executor": "Run",
-    "Gradle.EditarUsuarioRunner (1).executor": "Run",
-    "Gradle.EditarUsuarioRunner.executor": "Run",
-    "Gradle.EliminarProductoRunner.executor": "Run",
-    "Gradle.EliminarProveedorRunner.executor": "Run",
-    "Gradle.EliminarUsuarioRunner (1).executor": "Run",
-    "Gradle.EliminarUsuarioRunner.executor": "Run",
-    "Gradle.LoginRunner (1).executor": "Run",
-    "Gradle.LoginRunner.executor": "Run",
-    "Gradle.RegistrarProveedorRunner.executor": "Run",
-    "Gradle.RegistrarUsuarioRunner (1).executor": "Run",
-    "Gradle.RegistrarUsuarioRunner.executor": "Run",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Rama__juan",
-    "last_opened_file_path": "C:/Users/aprendiz.sena/Proyecto/Trimestre 9/BejiAutomatizacion",
-    "onboarding.tips.debug.path": "C:/Users/aprendiz.sena/Downloads/BejiAutomatizacion/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Scenario: Validar el inicio de sesion exitoso.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build BejiAutomatizacion.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CrearProductoRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EditarProveedorRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EditarUsuarioRunner (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EditarUsuarioRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EliminarProductoRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EliminarProveedorRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EliminarUsuarioRunner (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EliminarUsuarioRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginRunner (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrarProveedorRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrarUsuarioRunner (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrarUsuarioRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juanm/ULTIMO REPO PORFA/Proyecto/Trimestre 9/BejiAutomatizacion&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/aprendiz.sena/Downloads/BejiAutomatizacion/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\aprendiz.sena\Downloads\BejiAutomatizacion\src\test\java\co\com\Automatizacion\runners" />

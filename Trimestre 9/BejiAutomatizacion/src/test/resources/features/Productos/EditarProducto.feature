@@ -14,7 +14,7 @@ Característica: Editar un producto en la página web de Sport10
   @EditarProductos
   Escenario: Editar el último producto registrado correctamente
     Cuando el administrador edite el último producto con los siguientes datos:
-      | nombre_producto | categoria | subcategoria | cantidad | talla | precio_venta | precio_compra | material   | color | imagen |
-      |                 |            |              |           |       |              |               |            |       |        |
+      | nombre_producto | categoria | subcategoria | cantidad | talla | precio_venta | precio_compra | material | color | imagen |
+      | Guayos Nike     | Mujer     | Botin        | 10       | 42    | 260000       | 180000        | Cuero    | Negro |        |
     Y presione el botón "Actualizar"
     Entonces el producto editado debe mostrarse correctamente actualizado en la lista de productos

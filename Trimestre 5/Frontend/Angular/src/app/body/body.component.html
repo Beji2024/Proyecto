@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class=" bg-morado w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5" >
+    <div class=" w-50 text-center p-4 mx-auto ">
+        <h2 class="mb-2 mt-4">Menu</h2>
+        <div class="d-flex justify-content-center align-items-center h-25">
+            <label for="exampleSelect"></label>
+            <select class="form-select" id="exampleSelect">
+              <option selected>Selecciona...</option>
+              <option value="1">Ganacias</option>
+              <option value="2">Ventas</option>
+              <option value="3">Productos</option>
+            </select>
+          </div>
+
+        <h2 class=" mt-4">Fecha Inicio</h2>
+        <div class="mb-3">
+            <label for="exampleDate" class="form-label"></label>
+            <input type="date" class="form-control" id="exampleDate">
+          </div>
+        <h2 class="mt-4">Fecha Final</h2>
+        <div class="mb-3">
+            <label for="exampleDate" class="form-label"></label>
+            <input type="date" class="form-control" id="exampleDate">
+          </div>
+          <div class="m-3">
+            <h1><input type="submit" class="btn btn-success" value="Enviar" (click)="navigateToTabla()"></h1>
+          </div>        
+
+    </div>
+  </div>    

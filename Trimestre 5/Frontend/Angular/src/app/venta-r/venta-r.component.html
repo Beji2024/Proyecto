@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<div class=" w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5"  >
+  
+    <div class=" d-flex justify-content-center align-items-center h-25">
+        <h4 class="text-center mt-4 mb-0">Registro de venta</h4>
+    </div>
+    
+    <div class="w-75 mx-auto mt-3 mb-0">
+      <div class="input-group mb-3">
+        <span class="input-group-text mt-4">Nombre de cliente</span>
+        <input type="text " aria-label="First name" class="form-control mt-4">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text">Direccion de residencia</span>
+        <input type="text" aria-label="Direccion" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Correo</span>
+        <input type="email" aria-label="Correo" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Numero de contacto</span>
+        <input type="number" aria-label="Numero telefono" class="form-control">
+      </div>
+     <div class="input-group mb-3">
+        <span class="input-group-text">Numero de documento</span>
+        <input type="number" aria-label="Numero documento" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Codigo de zapato</span>
+        <input type="number" aria-label="Codigo numero" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Cantidad</span>
+        <input type="number" aria-label="Cantidad" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">ID Vendedor</span>
+        <input type="number" aria-label="Id Vendedor" class="form-control">
+      </div>
+      <div class="col-auto d-flex justify-content-center ">
+        <button class="btn btn-success mb-5 shadow" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrar</button>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea registrar la venta?</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="modal-title fs-5">Registro de venta exitoso</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>

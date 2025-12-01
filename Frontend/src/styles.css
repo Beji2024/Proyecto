@@ -1,0 +1,5 @@
+body {
+  background: radial-gradient(circle at top left, #f7f5fa, #ece9f4, #e9e6f1);
+  background-attachment: fixed;
+  font-family: 'Raleway', sans-serif;
+}

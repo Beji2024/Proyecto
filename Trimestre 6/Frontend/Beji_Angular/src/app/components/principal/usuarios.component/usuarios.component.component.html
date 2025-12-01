@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="m-5 mt-1 mb-0">
+  <img class="m-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLrG5rQbIDkNP22MimEOOiCzRZNXZF3yrRxQ&s" 
+  alt="image" height="100px">
+  <button (click)="IRRegistro()" class="btn btn-success shadow">Nuevo usuario</button>
+</div>
+
+
+<div class="container" >
+  <table class="mx-auto w-100 mb-5">
+    <tbody>
+      <tr *ngFor="let usuario of usuarios" class="w-100 d-flex justify-content-center align-items-center shadow d-flex ms-5 mx-5">
+          <img class="img-fluid w-50 ms-5" alt="Imagen" src="data:image/png;base64,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">
+        <div class="list-group list-group-flush mx-5 w-100 mb-3 mt-5" > 
+        <td class="list-group-item "> <b class="m-3">Documento:</b> {{ usuario.num_doc }}</td>
+        <td class="list-group-item"> <b class="m-3">Nombres:</b> {{ usuario.nombres }}</td>
+        <td class="list-group-item"><b class="m-3">Apellidos:</b> {{ usuario.apellidos }}</td>
+        <td class="list-group-item"><b class="m-3">Direccion:</b>{{ usuario.direccion }}</td>
+        <td class="list-group-item"> <b class="m-3">Email:</b> {{ usuario.email }}</td>
+        <td class="list-group-item"> <b class="m-3">Telefono:</b>{{ usuario.num_tel }}</td>
+        <td class="list-group-item"><b class="m-3">Fecha de Nacimiento:</b>{{ usuario.fec_nac }}</td>
+        <td class="list-group-item"><b class="m-3">Tipo de Documento:</b>{{ usuario.tipodoc.name }}</td> 
+        <td class="list-group-item"><b class="m-3">Rol:</b>{{ usuario.rol.name}}</td>      
+        </div>
+
+        <div>
+          <tr class="d-flex mx-5">
+            <td class="list-group-item m-2">  
+              <button (click)="editarUsuario(usuario.id)" class="btn btn-success shadow">Editar</button>
+            </td> 
+            <td><button (click)="eliminarUsuario(usuario.id)" class="btn btn-danger m-2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button></td>
+          </tr>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>

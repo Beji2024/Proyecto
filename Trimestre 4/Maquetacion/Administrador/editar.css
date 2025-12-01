@@ -1,0 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body{
+   width: 100%;
+    min-height: 100vh;
+}
+
+#titulo{
+   grid-column: 1/7;
+   display: flex;
+   justify-content: space-between;
+   background: #a30dda;
+   padding: 5px;
+   gap: 20px;
+}
+#titulo h1{
+   font-family: "calibri";
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   color: white;
+   text-shadow: 
+   3px 3px 0 black,
+   -3px -3px 0 black,
+   3px -3px 0 black,
+   -3px 3px 0 black;
+   font-size: 80px;
+   margin:0 auto 
+}
+#titulo h2{
+   font-family: "calibri";
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 40px;
+   margin-right: 90px;
+   color: aliceblue;
+   color: white;
+   text-shadow: 
+   2px 2px 0 black,
+   -2px -2px 0 black,
+   2px -2px 0 black,
+   -2px 2px 0 black;
+}
+#titulo h4{
+   width: 5%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 2%;
+}
+
+#contenedor{
+   width: 80%;
+   margin:0px auto;
+   margin-top: 20px;
+   display: flex;
+   flex-flow:column wrap;
+   gap: 20px;
+}
+
+#contenedor a{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   margin: auto;
+}
+#contenedor a:hover{
+   color: #ff0015;
+   font-weight: bold;
+   transform: translate(3px);
+}
+
+img{
+   width: 40px;
+   height: 40px;
+}
+
+table{
+   width: 100%;
+   margin: auto;
+}
+
+table tr{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 10px;
+}
+
+fieldset{
+   width: 40%;
+   margin: auto;
+   border: rgb(0, 0, 0) 8px double;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+legend{
+   font-weight: bold;
+   padding: 5px;
+   border: rgb(0, 0, 0) 8px double;
+   background: #a30dda;
+}
+
+h3{
+   font-weight: 500;
+}
+
+input{
+   background: rgb(209, 204, 204);
+   border: 0;
+   padding: 5px 15px;
+   border-radius:5px ;
+}
+
+
+#boton{
+   width: 204%;
+}
+
+#boton a{
+   border: 2px solid rgb(12, 12, 12);
+   width: 170px;
+   border-radius: 10px;
+    background: #00fc71;
+    color: #020202;
+    text-transform: uppercase;
+    font-size: 1,5em;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+}
+#boton a:hover{
+   color: white;
+}
+
+@media(max-width:360px){
+    table tr{
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+       gap: 10px;
+    }
+    #boton{
+       width: 100%;
+    }
+    }

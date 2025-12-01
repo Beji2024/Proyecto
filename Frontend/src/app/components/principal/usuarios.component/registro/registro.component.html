@@ -1,0 +1,127 @@
+<app-header></app-header>
+
+<div class="container d-flex justify-content-between align-items-start mt-5 mb-5 flex-wrap">
+  <div class="image-container align-items-center shadow mb-3">
+    <img class="img-fluid" src="../../../../../assets/imagenes/Editar.jpeg" alt="Imagen">
+  </div>
+
+  <form class="form-scroll shadow" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="num_doc">Número de documento:</label>
+      <input class="form-control" id="num_doc" formControlName="num_doc" type="text"
+        [ngClass]="{ 'is-invalid': registroForm.get('num_doc')?.invalid && registroForm.get('num_doc')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('num_doc')?.hasError('required') && registroForm.get('num_doc')?.touched">
+        El número de documento es obligatorio.
+      </div>
+      <div class="invalid-feedback" *ngIf="registroForm.get('num_doc')?.hasError('pattern') && registroForm.get('num_doc')?.touched">
+        Solo se permiten números (sin letras ni símbolos).
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nombres">Nombres:</label>
+      <input class="form-control" id="nombres" formControlName="nombres" type="text"
+        [ngClass]="{ 'is-invalid': registroForm.get('nombres')?.invalid && registroForm.get('nombres')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('nombres')?.hasError('required') && registroForm.get('nombres')?.touched">
+        El nombre es obligatorio.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="apellidos">Apellidos:</label>
+      <input class="form-control" id="apellidos" formControlName="apellidos" type="text"
+        [ngClass]="{ 'is-invalid': registroForm.get('apellidos')?.invalid && registroForm.get('apellidos')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('apellidos')?.hasError('required') && registroForm.get('apellidos')?.touched">
+        Los apellidos son obligatorios.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="direccion">Dirección:</label>
+      <input class="form-control" id="direccion" formControlName="direccion" type="text"
+        [ngClass]="{ 'is-invalid': registroForm.get('direccion')?.invalid && registroForm.get('direccion')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('direccion')?.hasError('required') && registroForm.get('direccion')?.touched">
+        La dirección es obligatoria.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo electrónico:</label>
+      <input class="form-control" id="email" formControlName="email" type="email"
+        [ngClass]="{ 'is-invalid': registroForm.get('email')?.invalid && registroForm.get('email')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('email')?.hasError('required') && registroForm.get('email')?.touched">
+        El correo es obligatorio.
+      </div>
+      <div class="invalid-feedback" *ngIf="registroForm.get('email')?.hasError('email') && registroForm.get('email')?.touched">
+        El correo no es válido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="num_tel">Número de teléfono:</label>
+      <input class="form-control" id="num_tel" formControlName="num_tel" type="text"
+        [ngClass]="{ 'is-invalid': registroForm.get('num_tel')?.invalid && registroForm.get('num_tel')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('num_tel')?.hasError('required') && registroForm.get('num_tel')?.touched">
+        El número de teléfono es obligatorio.
+      </div>
+      <div class="invalid-feedback" *ngIf="registroForm.get('num_tel')?.hasError('pattern') && registroForm.get('num_tel')?.touched">
+        Debe contener exactamente 10 números sin letras.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fec_nac">Fecha de nacimiento:</label>
+      <input class="form-control" id="fec_nac" formControlName="fec_nac" type="date"
+        [ngClass]="{ 'is-invalid': registroForm.get('fec_nac')?.invalid && registroForm.get('fec_nac')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('fec_nac')?.hasError('required') && registroForm.get('fec_nac')?.touched">
+        La fecha de nacimiento es obligatoria.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Contraseña:</label>
+      <input class="form-control" id="password" formControlName="password" type="password"
+        [ngClass]="{ 'is-invalid': registroForm.get('password')?.invalid && registroForm.get('password')?.touched }" />
+      <div class="invalid-feedback" *ngIf="registroForm.get('password')?.hasError('required') && registroForm.get('password')?.touched">
+        La contraseña es obligatoria.
+      </div>
+      <div class="invalid-feedback" *ngIf="registroForm.get('password')?.hasError('minlength') && registroForm.get('password')?.touched">
+        La contraseña debe tener al menos 6 caracteres.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="tipodoc_id">Tipo de documento:</label>
+      <select class="form-control" id="tipodoc_id" formControlName="tipodoc_id"
+        [ngClass]="{ 'is-invalid': registroForm.get('tipodoc_id')?.invalid && registroForm.get('tipodoc_id')?.touched }">
+        <option value="">Seleccione un tipo</option>
+        <option value="1">Cédula de ciudadanía</option>
+        <option value="2">Pasaporte</option>
+        <option value="3">Tarjeta de identidad</option>
+      </select>
+      <div class="invalid-feedback" *ngIf="registroForm.get('tipodoc_id')?.hasError('required') && registroForm.get('tipodoc_id')?.touched">
+        Seleccione un tipo de documento.
+      </div>
+    </div>
+
+    <div class="form-group mb-4">
+      <label for="rol_id">Rol:</label>
+      <select class="form-control" id="rol_id" formControlName="rol_id"
+        [ngClass]="{ 'is-invalid': registroForm.get('rol_id')?.invalid && registroForm.get('rol_id')?.touched }">
+        <option value="">Seleccione un rol</option>
+        <option value="1">Administrador</option>
+        <option value="2">Vendedor</option>
+        <option value="3">Bodeguero</option>
+      </select>
+      <div class="invalid-feedback" *ngIf="registroForm.get('rol_id')?.hasError('required') && registroForm.get('rol_id')?.touched">
+        Seleccione un rol.
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mb-5">
+      <button class="btn btn-success" type="submit" [disabled]="registroForm.invalid" id="enviar">Registrar</button>
+    </div>
+
+  </form>
+</div>

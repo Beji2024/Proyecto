@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+body{
+    font-size: 70.5%;
+    background-color:white  
+}
+
+header{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-between;
+    background: #a30dda;
+    padding: 5px;
+    width: 100%;
+    gap: 20px;
+    height: 110px;
+}
+header h1{
+    font-family: "calibri";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+    3px 3px 0 black,
+    -3px -3px 0 black,
+    3px -3px 0 black,
+    -3px 3px 0 black;
+    font-size: 80px;
+    margin:0 auto; 
+    
+        
+    }
+
+    header h2{
+        font-family: "calibri";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        text-shadow: 
+        3px 3px 0 black,
+        -3px -3px 0 black,
+        3px -3px 0 black,
+        -3px 3px 0 black;
+        font-size: 40px;
+        margin:0 auto; 
+    }
+nav a{
+    
+    text-decoration: none;
+
+}
+
+    
+     
+nav h1 a{
+    font-family: "calibri";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+    3px 3px 0 black,
+    -3px -3px 0 black,
+    3px -3px 0 black,
+    -3px 3px 0 black;
+    font-size: 20px;
+    margin:0 auto 
+    
+}
+
+nav :hover{
+    transform: scale(1.1);
+    color: aliceblue;
+
+}
+
+#menu3{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin:0 auto;
+    margin-top: 5%;
+    font-size: xx-large;
+    width: 50%;
+    padding: 2%;
+    border: 2px solid #a30dda;;
+    box-shadow: 8px 8px 3px violet;
+}
+
+
+#menu3 select{
+    display: flex;
+    justify-content:center ;
+    gap: 10px;
+    width: 200px;
+    height: 30px;
+    color: black;
+    margin: 0 auto;
+}
+
+#menu3 option{
+    color: black;
+}
+#datos{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+#datos h3{
+   width: 100%;
+}
+#datos input{
+    width: 100%;
+ }
+ #datos a{
+    width: 100%;
+ }
+#menu3 input{
+    margin-top: 15px;
+    width: 15%;
+    height: 30px;
+    color: black;
+}
+#menu3 h1{
+    font-family: "calibri";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    font-size: 60px;
+    margin:0 auto   
+}
+#menu3 h3{
+    font-family: "calibri";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    font-size: 50px;
+    margin:0 auto 
+}
+#boton button{
+    margin-top: 4%;
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(40deg,#a30dda,pink);
+    color: black;   
+}
+#boton button:hover{
+    background: violet;
+    transition:all 0.5s;
+    transform: translate(5px,-5px);
+}
+
+
+@media  (max-width:720px){
+    
+    header{
+        width: 125%;
+    }
+    header h1{
+        font-size: 60px;     
+        }
+    #menu3{
+        width:125% ;
+    }
+}
+
+@media (max-width:360px){
+    
+    header{
+        width: 250%;
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+        
+    }
+    header h1{
+        font-size: 80px;     
+        }
+   nav h1 a{
+        font-size: 40px;
+    }
+    header h2{
+        font-size: 50px;
+    }
+    #menu3{
+        width: 250%;
+    }
+    #menu3 select{
+        gap: 10px;
+        width:300px;
+        height: 50px;
+        color: black;
+        font-size: xx-large;
+    }
+    #menu3 input{
+        font-size: xx-large;
+        font-weight: bold;
+        width: 300px;
+        height: 50px;
+        margin: 5px 20px;
+    }
+
+    #menu3 option{
+        font-size: 12px;
+    }
+    
+    
+} 

@@ -1,0 +1,75 @@
+<app-header></app-header>
+
+
+<div class="container w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5">
+    <div class=" d-flex justify-content-center align-items-center h-25">
+        <h4 class="text-center mt-4 mb-0">Registro de venta</h4>
+    </div>
+  
+
+    <form class="w-75 mx-auto mt-3 mb-0" [formGroup]="ventaForm" (ngSubmit)="registrarVenta()">
+      <div class="input-group mb-3">
+        <label for="nombre_cli" class="input-group-text mt-4">Nombre del cliente</label>
+        <input type="text" id="nombre_cli" formControlName="nombre_cli" class="form-control mt-4" />
+      </div>
+  
+      <div class="input-group mb-3">
+        <label for="direccion_cli" class="input-group-text mt-4">Dirección del cliente</label>
+        <input type="text" id="direccion_cli" formControlName="direccion_cli" class="form-control mt-4" />
+      </div>
+  
+      <div class="input-group mb-3">
+        <label for="correo_cli" class="input-group-text mt-4">Correo del cliente</label>
+        <input type="text" id="correo_cli" formControlName="correo_cli" class="form-control mt-4" />
+      </div>
+
+      <div class="input-group mb-3">
+        <label for="num_tel_cli" class="input-group-text mt-4">Numero de telefono del cliente</label>
+        <input type="text" id="num_tel_cli" formControlName="num_tel_cli" class="form-control mt-4" />
+      </div>
+
+      <div class="input-group mb-3">
+        <label for="num_doc_cli" class="input-group-text mt-4">Numero de documento del cliente</label>
+        <input type="text" id="num_doc_cli" formControlName="num_doc_cli" class="form-control mt-4" />
+      </div>
+
+      <div class="input-group mb-3">
+        <label for="producto_id" class="input-group-text mt-4">Referencia</label>
+        <select id="producto_id" class="form-select mt-4" formControlName="producto_id">
+          <option value="">Seleccione una Referencia</option>
+          <option *ngFor="let producto of productos" [value]="producto.id">
+            {{ producto.referencia }}
+          </option>
+        </select>
+      </div>
+      
+      <div class="input-group mb-3">
+        <label for="cantidad" class="input-group-text mt-4">Cantidad</label>
+        <input type="number" id="cantidad" formControlName="cantidad" class="form-control mt-4" />
+      </div>
+  
+      <div class="input-group mb-3">
+        <label for="vendedor_id" class="input-group-text mt-4">Vendedor</label>
+        <select id="vendedor_id" class="form-select mt-4" formControlName="vendedor_id">
+          <option value="">Seleccione un vendedor</option>
+          <option *ngFor="let vendedor of vendedores" [value]="vendedor.id">
+            {{ vendedor.nombres }} {{ vendedor.apellidos }}
+          </option>
+        </select>
+      </div>
+      
+      
+      <div class="col-auto d-flex justify-content-center mt-5">
+        <button class="btn btn-success shadow" type="submit">Registrar Venta</button>
+      </div>
+      
+    </form>
+    <div class="col-auto d-flex justify-content-center mt-4">
+        <!-- Mensajes -->
+    <div *ngIf="mensaje" class=" mb-4 alert alert-success ">
+        {{ mensaje }}
+      </div>
+      <div *ngIf="error" class="mb-4 alert alert-danger ">
+        {{ error }}
+      </div>
+    </div>

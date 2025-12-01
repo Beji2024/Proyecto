@@ -1,0 +1,135 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style>
+
+.bg-morado[_ngcontent-ng-c59352354] {
+  background:
+    linear-gradient(
+      90deg,
+      #6e42a4,
+      #9b59b6,
+      #c48bd4);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.marca[_ngcontent-ng-c59352354] {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background:
+    linear-gradient(
+      135deg,
+      #ddd8da,
+      #fcfbfc,
+      #ff9bda,
+      #cba6ff,
+      #eb87a7);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(196, 139, 212, 0.3);
+  animation: _ngcontent-ng-c59352354_rainbowMove 8s linear infinite;
+  transition: all 0.3s ease;
+}
+@keyframes _ngcontent-ng-c59352354_rainbowMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+.marca[_ngcontent-ng-c59352354]:hover {
+  text-shadow: 0 0 20px rgba(196, 139, 212, 0.6), ;
+}
+.acciones[_ngcontent-ng-c59352354] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.rol[_ngcontent-ng-c59352354] {
+  font-family: "Orbitron", sans-serif;
+  color: #e6dfff;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+.btn-cerrar-sesion[_ngcontent-ng-c59352354] {
+  background-color: #ffffff;
+  color: #6e42a4;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-cerrar-sesion[_ngcontent-ng-c59352354]:hover {
+  background-color: #f3e6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(110, 66, 164, 0.25);
+}
+@media (max-width: 992px) {
+  .titulo[_ngcontent-ng-c59352354] {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .marca[_ngcontent-ng-c59352354] {
+    font-size: 1.3rem;
+  }
+  .acciones[_ngcontent-ng-c59352354] {
+    align-items: center;
+  }
+  .btn-cerrar-sesion[_ngcontent-ng-c59352354] {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  .header[_ngcontent-ng-c59352354] {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+/*# sourceMappingURL=/header.component.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-crear-venta><app-header _nghost-ng-c59352354=""><div _ngcontent-ng-c59352354="" class="header bg-morado d-flex justify-content-between align-items-center px-4 py-3 shadow"><h1 _ngcontent-ng-c59352354="" id="Titulo" class="marca mb-0 ms-3" style="cursor: pointer;"> SISTEMA DE INVENTARIO
+</h1><h2 _ngcontent-ng-c59352354="" class="marca mb-0">SPORT 10</h2><div _ngcontent-ng-c59352354="" class="acciones text-end me-5"><h6 _ngcontent-ng-c59352354="" id="rol" class="rol mb-2 me-1">Administrador</h6><button _ngcontent-ng-c59352354="" class="btn-cerrar-sesion"> Cerrar sesión </button></div></div></app-header><div class="container w-50 aling-left ms-rigth mx-auto shadow mt-5 mb-5"><div class="d-flex justify-content-center align-items-center h-25"><h4 class="text-center mt-4 mb-0">Registro de venta</h4></div><form novalidate="" class="w-75 mx-auto mt-3 mb-0 ng-invalid ng-dirty ng-touched ng-submitted" ng-reflect-form="[object Object]"><div class="input-group mb-3"><label for="nombre_cli" class="input-group-text mt-4">Nombre del cliente</label><input type="text" id="nombre_cli" formcontrolname="nombre_cli" class="form-control mt-4 ng-dirty ng-valid ng-touched" ng-reflect-name="nombre_cli"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="direccion_cli" class="input-group-text mt-4">Dirección del cliente</label><input type="text" id="direccion_cli" formcontrolname="direccion_cli" class="form-control mt-4 ng-dirty ng-valid ng-touched" ng-reflect-name="direccion_cli"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div class="input-group mb-3"><label for="correo_cli" class="input-group-text mt-4">Correo del cliente</label><input type="text" id="correo_cli" formcontrolname="correo_cli" class="form-control mt-4 ng-dirty ng-valid ng-touched" ng-reflect-name="correo_cli"><!--bindings={
+  "ng-reflect-ng-if": null
+}--></div><div class="input-group mb-3"><label for="num_tel_cli" class="input-group-text mt-4">Numero de telefono del cliente</label><input type="text" id="num_tel_cli" formcontrolname="num_tel_cli" class="form-control mt-4 ng-dirty ng-valid ng-touched" ng-reflect-name="num_tel_cli"><!--bindings={
+  "ng-reflect-ng-if": null
+}--></div><div class="input-group mb-3"><label for="num_doc_cli" class="input-group-text mt-4">Numero de documento del cliente</label><input type="text" id="num_doc_cli" formcontrolname="num_doc_cli" class="form-control mt-4 ng-dirty ng-valid ng-touched" ng-reflect-name="num_doc_cli"><!--bindings={
+  "ng-reflect-ng-if": null
+}--></div><div class="input-group mb-3"><label for="cantidad" class="input-group-text mt-4">Cantidad</label><input type="number" id="cantidad" formcontrolname="cantidad" class="form-control mt-4 ng-dirty ng-valid ng-touched" ng-reflect-name="cantidad"><!--bindings={
+  "ng-reflect-ng-if": null
+}--></div><div class="input-group mb-3"><label for="vendedor_id" class="input-group-text mt-4">Vendedor</label><select id="vendedor_id" formcontrolname="vendedor_id" class="form-select mt-4 ng-dirty ng-valid ng-touched" ng-reflect-name="vendedor_id"><option value="" ng-reflect-value="">Seleccione un vendedor</option><option value="2" ng-reflect-value="2"> Breiner Gustavo Rojas </option><option value="6" ng-reflect-value="6"> Ivan Mateo Garcia Giraldo </option><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></select><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div id="registrar" class="col-auto d-flex justify-content-center mt-5"><button type="submit" class="btn btn-success shadow">Registrar Venta</button></div></form><div class="col-auto d-flex justify-content-center mt-4"><!--bindings={
+  "ng-reflect-ng-if": ""
+}--><div class="mb-4 alert alert-danger"> Por favor completa todos los campos correctamente </div><!--bindings={
+  "ng-reflect-ng-if": "Por favor completa todos los c"
+}--></div></div></app-crear-venta><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-JLU5CXBL.js">
+<link rel="modulepreload" href="chunk-UP3H5FQE.js">
+
+
+</body></html>

@@ -1,0 +1,197 @@
+
+<app-header/>
+<div class="navbar">
+    <div class="container-fluid">
+        <h1>DATOS PROVEEDORES</h1>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="mb-4">
+    <a class="btn btn-success" (click)="navigateToRegproveedores()">
+        <img src="img/boton-mas.png" alt="Registrar" height="20px"> Registrar
+    </a>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre del proveedor</th>
+                <th>Nit proveedor</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>Direccion</th>
+                <th>Producto</th>
+                <th>Marca</th>
+                <th>Valor unitario</th>
+                <th>Editar/Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Super calzado</td>
+                <td>1244645</td>
+                <td>6423158</td>
+                <td>superhotmail</td>
+                <td>cr 12 cl 23-43</td>
+                <td>Deportivo</td>
+                <td>Nike</td>
+                <td>300000</td>
+                <td>
+                    <a class="btn btn-info" (click)="navigateToProveditar()">Editar</a> /
+                    <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar el proveedor?</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confrimar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title fs-5">!Eliminacion Exitosa¡</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Calzado Real</td>
+                <td>124575</td>
+                <td>1546521</td>
+                <td>realcalzadohotmail.com</td>
+                <td>cr 1 cl 10-11</td>
+                <td>Damas</td>
+                <td>Puma</td>
+                <td>240000</td>
+                <td>
+                    <a href="editar.html" class="btn btn-info" >Editar</a> /
+                    <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar el proveedor?</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confrimar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title fs-5">!Eliminacion Exitosa¡</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Mundo Calzado</td>
+                <td>354879</td>
+                <td>7944876</td>
+                <td>mundialgmail.com</td>
+                <td>cr 44 dg 77-80</td>
+                <td>Caballeros</td>
+                <td>Praga</td>
+                <td>600000</td>
+                <td>
+                    <a href="editar.html" class="btn btn-info" >Editar</a> /
+                    <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar el proveedor?</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confrimar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title fs-5">!Eliminacion Exitosa¡</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Mundo Calzado</td>
+                <td>354879</td>
+                <td>7944876</td>
+                <td>mundialgmail.com</td>
+                <td>cr 44 dg 77-80</td>
+                <td>Caballeros</td>
+                <td>Praga</td>
+                <td>600000</td>
+                <td>
+                    <a href="editar.html" class="btn btn-info" >Editar</a> 
+                    <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Eliminar</button>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea eliminar el proveedor?</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confrimar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title fs-5">!Eliminacion Exitosa¡</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <div class="btn-group me-2 " role="group" aria-label="Second group">
+        <button type="button" class="btn btn-secondary">1</button>
+        <button type="button" class="btn btn-secondary">2</button>
+        <button type="button" class="btn btn-secondary">3</button>
+      </div>
+</div>

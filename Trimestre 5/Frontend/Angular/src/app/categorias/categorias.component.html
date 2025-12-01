@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="website">
+    <div class="container mt-5">
+        <h2>Crear Nueva Categoría</h2>
+        <div>
+            <div class="mb-3 row">
+                <label for="subcategoria" class="col-sm-2 col-form-label">Nombre de la categoría</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="subcategoria" placeholder="Ingrese el nombre de la categoría" required>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                
+                    <div class="col-auto d-flex justify-content-center">
+                        <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >crear</button>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea crear una nueva categoría?</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title fs-5">  Categoría creada con éxito</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

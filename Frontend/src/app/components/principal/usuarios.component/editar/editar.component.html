@@ -1,0 +1,67 @@
+<app-header></app-header>
+<div class=" w-50 aling-left ms-rigth mx-auto shadow mt-3 mb-5">
+    <div class=" d-flex justify-content-center align-items-center h-25">
+        
+        <form [formGroup]="editarForm" (ngSubmit)="onSubmit()">
+            <div class="input-group ">
+                <label class="input-group-text mt-2" for="nombres">Nombres</label>
+                <input class="form-control mt-2" id="nombres" type="text" formControlName="nombres" />
+            </div>
+            <div *ngIf="editarForm.get('nombres')?.touched && editarForm.get('nombres')?.invalid" class="text-danger mb-2 ms-2">
+                El nombre es obligatorio.
+            </div>
+        
+            <div class="input-group ">
+                <label class="input-group-text mt-2" for="apellidos">Apellidos</label>
+                <input  class="form-control mt-2" id="apellidos" type="text" formControlName="apellidos" />
+            </div>
+            <div *ngIf="editarForm.get('apellidos')?.touched && editarForm.get('apellidos')?.invalid" class="text-danger mb-2 ms-2">
+                El apellido es obligatorio.
+            </div>
+            
+            <div class="input-group ">
+                <label class="input-group-text mt-2" for="direccion">Dirección</label>
+                <input class="form-control mt-2" id="direccion" type="text" formControlName="direccion" />
+            </div>
+            <div *ngIf="editarForm.get('direccion')?.touched && editarForm.get('direccion')?.invalid" class="text-danger mb-2 ms-2">
+                La dirección es obligatoria.
+            </div>
+
+            <div class="input-group ">
+                <label class="input-group-text mt-2" for="num_tel">Número de Teléfono</label>
+                <input class="form-control mt-2" id="num_tel" type="text" formControlName="num_tel" />
+            </div>
+            <div *ngIf="editarForm.get('num_tel')?.touched && editarForm.get('num_tel')?.invalid" class="text-danger mb-2 ms-2">
+                <div *ngIf="editarForm.get('num_tel')?.errors?.['required']">El número es obligatorio.</div>
+                <div *ngIf="editarForm.get('num_tel')?.errors?.['pattern']">Debe contener exactamente 10 números.</div>
+            </div>
+
+            <div class="input-group ">
+                <label class="input-group-text mt-2" for="password">Contraseña</label>
+                <input class="form-control mt-2" id="password" type="text" formControlName="password"/>
+            </div>
+            <div *ngIf="editarForm.get('password')?.touched && editarForm.get('password')?.invalid" class="text-danger mb-2 ms-2">
+                <div *ngIf="editarForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</div>
+                <div *ngIf="editarForm.get('password')?.errors?.['pattern']">Debe contener almenos 8 caracteres.</div>
+            </div>
+
+            <div class="input-group ">
+                <label class="input-group-text mt-2" for="rol_id">Rol</label>
+                <select class="form-control mt-2" id="rol_id" formControlName="rol_id">
+                <option value="">Seleccione un rol</option>
+                <option *ngFor="let rol of roles" [value]="rol.id">{{ rol.name }}</option>
+                </select>
+            </div>
+            <div *ngIf="editarForm.get('rol_id')?.touched && editarForm.get('rol_id')?.invalid" class="text-danger mb-2 ms-2">
+                El rol es obligatorio.
+            </div>
+
+
+
+            <div class="input-group mb-4 d-flex justify-content-center align-items-center"  >
+                <button id="enviar" class="input-group-text mt-4 " type="submit" [disabled]="editarForm.invalid">Guardar cambios</button>
+            </div>
+            
+          </form>
+    </div>
+</div>

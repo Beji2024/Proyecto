@@ -1,0 +1,409 @@
+<app-header></app-header>
+<div class="categorias">
+    <nav class="navbar navbar-expand  bg-primary" data-bs-theme="dark" style="color: white; padding-left:60px ; padding-right: 80px;">
+    
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" style="scale: 1.1; color: white; background-color: blue; border-radius: 10px;" >
+                <a class="nav-link active" aria-current="page" href="/productos"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mujer
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/productos/mujer">All</a></li>
+                  <li><a class="dropdown-item" href="/productos/mujer-deportivo">Sport</a></li>
+                 
+                  <li><a class="dropdown-item" href="/productos/mujer-plataformas">Plataformas</a></li>
+                  <li><a class="dropdown-item" href="/productos/mujer-elegante">Elegante</a></li>
+                  
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Hombre
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/productos/hombre">All</a></li>
+                  <li><a class="dropdown-item" href="/productos/hombre-deportivo">Sport</a></li>
+                  <li><a class="dropdown-item" href="/productos/hombre-guayos">Guayos</a></li>
+                  
+                  <li><a class="dropdown-item" href="/productos/hombre-elegante">Elegante</a></li>
+                  
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Niño
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/productos/niño">All</a></li>
+                  <li><a class="dropdown-item" href="/productos/niño-pantaneras">Pantaneras</a></li>
+                  
+                  <li><a class="dropdown-item" href="/productos/niño-escolar">Escolar</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-start">
+                  <li><a class="dropdown-item" href="/productos/new-categoria">Nueva categoría</a></li>
+                  <li><a class="dropdown-item" href="/productos/new-subcategoria">Nueva subcategoria</a></li>
+                  <li><a class="dropdown-item" href="/productos/gestión">Gestión de productos</a></li>
+                  
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="¿Que deseas buscar?" aria-label="Search" style="background: rgb(69, 132, 250); border: 2px solid white;">
+              <button class="btn btn-light" type="submit">Search</button>
+            </form>
+            
+          </div>
+        </div>
+      </nav>
+
+</div>
+<div class="website">
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/deportivo_mujer.jpeg" class="card-img-top" >
+        <div class="card-body">
+        <h5 class="card-title">Mujer, deportivo</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/elegante_mujer.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Mujer, elegante</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/niño.avif" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Niño</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/deportivo_hombre.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Hombre, deportivo</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/niño_escolar.avif" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Niño, escolar</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/guayos_hombre.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Hombre, guayos</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/plataforma_mujer.jpeg" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Mujer, plataformas</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/pantaneras_niño.webp" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Niño, pantaneras</h5>
+        <p class="card-text">0.00$</p>
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 25rem;">
+        <img src="img/elegante_hombre.jpeg" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">Hombre, elegante</h5>
+        <p class="card-text">0.00$</p>
+       
+        <div class="btn  btn-sm">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >Añadir</button>
+        </div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">¿Desea añadir este producto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <h1 class="modal-title fs-5"> Producto añadido con éxito</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        </div>
+    </div>
+
+
+
+
+

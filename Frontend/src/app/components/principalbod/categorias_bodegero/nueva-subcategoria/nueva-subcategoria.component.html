@@ -1,0 +1,123 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+  <h2>Gestión de Subcategorías</h2>
+
+  <!-- Formulario para nueva subcategoría -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5>Crear Nueva Subcategoría</h5>
+    </div>
+    <div class="card-body">
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="nombreSubcategoria" 
+                 placeholder="Ingrese el nombre" required>
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Categoría</label>
+        <div class="col-sm-10">
+          <select class="form-select" [(ngModel)]="categoriaSeleccionada">
+            <option [ngValue]="null" disabled>Seleccione una categoría</option>
+            <option *ngFor="let cat of categorias" [value]="cat.id">{{ cat.name }}</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn btn-success" (click)="crearSubcategoria()">Crear</button>
+    </div>
+  </div>
+
+  <!-- Listado de subcategorías -->
+  <div class="card">
+    <div class="card-header">
+      <h5>Subcategorías Existentes</h5>
+    </div>
+    <div class="card-body">
+      <div *ngIf="subcategorias.length > 0; else noSubcategorias">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría Padre</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let subcat of subcategorias">
+                <td>{{ subcat.id_sub }}</td>
+                <td>
+                  <span *ngIf="!subcat.editando">{{ subcat.nom_sub }}</span>
+                  <input *ngIf="subcat.editando" type="text" 
+                         [(ngModel)]="subcat.nom_sub" class="form-control">
+                </td>
+                <td>
+                  <span *ngIf="!subcat.editando">{{ getNombreCategoria(subcat.cat_sub) }}</span>
+                  <select *ngIf="subcat.editando" class="form-select" [(ngModel)]="subcat.cat_sub">
+                    <option *ngFor="let cat of categorias" [value]="cat.id">{{ cat.name }}</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="btn-group" role="group">
+                    <button *ngIf="!subcat.editando" class="btn btn-warning btn-sm" 
+                            (click)="activarEdicion(subcat)">
+                      Editar
+                    </button>
+                    <button *ngIf="subcat.editando" class="btn btn-success btn-sm" 
+                            (click)="guardarCambios(subcat)">
+                      Guardar
+                    </button>
+                    <button class="btn btn-danger btn-sm ms-2" 
+                            (click)="mostrarConfirmacionEliminar(subcat)">
+                      Eliminar
+                    </button>
+                    <button *ngIf="subcat.editando" class="btn btn-secondary btn-sm ms-2" 
+                            (click)="cancelarEdicion(subcat)">
+                      Cancelar
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <ng-template #noSubcategorias>
+        <p>No hay subcategorías registradas.</p>
+      </ng-template>
+    </div>
+  </div>
+
+  <!-- Modal de Confirmación Eliminar -->
+  <div *ngIf="mostrarConfirmacionEliminarModal" class="modal-backdrop fade show" style="z-index: 1050;"></div>
+  <div *ngIf="mostrarConfirmacionEliminarModal" class="modal d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmar Eliminación</h5>
+          <button type="button" class="btn-close" (click)="mostrarConfirmacionEliminarModal = false"></button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro de que deseas eliminar la subcategoría "{{ subcategoriaAEliminar?.nom_sub }}"?
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" (click)="mostrarConfirmacionEliminarModal = false">Cancelar</button>
+          <button class="btn btn-danger" (click)="confirmarEliminacion()">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mensajes de éxito/error -->
+  <div *ngIf="mensajeExito" class="alert alert-success mt-3">
+    {{ mensajeExito }}
+  </div>
+  <div *ngIf="mensajeError" class="alert alert-danger mt-3">
+    {{ mensajeError }}
+  </div>
+</div>

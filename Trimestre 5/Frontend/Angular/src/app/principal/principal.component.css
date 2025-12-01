@@ -1,0 +1,17 @@
+.bg-morado{
+    background-color: #a30dda;
+}
+.text-center{
+    text-shadow: 
+      2px 2px 0 black,
+      -2px -2px 0 black,
+      2px -2px 0 black,
+      -2px 2px 0 black;
+  }
+  .s2 {
+      text-shadow: 
+        2px 2px 0 black,
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px 2px 0 black;
+    }

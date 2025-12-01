@@ -1,0 +1,74 @@
+package co.com.Automatizacion.tasks.Usuarios;
+
+import co.com.Automatizacion.interactions.Esperar;
+import net.serenitybdd.core.steps.Instrumented;
+import net.serenitybdd.screenplay.Task;
+import java.util.List;
+import co.com.Automatizacion.models.Usuarios.DatosRegistro;
+import static co.com.Automatizacion.userinterface.Usuarios.RegistrarUsuario.*;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
+import co.com.Automatizacion.interactions.AceptarAlerta;
+import co.com.Automatizacion.interactions.ScrollBottom;
+
+import java.util.Random;
+
+public class RegistrarUsuario implements Task {
+
+    ScrollBottom scrollBottom = new ScrollBottom();
+    private List<DatosRegistro> datos;
+
+    public RegistrarUsuario(List<DatosRegistro> datos) {
+        this.datos = datos;
+    }
+
+    public static RegistrarUsuario registarUsuario(List<DatosRegistro> datos) {
+        return Instrumented.instanceOf(RegistrarUsuario.class).withProperties(datos);
+    }
+
+    String doc = "Cédula de ciudadanía";
+    String rol = "Administrador";
+    Random rand = new Random();
+    int numero = rand.nextInt(1000);
+    AceptarAlerta alerta = new AceptarAlerta();
+    Esperar esperar = new Esperar(2);
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+
+                Click.on(BTN_USUARIO),
+                Click.on(BTN_NUEVO),
+                Click.on(INPUT_NUMDOCUMENTO),
+                Enter.theValue(datos.get(0).getNum_doc() + numero).into(INPUT_NUMDOCUMENTO),
+                Click.on(INPUT_NOMBRES),
+                Enter.theValue(datos.get(0).getNombres()).into(INPUT_NOMBRES),
+                Click.on(INPUT_APELLIDOS),
+                Enter.theValue(datos.get(0).getApellidos()).into(INPUT_APELLIDOS),
+                Click.on(INPUT_DIRECCION),
+                Enter.theValue(datos.get(0).getDireccion()).into(INPUT_DIRECCION),
+                Click.on(INPUT_CORREO),
+                Enter.theValue(datos.get(0).getEmail() + numero).into(INPUT_CORREO),
+                Click.on(INPUT_TELEFONO),
+                scrollBottom,
+                Enter.theValue(datos.get(0).getNum_tel()).into(INPUT_TELEFONO),
+                Click.on(INPUT_FECHA),
+                Enter.theValue(datos.get(0).getFec_nac()).into(INPUT_FECHA),
+                Click.on(INPUT_CLAVE),
+                Enter.theValue(datos.get(0).getPassword()).into(INPUT_CLAVE),
+                Click.on(INPUT_TIPODOC),
+                SelectFromOptions.byVisibleText(doc).from(INPUT_TIPODOC),
+                Click.on(INPUT_ROL),
+                SelectFromOptions.byVisibleText(rol).from(INPUT_ROL),
+                Click.on(BTN_ENVIAR),
+                esperar,
+                alerta
+        );
+
+        theActorInTheSpotlight().remember(RegistroVariable.usuario.toString(), datos.get(0).getNum_doc() + numero);
+    }
+}

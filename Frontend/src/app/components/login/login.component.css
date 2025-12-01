@@ -1,0 +1,100 @@
+/* Contenedor general */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+background: linear-gradient(to bottom, #f9f5e3, #eedfc1);}
+/* Sección principal */
+section {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Tarjeta principal */
+#ss.login-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+h3{
+    color: #6a0dad;
+}
+#ss.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen lateral */
+.login-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 5px #4b0082;
+}
+
+/* Password toggle */
+.input-with-toggle {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.password-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106,13,173,0.15);
+}
+
+/* Botón */
+.btn-primary {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #6a0dad;
+}
+
+.btn-primary:hover {
+  background-color: #4b0082;
+}
+
+/* Título */
+h3 {
+  letter-spacing: 0.5px;
+}
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .login-container {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .login-card {
+    margin-top: 2rem;
+  }
+}

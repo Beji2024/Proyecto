@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<!-- ENCABEZADO -->
+<div class="usuarios-header d-flex justify-content-between align-items-center mx-5 mt-3 mb-4">
+  <div class="d-flex align-items-center">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLrG5rQbIDkNP22MimEOOiCzRZNXZF3yrRxQ&s"
+      alt="icono usuarios"
+      class="usuarios-icon me-3"
+    />
+    <button id="nuevo" (click)="IRRegistro()" class="btn-nuevo shadow">
+    <i class="bi bi-person-plus me-2"></i> Nuevo Usuario
+  </button>
+  </div>
+  <h2 class="titulo-usuarios mb-0">Gestión de Usuarios</h2>
+</div>
+
+
+<div class="container">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let usuario of usuariosPaginados">
+      <div class="card usuario-card shadow-sm">
+        <div class="card-body text-center">
+          <img
+            src="../../../../assets/imagenes/Perfil.jpeg"
+            alt="foto usuario"
+            class="usuario-img mb-3"
+          />
+          <h5 class="fw-bold mb-2">
+            {{ usuario.nombres }} <span class="apellido">{{ usuario.apellidos }}</span>
+          </h5>
+
+          <p class="text-muted mb-2"><i class="bi bi-envelope"></i> {{ usuario.email }}</p>
+          <p class="text-muted"><i class="bi bi-telephone"></i> {{ usuario.num_tel }}</p>
+          <hr>
+          <div class="text-start small">
+            <p id="documento"><b>Documento:</b> {{ usuario.num_doc }}</p>
+            <p><b>Dirección:</b> {{ usuario.direccion }}</p>
+            <p><b>Fecha Nac.:</b> {{ usuario.fec_nac }}</p>
+            <p><b>Tipo Doc:</b> {{ usuario.tipodoc.name }}</p>
+            <p><b>Rol:</b> {{ usuario.rol.name }}</p>
+          </div>
+
+          <div class="d-flex justify-content-center mt-3">
+            <button id="editar" (click)="editarUsuario(usuario.id)" class="btn-accion btn-editar me-2">
+              <i class="bi bi-pencil-square"></i> Editar
+            </button>
+            <button id="eliminar" (click)="eliminarUsuario(usuario.id)" class="btn-accion btn-eliminar">
+              <i class="bi bi-trash"></i> Eliminar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <nav *ngIf="totalPaginas > 1" class="d-flex justify-content-center mt-4">
+    <ul class="pagination">
+      <li class="page-item" [class.disabled]="paginaActual === 1">
+        <button class="page-link mb-4" (click)="cambiarPagina(paginaActual - 1)">Anterior</button>
+      </li>
+
+      <li class="page-item mb-4" *ngFor="let pagina of paginas" [class.active]="pagina === paginaActual">
+        <button class="page-link" (click)="cambiarPagina(pagina)">{{ pagina }}</button>
+      </li>
+
+      <li class="page-item mb-4" [class.disabled]="paginaActual === totalPaginas">
+        <button id="siguiente" class="page-link" (click)="cambiarPagina(paginaActual + 1)">Siguiente</button>
+      </li>
+    </ul>
+  </nav>
+</div>

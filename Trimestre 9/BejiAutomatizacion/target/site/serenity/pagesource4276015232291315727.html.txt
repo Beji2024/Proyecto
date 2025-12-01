@@ -1,0 +1,189 @@
+<html lang="en"><head>
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="utf-8">
+  <title>BejiAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style>
+
+.box[_ngcontent-ng-c3493869900] {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 35px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid rgba(106, 13, 173, 0.15);
+  box-shadow: 0 4px 15px rgba(75, 0, 130, 0.05);
+}
+.box[_ngcontent-ng-c3493869900]:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(75, 0, 130, 0.15);
+  border-color: rgba(106, 13, 173, 0.3);
+}
+.box[_ngcontent-ng-c3493869900]   h2[_ngcontent-ng-c3493869900] {
+  color: #4b0082;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+}
+.box[_ngcontent-ng-c3493869900]   img[_ngcontent-ng-c3493869900] {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+.box[_ngcontent-ng-c3493869900]:hover   img[_ngcontent-ng-c3493869900] {
+  transform: scale(1.1);
+  opacity: 1;
+}
+body[_ngcontent-ng-c3493869900] {
+  background-color: #f8f6fb;
+  background-image:
+    radial-gradient(
+      circle at 1px 1px,
+      rgba(106, 13, 173, 0.05) 1px,
+      transparent 0);
+  background-size: 30px 30px;
+}
+.container[_ngcontent-ng-c3493869900] {
+  max-width: 1200px;
+}
+a[_ngcontent-ng-c3493869900] {
+  text-decoration: none;
+  color: inherit;
+}
+@media (max-width: 768px) {
+  .titulo-principal[_ngcontent-ng-c3493869900] {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .subtitulo[_ngcontent-ng-c3493869900] {
+    display: none;
+  }
+  .cerrar-sesion[_ngcontent-ng-c3493869900] {
+    font-size: 0.9rem;
+  }
+  .box[_ngcontent-ng-c3493869900] {
+    padding: 25px 15px;
+  }
+  .bg-morado[_ngcontent-ng-c3493869900] {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+/*# sourceMappingURL=/principal.component.css.map */</style><style>
+
+.login-container[_ngcontent-ng-c4064589467] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      #f9f5e3,
+      #eedfc1);
+}
+section[_ngcontent-ng-c4064589467] {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+#ss.login-card[_ngcontent-ng-c4064589467] {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+h3[_ngcontent-ng-c4064589467] {
+  color: #6a0dad;
+}
+#ss.login-card[_ngcontent-ng-c4064589467]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.login-image[_ngcontent-ng-c4064589467] {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.form-control[_ngcontent-ng-c4064589467] {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+.form-control[_ngcontent-ng-c4064589467]:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 5px #4b0082;
+}
+.input-with-toggle[_ngcontent-ng-c4064589467] {
+  position: relative;
+}
+.password-toggle[_ngcontent-ng-c4064589467] {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.password-toggle[_ngcontent-ng-c4064589467]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.15);
+}
+.btn-primary[_ngcontent-ng-c4064589467] {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #6a0dad;
+}
+.btn-primary[_ngcontent-ng-c4064589467]:hover {
+  background-color: #4b0082;
+}
+h3[_ngcontent-ng-c4064589467] {
+  letter-spacing: 0.5px;
+}
+@media (max-width: 768px) {
+  .login-container[_ngcontent-ng-c4064589467] {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .login-card[_ngcontent-ng-c4064589467] {
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=/login.component.css.map */</style></head>
+<body>
+  <app-root ng-version="19.2.14" ng-server-context="ssg"><router-outlet></router-outlet><app-login _nghost-ng-c4064589467=""><div _ngcontent-ng-c4064589467="" class="login-container"><section _ngcontent-ng-c4064589467="" class="text-center text-lg-start"><div _ngcontent-ng-c4064589467="" id="ss" class="shadow login-card"><div _ngcontent-ng-c4064589467="" class="row g-0 align-items-center"><div _ngcontent-ng-c4064589467="" class="col-lg-5 ms-5 d-none d-lg-block"><img _ngcontent-ng-c4064589467="" src="assets/imagenes/BEJI_LOGO.png" alt="Login image" class="img-fluid login-image"></div><div _ngcontent-ng-c4064589467="" class="col-lg-6"><div _ngcontent-ng-c4064589467="" class="card-body p-5"><h3 _ngcontent-ng-c4064589467="" class="mb-4 fw-bold text-center">Bienvenido</h3><p _ngcontent-ng-c4064589467="" class="text-muted text-center mb-4">Inicia sesión para continuar</p><form _ngcontent-ng-c4064589467="" novalidate="" class="ng-dirty ng-touched ng-valid ng-submitted"><div _ngcontent-ng-c4064589467="" class="form-outline mb-3 position-relative"><input _ngcontent-ng-c4064589467="" name="email" type="email" placeholder="Correo electrónico" required="" email="" id="email" title="Ingrese el correo electrónico registrado en Sport10." aria-label="Correo electrónico" class="form-control ng-dirty ng-valid ng-touched" ng-reflect-required="" ng-reflect-email="" ng-reflect-name="email" ng-reflect-model="felipe@gmail.com"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c4064589467="" class="form-outline mb-3 position-relative"><div _ngcontent-ng-c4064589467="" class="input-with-toggle"><input _ngcontent-ng-c4064589467="" name="password" placeholder="Contraseña" required="" minlength="8" id="password" title="La contraseña distingue mayúsculas y minúsculas. Mínimo 8 caracteres." aria-label="Contraseña" class="form-control ng-dirty ng-valid ng-touched" ng-reflect-required="" ng-reflect-minlength="8" ng-reflect-name="password" ng-reflect-model="skjdahkjshdu13432.,-" type="password"><button _ngcontent-ng-c4064589467="" type="button" title="Mostrar / ocultar contraseña" class="btn btn-outline-secondary password-toggle" aria-pressed="false"><span _ngcontent-ng-c4064589467=""></span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></button></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-ng-c4064589467="" class="form-text text-muted mt-1">La contraseña distingue mayúsculas y minúsculas. Mínimo 8 caracteres.</div></div><div _ngcontent-ng-c4064589467="" class="d-grid gap-2"><button _ngcontent-ng-c4064589467="" type="submit" id="ingresar" class="btn btn-primary btn-lg"><span _ngcontent-ng-c4064589467="">Ingresar</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></button></div><div _ngcontent-ng-c4064589467="" class="alert alert-danger text-center mt-3"> Credenciales inválidas </div><!--bindings={
+  "ng-reflect-ng-if": "Credenciales inválidas"
+}--><div _ngcontent-ng-c4064589467="" class="text-center mt-3"><a _ngcontent-ng-c4064589467="" href="mailto:admin@example.com" title="Contacte al administrador para restablecer la contraseña" class="text-muted">¿No puede ingresar? Contacte al administrador para restablecer la contraseña</a></div></form></div></div></div></div></section></div></app-login><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+<link rel="modulepreload" href="chunk-JLU5CXBL.js">
+<link rel="modulepreload" href="chunk-UP3H5FQE.js">
+
+
+</body></html>

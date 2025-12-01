@@ -1,0 +1,52 @@
+<app-headerven></app-headerven>
+
+<div class="container mt-4">
+  <h2>Editar Venta</h2>
+  <form *ngIf="ventaForm"[formGroup]="ventaForm" (ngSubmit)="guardarCambios()">
+
+    <div class="form-group mb-3">
+      <label>Nombre del Cliente</label>
+      <input type="text" formControlName="nombre_cli" class="form-control bg-light" readonly>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>Dirección del Cliente</label>
+      <input type="text" formControlName="direccion_cli" class="form-control bg-light" readonly>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>Correo del Cliente</label>
+      <input type="email" formControlName="correo_cli" class="form-control bg-light" readonly>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>Teléfono del Cliente</label>
+      <input type="text" formControlName="num_tel_cli" class="form-control bg-light" readonly>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>Documento del Cliente</label>
+      <input type="text" formControlName="num_doc_cli" class="form-control bg-light" readonly>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>ID del Producto Actual</label>
+      <input type="number" formControlName="producto_id" class="form-control bg-light" readonly>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>ID del Nuevo Producto</label>
+      <input type="number" formControlName="nuevo_producto_id" class="form-control" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>ID del Vendedor</label>
+      <input type="number" formControlName="vendedor_id" class="form-control bg-light" readonly>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary" [disabled]="ventaForm.invalid">Guardar Cambios</button>
+    </div>
+    
+  </form>
+</div>

@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Automatizacion</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="e0d1833abe3e6e2de010e1a9a5c01a5d7fbc450997a46431bdc136a134f378f8.html">Consultar Ventas En La P&aacute;gina Sport10</a></span>
+                > <span class="truncate-60"><a
+                    href="0141be123caf0becf879f4cdcd2a7e7f0b9b29f17284287cf70d55566dcea769.html">Validar que el administrador pueda consultar las ventas </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-11-2025 22:16</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Consultar Ventas En La Página Sport10 </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como administrador de Sport10<br />
+Quiero consultar las ventas registradas<br />
+Para verificar que la información esté disponible correctamente
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="b7d01cad88b371990d64919e185b6892d52ba3fd3569ac8db4fb4e896b8ac62e.html">Consultar Venta
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Validar que el administrador pueda consultar las ventas
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="462eeead737353b325ef401e38f095127c0fa8f2b2e68914d0fbc0e1df97e90e.png" title=" Dado que el administrador este en la pagina" width="1584"/>
+                <img src="462eeead737353b325ef401e38f095127c0fa8f2b2e68914d0fbc0e1df97e90e.png" title=" Administrador abrir pagina" width="1584"/>
+                <img src="462eeead737353b325ef401e38f095127c0fa8f2b2e68914d0fbc0e1df97e90e.png" title=" administrador opens the Inicio pagina" width="1584"/>
+                <img src="462eeead737353b325ef401e38f095127c0fa8f2b2e68914d0fbc0e1df97e90e.png" title=" Administrador abrir pagina (completed)" width="1584"/>
+                <img src="462eeead737353b325ef401e38f095127c0fa8f2b2e68914d0fbc0e1df97e90e.png" title=" Dado que el administrador este en la pagina (completed)" width="1584"/>
+                <img src="f5b163691c02384c6739b47020886e8e8a121ccac2f897eb974ed7982f5425c6.png" title=" Cuando ingrese las crendenciales para loguearse:
+| email | password |
+| felipe@gmail.com | skjdahkjshdu13432.,- |" width="1584"/>
+                <img src="f5b163691c02384c6739b47020886e8e8a121ccac2f897eb974ed7982f5425c6.png" title=" Administrador login" width="1584"/>
+                <img src="f5b163691c02384c6739b47020886e8e8a121ccac2f897eb974ed7982f5425c6.png" title=" administrador clicks on Correo electronico" width="1584"/>
+                <img src="1910322cadac4b3204e6be4c2704facdd1e1abf8823032e3b45d01c0819b1cd6.png" title=" administrador enters 'felipe@gmail.com' into Correo electronico" width="1584"/>
+                <img src="24e7b7d8ec6cc54b23d0e1fe59dbd100908a2b18c2071b8e9fafae5e69c6311e.png" title=" administrador clicks on Contrase&ntilde;a" width="1584"/>
+                <img src="8d03fe3bb7867b664d59bcca63819702021c808883e697bf453c8761fe5c1649.png" title=" administrador enters 'skjdahkjshdu13432.,-' into Contrase&ntilde;a" width="1584"/>
+                <img src="9725bd316910abf78eee5defbf58c6ea427cfc7230a2cb894273fd9b25c1ea83.png" title=" administrador clicks on Boton de ingreso" width="1584"/>
+                <img src="9725bd316910abf78eee5defbf58c6ea427cfc7230a2cb894273fd9b25c1ea83.png" title=" Administrador login (completed)" width="1584"/>
+                <img src="9725bd316910abf78eee5defbf58c6ea427cfc7230a2cb894273fd9b25c1ea83.png" title=" Cuando ingrese las crendenciales para loguearse:
+| email | password |
+| felipe@gmail.com | skjdahkjshdu13432.,- | (completed)" width="1584"/>
+                <img src="f2ff1f87b43fdf5a086d5b48ffc3fb7ff63a8ffba183e0bbdb25db0d91253eac.png" title=" Y el administrador hace click en Venta" width="1584"/>
+                <img src="f2ff1f87b43fdf5a086d5b48ffc3fb7ff63a8ffba183e0bbdb25db0d91253eac.png" title=" Administrador click en venta" width="1584"/>
+                <img src="f2ff1f87b43fdf5a086d5b48ffc3fb7ff63a8ffba183e0bbdb25db0d91253eac.png" title=" administrador clicks on Bot&oacute;n Venta" width="1584"/>
+                <img src="f2ff1f87b43fdf5a086d5b48ffc3fb7ff63a8ffba183e0bbdb25db0d91253eac.png" title=" Administrador click en venta (completed)" width="1584"/>
+                <img src="f2ff1f87b43fdf5a086d5b48ffc3fb7ff63a8ffba183e0bbdb25db0d91253eac.png" title=" Y el administrador hace click en Venta (completed)" width="1584"/>
+                <img src="b8014e5b0e3d023642e835fdacb2f8accc14e22d0493098906a9f6d68e2f06b2.png" title=" Y el administrador hace click en Consultar venta" width="1584"/>
+                <img src="b8014e5b0e3d023642e835fdacb2f8accc14e22d0493098906a9f6d68e2f06b2.png" title=" Administrador click en consultar venta" width="1584"/>
+                <img src="b8014e5b0e3d023642e835fdacb2f8accc14e22d0493098906a9f6d68e2f06b2.png" title=" administrador clicks on Bot&oacute;n Consultar Venta" width="1584"/>
+                <img src="b8014e5b0e3d023642e835fdacb2f8accc14e22d0493098906a9f6d68e2f06b2.png" title=" Administrador click en consultar venta (completed)" width="1584"/>
+                <img src="f7650fc4e7711c166a2d0965c29ab56c965c2b6d74080809a56329a5e4f54fbc.png" title=" Y el administrador hace click en Consultar venta (completed)" width="1584"/>
+                <img src="de713bbbc0e625be3c5e067bb15e9c95ad35476ca2c2e2afd4da56c7d0127377.png" title=" Entonces Se debe verificar que el administrador haya ingresado correctamente a la p&aacute;gina y tenga acceso a sus funciones" width="1584"/>
+                <img src="de713bbbc0e625be3c5e067bb15e9c95ad35476ca2c2e2afd4da56c7d0127377.png" title=" Then validacion login" width="1584"/>
+                <img src="de713bbbc0e625be3c5e067bb15e9c95ad35476ca2c2e2afd4da56c7d0127377.png" title=" Entonces Se debe verificar que el administrador haya ingresado correctamente a la p&aacute;gina y tenga acceso a sus funciones (completed): <span class='success-color'>SUCCESS</span>" width="1584"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.1</span>
+</div>
+</body>
+</html>

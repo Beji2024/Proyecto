@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Ingresar a la sección de Venta en Sport10","Validar que el administrador pueda ingresar a la sección de Venta","FAILURE","2025-11-30T23:29:20.7548335-05:00[America/Bogota]","0.0","17.99"
+"Loguearse en la pagina Sport10","Validar el inicio de sesion exitoso","ERROR","2025-11-26T14:59:51.8515746-05:00[America/Bogota]","0.0","18.26"

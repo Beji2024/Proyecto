@@ -1,0 +1,139 @@
+body {
+  background-color: #f5f6fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  border-radius: 25%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border: 5px solid #a261e8;
+}
+
+.img-fluid:hover {
+  transform: scale(1.03);
+}
+
+form.form-scroll {
+  width: 50%;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  margin: 0;
+  max-height: 80vh;   
+  overflow-y: auto;   
+  overflow-x: hidden; 
+}
+
+form.form-scroll:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+form.form-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+form.form-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(108, 99, 255, 0.5);
+  border-radius: 10px;
+}
+
+form.form-scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #5c5c5c;
+  margin-bottom: 5px;
+}
+
+input.form-control,
+select.form-control {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 100%;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+input.form-control:focus,
+select.form-control:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.3);
+}
+
+.invalid-feedback {
+  font-size: 0.85rem;
+  color: #d9534f;
+}
+
+button#enviar {
+  background-color: #6c63ff;
+  border: none;
+  color: white;
+  font-size: 17px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(108, 99, 255, 0.3);
+}
+
+button#enviar:hover {
+  background-color: #574bff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(108, 99, 255, 0.4);
+}
+
+button#enviar:disabled {
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  form.form-scroll {
+    width: 90%;
+  }
+}

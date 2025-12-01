@@ -1,0 +1,18 @@
+.card-img-top{
+    height: 250px;
+    
+}
+.website{
+    display: flex;
+    justify-content: center;
+    flex-flow:wrap;
+    gap: 30px;
+    padding: 40px 20px;
+   
+}
+.categorias{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}

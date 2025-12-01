@@ -1,0 +1,114 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 36316999,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PreparacionEscenario.sepUp()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Validar que el administrador pueda ingresar a la sección de Venta",
+        "description": "",
+        "id": "ingresar-a-la-sección-de-venta-en-sport10;validar-que-el-administrador-pueda-ingresar-a-la-sección-de-venta",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2576777399,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "que el administrador este en la pagina",
+            "match": {
+              "location": "LoginStepDefinition.queElAdministradorEsteEnLaPagina()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1158116900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "ingrese las crendenciales para loguearse:",
+            "match": {
+              "location": "LoginStepDefinition.ingreseLasCrendencialesParaLoguearse(DatosLogin\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "felipe@gmail.com",
+                  "skjdahkjshdu13432.,-"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 4055997000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "el administrador ingresa al módulo de cambios",
+            "match": {
+              "location": "PaginaCambiosStepDefinition.elAdministradorIngresaAlModuloCambios()"
+            },
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 3249954000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "el administrador hace clic en el botón Cambios",
+            "match": {
+              "location": "PaginaCambiosStepDefinition.elAdministradorHaceClicEnElBotonCambios()"
+            },
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "error_message": "net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled\r\n\tat net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1149)\r\n\tat net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)\r\n\tat net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)\r\n\tat net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)\r\n\tat net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$bSFobERr.performAs$accessor$fAFBdY1X(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)\r\n\tat net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)\r\n\tat net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)\r\n\tat net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)\r\n\tat net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)\r\n\tat net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)\r\n\tat net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$bSFobERr.performAs(Unknown Source)\r\n\tat net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)\r\n\tat net.serenitybdd.screenplay.Actor.perform(Actor.java:229)\r\n\tat net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)\r\n\tat co.com.Automatizacion.tasks.venta.ClickEnVenta.performAs(ClickEnVenta.java:17)\r\n\tat co.com.Automatizacion.tasks.venta.ClickEnVenta$ByteBuddy$HLqW3riG.performAs$accessor$vHHv8gNE(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)\r\n\tat net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)\r\n\tat net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)\r\n\tat net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)\r\n\tat net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)\r\n\tat net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)\r\n\tat co.com.Automatizacion.tasks.venta.ClickEnVenta$ByteBuddy$HLqW3riG.performAs(Unknown Source)\r\n\tat net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)\r\n\tat net.serenitybdd.screenplay.Actor.perform(Actor.java:229)\r\n\tat net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)\r\n\tat co.com.Automatizacion.stepsdefinitions.venta.PaginaDevolucionesStepDefinition.elAdministradorIngresaAlModuloDeDevoluciones(PaginaDevolucionesStepDefinition.java:15)\r\n\tat ✽.el administrador ingresa al módulo de devoluciones(src/test/resources/features/venta/devolucion.feature:17)\r\nCaused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.id: venta to be enabled (tried for 5 second(s) with 100 milliseconds interval)\r\n\tat org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1146)\r\n\tat net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)\r\n\tat net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)\r\n\tat net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)\r\n\tat net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$bSFobERr.performAs$accessor$fAFBdY1X(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)\r\n\tat net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)\r\n\tat net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)\r\n\tat net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)\r\n\tat net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)\r\n\tat net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)\r\n\tat net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$bSFobERr.performAs(Unknown Source)\r\n\tat net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)\r\n\tat net.serenitybdd.screenplay.Actor.perform(Actor.java:229)\r\n\tat net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)\r\n\tat co.com.Automatizacion.tasks.venta.ClickEnVenta.performAs(ClickEnVenta.java:17)\r\n\tat co.com.Automatizacion.tasks.venta.ClickEnVenta$ByteBuddy$HLqW3riG.performAs$accessor$vHHv8gNE(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)\r\n\tat net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)\r\n\tat net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)\r\n\tat net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)\r\n\tat net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)\r\n\tat net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)\r\n\tat co.com.Automatizacion.tasks.venta.ClickEnVenta$ByteBuddy$HLqW3riG.performAs(Unknown Source)\r\n\tat net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)\r\n\tat net.serenitybdd.screenplay.Actor.perform(Actor.java:229)\r\n\tat net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)\r\n\tat co.com.Automatizacion.stepsdefinitions.venta.PaginaDevolucionesStepDefinition.elAdministradorIngresaAlModuloDeDevoluciones(PaginaDevolucionesStepDefinition.java:15)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:31)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:25)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)\r\n\tat cucumber.api.TestStep.executeStep(TestStep.java:102)\r\n\tat cucumber.api.TestStep.run(TestStep.java:83)\r\n\tat cucumber.api.TestCase.run(TestCase.java:58)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:80)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:118)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:56)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:127)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)\r\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)\r\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)\r\n\tat org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)\r\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)\r\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\r\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)\r\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)\r\n\tat com.sun.proxy.$Proxy4.processTestClass(Unknown Source)\r\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)\r\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)\r\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)\r\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)\r\n\tat org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)\r\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)\r\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)\r\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)\r\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)\r\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#venta\"}\n  (Session info: chrome\u003d142.0.7444.176)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027KSC\u0027, ip: \u0027192.168.1.21\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.59 (4b8153ab58d3..., userDataDir: C:\\WINDOWS\\SystemTemp\\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58346}, goog:processID: 24288, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: aee4051d9d240715af0069ad96d30a86\n*** Element info: {Using\u003did, value\u003dventa}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)\r\n\tat net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:18)\r\n\tat net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)\r\n\tat net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)\r\n\tat net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\t... 91 more\r\n",
+              "duration": 6516425000,
+              "status": "failed"
+            },
+            "line": 17,
+            "name": "el administrador ingresa al módulo de devoluciones",
+            "match": {
+              "location": "PaginaDevolucionesStepDefinition.elAdministradorIngresaAlModuloDeDevoluciones()"
+            },
+            "keyword": "Y "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@IngresarVenta"
+          }
+        ]
+      }
+    ],
+    "name": "Ingresar a la sección de Venta en Sport10",
+    "description": "  Como administrador de Sport10\n  Quiero ingresar al módulo de Venta\n  Para continuar con el flujo de cambios",
+    "id": "ingresar-a-la-sección-de-venta-en-sport10",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/venta/devolucion.feature",
+    "tags": []
+  }
+]

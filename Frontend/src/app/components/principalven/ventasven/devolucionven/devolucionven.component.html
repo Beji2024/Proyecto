@@ -1,0 +1,61 @@
+<app-headerven></app-headerven>
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-center align-items-center mb-5 mt-4">
+        <h4 class="text-center mt-4 mb-0">Devoluciones o cambio</h4>
+    </div>
+    
+    <div *ngIf="ventas.length > 0; else sinVentas">
+      <table class="table table-bordered table-striped mb-5 text-center">
+        <thead class="table-dark">
+          <tr class="text-center align-middle">
+            <th>Codigo de venta</th>
+            <th>Fecha</th>
+            <th>Referencia</th>
+            <th>Cantidad</th>
+            <th>Cliente</th>
+            <th>Telefono cliente</th>
+            <th>Vendedor</th>
+            <th>Cambio/Devolucion</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center align-middle" *ngFor="let venta of ventasPaginadas">
+            <td>{{ venta.id }}</td>
+            <td>{{ venta.fecha }}</td>
+            <td>{{ venta.producto.referencia}}</td>
+            <td>{{ venta.cantidad }}</td>
+            <td>{{ venta.nombre_cli }}</td>
+            <td>{{ venta.num_tel_cli }}</td>
+            <td>{{ venta.vendedor.nombres}}</td>
+            <td class="d-flex justify-content-center align-items-center">
+                <div class="col-auto d-flex justify-content-center w-75 ">
+                    <button class="btn shadow"><img src="https://cdn-icons-png.flaticon.com/128/6345/6345534.png" class="w-50"
+                        (click)="goToCambio(venta.id)"></button>
+                    <button class=" btn shadow ms-5" ><img src="https://cdn-icons-png.flaticon.com/128/5163/5163824.png" class="w-50"
+                        (click)="cambiarEstado(venta.id)"> 
+                    </button>
+                </div>
+            </td>
+            <td>{{ venta.estado.nombre }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center align-items-center mb-5">
+  <button class="btn btn-outline-primary me-2" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+    Anterior
+  </button>
+
+  <span class="mx-2">Página {{ paginaActual }} de {{ totalPaginas }}</span>
+
+  <button class="btn btn-outline-primary ms-2" (click)="siguientePagina()" [disabled]="paginaActual === totalPaginas">
+    Siguiente
+  </button>
+</div>
+    </div>
+  
+    <ng-template #sinVentas>
+      <div class="alert alert-info">No hay ventas registradas.</div>
+    </ng-template>
+  </div>

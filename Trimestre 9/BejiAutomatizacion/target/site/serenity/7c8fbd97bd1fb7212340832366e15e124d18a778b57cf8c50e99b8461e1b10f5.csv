@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Consultar ventas en la página Sport10","Validar que el administrador pueda consultar las ventas","SUCCESS","2025-11-30T22:16:25.3129075-05:00[America/Bogota]","0.0","11.08"
+"Registrar ventas en la página Sport10","Validar la creación exitosa de una venta","SUCCESS","2025-11-30T22:52:46.3173885-05:00[America/Bogota]","0.0","15.55"
+"Ingresar al módulo de Devoluciones en Sport10","Validar que el administrador pueda ingresar a la sección de Devoluciones","SUCCESS","2025-11-30T23:07:11.8637676-05:00[America/Bogota]","0.0","3.85"
+"Ingresar al módulo de Venta en Sport10","Validar que el administrador pueda ingresar a la sección de Devoluciones","SUCCESS","2025-11-30T23:07:47.711974-05:00[America/Bogota]","0.0","3.91"

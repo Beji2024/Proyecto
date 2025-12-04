@@ -1,5 +1,6 @@
 package co.com.Automatizacion.questions.Producto;
 
+import co.com.Automatizacion.interactions.ScrollBottom;
 import co.com.Automatizacion.userinterface.Productos.Producto;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -10,6 +11,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotV
 
 public class ValidarEliminacionProducto implements Question<Boolean> {
 
+    ScrollBottom scrollBottom = new ScrollBottom();
     private final String nombreProducto;
 
     public ValidarEliminacionProducto(String nombreProducto) {
@@ -25,20 +27,21 @@ public class ValidarEliminacionProducto implements Question<Boolean> {
 
         try {
             actor.attemptsTo(
+                    scrollBottom,
                     WaitUntil.the(Producto.elementoProducto(nombreProducto), isNotVisible())
                             .forNoMoreThan(5).seconds()
             );
         } catch (Exception e) {
-            // Si no se encuentra el elemento, ya está eliminado
+
             return true;
         }
 
-        // Validación REAL sin lanzar excepciones
+
         boolean existe = !Producto.elementoProducto(nombreProducto)
                 .resolveAllFor(actor)
                 .isEmpty();
 
-        return !existe; // true si NO existe
+        return !existe;
     }
 
 }

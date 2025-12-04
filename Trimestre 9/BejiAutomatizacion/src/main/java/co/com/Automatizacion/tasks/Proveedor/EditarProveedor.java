@@ -52,10 +52,10 @@ public class EditarProveedor implements Task {
             } else {
                 WebElementFacade siguiente = btnSiguiente.get(0);
                 try {
-                    new WebDriverWait(driver, 40)
+                    new WebDriverWait(driver, 4)
                             .until(ExpectedConditions.elementToBeClickable(siguiente));
                     siguiente.click();
-                    Thread.sleep(2000);
+                    Thread.sleep(200);
                 } catch (Exception e) {
                     haySiguiente = false;
                 }
@@ -66,7 +66,7 @@ public class EditarProveedor implements Task {
         WebElementFacade editarSeleccionado = todosLosBotones.get(index);
         editarSeleccionado.click();
 
-        WebDriverWait wait = new WebDriverWait(driver, 40);
+        WebDriverWait wait = new WebDriverWait(driver, 4);
         wait.until(ExpectedConditions.visibilityOf(EDT_CELULAR.resolveFor(actor)));
 
         String emailBase = datos.getEmail();
@@ -88,7 +88,7 @@ public class EditarProveedor implements Task {
 
         actor.attemptsTo(AceptarAlerta.ahora());
         try {
-            WebDriverWait waitAlerta = new WebDriverWait(driver, 40);
+            WebDriverWait waitAlerta = new WebDriverWait(driver, 4);
             waitAlerta.until(ExpectedConditions.alertIsPresent());
             actor.attemptsTo(AceptarAlerta.ahora());
         } catch (Exception e) {

@@ -59,7 +59,7 @@ public class ValidarEdicionProveedor implements Question<Boolean> {
                 }
 
                 WebDriver driver = BrowseTheWeb.as(actor).getDriver();
-                WebDriverWait wait = new WebDriverWait(driver, 20); // espera hasta 20 seg
+                WebDriverWait wait = new WebDriverWait(driver, 2); // espera hasta 20 seg
                 wait.until(ExpectedConditions.elementToBeClickable(siguiente.get(0)));
 
                 actor.attemptsTo(ScrollBottom.completo());

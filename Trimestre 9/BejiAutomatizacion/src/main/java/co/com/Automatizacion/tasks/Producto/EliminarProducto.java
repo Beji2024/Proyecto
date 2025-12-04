@@ -33,7 +33,7 @@ public class EliminarProducto implements Task {
                 Click.on(Producto.BTN_ELIMINAR_ULTIMO),
                 WaitUntil.the(Producto.BTN_ELIMINARCONFIRMACION, isVisible()).forNoMoreThan(5).seconds(),
                 Click.on(Producto.BTN_ELIMINARCONFIRMACION),
-                Esperar.segundos(30)
+                Esperar.segundos(3)
         );
 
     }

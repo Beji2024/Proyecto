@@ -1,6 +1,5 @@
 package co.com.Automatizacion.questions.Producto;
 
-
 import co.com.Automatizacion.interactions.ScrollBottom;
 import co.com.Automatizacion.userinterface.Productos.Producto;
 import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
@@ -13,15 +12,15 @@ import org.slf4j.LoggerFactory;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class ValidarCreacionProducto implements Question<Boolean> {
+public class ValidarEditarProducto implements Question<Boolean> {
 
     ScrollBottom scrollBottom = new ScrollBottom();
 
 
 
-    private static final Logger logger = LoggerFactory.getLogger(ValidarCreacionProducto.class);
-    public static ValidarCreacionProducto validarCreacionProducto () {
-        return new ValidarCreacionProducto();
+    private static final Logger logger = LoggerFactory.getLogger(ValidarEditarProducto.class);
+    public static ValidarEditarProducto validarEditarProducto () {
+        return new ValidarEditarProducto();
     }
 
     @Override
@@ -42,4 +41,3 @@ public class ValidarCreacionProducto implements Question<Boolean> {
     }
 
 }
-

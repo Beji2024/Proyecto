@@ -2,6 +2,8 @@ package co.com.Automatizacion.stepsdefinitions.Productos;
 
 import co.com.Automatizacion.models.Producto.DatosProducto;
 import co.com.Automatizacion.models.Usuarios.DatosLogin;
+import co.com.Automatizacion.questions.Producto.ValidarCreacionProducto;
+import co.com.Automatizacion.questions.Producto.ValidarEditarProducto;
 import co.com.Automatizacion.tasks.Producto.EditarProducto;
 import co.com.Automatizacion.tasks.Producto.IngresarModuloProducto;
 import cucumber.api.DataTable;
@@ -26,33 +28,14 @@ public class EditarProductosStepDefinition {
     }
 
     @Cuando("^el administrador edite el último producto con los siguientes datos:$")
-    public void editarUltimoProducto(DataTable dataTable) {
-        List<Map<String, String>> datos = dataTable.asMaps(String.class, String.class);
-        Map<String, String> producto = datos.get(0);
-
-        DatosProducto datosProducto = new DatosProducto(
-                producto.get("nombre_producto"),
-                producto.get("categoria"),
-                producto.get("subcategoria"),
-                producto.get("cantidad"),
-                producto.get("talla"),
-                producto.get("precio_venta"),
-                producto.get("precio_compra"),
-                producto.get("material"),
-                producto.get("color"),
-                producto.getOrDefault("imagen", "")
-        );
-
-        theActorInTheSpotlight().attemptsTo(EditarProducto.conLosDatos(datosProducto));
-    }
-
-    @Cuando("^presione el botón \"Actualizar\"$")
-    public void presioneActualizar() {
+    public void editarUltimoProducto(List<DatosProducto>datos) {
+        theActorInTheSpotlight().attemptsTo(EditarProducto.editarProducto(datos));
 
     }
+
 
     @Entonces("^el producto editado debe mostrarse correctamente actualizado en la lista de productos$")
     public void verificarEdicionProducto() {
-
+        theActorInTheSpotlight().should(seeThat(ValidarEditarProducto.validarEditarProducto()));
     }
 }

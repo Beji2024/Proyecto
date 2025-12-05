@@ -14,6 +14,7 @@ import { HeaderComponentComponent } from '../../header.component/header.componen
 export class ProveedoresComponent implements OnInit {
   proveedores: any[] = [];
   busqueda: string = '';
+  proveedoresFiltrados: any[] = []; 
 
   constructor(
     private http: HttpClient,
@@ -36,6 +37,7 @@ export class ProveedoresComponent implements OnInit {
 cargarProveedores(page: number = 1): void {
   this.http.get<any>(`http://localhost:8000/api/proveedores?page=${page}`).subscribe(data => {
     this.proveedores = data.data;
+    this.proveedoresFiltrados = this.proveedores;
     this.currentPage = data.current_page;
     this.lastPage = data.last_page;
   });
@@ -59,13 +61,29 @@ cargarProveedores(page: number = 1): void {
   
 
   buscarProveedor(): void {
-    if (this.busqueda.trim() === '') {
-      this.cargarProveedores();
-    } else {
-      this.proveedores = this.proveedores.filter(p =>
-        p.nombre.toLowerCase().includes(this.busqueda.toLowerCase()) ||
-        p.marca.toLowerCase().includes(this.busqueda.toLowerCase())
-      );
+    const term = this.busqueda.toLowerCase();
+
+    if (term.trim() === '') {
+      this.proveedoresFiltrados = this.proveedores;
+      return;
+    }
+
+    this.proveedoresFiltrados = this.proveedores.filter(p =>
+      (p.nombre?.toLowerCase() || '').includes(term) ||
+      (p.marca?.toLowerCase() || '').includes(term) ||
+      (p.nit?.toString() || '').includes(term)
+    );
+  }
+
+  cambiarPagina(page: number): void {
+    if (page >= 1 && page <= this.lastPage) {
+      this.currentPage = page;
+      this.cargarProveedores(page);
+
+      // Reaplicar el filtro si hay búsqueda activa
+      if (this.busqueda.trim() !== '') {
+        setTimeout(() => this.buscarProveedor(), 50);
+      }
     }
   }
 }

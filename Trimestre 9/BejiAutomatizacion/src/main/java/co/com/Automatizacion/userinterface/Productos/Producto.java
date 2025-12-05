@@ -63,7 +63,7 @@ public class Producto extends PageObject {
     public static final Target FILAS_TABLA = Target.the("filas de la tabla de productos")
             .locatedBy("//table[contains(@class,'table-striped')]/tbody/tr");
 
-    public static final By NOMBRE_PRODUCTO_EN_FILA = By.xpath(".//td[1]");
+    public static final By NOMBRE_PRODUCTO_EN_FILA = By.xpath(".//td[3]");
 
     public static final Target BTN_EDITAR_ULTIMO = Target.the("botón editar del último producto en la tabla")
             .locatedBy("(//table[contains(@class,'table-striped') or contains(@class,'table-hover')]//button[contains(text(),'Editar')])[last()]");

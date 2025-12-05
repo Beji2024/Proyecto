@@ -218,7 +218,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 13-11-2025 11:18</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 05-12-2025 13:04</span>
     <br style="clear:left"/>
 </div>
 
@@ -309,7 +309,7 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                                                             <a style="margin-left:0.5em;padding-right: 1.5em;"
                                                                                href="9ca5c46521a34c0ef0935ce100799d2c3ed180a6e4e35c1b0bde0bcf9511f534.html"
                                                                                title="View test results">
-                                                                            <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                                                             </a>
 
                                                                         
@@ -332,7 +332,7 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                             <h3>Scenario details</h3>
 
                                                 <div class="scenario-docs card" id="bc5ca5c22f0491f87924f8a6b12fb4b30a30e6a5b2ad2fcf7d0e6ab60cae774e">
-                                                    <div class="scenario-docs card-header error" style="min-height:1.5em;">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
                                                         <div>
                                                             <span class="scenario-heading">
                                                                 <a href="9ca5c46521a34c0ef0935ce100799d2c3ed180a6e4e35c1b0bde0bcf9511f534.html" title="View test results">Editar el último producto registrado correctamente</a>
@@ -340,7 +340,7 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                                             <span class="scenario-result-icon">
                                                                 
 
-                                                                    <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                                             </span>
                                                         </div>
                                                     </div>
@@ -355,10 +355,16 @@ Para modificar los datos de los productos registrados cuando sea necesario
 </tbody>
 </table>
 </p>
-                                                            <p>Cuando el administrador edite el último producto con los siguientes datos:</p>
-<p>| nombre_producto | categoria | subcategoria | cantidad | talla | precio_venta | precio_compra | material | color | imagen |
-|  |  |  |  |  |  |  |  |  |  |</p>
-                                                            <p>Y presione el botón &quot;Actualizar&quot;</p>
+                                                            <p><p>Cuando el administrador edite el último producto con los siguientes datos:</p>
+<table>
+<thead>
+<tr><th>nombre_producto</th><th>categoria</th><th>subcategoria</th><th>cantidad</th><th>talla</th><th>precio_venta</th><th>precio_compra</th><th>material</th><th>color</th><th>imagen</th></tr>
+</thead>
+<tbody>
+<tr><td>Guayos Nike</td><td>Mujer</td><td>Botin</td><td>10</td><td>42</td><td>260000</td><td>180000</td><td>Cuero</td><td>Negro</td><td></td></tr>
+</tbody>
+</table>
+</p>
                                                             <p>Entonces el producto editado debe mostrarse correctamente actualizado en la lista de productos</p>
                                                         <div class="examples">
                                                         </div>
@@ -379,10 +385,10 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                             </div>
                                             <script>
 
-                                                var labels = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '100%', ' ', ' ', ' '];
+                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
                                                 // Our series array that contains series objects or in this case series data arrays
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 1}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                var series = [{meta: 'Passing tests (automated)', value: 1}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                 // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                 // as you saw in the previous example
@@ -419,11 +425,12 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                                    <td class="aggregate-result-count"><i
-                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="30ecccd8875bceddd96427317529c52630f2735b06a44520f09f0afdda86d006.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
+                                                <td class="automated-stats">1</td>
+                                                <td class="automated-stats">100%</td>
                                             </tr>
                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -447,8 +454,8 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                                 <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
-                                                                             <td colspan="3"><a href="ad4dd893b7ccd14de4b26727f26b8683eafaa5f8e80f8b581c2bd82c76eeb533.html"><i
-                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                            <td colspan="3"><i
+                                                                                class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                             </td>
 
                                             </tr>
@@ -461,12 +468,12 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                                 <td class="automated-stats">0</td>
                                                 <td class="automated-stats"> </td>
                                             <tr>
-                                                                    <td class="aggregate-result-count indented-error-category">
-                                                                        <a href="a085d244b48565a2ce1632a98f436fa65ad0d67d94483678878ae519fe8b28ae.html"><i
-                                                                                class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken</a>
-                                                                    </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">100%</td>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
                                             <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -499,11 +506,11 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>17s</td>
-                                                        <td>17ms</td>
-                                                        <td>17s</td>
-                                                        <td>17s</td>
-                                                        <td>17s</td>
+                                                        <td>24s</td>
+                                                        <td>24ms</td>
+                                                        <td>24s</td>
+                                                        <td>24s</td>
+                                                        <td>24s</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -526,16 +533,16 @@ Para modificar los datos de los productos registrados cuando sea necesario
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="scenario-result ERROR">
+                                                <tr class="scenario-result SUCCESS">
                                                     <td>
                                                             <a href="9ca5c46521a34c0ef0935ce100799d2c3ed180a6e4e35c1b0bde0bcf9511f534.html">Editar el último producto registrado correctamente</a>
                                                     </td>
-                                                    <td>4</td>
-                                                    <td>11:18:09</td>
-                                                    <td>17s 694ms</td>
+                                                    <td>3</td>
+                                                    <td>13:04:20</td>
+                                                    <td>24s 084ms</td>
                                                     <td>
-                                                            <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a> <span
-                                                                style="display:none">ERROR</span>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
                                                     </td>
                                                 </tr>
                                                 </tbody>

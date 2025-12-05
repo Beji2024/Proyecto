@@ -48,6 +48,8 @@ public class EditarUsuario implements Task{
                 Enter.theValue(datos.get(0).getDireccion()).into(INPUT_DIRECCION),
                 Click.on(INPUT_NUMTEL),
                 Enter.theValue(datos.get(0).getNum_tel()).into(INPUT_NUMTEL),
+                Click.on(INPUT_CLAVE),
+                Enter.theValue(datos.get(0).getClave()).into(INPUT_CLAVE),
                 Click.on(INPUT_ROL),
                 SelectFromOptions.byVisibleText(rol).from(INPUT_ROL),
                 Click.on(BTN_ENVIAR),

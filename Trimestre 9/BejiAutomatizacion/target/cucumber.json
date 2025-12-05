@@ -1,0 +1,129 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Antecedentes",
+        "steps": [
+          {
+            "result": {
+              "duration": 6200511500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que el administrador esté en el módulo de productos con las credenciales:",
+            "match": {
+              "location": "CrearProductoStepDefinition.ingresarModuloProductos(DatosLogin\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "felipe@gmail.com",
+                  "skjdahkjshdu13432.,-"
+                ]
+              }
+            ],
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Editar el último producto registrado correctamente",
+        "description": "",
+        "id": "editar-un-producto-en-la-página-web-de-sport10;editar-el-último-producto-registrado-correctamente",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16145781800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "el administrador edite el último producto con los siguientes datos:",
+            "match": {
+              "location": "EditarProductosStepDefinition.editarUltimoProducto(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "nombre_producto",
+                  "categoria",
+                  "subcategoria",
+                  "cantidad",
+                  "talla",
+                  "precio_venta",
+                  "precio_compra",
+                  "material",
+                  "color",
+                  "imagen"
+                ]
+              },
+              {
+                "cells": [
+                  "Guayos Nike",
+                  "Mujer",
+                  "Botin",
+                  "10",
+                  "42",
+                  "260000",
+                  "180000",
+                  "Cuero",
+                  "Negro",
+                  ""
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 1100199,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "presione el botón \"Actualizar\"",
+            "match": {
+              "location": "EditarProductosStepDefinition.presioneActualizar()"
+            },
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 1044900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "el producto editado debe mostrarse correctamente actualizado en la lista de productos",
+            "match": {
+              "location": "EditarProductosStepDefinition.verificarEdicionProducto()"
+            },
+            "keyword": "Entonces "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@EditarProductos"
+          }
+        ]
+      }
+    ],
+    "name": "Editar un producto en la página web de Sport10",
+    "description": "  Como administrador de la página web\n  Quiero editar productos en la página web\n  Para modificar los datos de los productos registrados cuando sea necesario",
+    "id": "editar-un-producto-en-la-página-web-de-sport10",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/Productos/EditarProducto.feature",
+    "tags": []
+  }
+]

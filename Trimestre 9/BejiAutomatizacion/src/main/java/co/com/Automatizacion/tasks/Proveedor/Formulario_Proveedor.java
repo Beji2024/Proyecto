@@ -38,7 +38,7 @@ public class Formulario_Proveedor implements Task {
     public <T extends Actor> void performAs(T actor) {
         DatosProveedor proveedor = datos.get(0);
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, 3);
         String emailBase = proveedor.getEmail();
         String[] partes = emailBase.split("@");
         String emailRandom = partes[0] + numero + "@" + partes[1];

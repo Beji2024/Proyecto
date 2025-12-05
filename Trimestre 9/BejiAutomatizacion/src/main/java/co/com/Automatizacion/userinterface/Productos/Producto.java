@@ -42,11 +42,30 @@ public class Producto extends PageObject {
             .located(By.id("material"));
     public static final Target CAMPO_COLOR = Target.the("Campo color del producto")
             .located(By.id("color"));
+    public static final Target CAMPO_IMAGEN = Target.the("Campo imagen del producto")
+            .located(By.id("imagen"));
+
 
     public static final Target BTN_GUARDAR = Target.the("Boton para registrar y guardar cambios del formulario")
-            .located(By.id("sumbitFom"));
+            .located(By.id("submit"));
 
     public static final Target TABLA_PRODUCTOS = Target.the("Tabla de productos")
             .located(By.id("tablaProductos"));
+
+    public static Target elementoProducto(String nombreProducto) {
+        return Target.the("producto con nombre " + nombreProducto)
+                .locatedBy("//td[contains(text(),'" + nombreProducto + "')]");
+    }
+
+    public static final Target BTN_ELIMINAR_ULTIMO = Target.the("botón eliminar del último producto en la tabla")
+            .locatedBy("(//table[contains(@class,'table-striped') or contains(@class,'table-hover')]//button[contains(text(),'Eliminar')])[last()]");
+
+    public static final Target FILAS_TABLA = Target.the("filas de la tabla de productos")
+            .locatedBy("//table[contains(@class,'table-striped')]/tbody/tr");
+
+    public static final By NOMBRE_PRODUCTO_EN_FILA = By.xpath(".//td[1]");
+
+    public static final Target BTN_EDITAR_ULTIMO = Target.the("botón editar del último producto en la tabla")
+            .locatedBy("(//table[contains(@class,'table-striped') or contains(@class,'table-hover')]//button[contains(text(),'Editar')])[last()]");
 
 }

@@ -27,7 +27,7 @@ public class ValidarEliminacionProveedor implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
         By selector = By.xpath("//td[contains(normalize-space(.),'" + nit + "')]");
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, 3);
 
         try {
             boolean desaparecio = wait.until(

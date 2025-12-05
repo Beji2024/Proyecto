@@ -19,6 +19,6 @@
     Escenario: Verificar la modificacion exitosa de datos de un usuario
       Dado que el usuario se encuentre en la pagina en el modulo de usuarios para editar
       Cuando ingrese los datos que desee modificar para editar el registro:
-        | nombres  | apellidos | direccion       | num_tel    |
-        | Probando | Lopez     | Calle 63 #32-23 | 3109875434 |
+        | nombres  | apellidos | direccion       | num_tel    | clave      |
+        | Probando | Lopez     | Calle 63 #32-23 | 3109875434 | usuario123 |
       Entonces Se debe verificar que los datos modificados del usuario esten en el nuevo registro

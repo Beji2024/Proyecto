@@ -1,5 +1,6 @@
 package co.com.Automatizacion.tasks.Usuarios;
 
+import co.com.Automatizacion.interactions.Esperar;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Task;
 import java.util.List;
@@ -34,6 +35,7 @@ public class RegistrarUsuario implements Task {
     Random rand = new Random();
     int numero = rand.nextInt(1000);
     AceptarAlerta alerta = new AceptarAlerta();
+    Esperar esperar = new Esperar(2);
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -63,7 +65,7 @@ public class RegistrarUsuario implements Task {
                 Click.on(INPUT_ROL),
                 SelectFromOptions.byVisibleText(rol).from(INPUT_ROL),
                 Click.on(BTN_ENVIAR),
-                scrollBottom,
+                esperar,
                 alerta
         );
 

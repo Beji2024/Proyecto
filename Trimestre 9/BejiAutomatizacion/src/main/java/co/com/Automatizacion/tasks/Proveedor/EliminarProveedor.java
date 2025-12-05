@@ -29,7 +29,7 @@ public class EliminarProveedor implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
 
         List<WebElementFacade> todosLosProveedores = new ArrayList<>();
         boolean haySiguiente = true;
@@ -47,7 +47,7 @@ public class EliminarProveedor implements Task {
                 try {
                     wait.until(ExpectedConditions.elementToBeClickable(btnSiguiente.get(0)));
                     btnSiguiente.get(0).click();
-                    Thread.sleep(1200); // esperar que cargue la página
+                    Thread.sleep(120); // esperar que cargue la página
                 } catch (Exception e) {
                     haySiguiente = false;
                 }

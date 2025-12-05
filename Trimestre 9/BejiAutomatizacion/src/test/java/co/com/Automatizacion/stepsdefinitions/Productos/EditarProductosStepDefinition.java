@@ -1,39 +1,41 @@
 package co.com.Automatizacion.stepsdefinitions.Productos;
 
+import co.com.Automatizacion.models.Producto.DatosProducto;
+import co.com.Automatizacion.models.Usuarios.DatosLogin;
+import co.com.Automatizacion.questions.Producto.ValidarCreacionProducto;
+import co.com.Automatizacion.questions.Producto.ValidarEditarProducto;
+import co.com.Automatizacion.tasks.Producto.EditarProducto;
+import co.com.Automatizacion.tasks.Producto.IngresarModuloProducto;
 import cucumber.api.DataTable;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnlineCast;
+
+import java.util.List;
+import java.util.Map;
+
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class EditarProductosStepDefinition {
-    @Dado("^que el administrador se encuentre en el módulo de productos$")
-    public void queElAdministradorSeEncuentreEnElMóduloDeProductos() {
+
+    @Dado("^que el administrador esté en el módulo de productos las credenciales:$")
+    public void ingresarModuloProductos(List<DatosLogin> datosLogin) {
+        setTheStage(new OnlineCast());
+        theActorCalled("Administrador").attemptsTo(IngresarModuloProducto.con(datosLogin));
+    }
+
+    @Cuando("^el administrador edite el último producto con los siguientes datos:$")
+    public void editarUltimoProducto(List<DatosProducto>datos) {
+        theActorInTheSpotlight().attemptsTo(EditarProducto.editarProducto(datos));
 
     }
 
-    @Cuando("^seleccione el ícono del menú para desplegar las opciones$")
-    public void seleccioneElÍconoDelMenúParaDesplegarLasOpciones() {
 
+    @Entonces("^el producto editado debe mostrarse correctamente actualizado en la lista de productos$")
+    public void verificarEdicionProducto() {
+        theActorInTheSpotlight().should(seeThat(ValidarEditarProducto.validarEditarProducto()));
     }
-
-    @Cuando("^visualice la tabla con los productos registrados$")
-    public void visualiceLaTablaConLosProductosRegistrados() {
-
-    }
-
-    @Cuando("^seleccione el producto que desea editar$")
-    public void seleccioneElProductoQueDeseaEditar() {
-
-    }
-
-    @Cuando("^modifique los datos del producto en el formulario precargado:$")
-    public void modifiqueLosDatosDelProductoEnElFormularioPrecargado(DataTable arg1) {
-
-    }
-
-    @Entonces("^se debe verificar que los datos del producto editado se muestren correctamente actualizados en la tabla de productos$")
-    public void seDebeVerificarQueLosDatosDelProductoEditadoSeMuestrenCorrectamenteActualizadosEnLaTablaDeProductos() {
-
-    }
-
 }

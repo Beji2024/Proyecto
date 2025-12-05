@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/Usuarios/eliminar_usuario.feature",
         glue = {"co.com.Automatizacion.stepsdefinitions", "co.com.Automatizacion.utils.hooks"},
+        plugin = {"pretty", "html:target/cucumber-reports"},
         snippets = SnippetType.CAMELCASE
 )
 public class EliminarUsuarioRunner {

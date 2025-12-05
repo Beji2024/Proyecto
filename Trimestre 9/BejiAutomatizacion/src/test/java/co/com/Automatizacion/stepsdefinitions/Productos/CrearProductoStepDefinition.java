@@ -2,18 +2,16 @@ package co.com.Automatizacion.stepsdefinitions.Productos;
 
 import co.com.Automatizacion.models.Producto.DatosProducto;
 import co.com.Automatizacion.models.Usuarios.DatosLogin;
+import co.com.Automatizacion.questions.Producto.ValidarCreacionProducto;
 import co.com.Automatizacion.tasks.Producto.CrearProducto;
 import co.com.Automatizacion.tasks.Producto.IngresarModuloProducto;
-import cucumber.api.DataTable;
+
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
-import java.util.Map;
-
-import static co.com.Automatizacion.questions.Producto.ValidarCreacionProducto.esVisible;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
@@ -26,28 +24,13 @@ public class CrearProductoStepDefinition {
     }
 
     @Cuando("^el administrador cree un nuevo producto con los siguientes datos:$")
-    public void crearNuevoProducto(DataTable dataTable) {
-        List<Map<String, String>> datos = dataTable.asMaps(String.class, String.class);
-        Map<String, String> producto = datos.get(0);
+    public void crearNuevoProducto(List<DatosProducto>datos) {
 
-        DatosProducto datosProducto = new DatosProducto(
-                producto.get("nombre_producto"),
-                producto.get("categoria"),
-                producto.get("subcategoria"),
-                producto.get("cantidad"),
-                producto.get("talla"),
-                producto.get("precio_venta"),
-                producto.get("precio_compra"),
-                producto.get("material"),
-                producto.get("color"),
-                producto.getOrDefault("imagen", "")
-        );
-
-        theActorInTheSpotlight().attemptsTo(CrearProducto.conLosDatos(datosProducto));
+        theActorInTheSpotlight().attemptsTo(CrearProducto.crearProducto(datos));
     }
 
-    @Entonces("^el producto con nombre (.*) debe aparecer en la lista de productos$")
-    public void verificarCreacionProducto(String nombreProducto) {
-        theActorInTheSpotlight().should(seeThat(esVisible(nombreProducto)));
+    @Entonces("^el producto con debe aparecer en la lista de productos$")
+    public void elProductoConDebeAparecerEnLaListaDeProductos() {
+        theActorInTheSpotlight().should(seeThat(ValidarCreacionProducto.validarCreacionProducto()));
     }
 }

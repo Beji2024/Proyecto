@@ -18,7 +18,7 @@ public class IrProveedor implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(BTN_PROVEEDOR, isClickable()).forNoMoreThan(120).seconds(),
+                WaitUntil.the(BTN_PROVEEDOR, isClickable()).forNoMoreThan(2).seconds(),
                 Click.on(BTN_PROVEEDOR)
         );
     }

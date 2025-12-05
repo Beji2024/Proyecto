@@ -10,12 +10,16 @@ use Illuminate\Support\Facades\Auth;
 
 class UsuarioController extends Controller
 {
-    public function index()
-    {
-        
-        $usuarios = Usuario::with(['rol', 'tipodoc'])->get();
-        return response()->json($usuarios);
-    }
+        public function index()
+{
+    $usuarios = Usuario::whereHas('rol', function($q) {
+        $q->where('name', 'Administrador'); 
+    })
+    ->with(['rol', 'tipodoc'])
+    ->get();
+
+    return response()->json($usuarios);
+}
 
     public function store(Request $request)
     {

@@ -5,55 +5,77 @@
   <h2 class="mb-4">DATOS PROVEEDORES</h2>
 
   <div class="container-fluid">
+    
     <div class="mb-4">
-    <a class="btn btn-success" routerLink="/regproveedores">
+      <a class="btn btn-success" routerLink="/regproveedores">
         <img src="img/boton-mas.png" alt="" height="20px"> Registrar
-    </a>
-</div>
+      </a>
+    </div>
 
-  <div class="d-flex justify-content-end mb-2">
-    <input type="text" class="form-control w-25 me-2" placeholder="Buscar" [(ngModel)]="busqueda">
-    <button class="btn btn-outline-primary" (click)="buscarProveedor()">Search</button>
+    <div class="d-flex justify-content-end mb-2">
+      <input 
+        type="text" 
+        class="form-control w-25 me-2" 
+        placeholder="Buscar por nombre, o NIT"
+        [(ngModel)]="busqueda"
+        (input)="buscarProveedor()"
+      >
+      <button class="btn btn-outline-primary" (click)="buscarProveedor()">Buscar</button>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre del proveedor</th>
+            <th>NIT proveedor</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Dirección</th>
+            <th>Editar/Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let proveedor of proveedoresFiltrados">
+            <td>{{ proveedor.nombre }}</td>
+            <td>{{ proveedor.nit }}</td>
+            <td>{{ proveedor.celular }}</td>
+            <td>{{ proveedor.email }}</td>
+            <td>{{ proveedor.direccion }}</td>
+            <td>
+              <div class="d-flex gap-2">
+                <button class="btn btn-info btn-sm" (click)="editarProveedor(proveedor)">Editar</button>
+                <button class="btn btn-danger btn-sm" (click)="eliminarProveedor(proveedor.id)">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <button 
+          id="btn-anterior" 
+          class="btn btn-outline-secondary" 
+          (click)="cambiarPagina(currentPage - 1)"
+          [disabled]="currentPage === 1"
+        >
+          Anterior
+        </button>
+        
+        <span id="pagina-actual">Página {{ currentPage }} de {{ lastPage }}</span>
+        
+        <button  
+          id="btn-siguiente" 
+          class="btn btn-outline-secondary" 
+          (click)="cambiarPagina(currentPage + 1)"
+          [disabled]="currentPage === lastPage"
+        >
+          Siguiente
+        </button>
+      </div>
+
+    </div>
   </div>
-
-  <div class="table-responsive">
-  <table class="table table-striped table-bordered">
-    <thead class="table-dark">
-      <tr>
-        <th>Nombre del proveedor</th>
-        <th>NIT proveedor</th>
-        <th>Teléfono</th>
-        <th>Correo</th>
-        <th>Dirección</th>
-        <th>Editar/Eliminar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let proveedor of proveedores">
-        <td>{{ proveedor.nombre }}</td>
-        <td>{{ proveedor.nit }}</td>
-        <td>{{ proveedor.celular }}</td>
-        <td>{{ proveedor.email }}</td>
-        <td>{{ proveedor.direccion }}</td>
-        <td>
-          <div class="d-flex gap-2">
-            <button class="btn btn-info btn-sm" (click)="editarProveedor(proveedor)">Editar</button>
-            <button class="btn btn-danger btn-sm" (click)="eliminarProveedor(proveedor.id)">Eliminar</button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="d-flex justify-content-between align-items-center mt-3">
-  <button id="btn-anterior" class="btn btn-outline-secondary" (click)="cargarProveedores(currentPage - 1)" [disabled]="currentPage === 1">
-    Anterior
-  </button>
-  
-  <span id="pagina-actual">Página {{ currentPage }} de {{ lastPage }}</span>
-  
-  <button  id="btn-siguiente" class="btn btn-outline-secondary" (click)="cargarProveedores(currentPage + 1)" [disabled]="currentPage === lastPage">
-    Siguiente
-  </button>
-</div>
-</div>
 </div>

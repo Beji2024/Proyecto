@@ -35,9 +35,22 @@
     </div>
 
     <div class="form-group mb-3">
-      <label>ID del Nuevo Producto</label>
-      <input type="number" formControlName="nuevo_producto_id" class="form-control" required>
+    <label>Nueva Referencia</label>
+    <select  id="REFERENCIA" formControlName="nuevo_producto_id" class="form-select">
+      <option value="">Seleccione una referencia</option>
+      <option *ngFor="let producto of productos" [value]="producto.id">
+        {{ producto.referencia }}
+      </option>
+    </select>
+
+    <div *ngIf="ventaForm.get('nuevo_producto_id')?.touched && 
+                ventaForm.get('nuevo_producto_id')?.invalid" 
+        class="text-danger">
+      Seleccione una referencia válida.
     </div>
+    </div>
+
+
 
     <div class="form-group mb-3">
       <label>ID del Vendedor</label>

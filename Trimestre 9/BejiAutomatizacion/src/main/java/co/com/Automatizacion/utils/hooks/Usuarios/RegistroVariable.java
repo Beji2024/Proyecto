@@ -4,5 +4,6 @@ public enum RegistroVariable {
     usuario,
     producto,
     PROVEEDOR_NIT,
-    proveedor
+    proveedor,
+    venta
 }

@@ -1,0 +1,101 @@
+/* Contenedor principal más centrado y elegante */
+.container {
+  max-width: 700px;
+  background: #ffffffee;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  margin-top: 40px;
+}
+
+/* Título */
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5a2ea6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Etiquetas más elegantes */
+form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Inputs decorados y compactos */
+form .form-control {
+  padding: 8px 12px;
+  height: 38px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #d7d7d7;
+  background-color: #f7f7f7;
+  transition: all 0.3s ease;
+}
+
+/* Inputs al hacer focus */
+form .form-control:focus {
+  border-color: #8254cf;
+  box-shadow: 0 0 5px rgba(130, 84, 207, 0.4);
+  background-color: #fff;
+}
+
+/* Campos readonly más sutiles */
+form .form-control[readonly] {
+  background-color: #eaeaea;
+  cursor: not-allowed;
+}
+
+/* Separación compacta entre inputs */
+.form-group {
+  margin-bottom: 14px;
+}
+
+/* Botón moderno */
+button.btn-primary {
+  background: linear-gradient(135deg, #6a3cc9, #8d5cf0);
+  border: none;
+  padding: 8px 25px;
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Hover del botón */
+button.btn-primary:hover {
+  background: linear-gradient(135deg, #5427b8, #7c4ae3);
+  transform: scale(1.03);
+}
+
+/* Deshabilitado */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Inputs READONLY: más opacos y texto en negrita */
+form .form-control[readonly] {
+  background-color: #eeeeee !important;
+  color: #444 !important;
+  font-weight: 700 !important;  /* NEGRITA */
+  opacity: 0.9;
+  border-color: #d5d5d5;
+}
+
+/* Texto dentro del input (placeholder no aplica en readonly) */
+form .form-control[readonly]::placeholder {
+  font-weight: 700;
+  color: #444;
+}
+
+/* Input editable normal (ID del nuevo producto) */
+form .form-control:not([readonly]) {
+  background-color: #ffffff;
+  font-weight: 500;
+}

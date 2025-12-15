@@ -1,5 +1,6 @@
 package co.com.Automatizacion.tasks.Usuarios;
 import co.com.Automatizacion.interactions.AceptarAlerta;
+import co.com.Automatizacion.interactions.Esperar;
 import co.com.Automatizacion.interactions.ScrollBottom;
 import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
 import net.serenitybdd.screenplay.Task;
@@ -30,10 +31,12 @@ public class EditarUsuario implements Task{
     int numero = random.nextInt(1000);
     AceptarAlerta alerta = new AceptarAlerta();
     ScrollBottom scrollBottom = new ScrollBottom();
+    Esperar esperar = new Esperar(2);
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
                 Click.on(BTN_USUARIO),
+                esperar,
                 scrollBottom,
                 Click.on(BTN_SIGUIENTE),
                 Click.on(BTN_SIGUIENTE),

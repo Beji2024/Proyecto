@@ -18,8 +18,6 @@ import org.junit.runners.Suite;
         RegistrarProveedorRunner.class,
         EditarProveedorRunner.class,
         EliminarProveedorRunner.class
-
-
 })
 public class Suite1 {
 }

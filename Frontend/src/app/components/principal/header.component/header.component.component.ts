@@ -13,7 +13,7 @@ export class HeaderComponentComponent {
   constructor(private router: Router) {}
 
   irInicio() {
-    this.router.navigate(['/principal']); // Aquí va tu ruta principal
+    this.router.navigate(['/principal']);
   }
 
   confirmarLogout() {

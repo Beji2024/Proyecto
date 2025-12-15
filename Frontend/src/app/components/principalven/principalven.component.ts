@@ -35,6 +35,6 @@ export class PrincipalvenComponent {
     this.router.navigate(['/ventasven']);
   }
    goToProductos(){
-    this.router.navigate(['/productosven']);
+    this.router.navigate(['/productos']);
   }
 }

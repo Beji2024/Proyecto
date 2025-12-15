@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderbodComponent {
    constructor(private router: Router) {}
+   irInicio() {
+    this.router.navigate(['/principalbod']);
+  }
 
   confirmarLogout() {
     const confirmAction = window.confirm('¿Estás seguro de que deseas cerrar sesión?');

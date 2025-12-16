@@ -15,7 +15,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class CambioVenta implements Task {
 
 
-
+    Esperar esperar = new Esperar(3);
 
     public static CambioVenta realizar() {
         return instrumented(CambioVenta.class);
@@ -30,6 +30,7 @@ public class CambioVenta implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                esperar,
                 Click.on(Venta.IMG_DEVOLUCION)
         );
 
@@ -44,9 +45,10 @@ public class CambioVenta implements Task {
             intentos++;
         }
         actor.attemptsTo(
+                esperar,
                 Click.on(Venta.BTN_CAMBIA),
                 alerta,
-                Esperar.segundos(20),
+                Esperar.segundos(3),
                 scrollBottom,
 
                 Click.on(Venta.SELECT_REFERENCIAA),
@@ -55,7 +57,7 @@ public class CambioVenta implements Task {
                 Click.on(Venta.BTN_GUARDAR),
                 alerta,
 
-                Esperar.segundos(2)
+                Esperar.segundos(3)
         );
 
     }

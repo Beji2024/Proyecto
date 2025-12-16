@@ -1,6 +1,7 @@
 package co.com.Automatizacion.tasks.Producto;
 
 import co.com.Automatizacion.interactions.Esperar;
+import co.com.Automatizacion.interactions.ScrollBottom;
 import co.com.Automatizacion.models.Producto.DatosProducto;
 import co.com.Automatizacion.userinterface.Productos.Producto;
 import co.com.Automatizacion.utils.hooks.Usuarios.RegistroVariable;
@@ -21,6 +22,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 public class EditarProducto implements Task {
 
     Random rand = new Random();
+    ScrollBottom scrollBottom = new ScrollBottom();
     int numero = rand.nextInt(1000);
 
     private List<DatosProducto> datos;
@@ -59,7 +61,7 @@ public class EditarProducto implements Task {
 
                 Clear.field(Producto.CAMPO_COLOR),
                 Enter.theValue(datos.get(0).getColor()).into(Producto.CAMPO_COLOR),
-
+                scrollBottom,
                 Click.on(Producto.BTN_GUARDAR),
                 Esperar.segundos(3)
         );

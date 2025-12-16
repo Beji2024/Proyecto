@@ -36,6 +36,7 @@ public class CrearProducto implements Task {
         return Instrumented.instanceOf(CrearProducto.class).withProperties(datos);
     }
     Random rand = new Random();
+    ScrollBottom scrollBottom = new ScrollBottom();
     int numero = rand.nextInt(1000);
 
     @Override
@@ -63,6 +64,7 @@ public class CrearProducto implements Task {
                 Enter.theValue(datos.get(0).getMaterial()).into(Producto.CAMPO_MATERIAL),
                 Enter.theValue(datos.get(0).getColor()).into(Producto.CAMPO_COLOR),
                 Enter.keyValues(rutaImagen).into(Producto.CAMPO_IMAGEN),
+                scrollBottom,
                 Click.on(Producto.BTN_GUARDAR),
                 Esperar.segundos(3)
         );

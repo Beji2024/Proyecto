@@ -17,7 +17,6 @@ import java.util.Random;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CrearVenta implements Task {
-
     private List<Ventas> datos;
 
     public CrearVenta(List<Ventas> datos) {
@@ -37,7 +36,7 @@ public class CrearVenta implements Task {
         Ventas venta = datos.get(0);
 
         actor.attemptsTo(
-                Esperar.segundos(1),
+                Esperar.segundos(3),
                 Click.on(Venta.BTN_CREAR_VENTA),
 
                 Enter.theValue(venta.getNombre_cli()+numero).into(Venta.NOMBRE_CLIENTE),

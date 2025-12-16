@@ -19,6 +19,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class IngresarModuloVenta implements Task {
 
     private final List<DatosLogin> datosLogin;
+    Esperar esperar = new Esperar(4);
 
     public IngresarModuloVenta(List<DatosLogin> datosLogin) {
         this.datosLogin = datosLogin;
@@ -43,7 +44,7 @@ public class IngresarModuloVenta implements Task {
         );
 
         actor.attemptsTo(
-
+                esperar,
                 Click.on(Venta.BOTON_VENTA)
         );
     }
